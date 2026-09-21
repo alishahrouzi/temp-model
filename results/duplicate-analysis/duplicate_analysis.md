@@ -1,0 +1,13364 @@
+# S0.3 — Duplicate Analysis Report
+
+## Objective
+Identify exact and near-duplicate images before the dataset split. The source dataset is not modified.
+
+## Dataset Summary
+- Discovered image files: **6141**
+- Images analyzed: **6141**
+- Unreadable images during duplicate analysis: **0**
+- Exact duplicate groups: **23**
+- Exact duplicate members: **47**
+- Exact duplicate groups crossing classes: **0**
+
+## Exact Duplicate Detection
+Exact duplicates are grouped by SHA-256 of the complete file bytes.
+
+### Group 1 — 3 files (cross_class=False)
+- necklace\necklace_223.jpg
+- necklace\necklace_224.jpg
+- necklace\necklace_225.jpg
+
+### Group 2 — 2 files (cross_class=False)
+- earring_best\023_006.png
+- earring_best\023_007.png
+
+### Group 3 — 2 files (cross_class=False)
+- earring_best\025_008.png
+- earring_best\025_009.png
+
+### Group 4 — 2 files (cross_class=False)
+- earring_best\025_010.png
+- earring_best\025_011.png
+
+### Group 5 — 2 files (cross_class=False)
+- earring_best\025_012.png
+- earring_best\025_013.png
+
+### Group 6 — 2 files (cross_class=False)
+- earring_best\025_014.png
+- earring_best\025_015.png
+
+### Group 7 — 2 files (cross_class=False)
+- earring_best\025_039.png
+- earring_best\025_040.png
+
+### Group 8 — 2 files (cross_class=False)
+- earring_best\025_042.png
+- earring_best\025_043.png
+
+### Group 9 — 2 files (cross_class=False)
+- earring_best\030_024.png
+- earring_best\030_025.png
+
+### Group 10 — 2 files (cross_class=False)
+- earring_best\039_002.png
+- earring_best\041_012.png
+
+### Group 11 — 2 files (cross_class=False)
+- earring_best\039_006.png
+- earring_best\039_007.png
+
+### Group 12 — 2 files (cross_class=False)
+- earring_best\039_008.png
+- earring_best\039_009.png
+
+### Group 13 — 2 files (cross_class=False)
+- earring_best\039_010.png
+- earring_best\039_011.png
+
+### Group 14 — 2 files (cross_class=False)
+- earring_best\039_012.png
+- earring_best\039_013.png
+
+### Group 15 — 2 files (cross_class=False)
+- earring_best\039_035.png
+- earring_best\039_036.png
+
+### Group 16 — 2 files (cross_class=False)
+- earring_best\041_005.png
+- earring_best\041_006.png
+
+### Group 17 — 2 files (cross_class=False)
+- earring_best\044_033.png
+- earring_best\046_054.png
+
+### Group 18 — 2 files (cross_class=False)
+- earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring (1).jpg
+- earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring.jpg
+
+### Group 19 — 2 files (cross_class=False)
+- earring_best\61pAcjkFtoL._UY500_ (1).jpg
+- earring_best\61pAcjkFtoL._UY500_.jpg
+
+### Group 20 — 2 files (cross_class=False)
+- earring_best\images (90).jpeg
+- earring_best\images (93).jpeg
+
+### Group 21 — 2 files (cross_class=False)
+- earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e (1).jpg
+- earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e.jpg
+
+### Group 22 — 2 files (cross_class=False)
+- necklace\necklace_233.jpg
+- necklace\necklace_234.jpg
+
+### Group 23 — 2 files (cross_class=False)
+- necklace\necklace_273.jpg
+- necklace\necklace_279.jpg
+
+## Perceptual Duplicate Analysis
+Near duplicates are compared using 64-bit pHash Hamming distance. Multiple thresholds are measured so the split policy can be chosen from observed data rather than a hard-coded assumption.
+
+| Threshold | Pairs | Same-class pairs | Cross-class pairs | Groups |
+|---:|---:|---:|---:|---:|
+| 4 | 768 | 762 | 6 | 195 |
+| 6 | 2179 | 2139 | 40 | 284 |
+| 8 | 5899 | 5746 | 153 | 311 |
+| 10 | 14175 | 13618 | 557 | 216 |
+| 12 | 32457 | 30438 | 2019 | 114 |
+
+### Threshold Interpretation
+No final perceptual-deduplication threshold is selected by S0.3. S0.4 should use these results to keep duplicate/near-duplicate groups together when constructing train/validation/test splits.
+
+### Perceptual Groups
+#### Hamming threshold ≤ 4
+- Group 1: 45 files; classes=earring_best; cross_class=False; distance=0–4
+  - earring_best\010_018.png
+  - earring_best\010_021.png
+  - earring_best\017_049.png
+  - earring_best\017_060.png
+  - earring_best\018_029.png
+  - earring_best\018_032.png
+  - earring_best\018_033.png
+  - earring_best\019_017.png
+  - earring_best\019_026.png
+  - earring_best\019_028.png
+  - earring_best\019_029.png
+  - earring_best\019_043.png
+  - earring_best\021_046.png
+  - earring_best\021_048.png
+  - earring_best\023_006.png
+  - earring_best\023_007.png
+  - earring_best\023_015.png
+  - earring_best\023_017.png
+  - earring_best\023_018.png
+  - earring_best\023_023.png
+  - earring_best\023_025.png
+  - earring_best\023_026.png
+  - earring_best\023_029.png
+  - earring_best\023_032.png
+  - earring_best\023_033.png
+  - earring_best\023_037.png
+  - earring_best\024_004.png
+  - earring_best\028_031.png
+  - earring_best\028_036.png
+  - earring_best\030_001.png
+  - earring_best\030_026.png
+  - earring_best\031_002.png
+  - earring_best\039_026.png
+  - earring_best\041_016.png
+  - earring_best\041_017.png
+  - earring_best\044_004.png
+  - earring_best\044_015.png
+  - earring_best\044_016.png
+  - earring_best\044_017.png
+  - earring_best\044_018.png
+  - earring_best\044_026.png
+  - earring_best\044_027.png
+  - earring_best\046_008.png
+  - earring_best\046_033.png
+  - earring_best\earring_96.jpg
+- Group 2: 36 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\026_004.png
+  - earring_best\026_063.png
+  - earring_best\027_013.png
+  - earring_best\027_023.png
+  - earring_best\027_024.png
+  - earring_best\027_025.png
+  - earring_best\027_035.png
+  - earring_best\027_049.png
+  - earring_best\027_053.png
+  - earring_best\027_064.png
+  - earring_best\027_102.png
+  - earring_best\028_018.png
+  - earring_best\029_004.png
+  - earring_best\029_017.png
+  - earring_best\029_019.png
+  - earring_best\029_034.png
+  - earring_best\029_041.png
+  - earring_best\029_042.png
+  - earring_best\029_043.png
+  - earring_best\029_044.png
+  - earring_best\029_049.png
+  - earring_best\032_031.png
+  - earring_best\032_069.png
+  - earring_best\035_007.png
+  - earring_best\036_010.png
+  - earring_best\036_018.png
+  - earring_best\037_003.png
+  - earring_best\037_008.png
+  - earring_best\046_007.png
+  - earring_best\046_015.png
+  - earring_best\046_028.png
+  - earring_best\046_031.png
+  - earring_best\046_034.png
+  - earring_best\046_042.png
+  - earring_best\046_043.png
+  - earring_best\046_095.png
+- Group 3: 30 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\017_021.png
+  - earring_best\017_057.png
+  - earring_best\017_068.png
+  - earring_best\017_59.png
+  - earring_best\018_042.png
+  - earring_best\018_056.png
+  - earring_best\024_053.png
+  - earring_best\025_033.png
+  - earring_best\030_021.png
+  - earring_best\030_044.png
+  - earring_best\030_045.png
+  - earring_best\030_048.png
+  - earring_best\030_049.png
+  - earring_best\030_051.png
+  - earring_best\030_056.png
+  - earring_best\030_064.png
+  - earring_best\030_066.png
+  - earring_best\030_071.png
+  - earring_best\030_073.png
+  - earring_best\030_074.png
+  - earring_best\030_083.png
+  - earring_best\040_017.png
+  - earring_best\040_072.png
+  - earring_best\044_003.png
+  - earring_best\044_014.png
+  - earring_best\045_013.png
+  - earring_best\045_018.png
+  - earring_best\045_042.png
+  - earring_best\045_052.png
+  - earring_best\earring_173.jpg
+- Group 4: 22 files; classes=bracelet; cross_class=False; distance=0–4
+  - bracelet\bracelet_009.jpg
+  - bracelet\bracelet_010.jpg
+  - bracelet\bracelet_014.jpg
+  - bracelet\bracelet_102.jpg
+  - bracelet\bracelet_103.jpg
+  - bracelet\bracelet_104.jpg
+  - bracelet\bracelet_105.jpg
+  - bracelet\bracelet_106.jpg
+  - bracelet\bracelet_107.jpg
+  - bracelet\bracelet_108.jpg
+  - bracelet\bracelet_109.jpg
+  - bracelet\bracelet_110.jpg
+  - bracelet\bracelet_111.jpg
+  - bracelet\bracelet_112.jpg
+  - bracelet\bracelet_114.jpg
+  - bracelet\bracelet_115.jpg
+  - bracelet\bracelet_116.jpg
+  - bracelet\bracelet_117.jpg
+  - bracelet\bracelet_118.jpg
+  - bracelet\bracelet_119.jpg
+  - bracelet\bracelet_120.jpg
+  - bracelet\bracelet_121.jpg
+- Group 5: 12 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\018_058.png
+  - earring_best\018_080.png
+  - earring_best\020_019.png
+  - earring_best\021_054.png
+  - earring_best\021_065.png
+  - earring_best\021_066.png
+  - earring_best\021_068.png
+  - earring_best\021_072.png
+  - earring_best\024_114.png
+  - earring_best\040_076.png
+  - earring_best\040_077.png
+  - earring_best\045_046.png
+- Group 6: 9 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_021.png
+  - earring_best\027_026.png
+  - earring_best\027_030.png
+  - earring_best\027_034.png
+  - earring_best\027_037.png
+  - earring_best\027_043.png
+  - earring_best\027_057.png
+  - earring_best\027_059.png
+  - earring_best\036_014.png
+- Group 7: 7 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\017_027.png
+  - earring_best\017_034.png
+  - earring_best\017_044.png
+  - earring_best\030_004.png
+  - earring_best\030_015.png
+  - earring_best\030_053.png
+  - earring_best\030_060.png
+- Group 8: 7 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\018_019.png
+  - earring_best\018_020.png
+  - earring_best\019_033.png
+  - earring_best\024_044.png
+  - earring_best\031_011.png
+  - earring_best\039_030.png
+  - earring_best\039_031.png
+- Group 9: 6 files; classes=bracelet, earring_best; cross_class=True; distance=2–4
+  - bracelet\7B1IKBKRKSL7.jpg
+  - bracelet\Z1WGR7EXQXRN.jpg
+  - bracelet\ZSMKA187T91S.jpg
+  - bracelet\bracelet_018.jpg
+  - bracelet\bracelet_213.jpg
+  - earring_best\046_087.png
+- Group 10: 6 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\018_045.png
+  - earring_best\020_010.png
+  - earring_best\030_006.png
+  - earring_best\030_011.png
+  - earring_best\030_034.png
+  - earring_best\030_055.png
+- Group 11: 6 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\024_002.png
+  - earring_best\024_112.png
+  - earring_best\024_117.png
+  - earring_best\040_003.png
+  - earring_best\040_070.png
+  - earring_best\040_078.png
+- Group 12: 6 files; classes=necklace; cross_class=False; distance=0–4
+  - necklace\necklace_55.jpg
+  - necklace\necklace_56.jpg
+  - necklace\necklace_58.jpg
+  - necklace\necklace_59.jpg
+  - necklace\necklace_60.jpg
+  - necklace\necklace_68.jpg
+- Group 13: 5 files; classes=bracelet; cross_class=False; distance=2–4
+  - bracelet\E1UNL404V9EJ.jpg
+  - bracelet\bracelet_136.jpg
+  - bracelet\bracelet_173.jpg
+  - bracelet\bracelet_180.jpg
+  - bracelet\bracelet_196.jpg
+- Group 14: 5 files; classes=bracelet; cross_class=False; distance=2–4
+  - bracelet\bracelet_058.jpg
+  - bracelet\bracelet_072.jpg
+  - bracelet\bracelet_076.jpg
+  - bracelet\bracelet_077.jpg
+  - bracelet\bracelet_256.jpg
+- Group 15: 5 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\022_018.png
+  - earring_best\030_065.png
+  - earring_best\045_016.png
+  - earring_best\045_023.png
+  - earring_best\045_026.png
+- Group 16: 5 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\027_104.png
+  - earring_best\029_014.png
+  - earring_best\046_021.png
+  - earring_best\046_045.png
+  - earring_best\046_062.png
+- Group 17: 5 files; classes=necklace; cross_class=False; distance=2–4
+  - necklace\necklace_212.jpg
+  - necklace\necklace_214.jpg
+  - necklace\necklace_217.jpg
+  - necklace\necklace_218.jpg
+  - necklace\necklace_219.jpg
+- Group 18: 4 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\018_055.png
+  - earring_best\019_025.png
+  - earring_best\023_024.png
+  - earring_best\044_007.png
+- Group 19: 4 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\019_035.png
+  - earring_best\024_043.png
+  - earring_best\043_001.png
+  - earring_best\045_001.png
+- Group 20: 4 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\021_055.png
+  - earring_best\022_025.png
+  - earring_best\022_031.png
+  - earring_best\038_062.png
+- Group 21: 4 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\027_001.png
+  - earring_best\032_024.png
+  - earring_best\033_004.png
+  - earring_best\036_020.png
+- Group 22: 4 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\030_040.png
+  - earring_best\030_043.png
+  - earring_best\045_009.png
+  - earring_best\045_027.png
+- Group 23: 4 files; classes=necklace; cross_class=False; distance=2–4
+  - necklace\AHCSZ03LGE1E.jpg
+  - necklace\BVZ4WR9YLOQG.jpg
+  - necklace\MKC67M50OHMD.jpg
+  - necklace\YHEV5MZR80V4.jpg
+- Group 24: 4 files; classes=ring_best; cross_class=False; distance=4–4
+  - ring_best\ring_073.jpg
+  - ring_best\ring_103.jpg
+  - ring_best\ring_116.jpg
+  - ring_best\ring_132.jpg
+- Group 25: 3 files; classes=bracelet, necklace; cross_class=True; distance=2–4
+  - bracelet\bracelet_028.jpg
+  - necklace\KGIA7QADG5RI.jpg
+  - necklace\P9FJTOV9AK42.jpg
+- Group 26: 3 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_045.jpg
+  - bracelet\bracelet_093.jpg
+  - bracelet\bracelet_211.jpg
+- Group 27: 3 files; classes=bracelet; cross_class=False; distance=0–4
+  - bracelet\bracelet_133.jpg
+  - bracelet\bracelet_142.jpg
+  - bracelet\bracelet_150.jpg
+- Group 28: 3 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_138.jpg
+  - bracelet\bracelet_141.jpg
+  - bracelet\bracelet_144.jpg
+- Group 29: 3 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\010_025.png
+  - earring_best\026_009.png
+  - earring_best\044_010.png
+- Group 30: 3 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_031.png
+  - earring_best\017_032.png
+  - earring_best\017_070.png
+- Group 31: 3 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_041.png
+  - earring_best\040_012.png
+  - earring_best\040_014.png
+- Group 32: 3 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\018_006.png
+  - earring_best\024_010.png
+  - earring_best\031_001.png
+- Group 33: 3 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\018_027.png
+  - earring_best\024_031.png
+  - earring_best\024_034.png
+- Group 34: 3 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\018_035.png
+  - earring_best\019_030.png
+  - earring_best\019_037.png
+- Group 35: 3 files; classes=earring_best, necklace; cross_class=True; distance=2–4
+  - earring_best\018_081.png
+  - earring_best\018_083.png
+  - necklace\P8Y5N4GSQE6K.jpg
+- Group 36: 3 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\019_044.png
+  - earring_best\026_008.png
+  - earring_best\046_009.png
+- Group 37: 3 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\023_027.png
+  - earring_best\030_005.png
+  - earring_best\044_019.png
+- Group 38: 3 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\024_119.png
+  - earring_best\024_122.png
+  - earring_best\038_017.png
+- Group 39: 3 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\026_050.png
+  - earring_best\032_039.png
+  - earring_best\046_060.png
+- Group 40: 3 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\038_014.png
+  - earring_best\038_021.png
+  - earring_best\038_024.png
+- Group 41: 3 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\040_009.png
+  - earring_best\040_023.png
+  - earring_best\040_035.png
+- Group 42: 3 files; classes=earring_best; cross_class=False; distance=0–2
+  - earring_best\UE00012-YG0000_1_lar.jpg
+  - earring_best\earring_322.jpg
+  - earring_best\earring_324.jpg
+- Group 43: 3 files; classes=necklace; cross_class=False; distance=0–2
+  - necklace\NM6BBE8CX8YE.jpg
+  - necklace\TCQAEJWM3IE9.jpg
+  - necklace\XC80ICY9WJ8Q.jpg
+- Group 44: 3 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_107.jpg
+  - necklace\necklace_145.jpg
+  - necklace\necklace_207.jpg
+- Group 45: 3 files; classes=necklace; cross_class=False; distance=2–4
+  - necklace\necklace_137.jpg
+  - necklace\necklace_147.jpg
+  - necklace\necklace_7.jpg
+- Group 46: 3 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\necklace_223.jpg
+  - necklace\necklace_224.jpg
+  - necklace\necklace_225.jpg
+- Group 47: 3 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_285.jpg
+  - necklace\necklace_304.jpg
+  - necklace\necklace_314.jpg
+- Group 48: 3 files; classes=necklace; cross_class=False; distance=0–2
+  - necklace\necklace_61.jpg
+  - necklace\necklace_62.jpg
+  - necklace\necklace_64.jpg
+- Group 49: 3 files; classes=ring_best; cross_class=False; distance=2–4
+  - ring_best\ring_066.jpg
+  - ring_best\ring_117.jpg
+  - ring_best\ring_139.jpg
+- Group 50: 3 files; classes=ring_best; cross_class=False; distance=4–4
+  - ring_best\ring_087.jpg
+  - ring_best\ring_106.jpg
+  - ring_best\ring_153.jpg
+- Group 51: 3 files; classes=ring_best; cross_class=False; distance=2–4
+  - ring_best\ring_146.jpg
+  - ring_best\ring_155.jpg
+  - ring_best\ring_172.jpg
+- Group 52: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\43DOTJXD75JE.jpg
+  - bracelet\bracelet_194.jpg
+- Group 53: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\98O5L98RN2KN.jpg
+  - bracelet\QJJSQ47YGDJ2.jpg
+- Group 54: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\AAQSFJZOELZ8.jpg
+  - bracelet\EUETWO4ZFI1P.jpg
+- Group 55: 2 files; classes=bracelet; cross_class=False; distance=2–2
+  - bracelet\HFC8YYV9CRHF.jpg
+  - bracelet\YIJX2H4AE3YL.jpg
+- Group 56: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\IMG_5993.JPG
+  - bracelet\bracelet-socotra.jpg
+- Group 57: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_001.jpg
+  - bracelet\bracelet_195.jpg
+- Group 58: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_023.jpg
+  - bracelet\bracelet_068.jpg
+- Group 59: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_048.jpg
+  - bracelet\bracelet_264.jpg
+- Group 60: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_063.jpg
+  - bracelet\bracelet_074.jpg
+- Group 61: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_073.jpg
+  - bracelet\bracelet_218.jpg
+- Group 62: 2 files; classes=bracelet, necklace; cross_class=True; distance=4–4
+  - bracelet\bracelet_130.jpg
+  - necklace\necklace_102.jpg
+- Group 63: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_147.jpg
+  - bracelet\bracelet_166.jpg
+- Group 64: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_222.jpg
+  - bracelet\bracelet_231.jpg
+- Group 65: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\006_007.png
+  - earring_best\007_030.png
+- Group 66: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\010_002.png
+  - earring_best\010_012.png
+- Group 67: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\010_017.png
+  - earring_best\039_025.png
+- Group 68: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\014_008.png
+  - earring_best\014_010.png
+- Group 69: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\014_013.png
+  - earring_best\014_016.png
+- Group 70: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\014_014.png
+  - earring_best\014_015.png
+- Group 71: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_014.png
+  - earring_best\044_034.png
+- Group 72: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_023.png
+  - earring_best\033_001.png
+- Group 73: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_028.png
+  - earring_best\017_036.png
+- Group 74: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_033.png
+  - earring_best\030_035.png
+- Group 75: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_039.png
+  - earring_best\040_019.png
+- Group 76: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_053.png
+  - earring_best\040_015.png
+- Group 77: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_066.png
+  - earring_best\017_067.png
+- Group 78: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_078.png
+  - earring_best\031_036.png
+- Group 79: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_094.png
+  - earring_best\040_099.png
+- Group 80: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_098.png
+  - earring_best\040_094.png
+- Group 81: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\018_024.png
+  - earring_best\018_026.png
+- Group 82: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\018_030.png
+  - earring_best\023_021.png
+- Group 83: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\018_040.png
+  - earring_best\044_009.png
+- Group 84: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\018_051.png
+  - earring_best\045_002.png
+- Group 85: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\018_069.png
+  - earring_best\024_115.png
+- Group 86: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\018_074.png
+  - earring_best\018_075.png
+- Group 87: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\020_012.png
+  - earring_best\030_080.png
+- Group 88: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\020_015.png
+  - earring_best\028_056.png
+- Group 89: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\020_018.png
+  - earring_best\024_070.png
+- Group 90: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\021_002.png
+  - earring_best\021_078.png
+- Group 91: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\021_028.png
+  - earring_best\021_043.png
+- Group 92: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\021_063.png
+  - earring_best\021_079.png
+- Group 93: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\022_027.png
+  - earring_best\042_022.png
+- Group 94: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\022_055.png
+  - earring_best\031_017.png
+- Group 95: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\024_048.png
+  - earring_best\earring_312.jpg
+- Group 96: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_008.png
+  - earring_best\025_009.png
+- Group 97: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_010.png
+  - earring_best\025_011.png
+- Group 98: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_012.png
+  - earring_best\025_013.png
+- Group 99: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_014.png
+  - earring_best\025_015.png
+- Group 100: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_039.png
+  - earring_best\025_040.png
+- Group 101: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_042.png
+  - earring_best\025_043.png
+- Group 102: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\026_048.png
+  - earring_best\035_015.png
+- Group 103: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\026_052.png
+  - earring_best\046_049.png
+- Group 104: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\026_064.png
+  - earring_best\045_012.png
+- Group 105: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_004.png
+  - earring_best\027_007.png
+- Group 106: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_022.png
+  - earring_best\029_037.png
+- Group 107: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_031.png
+  - earring_best\036_013.png
+- Group 108: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_042.png
+  - earring_best\earring_308.jpg
+- Group 109: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\027_051.png
+  - earring_best\029_048.png
+- Group 110: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_058.png
+  - earring_best\046_046.png
+- Group 111: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_061.png
+  - earring_best\032_026.png
+- Group 112: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\027_067.png
+  - earring_best\046_030.png
+- Group 113: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_068.png
+  - earring_best\027_069.png
+- Group 114: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_115.png
+  - earring_best\029_054.png
+- Group 115: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\029_001.png
+  - earring_best\029_047.png
+- Group 116: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\029_028.png
+  - earring_best\046_025.png
+- Group 117: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\029_076.png
+  - earring_best\029_079.png
+- Group 118: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\030_022.png
+  - earring_best\030_041.png
+- Group 119: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\030_024.png
+  - earring_best\030_025.png
+- Group 120: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\030_027.png
+  - earring_best\030_028.png
+- Group 121: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\030_029.png
+  - earring_best\045_019.png
+- Group 122: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\030_032.png
+  - earring_best\045_038.png
+- Group 123: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\030_092.png
+  - earring_best\030_094.png
+- Group 124: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\032_022.png
+  - earring_best\036_008.png
+- Group 125: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\032_037.png
+  - earring_best\032_038.png
+- Group 126: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\033_019.png
+  - earring_best\033_024.png
+- Group 127: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\036_012.png
+  - earring_best\046_057.png
+- Group 128: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\038_005.png
+  - earring_best\044_056.png
+- Group 129: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\038_011.png
+  - earring_best\038_038.png
+- Group 130: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\038_032.png
+  - earring_best\044_065.png
+- Group 131: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_002.png
+  - earring_best\041_012.png
+- Group 132: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_006.png
+  - earring_best\039_007.png
+- Group 133: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_008.png
+  - earring_best\039_009.png
+- Group 134: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_010.png
+  - earring_best\039_011.png
+- Group 135: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_012.png
+  - earring_best\039_013.png
+- Group 136: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\039_029.png
+  - earring_best\earring_456.jpg
+- Group 137: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_035.png
+  - earring_best\039_036.png
+- Group 138: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\039_055.png
+  - earring_best\044_057.png
+- Group 139: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\040_041.png
+  - earring_best\043_031.png
+- Group 140: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\040_069.png
+  - earring_best\041_010.png
+- Group 141: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\041_005.png
+  - earring_best\041_006.png
+- Group 142: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\041_019.png
+  - earring_best\044_025.png
+- Group 143: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\042_051.png
+  - earring_best\042_052.png
+- Group 144: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\044_008.png
+  - earring_best\earring_50.jpg
+- Group 145: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\044_029.png
+  - earring_best\044_030.png
+- Group 146: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\044_033.png
+  - earring_best\046_054.png
+- Group 147: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\044_058.png
+  - earring_best\044_060.png
+- Group 148: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\046_010.png
+  - earring_best\046_047.png
+- Group 149: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\046_022.png
+  - earring_best\046_051.png
+- Group 150: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\046_048.png
+  - earring_best\046_055.png
+- Group 151: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring (1).jpg
+  - earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring.jpg
+- Group 152: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\41OBUc2qfRL._UY395_.jpg
+  - earring_best\earring_13.jpg
+- Group 153: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\57597_main.jpeg
+  - earring_best\images (48).jpeg
+- Group 154: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\61pAcjkFtoL._UY500_ (1).jpg
+  - earring_best\61pAcjkFtoL._UY500_.jpg
+- Group 155: 2 files; classes=earring_best, necklace; cross_class=True; distance=4–4
+  - earring_best\CFE0686_D.jpg
+  - necklace\necklace_205.jpg
+- Group 156: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\JE03505-YGP900_1_lar.jpg
+  - earring_best\earring_241.jpg
+- Group 157: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\JE04410-YGP9OS_1_lar.jpg
+  - earring_best\earring_211.jpg
+- Group 158: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\NMPALMX_mz.jpg
+  - earring_best\images (49).jpeg
+- Group 159: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\UE00018-YG0000_1_lar.jpg
+  - earring_best\earring_326.jpg
+- Group 160: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\earring_142.jpg
+  - earring_best\earring_144.jpg
+- Group 161: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\earring_197.jpg
+  - earring_best\earring_342.jpg
+- Group 162: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\earring_257.jpg
+  - earring_best\earring_258.jpg
+- Group 163: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\earring_369.jpg
+  - earring_best\images (4).jpeg
+- Group 164: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\earring_378.jpg
+  - earring_best\images (3).jpeg
+- Group 165: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\earring_93.jpg
+  - earring_best\earring_94.jpg
+- Group 166: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\images (90).jpeg
+  - earring_best\images (93).jpeg
+- Group 167: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e (1).jpg
+  - earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e.jpg
+- Group 168: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\2KCB0164E0WZ.jpg
+  - necklace\necklace_108.jpg
+- Group 169: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\6SE79YMZ1L10.jpg
+  - necklace\GI93X1XFXU5Y.jpg
+- Group 170: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\8BDAS0ZPMTWX.jpg
+  - necklace\necklace_191.jpg
+- Group 171: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\8IACKSIP2ZQ7.jpg
+  - necklace\CRKMYDSH5DW2.jpg
+- Group 172: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\A86B0SBIPBET.jpg
+  - necklace\LXE9TVUVMDYI.jpg
+- Group 173: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\BW8Q7QW5DDQL.jpg
+  - necklace\YISHVTEXJ9VJ.jpg
+- Group 174: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\CH01IVURU3DA.jpg
+  - necklace\PFCAOQEOYB3C.jpg
+- Group 175: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\DRB65CCNAYW1.jpg
+  - necklace\necklace_195.jpg
+- Group 176: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\EPL0QTEDN8UZ.jpg
+  - necklace\necklace_138.jpg
+- Group 177: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\LZTFB5F7THBK.jpg
+  - necklace\PPQ5I9VK0U9D.jpg
+- Group 178: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\QBN3RCDOG4IG.jpg
+  - necklace\necklace_98.jpg
+- Group 179: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\necklace_15.jpg
+  - necklace\necklace_16.jpg
+- Group 180: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_18.jpg
+  - necklace\necklace_20.jpg
+- Group 181: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_21.jpg
+  - necklace\necklace_22.jpg
+- Group 182: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_215.jpg
+  - necklace\necklace_216.jpg
+- Group 183: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\necklace_231.jpg
+  - necklace\necklace_232.jpg
+- Group 184: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\necklace_233.jpg
+  - necklace\necklace_234.jpg
+- Group 185: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\necklace_271.jpg
+  - necklace\necklace_275.jpg
+- Group 186: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\necklace_273.jpg
+  - necklace\necklace_279.jpg
+- Group 187: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_298.jpg
+  - necklace\necklace_305.jpg
+- Group 188: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_30.jpg
+  - necklace\necklace_31.jpg
+- Group 189: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_319.jpg
+  - necklace\necklace_320.jpg
+- Group 190: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_38.jpg
+  - necklace\necklace_41.jpg
+- Group 191: 2 files; classes=ring_best; cross_class=False; distance=4–4
+  - ring_best\ring_078.jpg
+  - ring_best\ring_079.jpg
+- Group 192: 2 files; classes=ring_best; cross_class=False; distance=2–2
+  - ring_best\ring_096.jpg
+  - ring_best\ring_123.jpg
+- Group 193: 2 files; classes=ring_best; cross_class=False; distance=0–0
+  - ring_best\ring_104.jpg
+  - ring_best\ring_165.jpg
+- Group 194: 2 files; classes=ring_best; cross_class=False; distance=4–4
+  - ring_best\ring_105.jpg
+  - ring_best\ring_154.jpg
+- Group 195: 2 files; classes=ring_best; cross_class=False; distance=4–4
+  - ring_best\ring_129.jpg
+  - ring_best\ring_187.jpg
+#### Hamming threshold ≤ 6
+- Group 1: 301 files; classes=bracelet, earring_best; cross_class=True; distance=0–6
+  - bracelet\DDMN43YD8J0H.jpg
+  - bracelet\bracelet_071.jpg
+  - bracelet\bracelet_192.jpg
+  - bracelet\bracelet_276.jpg
+  - earring_best\002_005.png
+  - earring_best\010_015.png
+  - earring_best\010_018.png
+  - earring_best\010_020.png
+  - earring_best\010_021.png
+  - earring_best\010_022.png
+  - earring_best\010_025.png
+  - earring_best\016_007.png
+  - earring_best\017_049.png
+  - earring_best\017_060.png
+  - earring_best\017_063.png
+  - earring_best\017_069.png
+  - earring_best\018_019.png
+  - earring_best\018_020.png
+  - earring_best\018_029.png
+  - earring_best\018_030.png
+  - earring_best\018_032.png
+  - earring_best\018_033.png
+  - earring_best\018_035.png
+  - earring_best\018_036.png
+  - earring_best\018_052.png
+  - earring_best\018_055.png
+  - earring_best\018_31.png
+  - earring_best\019_017.png
+  - earring_best\019_018.png
+  - earring_best\019_023.png
+  - earring_best\019_025.png
+  - earring_best\019_026.png
+  - earring_best\019_027.png
+  - earring_best\019_028.png
+  - earring_best\019_029.png
+  - earring_best\019_030.png
+  - earring_best\019_031.png
+  - earring_best\019_032.png
+  - earring_best\019_033.png
+  - earring_best\019_035.png
+  - earring_best\019_037.png
+  - earring_best\019_041.png
+  - earring_best\019_043.png
+  - earring_best\019_044.png
+  - earring_best\020_007.png
+  - earring_best\021_046.png
+  - earring_best\021_048.png
+  - earring_best\021_049.png
+  - earring_best\022_029.png
+  - earring_best\023_006.png
+  - earring_best\023_007.png
+  - earring_best\023_015.png
+  - earring_best\023_016.png
+  - earring_best\023_017.png
+  - earring_best\023_018.png
+  - earring_best\023_020.png
+  - earring_best\023_021.png
+  - earring_best\023_023.png
+  - earring_best\023_024.png
+  - earring_best\023_025.png
+  - earring_best\023_026.png
+  - earring_best\023_029.png
+  - earring_best\023_032.png
+  - earring_best\023_033.png
+  - earring_best\023_034.png
+  - earring_best\023_036.png
+  - earring_best\023_037.png
+  - earring_best\023_038.png
+  - earring_best\024_002.png
+  - earring_best\024_004.png
+  - earring_best\024_041.png
+  - earring_best\024_043.png
+  - earring_best\024_044.png
+  - earring_best\024_050.png
+  - earring_best\024_058.png
+  - earring_best\024_103.png
+  - earring_best\024_112.png
+  - earring_best\024_117.png
+  - earring_best\024_119.png
+  - earring_best\024_122.png
+  - earring_best\026_004.png
+  - earring_best\026_008.png
+  - earring_best\026_009.png
+  - earring_best\026_011.png
+  - earring_best\026_036.png
+  - earring_best\026_041.png
+  - earring_best\026_045.png
+  - earring_best\026_048.png
+  - earring_best\026_050.png
+  - earring_best\026_052.png
+  - earring_best\026_056.png
+  - earring_best\026_061.png
+  - earring_best\026_063.png
+  - earring_best\026_064.png
+  - earring_best\027_001.png
+  - earring_best\027_002.png
+  - earring_best\027_013.png
+  - earring_best\027_018.png
+  - earring_best\027_021.png
+  - earring_best\027_023.png
+  - earring_best\027_024.png
+  - earring_best\027_025.png
+  - earring_best\027_026.png
+  - earring_best\027_027.png
+  - earring_best\027_028.png
+  - earring_best\027_029.png
+  - earring_best\027_030.png
+  - earring_best\027_031.png
+  - earring_best\027_034.png
+  - earring_best\027_035.png
+  - earring_best\027_037.png
+  - earring_best\027_039.png
+  - earring_best\027_040.png
+  - earring_best\027_042.png
+  - earring_best\027_043.png
+  - earring_best\027_049.png
+  - earring_best\027_050.png
+  - earring_best\027_051.png
+  - earring_best\027_053.png
+  - earring_best\027_054.png
+  - earring_best\027_057.png
+  - earring_best\027_058.png
+  - earring_best\027_059.png
+  - earring_best\027_061.png
+  - earring_best\027_063.png
+  - earring_best\027_064.png
+  - earring_best\027_065.png
+  - earring_best\027_067.png
+  - earring_best\027_068.png
+  - earring_best\027_069.png
+  - earring_best\027_070.png
+  - earring_best\027_102.png
+  - earring_best\027_104.png
+  - earring_best\027_105.png
+  - earring_best\028_018.png
+  - earring_best\028_026.png
+  - earring_best\028_030.png
+  - earring_best\028_031.png
+  - earring_best\028_036.png
+  - earring_best\028_039.png
+  - earring_best\029_003.png
+  - earring_best\029_004.png
+  - earring_best\029_011.png
+  - earring_best\029_012.png
+  - earring_best\029_014.png
+  - earring_best\029_015.png
+  - earring_best\029_016.png
+  - earring_best\029_017.png
+  - earring_best\029_019.png
+  - earring_best\029_021.png
+  - earring_best\029_023.png
+  - earring_best\029_026.png
+  - earring_best\029_028.png
+  - earring_best\029_032.png
+  - earring_best\029_034.png
+  - earring_best\029_038.png
+  - earring_best\029_041.png
+  - earring_best\029_042.png
+  - earring_best\029_043.png
+  - earring_best\029_044.png
+  - earring_best\029_045.png
+  - earring_best\029_048.png
+  - earring_best\029_049.png
+  - earring_best\029_069.png
+  - earring_best\030_001.png
+  - earring_best\030_008.png
+  - earring_best\030_009.png
+  - earring_best\030_026.png
+  - earring_best\030_030.png
+  - earring_best\031_002.png
+  - earring_best\031_005.png
+  - earring_best\031_011.png
+  - earring_best\031_040.png
+  - earring_best\032_022.png
+  - earring_best\032_024.png
+  - earring_best\032_026.png
+  - earring_best\032_029.png
+  - earring_best\032_030.png
+  - earring_best\032_031.png
+  - earring_best\032_035.png
+  - earring_best\032_039.png
+  - earring_best\032_041.png
+  - earring_best\032_048.png
+  - earring_best\032_050.png
+  - earring_best\032_051.png
+  - earring_best\032_052.png
+  - earring_best\032_054.png
+  - earring_best\032_055.png
+  - earring_best\032_057.png
+  - earring_best\032_059.png
+  - earring_best\032_069.png
+  - earring_best\033_003.png
+  - earring_best\033_004.png
+  - earring_best\033_006.png
+  - earring_best\033_015.png
+  - earring_best\035_005.png
+  - earring_best\035_006.png
+  - earring_best\035_007.png
+  - earring_best\035_012.png
+  - earring_best\035_013.png
+  - earring_best\035_015.png
+  - earring_best\035_016.png
+  - earring_best\035_019.png
+  - earring_best\035_020.png
+  - earring_best\036_004.png
+  - earring_best\036_005.png
+  - earring_best\036_007.png
+  - earring_best\036_008.png
+  - earring_best\036_009.png
+  - earring_best\036_010.png
+  - earring_best\036_011.png
+  - earring_best\036_013.png
+  - earring_best\036_014.png
+  - earring_best\036_016.png
+  - earring_best\036_017.png
+  - earring_best\036_018.png
+  - earring_best\036_020.png
+  - earring_best\036_024.png
+  - earring_best\037_003.png
+  - earring_best\037_008.png
+  - earring_best\037_011.png
+  - earring_best\038_011.png
+  - earring_best\038_013.png
+  - earring_best\038_017.png
+  - earring_best\038_037.png
+  - earring_best\038_038.png
+  - earring_best\038_059.png
+  - earring_best\038_067.png
+  - earring_best\039_024.png
+  - earring_best\039_026.png
+  - earring_best\039_030.png
+  - earring_best\039_031.png
+  - earring_best\040_003.png
+  - earring_best\040_005.png
+  - earring_best\040_006.png
+  - earring_best\040_065.png
+  - earring_best\040_070.png
+  - earring_best\040_078.png
+  - earring_best\041_016.png
+  - earring_best\041_017.png
+  - earring_best\043_001.png
+  - earring_best\044_004.png
+  - earring_best\044_007.png
+  - earring_best\044_010.png
+  - earring_best\044_015.png
+  - earring_best\044_016.png
+  - earring_best\044_017.png
+  - earring_best\044_018.png
+  - earring_best\044_021.png
+  - earring_best\044_026.png
+  - earring_best\044_027.png
+  - earring_best\044_032.png
+  - earring_best\044_033.png
+  - earring_best\045_001.png
+  - earring_best\045_012.png
+  - earring_best\045_015.png
+  - earring_best\046_007.png
+  - earring_best\046_008.png
+  - earring_best\046_009.png
+  - earring_best\046_010.png
+  - earring_best\046_014.png
+  - earring_best\046_015.png
+  - earring_best\046_019.png
+  - earring_best\046_021.png
+  - earring_best\046_022.png
+  - earring_best\046_025.png
+  - earring_best\046_028.png
+  - earring_best\046_030.png
+  - earring_best\046_031.png
+  - earring_best\046_033.png
+  - earring_best\046_034.png
+  - earring_best\046_035.png
+  - earring_best\046_036.png
+  - earring_best\046_037.png
+  - earring_best\046_039.png
+  - earring_best\046_041.png
+  - earring_best\046_042.png
+  - earring_best\046_043.png
+  - earring_best\046_044.png
+  - earring_best\046_045.png
+  - earring_best\046_046.png
+  - earring_best\046_047.png
+  - earring_best\046_048.png
+  - earring_best\046_049.png
+  - earring_best\046_051.png
+  - earring_best\046_052.png
+  - earring_best\046_054.png
+  - earring_best\046_055.png
+  - earring_best\046_060.png
+  - earring_best\046_061.png
+  - earring_best\046_062.png
+  - earring_best\046_065.png
+  - earring_best\046_066.png
+  - earring_best\046_095.png
+  - earring_best\1 (1).jpg
+  - earring_best\earring_100.jpg
+  - earring_best\earring_264.jpg
+  - earring_best\earring_308.jpg
+  - earring_best\earring_382.jpg
+  - earring_best\earring_92.jpg
+  - earring_best\earring_96.jpg
+- Group 2: 201 files; classes=earring_best, necklace; cross_class=True; distance=0–6
+  - earring_best\004_001.png
+  - earring_best\010_019.png
+  - earring_best\013_028.png
+  - earring_best\017_007.png
+  - earring_best\017_010.png
+  - earring_best\017_021.png
+  - earring_best\017_027.png
+  - earring_best\017_028.png
+  - earring_best\017_030.png
+  - earring_best\017_031.png
+  - earring_best\017_032.png
+  - earring_best\017_034.png
+  - earring_best\017_036.png
+  - earring_best\017_038.png
+  - earring_best\017_039.png
+  - earring_best\017_040.png
+  - earring_best\017_041.png
+  - earring_best\017_042.png
+  - earring_best\017_044.png
+  - earring_best\017_045.png
+  - earring_best\017_048.png
+  - earring_best\017_052.png
+  - earring_best\017_056.png
+  - earring_best\017_057.png
+  - earring_best\017_062.png
+  - earring_best\017_068.png
+  - earring_best\017_070.png
+  - earring_best\017_078.png
+  - earring_best\017_083.png
+  - earring_best\017_093.png
+  - earring_best\017_098.png
+  - earring_best\017_59.png
+  - earring_best\018_037.png
+  - earring_best\018_038.png
+  - earring_best\018_042.png
+  - earring_best\018_045.png
+  - earring_best\018_046.png
+  - earring_best\018_051.png
+  - earring_best\018_056.png
+  - earring_best\018_058.png
+  - earring_best\018_070.png
+  - earring_best\018_074.png
+  - earring_best\018_075.png
+  - earring_best\018_080.png
+  - earring_best\018_081.png
+  - earring_best\018_083.png
+  - earring_best\019_034.png
+  - earring_best\019_042.png
+  - earring_best\020_010.png
+  - earring_best\020_013.png
+  - earring_best\020_019.png
+  - earring_best\021_025.png
+  - earring_best\021_034.png
+  - earring_best\021_053.png
+  - earring_best\021_054.png
+  - earring_best\021_055.png
+  - earring_best\021_057.png
+  - earring_best\021_063.png
+  - earring_best\021_064.png
+  - earring_best\021_065.png
+  - earring_best\021_066.png
+  - earring_best\021_067.png
+  - earring_best\021_068.png
+  - earring_best\021_072.png
+  - earring_best\021_075.png
+  - earring_best\021_079.png
+  - earring_best\022_018.png
+  - earring_best\022_025.png
+  - earring_best\022_031.png
+  - earring_best\024_028.png
+  - earring_best\024_053.png
+  - earring_best\024_114.png
+  - earring_best\025_030.png
+  - earring_best\025_033.png
+  - earring_best\025_036.png
+  - earring_best\025_039.png
+  - earring_best\025_040.png
+  - earring_best\025_047.png
+  - earring_best\026_001.png
+  - earring_best\026_002.png
+  - earring_best\027_020.png
+  - earring_best\028_027.png
+  - earring_best\030_003.png
+  - earring_best\030_004.png
+  - earring_best\030_006.png
+  - earring_best\030_010.png
+  - earring_best\030_011.png
+  - earring_best\030_015.png
+  - earring_best\030_016.png
+  - earring_best\030_021.png
+  - earring_best\030_022.png
+  - earring_best\030_024.png
+  - earring_best\030_025.png
+  - earring_best\030_027.png
+  - earring_best\030_028.png
+  - earring_best\030_029.png
+  - earring_best\030_032.png
+  - earring_best\030_034.png
+  - earring_best\030_039.png
+  - earring_best\030_040.png
+  - earring_best\030_041.png
+  - earring_best\030_042.png
+  - earring_best\030_043.png
+  - earring_best\030_044.png
+  - earring_best\030_045.png
+  - earring_best\030_047.png
+  - earring_best\030_048.png
+  - earring_best\030_049.png
+  - earring_best\030_050.png
+  - earring_best\030_051.png
+  - earring_best\030_053.png
+  - earring_best\030_055.png
+  - earring_best\030_056.png
+  - earring_best\030_058.png
+  - earring_best\030_060.png
+  - earring_best\030_062.png
+  - earring_best\030_064.png
+  - earring_best\030_065.png
+  - earring_best\030_066.png
+  - earring_best\030_067.png
+  - earring_best\030_071.png
+  - earring_best\030_073.png
+  - earring_best\030_074.png
+  - earring_best\030_076.png
+  - earring_best\030_083.png
+  - earring_best\031_014.png
+  - earring_best\031_036.png
+  - earring_best\032_037.png
+  - earring_best\032_038.png
+  - earring_best\033_005.png
+  - earring_best\033_007.png
+  - earring_best\033_011.png
+  - earring_best\038_032.png
+  - earring_best\038_062.png
+  - earring_best\038_068.png
+  - earring_best\040_008.png
+  - earring_best\040_009.png
+  - earring_best\040_012.png
+  - earring_best\040_014.png
+  - earring_best\040_017.png
+  - earring_best\040_019.png
+  - earring_best\040_022.png
+  - earring_best\040_023.png
+  - earring_best\040_035.png
+  - earring_best\040_060.png
+  - earring_best\040_067.png
+  - earring_best\040_068.png
+  - earring_best\040_072.png
+  - earring_best\040_073.png
+  - earring_best\040_076.png
+  - earring_best\040_077.png
+  - earring_best\040_094.png
+  - earring_best\040_097.png
+  - earring_best\040_101.png
+  - earring_best\042_003.png
+  - earring_best\042_054.png
+  - earring_best\043_002.png
+  - earring_best\044_003.png
+  - earring_best\044_014.png
+  - earring_best\044_065.png
+  - earring_best\045_002.png
+  - earring_best\045_008.png
+  - earring_best\045_009.png
+  - earring_best\045_010.png
+  - earring_best\045_011.png
+  - earring_best\045_013.png
+  - earring_best\045_014.png
+  - earring_best\045_016.png
+  - earring_best\045_018.png
+  - earring_best\045_019.png
+  - earring_best\045_023.png
+  - earring_best\045_025.png
+  - earring_best\045_026.png
+  - earring_best\045_027.png
+  - earring_best\045_031.png
+  - earring_best\045_035.png
+  - earring_best\045_038.png
+  - earring_best\045_040.png
+  - earring_best\045_041.png
+  - earring_best\045_042.png
+  - earring_best\045_046.png
+  - earring_best\045_052.png
+  - earring_best\046_011.png
+  - earring_best\earring_106.jpg
+  - earring_best\earring_119.jpg
+  - earring_best\earring_133.jpg
+  - earring_best\earring_147.jpg
+  - earring_best\earring_160.jpg
+  - earring_best\earring_163.jpg
+  - earring_best\earring_173.jpg
+  - earring_best\earring_212.jpg
+  - earring_best\earring_3.jpg
+  - earring_best\earring_406.jpg
+  - earring_best\earring_408.jpg
+  - earring_best\earring_423.jpg
+  - earring_best\earring_431.jpg
+  - earring_best\earring_432.jpg
+  - earring_best\earring_463.jpg
+  - earring_best\images (23).jpeg
+  - earring_best\images (41).jpeg
+  - necklace\P8Y5N4GSQE6K.jpg
+- Group 3: 41 files; classes=bracelet, earring_best; cross_class=True; distance=0–6
+  - bracelet\66Z6Q4HVXVIP.jpg
+  - bracelet\7B1IKBKRKSL7.jpg
+  - bracelet\E1UNL404V9EJ.jpg
+  - bracelet\Z1WGR7EXQXRN.jpg
+  - bracelet\ZSMKA187T91S.jpg
+  - bracelet\bracelet_009.jpg
+  - bracelet\bracelet_010.jpg
+  - bracelet\bracelet_014.jpg
+  - bracelet\bracelet_018.jpg
+  - bracelet\bracelet_102.jpg
+  - bracelet\bracelet_103.jpg
+  - bracelet\bracelet_104.jpg
+  - bracelet\bracelet_105.jpg
+  - bracelet\bracelet_106.jpg
+  - bracelet\bracelet_107.jpg
+  - bracelet\bracelet_108.jpg
+  - bracelet\bracelet_109.jpg
+  - bracelet\bracelet_110.jpg
+  - bracelet\bracelet_111.jpg
+  - bracelet\bracelet_112.jpg
+  - bracelet\bracelet_114.jpg
+  - bracelet\bracelet_115.jpg
+  - bracelet\bracelet_116.jpg
+  - bracelet\bracelet_117.jpg
+  - bracelet\bracelet_118.jpg
+  - bracelet\bracelet_119.jpg
+  - bracelet\bracelet_120.jpg
+  - bracelet\bracelet_121.jpg
+  - bracelet\bracelet_136.jpg
+  - bracelet\bracelet_149.jpg
+  - bracelet\bracelet_173.jpg
+  - bracelet\bracelet_176.jpg
+  - bracelet\bracelet_180.jpg
+  - bracelet\bracelet_186.jpg
+  - bracelet\bracelet_196.jpg
+  - bracelet\bracelet_213.jpg
+  - bracelet\bracelet_227.jpg
+  - bracelet\bracelet_255.jpg
+  - earring_best\028_014.png
+  - earring_best\036_031.png
+  - earring_best\046_087.png
+- Group 4: 24 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\017_033.png
+  - earring_best\017_043.png
+  - earring_best\017_066.png
+  - earring_best\017_067.png
+  - earring_best\018_040.png
+  - earring_best\018_057.png
+  - earring_best\024_048.png
+  - earring_best\024_054.png
+  - earring_best\024_104.png
+  - earring_best\025_044.png
+  - earring_best\030_035.png
+  - earring_best\030_082.png
+  - earring_best\031_006.png
+  - earring_best\044_008.png
+  - earring_best\044_009.png
+  - earring_best\earring_122.jpg
+  - earring_best\earring_130.jpg
+  - earring_best\earring_136.jpg
+  - earring_best\earring_312.jpg
+  - earring_best\earring_395.jpg
+  - earring_best\earring_46.jpg
+  - earring_best\earring_50.jpg
+  - earring_best\earring_6.jpg
+  - earring_best\earring_76.jpg
+- Group 5: 22 files; classes=necklace, ring_best; cross_class=True; distance=2–6
+  - necklace\HDC351EIKY6P.jpg
+  - ring_best\ring_065.jpg
+  - ring_best\ring_067.jpg
+  - ring_best\ring_073.jpg
+  - ring_best\ring_080.jpg
+  - ring_best\ring_083.jpg
+  - ring_best\ring_085.jpg
+  - ring_best\ring_089.jpg
+  - ring_best\ring_091.jpg
+  - ring_best\ring_096.jpg
+  - ring_best\ring_100.jpg
+  - ring_best\ring_103.jpg
+  - ring_best\ring_116.jpg
+  - ring_best\ring_123.jpg
+  - ring_best\ring_129.jpg
+  - ring_best\ring_132.jpg
+  - ring_best\ring_134.jpg
+  - ring_best\ring_145.jpg
+  - ring_best\ring_162.jpg
+  - ring_best\ring_164.jpg
+  - ring_best\ring_176.jpg
+  - ring_best\ring_187.jpg
+- Group 6: 14 files; classes=necklace; cross_class=False; distance=0–6
+  - necklace\necklace_212.jpg
+  - necklace\necklace_214.jpg
+  - necklace\necklace_215.jpg
+  - necklace\necklace_216.jpg
+  - necklace\necklace_217.jpg
+  - necklace\necklace_218.jpg
+  - necklace\necklace_219.jpg
+  - necklace\necklace_223.jpg
+  - necklace\necklace_224.jpg
+  - necklace\necklace_225.jpg
+  - necklace\necklace_226.jpg
+  - necklace\necklace_227.jpg
+  - necklace\necklace_229.jpg
+  - necklace\necklace_237.jpg
+- Group 7: 13 files; classes=bracelet, necklace; cross_class=True; distance=2–6
+  - bracelet\IMG_5995.JPG
+  - bracelet\bracelet_028.jpg
+  - bracelet\bracelet_042.jpg
+  - bracelet\bracelet_100.jpg
+  - bracelet\bracelet_113.jpg
+  - necklace\ARUR3T9KJ1SK.jpg
+  - necklace\GVV75ZZ1DKSA.jpg
+  - necklace\JA7J7A85A0UV.jpg
+  - necklace\KGIA7QADG5RI.jpg
+  - necklace\NS1NO6GQMC4D.jpg
+  - necklace\P9FJTOV9AK42.jpg
+  - necklace\necklace_135.jpg
+  - necklace\necklace_176.jpg
+- Group 8: 13 files; classes=earring_best; cross_class=False; distance=2–6
+  - earring_best\010_017.png
+  - earring_best\018_027.png
+  - earring_best\022_020.png
+  - earring_best\024_003.png
+  - earring_best\024_025.png
+  - earring_best\024_031.png
+  - earring_best\024_034.png
+  - earring_best\024_046.png
+  - earring_best\024_051.png
+  - earring_best\024_071.png
+  - earring_best\039_025.png
+  - earring_best\039_033.png
+  - earring_best\earring_54.jpg
+- Group 9: 11 files; classes=bracelet, necklace; cross_class=True; distance=2–6
+  - bracelet\S9J4YH41HM2K.jpg
+  - necklace\7SO8EEU6FTEZ.jpg
+  - necklace\AHCSZ03LGE1E.jpg
+  - necklace\BGHZRXUR7I0Y.jpg
+  - necklace\BVZ4WR9YLOQG.jpg
+  - necklace\KT98NIMGDCYC.jpg
+  - necklace\MKC67M50OHMD.jpg
+  - necklace\SEW2IWG0APPV.jpg
+  - necklace\VNC52R9H84YR.jpg
+  - necklace\X41QS437PVQO.jpg
+  - necklace\YHEV5MZR80V4.jpg
+- Group 10: 10 files; classes=ring_best; cross_class=False; distance=0–6
+  - ring_best\ring_066.jpg
+  - ring_best\ring_087.jpg
+  - ring_best\ring_104.jpg
+  - ring_best\ring_106.jpg
+  - ring_best\ring_117.jpg
+  - ring_best\ring_131.jpg
+  - ring_best\ring_139.jpg
+  - ring_best\ring_153.jpg
+  - ring_best\ring_165.jpg
+  - ring_best\ring_189.jpg
+- Group 11: 8 files; classes=bracelet; cross_class=False; distance=4–6
+  - bracelet\bracelet_021.jpg
+  - bracelet\bracelet_046.jpg
+  - bracelet\bracelet_052.jpg
+  - bracelet\bracelet_054.jpg
+  - bracelet\bracelet_063.jpg
+  - bracelet\bracelet_073.jpg
+  - bracelet\bracelet_074.jpg
+  - bracelet\bracelet_218.jpg
+- Group 12: 8 files; classes=necklace; cross_class=False; distance=2–6
+  - necklace\6SE79YMZ1L10.jpg
+  - necklace\GI93X1XFXU5Y.jpg
+  - necklace\MR06HMY05J4O.jpg
+  - necklace\necklace_104.jpg
+  - necklace\necklace_136.jpg
+  - necklace\necklace_137.jpg
+  - necklace\necklace_147.jpg
+  - necklace\necklace_7.jpg
+- Group 13: 7 files; classes=bracelet; cross_class=False; distance=2–6
+  - bracelet\bracelet_048.jpg
+  - bracelet\bracelet_058.jpg
+  - bracelet\bracelet_072.jpg
+  - bracelet\bracelet_076.jpg
+  - bracelet\bracelet_077.jpg
+  - bracelet\bracelet_256.jpg
+  - bracelet\bracelet_264.jpg
+- Group 14: 7 files; classes=earring_best; cross_class=False; distance=2–6
+  - earring_best\021_026.png
+  - earring_best\021_028.png
+  - earring_best\021_037.png
+  - earring_best\021_043.png
+  - earring_best\021_047.png
+  - earring_best\044_036.png
+  - earring_best\045_030.png
+- Group 15: 7 files; classes=necklace; cross_class=False; distance=0–6
+  - necklace\necklace_55.jpg
+  - necklace\necklace_56.jpg
+  - necklace\necklace_57.jpg
+  - necklace\necklace_58.jpg
+  - necklace\necklace_59.jpg
+  - necklace\necklace_60.jpg
+  - necklace\necklace_68.jpg
+- Group 16: 7 files; classes=ring_best; cross_class=False; distance=2–6
+  - ring_best\ring_086.jpg
+  - ring_best\ring_088.jpg
+  - ring_best\ring_146.jpg
+  - ring_best\ring_152.jpg
+  - ring_best\ring_155.jpg
+  - ring_best\ring_156.jpg
+  - ring_best\ring_172.jpg
+- Group 17: 6 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\004_016.png
+  - earring_best\024_093.png
+  - earring_best\024_097.png
+  - earring_best\024_120.png
+  - earring_best\025_054.png
+  - earring_best\earring_274.jpg
+- Group 18: 6 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\017_094.png
+  - earring_best\017_097.png
+  - earring_best\021_062.png
+  - earring_best\040_091.png
+  - earring_best\040_095.png
+  - earring_best\040_099.png
+- Group 19: 5 files; classes=bracelet; cross_class=False; distance=4–6
+  - bracelet\bracelet_045.jpg
+  - bracelet\bracelet_093.jpg
+  - bracelet\bracelet_099.jpg
+  - bracelet\bracelet_210.jpg
+  - bracelet\bracelet_211.jpg
+- Group 20: 5 files; classes=bracelet; cross_class=False; distance=0–6
+  - bracelet\bracelet_133.jpg
+  - bracelet\bracelet_142.jpg
+  - bracelet\bracelet_147.jpg
+  - bracelet\bracelet_150.jpg
+  - bracelet\bracelet_166.jpg
+- Group 21: 5 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\017_006.png
+  - earring_best\018_008.png
+  - earring_best\018_010.png
+  - earring_best\018_011.png
+  - earring_best\018_013.png
+- Group 22: 5 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\018_024.png
+  - earring_best\018_026.png
+  - earring_best\023_027.png
+  - earring_best\030_005.png
+  - earring_best\044_019.png
+- Group 23: 5 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\027_047.png
+  - earring_best\036_006.png
+  - earring_best\036_012.png
+  - earring_best\038_061.png
+  - earring_best\046_057.png
+- Group 24: 5 files; classes=earring_best; cross_class=False; distance=0–6
+  - earring_best\UE00012-YG0000_1_lar.jpg
+  - earring_best\earring_322.jpg
+  - earring_best\earring_324.jpg
+  - earring_best\earring_421.jpg
+  - earring_best\earring_425.jpg
+- Group 25: 4 files; classes=bracelet; cross_class=False; distance=4–6
+  - bracelet\0X8F0EH1FXYE.jpg
+  - bracelet\5GNWOHTQS771.jpg
+  - bracelet\AAQSFJZOELZ8.jpg
+  - bracelet\EUETWO4ZFI1P.jpg
+- Group 26: 4 files; classes=bracelet, necklace; cross_class=True; distance=4–6
+  - bracelet\FHTEGQ0QE6GO.jpg
+  - necklace\617CIVUG5Y7T.jpg
+  - necklace\LZTFB5F7THBK.jpg
+  - necklace\PPQ5I9VK0U9D.jpg
+- Group 27: 4 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\004_017.png
+  - earring_best\004_020.png
+  - earring_best\011_029.png
+  - earring_best\011_030.png
+- Group 28: 4 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\004_024.png
+  - earring_best\004_026.png
+  - earring_best\004_027.png
+  - earring_best\004_028.png
+- Group 29: 4 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\010_023.png
+  - earring_best\021_027.png
+  - earring_best\021_045.png
+  - earring_best\030_054.png
+- Group 30: 4 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\014_001.png
+  - earring_best\016_010.png
+  - earring_best\026_059.png
+  - earring_best\037_004.png
+- Group 31: 4 files; classes=earring_best; cross_class=False; distance=0–6
+  - earring_best\016_009.png
+  - earring_best\026_037.png
+  - earring_best\61pAcjkFtoL._UY500_ (1).jpg
+  - earring_best\61pAcjkFtoL._UY500_.jpg
+- Group 32: 4 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\017_009.png
+  - earring_best\017_053.png
+  - earring_best\040_015.png
+  - earring_best\045_032.png
+- Group 33: 4 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\024_077.png
+  - earring_best\030_092.png
+  - earring_best\030_094.png
+  - earring_best\030_096.png
+- Group 34: 4 files; classes=earring_best, necklace; cross_class=True; distance=6–6
+  - earring_best\025_038.png
+  - earring_best\039_016.png
+  - earring_best\039_023.png
+  - necklace\9OQ1W7N6N673.jpg
+- Group 35: 4 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\026_066.png
+  - earring_best\028_037.png
+  - earring_best\046_094.png
+  - earring_best\princess-cut-halo-diamond-earring-with-ruby-in-14K-yellow-gold-FDOEAR40538GRUDR-NL-YG.jpg
+- Group 36: 4 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_060.png
+  - earring_best\037_010.png
+  - earring_best\046_027.png
+  - earring_best\earring_233.jpg
+- Group 37: 4 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\037_020.png
+  - earring_best\037_021.png
+  - earring_best\046_070.png
+  - earring_best\046_073.png
+- Group 38: 4 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\JE04410-YGP9OS_1_lar.jpg
+  - earring_best\earring_197.jpg
+  - earring_best\earring_211.jpg
+  - earring_best\earring_342.jpg
+- Group 39: 4 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_2.jpg
+  - earring_best\earring_25.jpg
+  - earring_best\earring_309.jpg
+  - earring_best\earring_55.jpg
+- Group 40: 4 files; classes=necklace; cross_class=False; distance=4–6
+  - necklace\necklace_107.jpg
+  - necklace\necklace_126.jpg
+  - necklace\necklace_145.jpg
+  - necklace\necklace_207.jpg
+- Group 41: 4 files; classes=necklace; cross_class=False; distance=0–6
+  - necklace\necklace_61.jpg
+  - necklace\necklace_62.jpg
+  - necklace\necklace_64.jpg
+  - necklace\necklace_66.jpg
+- Group 42: 4 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_91.jpg
+  - necklace\necklace_93.jpg
+  - necklace\necklace_95.jpg
+  - necklace\necklace_96.jpg
+- Group 43: 4 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_118.jpg
+  - ring_best\ring_133.jpg
+  - ring_best\ring_166.jpg
+  - ring_best\ring_168.jpg
+- Group 44: 3 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_004.jpg
+  - bracelet\bracelet_015.jpg
+  - bracelet\bracelet_158.jpg
+- Group 45: 3 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_024.jpg
+  - bracelet\bracelet_059.jpg
+  - bracelet\bracelet_151.jpg
+- Group 46: 3 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_067.jpg
+  - bracelet\bracelet_097.jpg
+  - bracelet\bracelet_292.jpg
+- Group 47: 3 files; classes=bracelet, necklace; cross_class=True; distance=4–6
+  - bracelet\bracelet_130.jpg
+  - necklace\necklace_102.jpg
+  - necklace\necklace_125.jpg
+- Group 48: 3 files; classes=bracelet; cross_class=False; distance=4–6
+  - bracelet\bracelet_138.jpg
+  - bracelet\bracelet_141.jpg
+  - bracelet\bracelet_144.jpg
+- Group 49: 3 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_285.jpg
+  - bracelet\bracelet_295.jpg
+  - bracelet\bracelet_304.jpg
+- Group 50: 3 files; classes=bracelet, earring_best; cross_class=True; distance=6–6
+  - bracelet\d3d801008a90f354231c3f57544c9328b26269f8.jpg
+  - earring_best\029_013.png
+  - earring_best\029_022.png
+- Group 51: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\001_005.png
+  - earring_best\002_014.png
+  - earring_best\024_095.png
+- Group 52: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\002_020.png
+  - earring_best\002_027.png
+  - earring_best\002_028.png
+- Group 53: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\004_033.png
+  - earring_best\024_084.png
+  - earring_best\039_034.png
+- Group 54: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\007_018.png
+  - earring_best\032_044.png
+  - earring_best\033_010.png
+- Group 55: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\010_026.png
+  - earring_best\016_004.png
+  - earring_best\044_039.png
+- Group 56: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\012_002.png
+  - earring_best\012_016.png
+  - earring_best\029_070.png
+- Group 57: 3 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\013_027.png
+  - earring_best\042_051.png
+  - earring_best\042_052.png
+- Group 58: 3 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\014_007.png
+  - earring_best\014_008.png
+  - earring_best\014_010.png
+- Group 59: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\016_005.png
+  - earring_best\026_049.png
+  - earring_best\earring_443.jpg
+- Group 60: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\016_029.png
+  - earring_best\042_010.png
+  - earring_best\042_057.png
+- Group 61: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\017_012.png
+  - earring_best\030_057.png
+  - earring_best\030_072.png
+- Group 62: 3 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\017_014.png
+  - earring_best\018_028.png
+  - earring_best\044_034.png
+- Group 63: 3 files; classes=earring_best; cross_class=False; distance=2–4
+  - earring_best\018_006.png
+  - earring_best\024_010.png
+  - earring_best\031_001.png
+- Group 64: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\019_051.png
+  - earring_best\019_053.png
+  - earring_best\045_066.png
+- Group 65: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\020_004.png
+  - earring_best\020_009.png
+  - earring_best\045_036.png
+- Group 66: 3 files; classes=earring_best; cross_class=False; distance=2–6
+  - earring_best\020_012.png
+  - earring_best\030_079.png
+  - earring_best\030_080.png
+- Group 67: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\021_071.png
+  - earring_best\021_073.png
+  - earring_best\042_044.png
+- Group 68: 3 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\022_024.png
+  - earring_best\022_027.png
+  - earring_best\042_022.png
+- Group 69: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\022_060.png
+  - earring_best\040_100.png
+  - earring_best\ER1069-Mizana-Jewelry.jpg
+- Group 70: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\024_055.png
+  - earring_best\039_027.png
+  - earring_best\earring_294.jpg
+- Group 71: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\024_078.png
+  - earring_best\040_024.png
+  - earring_best\045_051.png
+- Group 72: 3 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\026_055.png
+  - earring_best\027_022.png
+  - earring_best\029_037.png
+- Group 73: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_044.png
+  - earring_best\033_013.png
+  - earring_best\035_010.png
+- Group 74: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_079.png
+  - earring_best\027_081.png
+  - earring_best\027_110.png
+- Group 75: 3 files; classes=earring_best; cross_class=False; distance=2–6
+  - earring_best\029_076.png
+  - earring_best\029_078.png
+  - earring_best\029_079.png
+- Group 76: 3 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\038_005.png
+  - earring_best\042_053.png
+  - earring_best\044_056.png
+- Group 77: 3 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\038_014.png
+  - earring_best\038_021.png
+  - earring_best\038_024.png
+- Group 78: 3 files; classes=earring_best; cross_class=False; distance=0–6
+  - earring_best\040_041.png
+  - earring_best\040_082.png
+  - earring_best\043_031.png
+- Group 79: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\041_038.png
+  - earring_best\044_040.png
+  - earring_best\044_059.png
+- Group 80: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\046_077.png
+  - earring_best\046_081.png
+  - earring_best\046_084.png
+- Group 81: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_17.jpg
+  - earring_best\earring_36.jpg
+  - earring_best\earring_70.jpg
+- Group 82: 3 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\earring_93.jpg
+  - earring_best\earring_94.jpg
+  - earring_best\earring_95.jpg
+- Group 83: 3 files; classes=earring_best, necklace; cross_class=True; distance=0–6
+  - earring_best\images (90).jpeg
+  - earring_best\images (93).jpeg
+  - necklace\RXALK577J7GI.jpg
+- Group 84: 3 files; classes=necklace; cross_class=False; distance=4–6
+  - necklace\L1O528YKKU1W.jpg
+  - necklace\necklace_30.jpg
+  - necklace\necklace_31.jpg
+- Group 85: 3 files; classes=necklace; cross_class=False; distance=0–2
+  - necklace\NM6BBE8CX8YE.jpg
+  - necklace\TCQAEJWM3IE9.jpg
+  - necklace\XC80ICY9WJ8Q.jpg
+- Group 86: 3 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\OMSZI1IEY4Z6.jpg
+  - necklace\necklace_139.jpg
+  - necklace\necklace_185.jpg
+- Group 87: 3 files; classes=necklace; cross_class=False; distance=2–6
+  - necklace\necklace_14.jpg
+  - necklace\necklace_15.jpg
+  - necklace\necklace_16.jpg
+- Group 88: 3 files; classes=necklace; cross_class=False; distance=2–6
+  - necklace\necklace_221.jpg
+  - necklace\necklace_231.jpg
+  - necklace\necklace_232.jpg
+- Group 89: 3 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_241.jpg
+  - necklace\necklace_246.jpg
+  - necklace\necklace_247.jpg
+- Group 90: 3 files; classes=necklace; cross_class=False; distance=4–6
+  - necklace\necklace_285.jpg
+  - necklace\necklace_304.jpg
+  - necklace\necklace_314.jpg
+- Group 91: 3 files; classes=necklace; cross_class=False; distance=4–6
+  - necklace\necklace_316.jpg
+  - necklace\necklace_319.jpg
+  - necklace\necklace_320.jpg
+- Group 92: 3 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_084.jpg
+  - ring_best\ring_181.jpg
+  - ring_best\ring_185.jpg
+- Group 93: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\43DOTJXD75JE.jpg
+  - bracelet\bracelet_194.jpg
+- Group 94: 2 files; classes=bracelet, earring_best; cross_class=True; distance=6–6
+  - bracelet\53WY8QXI5ULW.jpg
+  - earring_best\046_082.png
+- Group 95: 2 files; classes=bracelet, earring_best; cross_class=True; distance=6–6
+  - bracelet\5J7UTHWI5OQS.jpg
+  - earring_best\002_019.png
+- Group 96: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\98O5L98RN2KN.jpg
+  - bracelet\QJJSQ47YGDJ2.jpg
+- Group 97: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\BRCKV9YQGDWI.jpg
+  - bracelet\IMG_5963.JPG
+- Group 98: 2 files; classes=bracelet, necklace; cross_class=True; distance=6–6
+  - bracelet\E6OW3GW19GPC.jpg
+  - necklace\F4NQTFUYD5Z0.jpg
+- Group 99: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\EFFLGSR80L22.jpg
+  - bracelet\bracelet_101.jpg
+- Group 100: 2 files; classes=bracelet; cross_class=False; distance=2–2
+  - bracelet\HFC8YYV9CRHF.jpg
+  - bracelet\YIJX2H4AE3YL.jpg
+- Group 101: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\IMG_5993.JPG
+  - bracelet\bracelet-socotra.jpg
+- Group 102: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\K5YHA2WPNAJ8.jpg
+  - bracelet\OAXZ7Z86VHVH.jpg
+- Group 103: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\SF465W97AC9V.jpg
+  - bracelet\bracelet_217.jpg
+- Group 104: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_001.jpg
+  - bracelet\bracelet_195.jpg
+- Group 105: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_007.jpg
+  - bracelet\bracelet_154.jpg
+- Group 106: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_023.jpg
+  - bracelet\bracelet_068.jpg
+- Group 107: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_026.jpg
+  - bracelet\bracelet_080.jpg
+- Group 108: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_031.jpg
+  - bracelet\bracelet_260.jpg
+- Group 109: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_032.jpg
+  - bracelet\bracelet_049.jpg
+- Group 110: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_043.jpg
+  - bracelet\bracelet_157.jpg
+- Group 111: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_064.jpg
+  - bracelet\bracelet_179.jpg
+- Group 112: 2 files; classes=bracelet, necklace; cross_class=True; distance=6–6
+  - bracelet\bracelet_198.jpg
+  - necklace\necklace_161.jpg
+- Group 113: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_222.jpg
+  - bracelet\bracelet_231.jpg
+- Group 114: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_302.jpg
+  - bracelet\bracelet_307.jpg
+- Group 115: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\001_017.png
+  - earring_best\011_042.png
+- Group 116: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\003_002.png
+  - earring_best\003_004.png
+- Group 117: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\003_040.png
+  - earring_best\004_035.png
+- Group 118: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\003_052.png
+  - earring_best\016_022.png
+- Group 119: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\003_054.png
+  - earring_best\003_057.png
+- Group 120: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\004_007.png
+  - earring_best\007_025.png
+- Group 121: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\004_036.png
+  - earring_best\013_018.png
+- Group 122: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\005_024.png
+  - earring_best\046_076.png
+- Group 123: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\006_007.png
+  - earring_best\007_030.png
+- Group 124: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\008_042.png
+  - earring_best\012_001.png
+- Group 125: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\009_014.png
+  - earring_best\027_091.png
+- Group 126: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\009_036.png
+  - earring_best\029_074.png
+- Group 127: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\010_002.png
+  - earring_best\010_012.png
+- Group 128: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\010_016.png
+  - earring_best\earring_281.jpg
+- Group 129: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\012_021.png
+  - earring_best\034_021.png
+- Group 130: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\013_020.png
+  - earring_best\013_022.png
+- Group 131: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\014_002.png
+  - earring_best\014_003.png
+- Group 132: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\014_013.png
+  - earring_best\014_016.png
+- Group 133: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\014_014.png
+  - earring_best\014_015.png
+- Group 134: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\014_019.png
+  - earring_best\014_020.png
+- Group 135: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\014_028.png
+  - earring_best\014_029.png
+- Group 136: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\015_016.png
+  - earring_best\1398.Jpg
+- Group 137: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\016_002.png
+  - earring_best\032_042.png
+- Group 138: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\016_020.png
+  - earring_best\042_007.png
+- Group 139: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\017_008.png
+  - earring_best\017_047.png
+- Group 140: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_023.png
+  - earring_best\033_001.png
+- Group 141: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\017_024.png
+  - earring_best\030_052.png
+- Group 142: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\017_073.png
+  - earring_best\017_081.png
+- Group 143: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\018_017.png
+  - earring_best\024_016.png
+- Group 144: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\018_025.png
+  - earring_best\024_038.png
+- Group 145: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\018_044.png
+  - earring_best\031_007.png
+- Group 146: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\018_069.png
+  - earring_best\024_115.png
+- Group 147: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\019_019.png
+  - earring_best\032_046.png
+- Group 148: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\019_060.png
+  - earring_best\031_039.png
+- Group 149: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\020_003.png
+  - earring_best\044_011.png
+- Group 150: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\020_015.png
+  - earring_best\028_056.png
+- Group 151: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\020_018.png
+  - earring_best\024_070.png
+- Group 152: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\021_002.png
+  - earring_best\021_078.png
+- Group 153: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\021_007.png
+  - earring_best\022_002.png
+- Group 154: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\021_020.png
+  - earring_best\040_042.png
+- Group 155: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\021_041.png
+  - earring_best\earring_86.jpg
+- Group 156: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\021_069.png
+  - earring_best\040_049.png
+- Group 157: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\022_005.png
+  - earring_best\022_056.png
+- Group 158: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\022_011.png
+  - earring_best\022_046.png
+- Group 159: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\022_015.png
+  - earring_best\039_020.png
+- Group 160: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\022_022.png
+  - earring_best\022_050.png
+- Group 161: 2 files; classes=earring_best, ring_best; cross_class=True; distance=6–6
+  - earring_best\022_033.png
+  - ring_best\ring_063.jpg
+- Group 162: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\022_055.png
+  - earring_best\031_017.png
+- Group 163: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\023_035.png
+  - earring_best\earring_262.jpg
+- Group 164: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\023_041.png
+  - earring_best\035_003.png
+- Group 165: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\024_036.png
+  - earring_best\earring_383.jpg
+- Group 166: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\024_062.png
+  - earring_best\024_063.png
+- Group 167: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\024_082.png
+  - earring_best\024_083.png
+- Group 168: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_008.png
+  - earring_best\025_009.png
+- Group 169: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_010.png
+  - earring_best\025_011.png
+- Group 170: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_012.png
+  - earring_best\025_013.png
+- Group 171: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_014.png
+  - earring_best\025_015.png
+- Group 172: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_042.png
+  - earring_best\025_043.png
+- Group 173: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\025_046.png
+  - earring_best\earring_407.jpg
+- Group 174: 2 files; classes=earring_best, necklace; cross_class=True; distance=6–6
+  - earring_best\025_069.png
+  - necklace\2L56SAL3QEZQ.jpg
+- Group 175: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\026_005.png
+  - earring_best\032_027.png
+- Group 176: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\026_018.png
+  - earring_best\046_003.png
+- Group 177: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\026_038.png
+  - earring_best\037_005.png
+- Group 178: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\026_060.png
+  - earring_best\046_024.png
+- Group 179: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\026_073.png
+  - earring_best\036_034.png
+- Group 180: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_004.png
+  - earring_best\027_007.png
+- Group 181: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_014.png
+  - earring_best\027_016.png
+- Group 182: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_045.png
+  - earring_best\027_106.png
+- Group 183: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_072.png
+  - earring_best\033_035.png
+- Group 184: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_077.png
+  - earring_best\036_025.png
+- Group 185: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_085.png
+  - earring_best\037_018.png
+- Group 186: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_086.png
+  - earring_best\027_095.png
+- Group 187: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_103.png
+  - earring_best\032_056.png
+- Group 188: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\027_115.png
+  - earring_best\029_054.png
+- Group 189: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\028_029.png
+  - earring_best\034_003.png
+- Group 190: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\029_001.png
+  - earring_best\029_047.png
+- Group 191: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\029_073.png
+  - earring_best\046_096.png
+- Group 192: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\030_007.png
+  - earring_best\153372934957324276-youbella-goldplated-moti-fancy-partywear-jhumka.jpg
+- Group 193: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\030_023.png
+  - earring_best\032_036.png
+- Group 194: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\031_020.png
+  - earring_best\039_046.png
+- Group 195: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\032_008.png
+  - earring_best\032_010.png
+- Group 196: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\032_019.png
+  - earring_best\032_058.png
+- Group 197: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\033_019.png
+  - earring_best\033_024.png
+- Group 198: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\037_007.png
+  - earring_best\045_028.png
+- Group 199: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\038_012.png
+  - earring_best\stylish-earrings-by-kaara-san203-large_7e79aaf7b7df7c443e89db3c1b96bac1.jpg
+- Group 200: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\038_018.png
+  - earring_best\038_026.png
+- Group 201: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_002.png
+  - earring_best\041_012.png
+- Group 202: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_006.png
+  - earring_best\039_007.png
+- Group 203: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_008.png
+  - earring_best\039_009.png
+- Group 204: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_010.png
+  - earring_best\039_011.png
+- Group 205: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_012.png
+  - earring_best\039_013.png
+- Group 206: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\039_029.png
+  - earring_best\earring_456.jpg
+- Group 207: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_035.png
+  - earring_best\039_036.png
+- Group 208: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\039_055.png
+  - earring_best\044_057.png
+- Group 209: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\040_010.png
+  - earring_best\045_020.png
+- Group 210: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\040_069.png
+  - earring_best\041_010.png
+- Group 211: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\040_103.png
+  - earring_best\earring_273.jpg
+- Group 212: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\041_005.png
+  - earring_best\041_006.png
+- Group 213: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\041_019.png
+  - earring_best\044_025.png
+- Group 214: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\042_011.png
+  - earring_best\042_040.png
+- Group 215: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\044_005.png
+  - earring_best\earring_22.jpg
+- Group 216: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\044_029.png
+  - earring_best\044_030.png
+- Group 217: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\044_046.png
+  - earring_best\044_050.png
+- Group 218: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\044_048.png
+  - earring_best\044_051.png
+- Group 219: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\044_058.png
+  - earring_best\044_060.png
+- Group 220: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring (1).jpg
+  - earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring.jpg
+- Group 221: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\41OBUc2qfRL._UY395_.jpg
+  - earring_best\earring_13.jpg
+- Group 222: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\57597_main.jpeg
+  - earring_best\images (48).jpeg
+- Group 223: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\61TqDlj3i6L._UY395_.jpg
+  - earring_best\earring_343.jpg
+- Group 224: 2 files; classes=earring_best, necklace; cross_class=True; distance=4–4
+  - earring_best\CFE0686_D.jpg
+  - necklace\necklace_205.jpg
+- Group 225: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\JE03505-YGP900_1_lar.jpg
+  - earring_best\earring_241.jpg
+- Group 226: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\JE03706-YGP900_1_lar.jpg
+  - earring_best\earring_78.jpg
+- Group 227: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\NMPALMX_mz.jpg
+  - earring_best\images (49).jpeg
+- Group 228: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\UE00018-YG0000_1_lar.jpg
+  - earring_best\earring_326.jpg
+- Group 229: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_109.jpg
+  - earring_best\earring_427.jpg
+- Group 230: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_113.jpg
+  - earring_best\earring_318.jpg
+- Group 231: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_126.jpg
+  - earring_best\earring_140.jpg
+- Group 232: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_138.jpg
+  - earring_best\earring_267.jpg
+- Group 233: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_141.jpg
+  - earring_best\earring_171.jpg
+- Group 234: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\earring_142.jpg
+  - earring_best\earring_144.jpg
+- Group 235: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_146.jpg
+  - earring_best\earring_61.jpg
+- Group 236: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_178.jpg
+  - earring_best\earring_228.jpg
+- Group 237: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_202.jpg
+  - earring_best\earring_209.jpg
+- Group 238: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\earring_257.jpg
+  - earring_best\earring_258.jpg
+- Group 239: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_285.jpg
+  - earring_best\earring_286.jpg
+- Group 240: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\earring_369.jpg
+  - earring_best\images (4).jpeg
+- Group 241: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_374.jpg
+  - earring_best\earring_375.jpg
+- Group 242: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\earring_378.jpg
+  - earring_best\images (3).jpeg
+- Group 243: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_384.jpg
+  - earring_best\earring_398.jpg
+- Group 244: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_49.jpg
+  - earring_best\earring_9.jpg
+- Group 245: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e (1).jpg
+  - earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e.jpg
+- Group 246: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\2KCB0164E0WZ.jpg
+  - necklace\necklace_108.jpg
+- Group 247: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\8BDAS0ZPMTWX.jpg
+  - necklace\necklace_191.jpg
+- Group 248: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\8IACKSIP2ZQ7.jpg
+  - necklace\CRKMYDSH5DW2.jpg
+- Group 249: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\A86B0SBIPBET.jpg
+  - necklace\LXE9TVUVMDYI.jpg
+- Group 250: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\BW8Q7QW5DDQL.jpg
+  - necklace\YISHVTEXJ9VJ.jpg
+- Group 251: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\CH01IVURU3DA.jpg
+  - necklace\PFCAOQEOYB3C.jpg
+- Group 252: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\DRB65CCNAYW1.jpg
+  - necklace\necklace_195.jpg
+- Group 253: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\EPL0QTEDN8UZ.jpg
+  - necklace\necklace_138.jpg
+- Group 254: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\L7QNYUL3Q9MS.jpg
+  - necklace\necklace_6.jpg
+- Group 255: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\QBN3RCDOG4IG.jpg
+  - necklace\necklace_98.jpg
+- Group 256: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_18.jpg
+  - necklace\necklace_20.jpg
+- Group 257: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_203.jpg
+  - necklace\necklace_204.jpg
+- Group 258: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_21.jpg
+  - necklace\necklace_22.jpg
+- Group 259: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\necklace_233.jpg
+  - necklace\necklace_234.jpg
+- Group 260: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_239.jpg
+  - necklace\necklace_244.jpg
+- Group 261: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_240.jpg
+  - necklace\necklace_243.jpg
+- Group 262: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_25.jpg
+  - necklace\necklace_26.jpg
+- Group 263: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_256.jpg
+  - necklace\necklace_263.jpg
+- Group 264: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_257.jpg
+  - necklace\necklace_259.jpg
+- Group 265: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_258.jpg
+  - necklace\necklace_262.jpg
+- Group 266: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_264.jpg
+  - necklace\necklace_267.jpg
+- Group 267: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_27.jpg
+  - necklace\necklace_28.jpg
+- Group 268: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\necklace_271.jpg
+  - necklace\necklace_275.jpg
+- Group 269: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_272.jpg
+  - necklace\necklace_313.jpg
+- Group 270: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\necklace_273.jpg
+  - necklace\necklace_279.jpg
+- Group 271: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_276.jpg
+  - necklace\necklace_278.jpg
+- Group 272: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_286.jpg
+  - necklace\necklace_292.jpg
+- Group 273: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_294.jpg
+  - necklace\necklace_302.jpg
+- Group 274: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_298.jpg
+  - necklace\necklace_305.jpg
+- Group 275: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_317.jpg
+  - necklace\necklace_318.jpg
+- Group 276: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_36.jpg
+  - necklace\necklace_37.jpg
+- Group 277: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\necklace_38.jpg
+  - necklace\necklace_41.jpg
+- Group 278: 2 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_041.jpg
+  - ring_best\ring_042.jpg
+- Group 279: 2 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_058.jpg
+  - ring_best\ring_060.jpg
+- Group 280: 2 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_074.jpg
+  - ring_best\ring_147.jpg
+- Group 281: 2 files; classes=ring_best; cross_class=False; distance=4–4
+  - ring_best\ring_078.jpg
+  - ring_best\ring_079.jpg
+- Group 282: 2 files; classes=ring_best; cross_class=False; distance=4–4
+  - ring_best\ring_105.jpg
+  - ring_best\ring_154.jpg
+- Group 283: 2 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_108.jpg
+  - ring_best\ring_121.jpg
+- Group 284: 2 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_124.jpg
+  - ring_best\ring_193.jpg
+#### Hamming threshold ≤ 8
+- Group 1: 1191 files; classes=bracelet, earring_best, necklace, ring_best; cross_class=True; distance=0–8
+  - bracelet\43DOTJXD75JE.jpg
+  - bracelet\66Z6Q4HVXVIP.jpg
+  - bracelet\7B1IKBKRKSL7.jpg
+  - bracelet\ACVMPAVSWE5J.jpg
+  - bracelet\CM22SVEL9601.jpg
+  - bracelet\DDMN43YD8J0H.jpg
+  - bracelet\DN8I4557B6K8.jpg
+  - bracelet\E1UNL404V9EJ.jpg
+  - bracelet\EJSYRPEBFVN7.jpg
+  - bracelet\FUGF0W3ROIYF.jpg
+  - bracelet\HGUDWC52JMI7.jpg
+  - bracelet\IMG_5993.JPG
+  - bracelet\KJZYPOJBZBJA.jpg
+  - bracelet\N6O9UDLGO63U.jpg
+  - bracelet\SF465W97AC9V.jpg
+  - bracelet\SJQVPXUVAYVM.jpg
+  - bracelet\Z1WGR7EXQXRN.jpg
+  - bracelet\ZSMKA187T91S.jpg
+  - bracelet\bracelet-socotra.jpg
+  - bracelet\bracelet_003.jpg
+  - bracelet\bracelet_009.jpg
+  - bracelet\bracelet_010.jpg
+  - bracelet\bracelet_014.jpg
+  - bracelet\bracelet_018.jpg
+  - bracelet\bracelet_022.jpg
+  - bracelet\bracelet_024.jpg
+  - bracelet\bracelet_026.jpg
+  - bracelet\bracelet_032.jpg
+  - bracelet\bracelet_036.jpg
+  - bracelet\bracelet_041.jpg
+  - bracelet\bracelet_048.jpg
+  - bracelet\bracelet_049.jpg
+  - bracelet\bracelet_053.jpg
+  - bracelet\bracelet_058.jpg
+  - bracelet\bracelet_059.jpg
+  - bracelet\bracelet_071.jpg
+  - bracelet\bracelet_072.jpg
+  - bracelet\bracelet_076.jpg
+  - bracelet\bracelet_077.jpg
+  - bracelet\bracelet_080.jpg
+  - bracelet\bracelet_087.jpg
+  - bracelet\bracelet_095.jpg
+  - bracelet\bracelet_102.jpg
+  - bracelet\bracelet_103.jpg
+  - bracelet\bracelet_104.jpg
+  - bracelet\bracelet_105.jpg
+  - bracelet\bracelet_106.jpg
+  - bracelet\bracelet_107.jpg
+  - bracelet\bracelet_108.jpg
+  - bracelet\bracelet_109.jpg
+  - bracelet\bracelet_110.jpg
+  - bracelet\bracelet_111.jpg
+  - bracelet\bracelet_112.jpg
+  - bracelet\bracelet_114.jpg
+  - bracelet\bracelet_115.jpg
+  - bracelet\bracelet_116.jpg
+  - bracelet\bracelet_117.jpg
+  - bracelet\bracelet_118.jpg
+  - bracelet\bracelet_119.jpg
+  - bracelet\bracelet_120.jpg
+  - bracelet\bracelet_121.jpg
+  - bracelet\bracelet_136.jpg
+  - bracelet\bracelet_148.jpg
+  - bracelet\bracelet_149.jpg
+  - bracelet\bracelet_151.jpg
+  - bracelet\bracelet_173.jpg
+  - bracelet\bracelet_176.jpg
+  - bracelet\bracelet_178.jpg
+  - bracelet\bracelet_180.jpg
+  - bracelet\bracelet_186.jpg
+  - bracelet\bracelet_192.jpg
+  - bracelet\bracelet_194.jpg
+  - bracelet\bracelet_196.jpg
+  - bracelet\bracelet_213.jpg
+  - bracelet\bracelet_216.jpg
+  - bracelet\bracelet_217.jpg
+  - bracelet\bracelet_227.jpg
+  - bracelet\bracelet_230.jpg
+  - bracelet\bracelet_232.jpg
+  - bracelet\bracelet_254.jpg
+  - bracelet\bracelet_255.jpg
+  - bracelet\bracelet_256.jpg
+  - bracelet\bracelet_264.jpg
+  - bracelet\bracelet_276.jpg
+  - bracelet\bracelet_281.jpg
+  - bracelet\d3d801008a90f354231c3f57544c9328b26269f8.jpg
+  - earring_best\001_018.png
+  - earring_best\001_021.png
+  - earring_best\002_005.png
+  - earring_best\002_007.png
+  - earring_best\003_028.png
+  - earring_best\004_001.png
+  - earring_best\004_007.png
+  - earring_best\004_011.png
+  - earring_best\004_016.png
+  - earring_best\007_018.png
+  - earring_best\007_025.png
+  - earring_best\007_033.png
+  - earring_best\007_034.png
+  - earring_best\007_045.png
+  - earring_best\008_002.png
+  - earring_best\008_003.png
+  - earring_best\008_035.png
+  - earring_best\008_043.png
+  - earring_best\009_015.png
+  - earring_best\009_023.png
+  - earring_best\009_028.png
+  - earring_best\009_033.png
+  - earring_best\009_036.png
+  - earring_best\010_015.png
+  - earring_best\010_016.png
+  - earring_best\010_017.png
+  - earring_best\010_018.png
+  - earring_best\010_019.png
+  - earring_best\010_020.png
+  - earring_best\010_021.png
+  - earring_best\010_022.png
+  - earring_best\010_023.png
+  - earring_best\010_025.png
+  - earring_best\010_026.png
+  - earring_best\010_033.png
+  - earring_best\011_055.png
+  - earring_best\012_002.png
+  - earring_best\012_004.png
+  - earring_best\012_009.png
+  - earring_best\012_010.png
+  - earring_best\012_012.png
+  - earring_best\012_015.png
+  - earring_best\012_016.png
+  - earring_best\012_021.png
+  - earring_best\013_013.png
+  - earring_best\013_028.png
+  - earring_best\013_029.png
+  - earring_best\014_001.png
+  - earring_best\015_012.png
+  - earring_best\015_016.png
+  - earring_best\016_004.png
+  - earring_best\016_005.png
+  - earring_best\016_006.png
+  - earring_best\016_007.png
+  - earring_best\016_008.png
+  - earring_best\016_009.png
+  - earring_best\016_010.png
+  - earring_best\016_011.png
+  - earring_best\016_030.png
+  - earring_best\017_007.png
+  - earring_best\017_008.png
+  - earring_best\017_009.png
+  - earring_best\017_010.png
+  - earring_best\017_012.png
+  - earring_best\017_013.png
+  - earring_best\017_014.png
+  - earring_best\017_016.png
+  - earring_best\017_021.png
+  - earring_best\017_022.png
+  - earring_best\017_025.png
+  - earring_best\017_026.png
+  - earring_best\017_027.png
+  - earring_best\017_028.png
+  - earring_best\017_029.png
+  - earring_best\017_030.png
+  - earring_best\017_031.png
+  - earring_best\017_032.png
+  - earring_best\017_033.png
+  - earring_best\017_034.png
+  - earring_best\017_035.png
+  - earring_best\017_036.png
+  - earring_best\017_038.png
+  - earring_best\017_039.png
+  - earring_best\017_040.png
+  - earring_best\017_041.png
+  - earring_best\017_042.png
+  - earring_best\017_043.png
+  - earring_best\017_044.png
+  - earring_best\017_045.png
+  - earring_best\017_046.png
+  - earring_best\017_047.png
+  - earring_best\017_048.png
+  - earring_best\017_049.png
+  - earring_best\017_050.png
+  - earring_best\017_052.png
+  - earring_best\017_053.png
+  - earring_best\017_055.png
+  - earring_best\017_056.png
+  - earring_best\017_057.png
+  - earring_best\017_060.png
+  - earring_best\017_062.png
+  - earring_best\017_063.png
+  - earring_best\017_064.png
+  - earring_best\017_066.png
+  - earring_best\017_067.png
+  - earring_best\017_068.png
+  - earring_best\017_069.png
+  - earring_best\017_070.png
+  - earring_best\017_074.png
+  - earring_best\017_078.png
+  - earring_best\017_080.png
+  - earring_best\017_083.png
+  - earring_best\017_093.png
+  - earring_best\017_094.png
+  - earring_best\017_097.png
+  - earring_best\017_098.png
+  - earring_best\017_100.png
+  - earring_best\017_107.png
+  - earring_best\017_59.png
+  - earring_best\018_019.png
+  - earring_best\018_020.png
+  - earring_best\018_024.png
+  - earring_best\018_026.png
+  - earring_best\018_027.png
+  - earring_best\018_028.png
+  - earring_best\018_029.png
+  - earring_best\018_030.png
+  - earring_best\018_032.png
+  - earring_best\018_033.png
+  - earring_best\018_034.png
+  - earring_best\018_035.png
+  - earring_best\018_036.png
+  - earring_best\018_037.png
+  - earring_best\018_038.png
+  - earring_best\018_039.png
+  - earring_best\018_040.png
+  - earring_best\018_041.png
+  - earring_best\018_042.png
+  - earring_best\018_043.png
+  - earring_best\018_044.png
+  - earring_best\018_045.png
+  - earring_best\018_046.png
+  - earring_best\018_047.png
+  - earring_best\018_051.png
+  - earring_best\018_052.png
+  - earring_best\018_053.png
+  - earring_best\018_055.png
+  - earring_best\018_056.png
+  - earring_best\018_057.png
+  - earring_best\018_058.png
+  - earring_best\018_069.png
+  - earring_best\018_070.png
+  - earring_best\018_071.png
+  - earring_best\018_074.png
+  - earring_best\018_075.png
+  - earring_best\018_080.png
+  - earring_best\018_081.png
+  - earring_best\018_083.png
+  - earring_best\018_31.png
+  - earring_best\019_017.png
+  - earring_best\019_018.png
+  - earring_best\019_019.png
+  - earring_best\019_020.png
+  - earring_best\019_023.png
+  - earring_best\019_024.png
+  - earring_best\019_025.png
+  - earring_best\019_026.png
+  - earring_best\019_027.png
+  - earring_best\019_028.png
+  - earring_best\019_029.png
+  - earring_best\019_030.png
+  - earring_best\019_031.png
+  - earring_best\019_032.png
+  - earring_best\019_033.png
+  - earring_best\019_034.png
+  - earring_best\019_035.png
+  - earring_best\019_037.png
+  - earring_best\019_038.png
+  - earring_best\019_041.png
+  - earring_best\019_042.png
+  - earring_best\019_043.png
+  - earring_best\019_044.png
+  - earring_best\020_001.png
+  - earring_best\020_003.png
+  - earring_best\020_004.png
+  - earring_best\020_005.png
+  - earring_best\020_006.png
+  - earring_best\020_007.png
+  - earring_best\020_008.png
+  - earring_best\020_009.png
+  - earring_best\020_010.png
+  - earring_best\020_012.png
+  - earring_best\020_013.png
+  - earring_best\020_019.png
+  - earring_best\021_002.png
+  - earring_best\021_012.png
+  - earring_best\021_013.png
+  - earring_best\021_025.png
+  - earring_best\021_026.png
+  - earring_best\021_027.png
+  - earring_best\021_028.png
+  - earring_best\021_030.png
+  - earring_best\021_032.png
+  - earring_best\021_034.png
+  - earring_best\021_035.png
+  - earring_best\021_036.png
+  - earring_best\021_037.png
+  - earring_best\021_038.png
+  - earring_best\021_039.png
+  - earring_best\021_040.png
+  - earring_best\021_041.png
+  - earring_best\021_042.png
+  - earring_best\021_043.png
+  - earring_best\021_044.png
+  - earring_best\021_045.png
+  - earring_best\021_046.png
+  - earring_best\021_047.png
+  - earring_best\021_048.png
+  - earring_best\021_049.png
+  - earring_best\021_053.png
+  - earring_best\021_054.png
+  - earring_best\021_055.png
+  - earring_best\021_057.png
+  - earring_best\021_062.png
+  - earring_best\021_063.png
+  - earring_best\021_064.png
+  - earring_best\021_065.png
+  - earring_best\021_066.png
+  - earring_best\021_067.png
+  - earring_best\021_068.png
+  - earring_best\021_069.png
+  - earring_best\021_070.png
+  - earring_best\021_071.png
+  - earring_best\021_072.png
+  - earring_best\021_073.png
+  - earring_best\021_075.png
+  - earring_best\021_078.png
+  - earring_best\021_079.png
+  - earring_best\022_003.png
+  - earring_best\022_015.png
+  - earring_best\022_016.png
+  - earring_best\022_017.png
+  - earring_best\022_018.png
+  - earring_best\022_020.png
+  - earring_best\022_024.png
+  - earring_best\022_025.png
+  - earring_best\022_026.png
+  - earring_best\022_027.png
+  - earring_best\022_029.png
+  - earring_best\022_031.png
+  - earring_best\022_032.png
+  - earring_best\022_040.png
+  - earring_best\022_057.png
+  - earring_best\022_062.png
+  - earring_best\023_006.png
+  - earring_best\023_007.png
+  - earring_best\023_014.png
+  - earring_best\023_015.png
+  - earring_best\023_016.png
+  - earring_best\023_017.png
+  - earring_best\023_018.png
+  - earring_best\023_019.png
+  - earring_best\023_020.png
+  - earring_best\023_021.png
+  - earring_best\023_022.png
+  - earring_best\023_023.png
+  - earring_best\023_024.png
+  - earring_best\023_025.png
+  - earring_best\023_026.png
+  - earring_best\023_027.png
+  - earring_best\023_028.png
+  - earring_best\023_029.png
+  - earring_best\023_031.png
+  - earring_best\023_032.png
+  - earring_best\023_033.png
+  - earring_best\023_034.png
+  - earring_best\023_035.png
+  - earring_best\023_036.png
+  - earring_best\023_037.png
+  - earring_best\023_038.png
+  - earring_best\024_002.png
+  - earring_best\024_003.png
+  - earring_best\024_004.png
+  - earring_best\024_005.png
+  - earring_best\024_009.png
+  - earring_best\024_014.png
+  - earring_best\024_024.png
+  - earring_best\024_025.png
+  - earring_best\024_026.png
+  - earring_best\024_028.png
+  - earring_best\024_031.png
+  - earring_best\024_033.png
+  - earring_best\024_034.png
+  - earring_best\024_035.png
+  - earring_best\024_036.png
+  - earring_best\024_037.png
+  - earring_best\024_041.png
+  - earring_best\024_042.png
+  - earring_best\024_043.png
+  - earring_best\024_044.png
+  - earring_best\024_046.png
+  - earring_best\024_048.png
+  - earring_best\024_049.png
+  - earring_best\024_050.png
+  - earring_best\024_051.png
+  - earring_best\024_052.png
+  - earring_best\024_053.png
+  - earring_best\024_054.png
+  - earring_best\024_055.png
+  - earring_best\024_058.png
+  - earring_best\024_071.png
+  - earring_best\024_093.png
+  - earring_best\024_097.png
+  - earring_best\024_103.png
+  - earring_best\024_104.png
+  - earring_best\024_105.png
+  - earring_best\024_106.png
+  - earring_best\024_112.png
+  - earring_best\024_114.png
+  - earring_best\024_115.png
+  - earring_best\024_117.png
+  - earring_best\024_119.png
+  - earring_best\024_120.png
+  - earring_best\024_122.png
+  - earring_best\025_003.png
+  - earring_best\025_030.png
+  - earring_best\025_033.png
+  - earring_best\025_036.png
+  - earring_best\025_039.png
+  - earring_best\025_040.png
+  - earring_best\025_041.png
+  - earring_best\025_044.png
+  - earring_best\025_045.png
+  - earring_best\025_046.png
+  - earring_best\025_047.png
+  - earring_best\025_054.png
+  - earring_best\025_055.png
+  - earring_best\025_073.png
+  - earring_best\025_076.png
+  - earring_best\025_077.png
+  - earring_best\026_001.png
+  - earring_best\026_002.png
+  - earring_best\026_004.png
+  - earring_best\026_005.png
+  - earring_best\026_006.png
+  - earring_best\026_008.png
+  - earring_best\026_009.png
+  - earring_best\026_011.png
+  - earring_best\026_036.png
+  - earring_best\026_037.png
+  - earring_best\026_038.png
+  - earring_best\026_041.png
+  - earring_best\026_042.png
+  - earring_best\026_044.png
+  - earring_best\026_045.png
+  - earring_best\026_046.png
+  - earring_best\026_048.png
+  - earring_best\026_049.png
+  - earring_best\026_050.png
+  - earring_best\026_052.png
+  - earring_best\026_053.png
+  - earring_best\026_054.png
+  - earring_best\026_055.png
+  - earring_best\026_056.png
+  - earring_best\026_057.png
+  - earring_best\026_058.png
+  - earring_best\026_059.png
+  - earring_best\026_060.png
+  - earring_best\026_061.png
+  - earring_best\026_063.png
+  - earring_best\026_064.png
+  - earring_best\026_065.png
+  - earring_best\026_066.png
+  - earring_best\026_079.png
+  - earring_best\026_088.png
+  - earring_best\026_090.png
+  - earring_best\027_001.png
+  - earring_best\027_002.png
+  - earring_best\027_012.png
+  - earring_best\027_013.png
+  - earring_best\027_014.png
+  - earring_best\027_016.png
+  - earring_best\027_017.png
+  - earring_best\027_018.png
+  - earring_best\027_019.png
+  - earring_best\027_020.png
+  - earring_best\027_021.png
+  - earring_best\027_022.png
+  - earring_best\027_023.png
+  - earring_best\027_024.png
+  - earring_best\027_025.png
+  - earring_best\027_026.png
+  - earring_best\027_027.png
+  - earring_best\027_028.png
+  - earring_best\027_029.png
+  - earring_best\027_030.png
+  - earring_best\027_031.png
+  - earring_best\027_032.png
+  - earring_best\027_033.png
+  - earring_best\027_034.png
+  - earring_best\027_035.png
+  - earring_best\027_036.png
+  - earring_best\027_037.png
+  - earring_best\027_038.png
+  - earring_best\027_039.png
+  - earring_best\027_040.png
+  - earring_best\027_041.png
+  - earring_best\027_042.png
+  - earring_best\027_043.png
+  - earring_best\027_044.png
+  - earring_best\027_045.png
+  - earring_best\027_046.png
+  - earring_best\027_047.png
+  - earring_best\027_049.png
+  - earring_best\027_050.png
+  - earring_best\027_051.png
+  - earring_best\027_052.png
+  - earring_best\027_053.png
+  - earring_best\027_054.png
+  - earring_best\027_055.png
+  - earring_best\027_056.png
+  - earring_best\027_057.png
+  - earring_best\027_058.png
+  - earring_best\027_059.png
+  - earring_best\027_060.png
+  - earring_best\027_061.png
+  - earring_best\027_062.png
+  - earring_best\027_063.png
+  - earring_best\027_064.png
+  - earring_best\027_065.png
+  - earring_best\027_067.png
+  - earring_best\027_068.png
+  - earring_best\027_069.png
+  - earring_best\027_070.png
+  - earring_best\027_072.png
+  - earring_best\027_073.png
+  - earring_best\027_075.png
+  - earring_best\027_085.png
+  - earring_best\027_086.png
+  - earring_best\027_090.png
+  - earring_best\027_093.png
+  - earring_best\027_095.png
+  - earring_best\027_102.png
+  - earring_best\027_103.png
+  - earring_best\027_104.png
+  - earring_best\027_105.png
+  - earring_best\027_106.png
+  - earring_best\027_107.png
+  - earring_best\027_111.png
+  - earring_best\027_115.png
+  - earring_best\028_014.png
+  - earring_best\028_018.png
+  - earring_best\028_019.png
+  - earring_best\028_020.png
+  - earring_best\028_021.png
+  - earring_best\028_022.png
+  - earring_best\028_023.png
+  - earring_best\028_026.png
+  - earring_best\028_027.png
+  - earring_best\028_030.png
+  - earring_best\028_031.png
+  - earring_best\028_034.png
+  - earring_best\028_036.png
+  - earring_best\028_037.png
+  - earring_best\028_038.png
+  - earring_best\028_039.png
+  - earring_best\028_040.png
+  - earring_best\028_043.png
+  - earring_best\028_054.png
+  - earring_best\029_001.png
+  - earring_best\029_002.png
+  - earring_best\029_003.png
+  - earring_best\029_004.png
+  - earring_best\029_011.png
+  - earring_best\029_012.png
+  - earring_best\029_013.png
+  - earring_best\029_014.png
+  - earring_best\029_015.png
+  - earring_best\029_016.png
+  - earring_best\029_017.png
+  - earring_best\029_019.png
+  - earring_best\029_020.png
+  - earring_best\029_021.png
+  - earring_best\029_022.png
+  - earring_best\029_023.png
+  - earring_best\029_024.png
+  - earring_best\029_026.png
+  - earring_best\029_027.png
+  - earring_best\029_028.png
+  - earring_best\029_029.png
+  - earring_best\029_030.png
+  - earring_best\029_031.png
+  - earring_best\029_032.png
+  - earring_best\029_034.png
+  - earring_best\029_037.png
+  - earring_best\029_038.png
+  - earring_best\029_039.png
+  - earring_best\029_041.png
+  - earring_best\029_042.png
+  - earring_best\029_043.png
+  - earring_best\029_044.png
+  - earring_best\029_045.png
+  - earring_best\029_046.png
+  - earring_best\029_047.png
+  - earring_best\029_048.png
+  - earring_best\029_049.png
+  - earring_best\029_050.png
+  - earring_best\029_051.png
+  - earring_best\029_052.png
+  - earring_best\029_054.png
+  - earring_best\029_058.png
+  - earring_best\029_069.png
+  - earring_best\029_070.png
+  - earring_best\029_073.png
+  - earring_best\029_074.png
+  - earring_best\029_076.png
+  - earring_best\029_078.png
+  - earring_best\029_079.png
+  - earring_best\030_001.png
+  - earring_best\030_002.png
+  - earring_best\030_003.png
+  - earring_best\030_004.png
+  - earring_best\030_005.png
+  - earring_best\030_006.png
+  - earring_best\030_007.png
+  - earring_best\030_008.png
+  - earring_best\030_009.png
+  - earring_best\030_010.png
+  - earring_best\030_011.png
+  - earring_best\030_012.png
+  - earring_best\030_013.png
+  - earring_best\030_014.png
+  - earring_best\030_015.png
+  - earring_best\030_016.png
+  - earring_best\030_017.png
+  - earring_best\030_018.png
+  - earring_best\030_020.png
+  - earring_best\030_021.png
+  - earring_best\030_022.png
+  - earring_best\030_023.png
+  - earring_best\030_024.png
+  - earring_best\030_025.png
+  - earring_best\030_026.png
+  - earring_best\030_027.png
+  - earring_best\030_028.png
+  - earring_best\030_029.png
+  - earring_best\030_030.png
+  - earring_best\030_031.png
+  - earring_best\030_032.png
+  - earring_best\030_033.png
+  - earring_best\030_034.png
+  - earring_best\030_035.png
+  - earring_best\030_039.png
+  - earring_best\030_040.png
+  - earring_best\030_041.png
+  - earring_best\030_042.png
+  - earring_best\030_043.png
+  - earring_best\030_044.png
+  - earring_best\030_045.png
+  - earring_best\030_046.png
+  - earring_best\030_047.png
+  - earring_best\030_048.png
+  - earring_best\030_049.png
+  - earring_best\030_050.png
+  - earring_best\030_051.png
+  - earring_best\030_053.png
+  - earring_best\030_054.png
+  - earring_best\030_055.png
+  - earring_best\030_056.png
+  - earring_best\030_057.png
+  - earring_best\030_058.png
+  - earring_best\030_060.png
+  - earring_best\030_062.png
+  - earring_best\030_063.png
+  - earring_best\030_064.png
+  - earring_best\030_065.png
+  - earring_best\030_066.png
+  - earring_best\030_067.png
+  - earring_best\030_071.png
+  - earring_best\030_072.png
+  - earring_best\030_073.png
+  - earring_best\030_074.png
+  - earring_best\030_075.png
+  - earring_best\030_076.png
+  - earring_best\030_077.png
+  - earring_best\030_079.png
+  - earring_best\030_080.png
+  - earring_best\030_082.png
+  - earring_best\030_083.png
+  - earring_best\031_002.png
+  - earring_best\031_003.png
+  - earring_best\031_005.png
+  - earring_best\031_006.png
+  - earring_best\031_007.png
+  - earring_best\031_008.png
+  - earring_best\031_009.png
+  - earring_best\031_011.png
+  - earring_best\031_012.png
+  - earring_best\031_014.png
+  - earring_best\031_020.png
+  - earring_best\031_027.png
+  - earring_best\031_030.png
+  - earring_best\031_036.png
+  - earring_best\031_040.png
+  - earring_best\032_018.png
+  - earring_best\032_020.png
+  - earring_best\032_022.png
+  - earring_best\032_023.png
+  - earring_best\032_024.png
+  - earring_best\032_025.png
+  - earring_best\032_026.png
+  - earring_best\032_027.png
+  - earring_best\032_028.png
+  - earring_best\032_029.png
+  - earring_best\032_030.png
+  - earring_best\032_031.png
+  - earring_best\032_034.png
+  - earring_best\032_035.png
+  - earring_best\032_036.png
+  - earring_best\032_037.png
+  - earring_best\032_038.png
+  - earring_best\032_039.png
+  - earring_best\032_041.png
+  - earring_best\032_043.png
+  - earring_best\032_044.png
+  - earring_best\032_045.png
+  - earring_best\032_046.png
+  - earring_best\032_048.png
+  - earring_best\032_049.png
+  - earring_best\032_050.png
+  - earring_best\032_051.png
+  - earring_best\032_052.png
+  - earring_best\032_054.png
+  - earring_best\032_055.png
+  - earring_best\032_056.png
+  - earring_best\032_057.png
+  - earring_best\032_059.png
+  - earring_best\032_061.png
+  - earring_best\032_062.png
+  - earring_best\032_065.png
+  - earring_best\032_069.png
+  - earring_best\033_003.png
+  - earring_best\033_004.png
+  - earring_best\033_005.png
+  - earring_best\033_006.png
+  - earring_best\033_007.png
+  - earring_best\033_008.png
+  - earring_best\033_009.png
+  - earring_best\033_010.png
+  - earring_best\033_011.png
+  - earring_best\033_013.png
+  - earring_best\033_015.png
+  - earring_best\033_016.png
+  - earring_best\033_021.png
+  - earring_best\033_032.png
+  - earring_best\033_035.png
+  - earring_best\033_036.png
+  - earring_best\034_006.png
+  - earring_best\034_021.png
+  - earring_best\034_026.png
+  - earring_best\035_005.png
+  - earring_best\035_006.png
+  - earring_best\035_007.png
+  - earring_best\035_010.png
+  - earring_best\035_011.png
+  - earring_best\035_012.png
+  - earring_best\035_013.png
+  - earring_best\035_015.png
+  - earring_best\035_016.png
+  - earring_best\035_017.png
+  - earring_best\035_019.png
+  - earring_best\035_020.png
+  - earring_best\036_004.png
+  - earring_best\036_005.png
+  - earring_best\036_006.png
+  - earring_best\036_007.png
+  - earring_best\036_008.png
+  - earring_best\036_009.png
+  - earring_best\036_010.png
+  - earring_best\036_011.png
+  - earring_best\036_012.png
+  - earring_best\036_013.png
+  - earring_best\036_014.png
+  - earring_best\036_016.png
+  - earring_best\036_017.png
+  - earring_best\036_018.png
+  - earring_best\036_019.png
+  - earring_best\036_020.png
+  - earring_best\036_021.png
+  - earring_best\036_024.png
+  - earring_best\036_031.png
+  - earring_best\037_001.png
+  - earring_best\037_003.png
+  - earring_best\037_004.png
+  - earring_best\037_005.png
+  - earring_best\037_007.png
+  - earring_best\037_008.png
+  - earring_best\037_009.png
+  - earring_best\037_010.png
+  - earring_best\037_011.png
+  - earring_best\037_018.png
+  - earring_best\037_022.png
+  - earring_best\038_005.png
+  - earring_best\038_010.png
+  - earring_best\038_011.png
+  - earring_best\038_013.png
+  - earring_best\038_014.png
+  - earring_best\038_017.png
+  - earring_best\038_021.png
+  - earring_best\038_024.png
+  - earring_best\038_032.png
+  - earring_best\038_037.png
+  - earring_best\038_038.png
+  - earring_best\038_059.png
+  - earring_best\038_061.png
+  - earring_best\038_062.png
+  - earring_best\038_065.png
+  - earring_best\038_067.png
+  - earring_best\038_068.png
+  - earring_best\038_071.png
+  - earring_best\038_075.png
+  - earring_best\039_017.png
+  - earring_best\039_020.png
+  - earring_best\039_021.png
+  - earring_best\039_024.png
+  - earring_best\039_025.png
+  - earring_best\039_026.png
+  - earring_best\039_027.png
+  - earring_best\039_030.png
+  - earring_best\039_031.png
+  - earring_best\039_033.png
+  - earring_best\039_046.png
+  - earring_best\039_049.png
+  - earring_best\039_051.png
+  - earring_best\040_002.png
+  - earring_best\040_003.png
+  - earring_best\040_005.png
+  - earring_best\040_006.png
+  - earring_best\040_007.png
+  - earring_best\040_008.png
+  - earring_best\040_009.png
+  - earring_best\040_010.png
+  - earring_best\040_012.png
+  - earring_best\040_013.png
+  - earring_best\040_014.png
+  - earring_best\040_015.png
+  - earring_best\040_016.png
+  - earring_best\040_017.png
+  - earring_best\040_019.png
+  - earring_best\040_022.png
+  - earring_best\040_023.png
+  - earring_best\040_035.png
+  - earring_best\040_036.png
+  - earring_best\040_049.png
+  - earring_best\040_050.png
+  - earring_best\040_051.png
+  - earring_best\040_055.png
+  - earring_best\040_060.png
+  - earring_best\040_065.png
+  - earring_best\040_067.png
+  - earring_best\040_068.png
+  - earring_best\040_070.png
+  - earring_best\040_071.png
+  - earring_best\040_072.png
+  - earring_best\040_073.png
+  - earring_best\040_074.png
+  - earring_best\040_075.png
+  - earring_best\040_076.png
+  - earring_best\040_077.png
+  - earring_best\040_078.png
+  - earring_best\040_091.png
+  - earring_best\040_093.png
+  - earring_best\040_094.png
+  - earring_best\040_095.png
+  - earring_best\040_097.png
+  - earring_best\040_099.png
+  - earring_best\040_101.png
+  - earring_best\040_103.png
+  - earring_best\040_104.png
+  - earring_best\041_011.png
+  - earring_best\041_016.png
+  - earring_best\041_017.png
+  - earring_best\041_019.png
+  - earring_best\041_023.png
+  - earring_best\041_027.png
+  - earring_best\041_030.png
+  - earring_best\042_002.png
+  - earring_best\042_003.png
+  - earring_best\042_020.png
+  - earring_best\042_022.png
+  - earring_best\042_042.png
+  - earring_best\042_044.png
+  - earring_best\042_048.png
+  - earring_best\042_053.png
+  - earring_best\042_054.png
+  - earring_best\043_001.png
+  - earring_best\043_002.png
+  - earring_best\043_016.png
+  - earring_best\043_032.png
+  - earring_best\044_003.png
+  - earring_best\044_004.png
+  - earring_best\044_005.png
+  - earring_best\044_006.png
+  - earring_best\044_007.png
+  - earring_best\044_008.png
+  - earring_best\044_009.png
+  - earring_best\044_010.png
+  - earring_best\044_011.png
+  - earring_best\044_012.png
+  - earring_best\044_013.png
+  - earring_best\044_014.png
+  - earring_best\044_015.png
+  - earring_best\044_016.png
+  - earring_best\044_017.png
+  - earring_best\044_018.png
+  - earring_best\044_019.png
+  - earring_best\044_020.png
+  - earring_best\044_021.png
+  - earring_best\044_023.png
+  - earring_best\044_024.png
+  - earring_best\044_025.png
+  - earring_best\044_026.png
+  - earring_best\044_027.png
+  - earring_best\044_032.png
+  - earring_best\044_033.png
+  - earring_best\044_034.png
+  - earring_best\044_036.png
+  - earring_best\044_038.png
+  - earring_best\044_039.png
+  - earring_best\044_056.png
+  - earring_best\044_063.png
+  - earring_best\044_065.png
+  - earring_best\044_066.png
+  - earring_best\044_069.png
+  - earring_best\045_001.png
+  - earring_best\045_002.png
+  - earring_best\045_006.png
+  - earring_best\045_008.png
+  - earring_best\045_009.png
+  - earring_best\045_010.png
+  - earring_best\045_011.png
+  - earring_best\045_012.png
+  - earring_best\045_013.png
+  - earring_best\045_014.png
+  - earring_best\045_015.png
+  - earring_best\045_016.png
+  - earring_best\045_017.png
+  - earring_best\045_018.png
+  - earring_best\045_019.png
+  - earring_best\045_020.png
+  - earring_best\045_021.png
+  - earring_best\045_022.png
+  - earring_best\045_023.png
+  - earring_best\045_024.png
+  - earring_best\045_025.png
+  - earring_best\045_026.png
+  - earring_best\045_027.png
+  - earring_best\045_028.png
+  - earring_best\045_029.png
+  - earring_best\045_030.png
+  - earring_best\045_031.png
+  - earring_best\045_032.png
+  - earring_best\045_033.png
+  - earring_best\045_035.png
+  - earring_best\045_036.png
+  - earring_best\045_037.png
+  - earring_best\045_038.png
+  - earring_best\045_040.png
+  - earring_best\045_041.png
+  - earring_best\045_042.png
+  - earring_best\045_044.png
+  - earring_best\045_046.png
+  - earring_best\045_049.png
+  - earring_best\045_052.png
+  - earring_best\046_005.png
+  - earring_best\046_006.png
+  - earring_best\046_007.png
+  - earring_best\046_008.png
+  - earring_best\046_009.png
+  - earring_best\046_010.png
+  - earring_best\046_011.png
+  - earring_best\046_012.png
+  - earring_best\046_013.png
+  - earring_best\046_014.png
+  - earring_best\046_015.png
+  - earring_best\046_017.png
+  - earring_best\046_018.png
+  - earring_best\046_019.png
+  - earring_best\046_021.png
+  - earring_best\046_022.png
+  - earring_best\046_024.png
+  - earring_best\046_025.png
+  - earring_best\046_026.png
+  - earring_best\046_027.png
+  - earring_best\046_028.png
+  - earring_best\046_030.png
+  - earring_best\046_031.png
+  - earring_best\046_032.png
+  - earring_best\046_033.png
+  - earring_best\046_034.png
+  - earring_best\046_035.png
+  - earring_best\046_036.png
+  - earring_best\046_037.png
+  - earring_best\046_038.png
+  - earring_best\046_039.png
+  - earring_best\046_041.png
+  - earring_best\046_042.png
+  - earring_best\046_043.png
+  - earring_best\046_044.png
+  - earring_best\046_045.png
+  - earring_best\046_046.png
+  - earring_best\046_047.png
+  - earring_best\046_048.png
+  - earring_best\046_049.png
+  - earring_best\046_050.png
+  - earring_best\046_051.png
+  - earring_best\046_052.png
+  - earring_best\046_053.png
+  - earring_best\046_054.png
+  - earring_best\046_055.png
+  - earring_best\046_056.png
+  - earring_best\046_057.png
+  - earring_best\046_058.png
+  - earring_best\046_059.png
+  - earring_best\046_060.png
+  - earring_best\046_061.png
+  - earring_best\046_062.png
+  - earring_best\046_064.png
+  - earring_best\046_065.png
+  - earring_best\046_066.png
+  - earring_best\046_087.png
+  - earring_best\046_094.png
+  - earring_best\046_095.png
+  - earring_best\046_096.png
+  - earring_best\046_097.png
+  - earring_best\1 (1).jpg
+  - earring_best\1.jpg
+  - earring_best\11495432936270-Zaveri-Pearls-Women-Earrings-2751495432936199-1.jpg
+  - earring_best\11512189537872-Zaveri-Pearls-Gold-Toned-Chandbalis-6931512189537849-1.jpg
+  - earring_best\1398.Jpg
+  - earring_best\153372934957324276-youbella-goldplated-moti-fancy-partywear-jhumka.jpg
+  - earring_best\61TqDlj3i6L._UY395_.jpg
+  - earring_best\61pAcjkFtoL._UY500_ (1).jpg
+  - earring_best\61pAcjkFtoL._UY500_.jpg
+  - earring_best\Earrings_PDRSVE016_01-600x600.jpg
+  - earring_best\Handluv-Gold-American-Diamond-Earrings-SDL352813271-1-944d6.jpg
+  - earring_best\JE03706-YGP900_1_lar.jpg
+  - earring_best\JE04410-YGP9OS_1_lar.jpg
+  - earring_best\MP000000002964268_437Wx649H_20180411025830.jpeg
+  - earring_best\Resin-Rhinestone-Butterfly-Stud-Earrings__30519_zoom.jpg
+  - earring_best\UE00012-YG0000_1_lar.jpg
+  - earring_best\UE00018-YG0000_1_lar.jpg
+  - earring_best\UE00497-YG0000_1_lar.jpg
+  - earring_best\earring_100.jpg
+  - earring_best\earring_106.jpg
+  - earring_best\earring_109.jpg
+  - earring_best\earring_113.jpg
+  - earring_best\earring_117.jpg
+  - earring_best\earring_118.jpg
+  - earring_best\earring_119.jpg
+  - earring_best\earring_120.jpg
+  - earring_best\earring_122.jpg
+  - earring_best\earring_125.jpg
+  - earring_best\earring_126.jpg
+  - earring_best\earring_127.jpg
+  - earring_best\earring_130.jpg
+  - earring_best\earring_132.jpg
+  - earring_best\earring_133.jpg
+  - earring_best\earring_135.jpg
+  - earring_best\earring_136.jpg
+  - earring_best\earring_137.jpg
+  - earring_best\earring_138.jpg
+  - earring_best\earring_139.jpg
+  - earring_best\earring_140.jpg
+  - earring_best\earring_141.jpg
+  - earring_best\earring_145.jpg
+  - earring_best\earring_146.jpg
+  - earring_best\earring_147.jpg
+  - earring_best\earring_149.jpg
+  - earring_best\earring_156.jpg
+  - earring_best\earring_157.jpg
+  - earring_best\earring_160.jpg
+  - earring_best\earring_163.jpg
+  - earring_best\earring_168.jpg
+  - earring_best\earring_17.jpg
+  - earring_best\earring_171.jpg
+  - earring_best\earring_173.jpg
+  - earring_best\earring_178.jpg
+  - earring_best\earring_182.jpg
+  - earring_best\earring_183.jpg
+  - earring_best\earring_197.jpg
+  - earring_best\earring_199.jpg
+  - earring_best\earring_202.jpg
+  - earring_best\earring_207.jpg
+  - earring_best\earring_208.jpg
+  - earring_best\earring_209.jpg
+  - earring_best\earring_211.jpg
+  - earring_best\earring_212.jpg
+  - earring_best\earring_215.jpg
+  - earring_best\earring_216.jpg
+  - earring_best\earring_22.jpg
+  - earring_best\earring_223.jpg
+  - earring_best\earring_224.jpg
+  - earring_best\earring_228.jpg
+  - earring_best\earring_229.jpg
+  - earring_best\earring_233.jpg
+  - earring_best\earring_234.jpg
+  - earring_best\earring_239.jpg
+  - earring_best\earring_257.jpg
+  - earring_best\earring_258.jpg
+  - earring_best\earring_259.jpg
+  - earring_best\earring_262.jpg
+  - earring_best\earring_263.jpg
+  - earring_best\earring_264.jpg
+  - earring_best\earring_267.jpg
+  - earring_best\earring_268.jpg
+  - earring_best\earring_272.jpg
+  - earring_best\earring_273.jpg
+  - earring_best\earring_274.jpg
+  - earring_best\earring_275.jpg
+  - earring_best\earring_278.jpg
+  - earring_best\earring_279.jpg
+  - earring_best\earring_281.jpg
+  - earring_best\earring_294.jpg
+  - earring_best\earring_3.jpg
+  - earring_best\earring_301.jpg
+  - earring_best\earring_308.jpg
+  - earring_best\earring_31.jpg
+  - earring_best\earring_310.jpg
+  - earring_best\earring_312.jpg
+  - earring_best\earring_318.jpg
+  - earring_best\earring_322.jpg
+  - earring_best\earring_324.jpg
+  - earring_best\earring_326.jpg
+  - earring_best\earring_333.jpg
+  - earring_best\earring_342.jpg
+  - earring_best\earring_343.jpg
+  - earring_best\earring_345.jpg
+  - earring_best\earring_36.jpg
+  - earring_best\earring_363.jpg
+  - earring_best\earring_378.jpg
+  - earring_best\earring_381.jpg
+  - earring_best\earring_382.jpg
+  - earring_best\earring_383.jpg
+  - earring_best\earring_384.jpg
+  - earring_best\earring_393.jpg
+  - earring_best\earring_395.jpg
+  - earring_best\earring_397.jpg
+  - earring_best\earring_398.jpg
+  - earring_best\earring_401.jpg
+  - earring_best\earring_402.jpg
+  - earring_best\earring_406.jpg
+  - earring_best\earring_407.jpg
+  - earring_best\earring_408.jpg
+  - earring_best\earring_421.jpg
+  - earring_best\earring_423.jpg
+  - earring_best\earring_425.jpg
+  - earring_best\earring_427.jpg
+  - earring_best\earring_431.jpg
+  - earring_best\earring_432.jpg
+  - earring_best\earring_437.jpg
+  - earring_best\earring_440.jpg
+  - earring_best\earring_443.jpg
+  - earring_best\earring_46.jpg
+  - earring_best\earring_463.jpg
+  - earring_best\earring_467.jpg
+  - earring_best\earring_470.jpg
+  - earring_best\earring_50.jpg
+  - earring_best\earring_53.jpg
+  - earring_best\earring_54.jpg
+  - earring_best\earring_6.jpg
+  - earring_best\earring_61.jpg
+  - earring_best\earring_7.jpg
+  - earring_best\earring_70.jpg
+  - earring_best\earring_72.jpg
+  - earring_best\earring_76.jpg
+  - earring_best\earring_77.jpg
+  - earring_best\earring_78.jpg
+  - earring_best\earring_81.jpg
+  - earring_best\earring_86.jpg
+  - earring_best\earring_91.jpg
+  - earring_best\earring_92.jpg
+  - earring_best\earring_96.jpg
+  - earring_best\earring_98.jpg
+  - earring_best\images (1).jpeg
+  - earring_best\images (16).jpeg
+  - earring_best\images (22).jpeg
+  - earring_best\images (23).jpeg
+  - earring_best\images (3).jpeg
+  - earring_best\images (41).jpeg
+  - earring_best\images (43).jpeg
+  - earring_best\images (71).jpeg
+  - earring_best\images (72).jpeg
+  - earring_best\images (82).jpeg
+  - earring_best\images (86).jpeg
+  - earring_best\princess-cut-halo-diamond-earring-with-ruby-in-14K-yellow-gold-FDOEAR40538GRUDR-NL-YG.jpg
+  - earring_best\product-hugerect-449558-169254-1423069448-3db6c3d4b4887a223a91e64c58b6d3e5.jpg
+  - earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e (1).jpg
+  - earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e.jpg
+  - necklace\74O9NUZ871QO.jpg
+  - necklace\P8Y5N4GSQE6K.jpg
+  - necklace\necklace_184.jpg
+  - necklace\necklace_39.jpg
+  - necklace\necklace_48.jpg
+  - ring_best\ring_051.jpg
+- Group 2: 89 files; classes=earring_best, necklace, ring_best; cross_class=True; distance=0–8
+  - earring_best\044_044.png
+  - necklace\HDC351EIKY6P.jpg
+  - ring_best\ring_064.png
+  - ring_best\ring_065.jpg
+  - ring_best\ring_066.jpg
+  - ring_best\ring_067.jpg
+  - ring_best\ring_068.jpg
+  - ring_best\ring_069.jpg
+  - ring_best\ring_071.jpg
+  - ring_best\ring_072.jpg
+  - ring_best\ring_073.jpg
+  - ring_best\ring_074.jpg
+  - ring_best\ring_076.jpg
+  - ring_best\ring_078.jpg
+  - ring_best\ring_079.jpg
+  - ring_best\ring_080.jpg
+  - ring_best\ring_081.jpg
+  - ring_best\ring_083.jpg
+  - ring_best\ring_084.jpg
+  - ring_best\ring_085.jpg
+  - ring_best\ring_086.jpg
+  - ring_best\ring_087.jpg
+  - ring_best\ring_088.jpg
+  - ring_best\ring_089.jpg
+  - ring_best\ring_091.jpg
+  - ring_best\ring_093.jpg
+  - ring_best\ring_094.jpg
+  - ring_best\ring_096.jpg
+  - ring_best\ring_097.jpg
+  - ring_best\ring_100.jpg
+  - ring_best\ring_101.jpg
+  - ring_best\ring_102.jpg
+  - ring_best\ring_103.jpg
+  - ring_best\ring_104.jpg
+  - ring_best\ring_105.jpg
+  - ring_best\ring_106.jpg
+  - ring_best\ring_107.jpg
+  - ring_best\ring_108.jpg
+  - ring_best\ring_109.jpg
+  - ring_best\ring_112.jpg
+  - ring_best\ring_114.jpg
+  - ring_best\ring_115.jpg
+  - ring_best\ring_116.jpg
+  - ring_best\ring_117.jpg
+  - ring_best\ring_118.jpg
+  - ring_best\ring_121.jpg
+  - ring_best\ring_123.jpg
+  - ring_best\ring_126.jpg
+  - ring_best\ring_128.jpg
+  - ring_best\ring_129.jpg
+  - ring_best\ring_131.jpg
+  - ring_best\ring_132.jpg
+  - ring_best\ring_133.jpg
+  - ring_best\ring_134.jpg
+  - ring_best\ring_135.jpg
+  - ring_best\ring_136.jpg
+  - ring_best\ring_137.jpg
+  - ring_best\ring_138.jpg
+  - ring_best\ring_139.jpg
+  - ring_best\ring_140.jpg
+  - ring_best\ring_141.jpg
+  - ring_best\ring_143.jpg
+  - ring_best\ring_145.jpg
+  - ring_best\ring_146.jpg
+  - ring_best\ring_147.jpg
+  - ring_best\ring_148.jpg
+  - ring_best\ring_152.jpg
+  - ring_best\ring_153.jpg
+  - ring_best\ring_154.jpg
+  - ring_best\ring_155.jpg
+  - ring_best\ring_156.jpg
+  - ring_best\ring_159.jpg
+  - ring_best\ring_161.jpg
+  - ring_best\ring_162.jpg
+  - ring_best\ring_164.jpg
+  - ring_best\ring_165.jpg
+  - ring_best\ring_166.jpg
+  - ring_best\ring_168.jpg
+  - ring_best\ring_169.jpg
+  - ring_best\ring_170.jpg
+  - ring_best\ring_172.jpg
+  - ring_best\ring_176.jpg
+  - ring_best\ring_179.jpg
+  - ring_best\ring_181.jpg
+  - ring_best\ring_182.jpg
+  - ring_best\ring_185.jpg
+  - ring_best\ring_187.jpg
+  - ring_best\ring_188.jpg
+  - ring_best\ring_189.jpg
+- Group 3: 51 files; classes=bracelet, necklace, ring_best; cross_class=True; distance=2–8
+  - bracelet\ACVJ5JLH6346.jpg
+  - bracelet\E6OW3GW19GPC.jpg
+  - bracelet\IMG_5995.JPG
+  - bracelet\bracelet_028.jpg
+  - bracelet\bracelet_042.jpg
+  - bracelet\bracelet_045.jpg
+  - bracelet\bracelet_067.jpg
+  - bracelet\bracelet_093.jpg
+  - bracelet\bracelet_097.jpg
+  - bracelet\bracelet_099.jpg
+  - bracelet\bracelet_100.jpg
+  - bracelet\bracelet_113.jpg
+  - bracelet\bracelet_193.jpg
+  - bracelet\bracelet_210.jpg
+  - bracelet\bracelet_211.jpg
+  - bracelet\bracelet_222.jpg
+  - bracelet\bracelet_231.jpg
+  - bracelet\bracelet_292.jpg
+  - necklace\0IWH80RS6UHO.jpg
+  - necklace\38M736KC7Y0J.jpg
+  - necklace\9F0Y1XGW84G4.jpg
+  - necklace\ARUR3T9KJ1SK.jpg
+  - necklace\AXH5UHWSFS9C.jpg
+  - necklace\F4NQTFUYD5Z0.jpg
+  - necklace\GVV75ZZ1DKSA.jpg
+  - necklace\JA7J7A85A0UV.jpg
+  - necklace\KGIA7QADG5RI.jpg
+  - necklace\MM2I47DEXGLX.jpg
+  - necklace\NS1NO6GQMC4D.jpg
+  - necklace\OLSP73XANWEO.jpg
+  - necklace\OMSZI1IEY4Z6.jpg
+  - necklace\P9FJTOV9AK42.jpg
+  - necklace\QVZLZUN1ES1Q.jpg
+  - necklace\RIV49BBQLB6S.jpg
+  - necklace\necklace_105.jpg
+  - necklace\necklace_107.jpg
+  - necklace\necklace_109.jpg
+  - necklace\necklace_123.jpg
+  - necklace\necklace_126.jpg
+  - necklace\necklace_135.jpg
+  - necklace\necklace_139.jpg
+  - necklace\necklace_145.jpg
+  - necklace\necklace_171.jpg
+  - necklace\necklace_176.jpg
+  - necklace\necklace_185.jpg
+  - necklace\necklace_193.jpg
+  - necklace\necklace_207.jpg
+  - necklace\necklace_75.jpg
+  - ring_best\ring_057.jpg
+  - ring_best\ring_058.jpg
+  - ring_best\ring_060.jpg
+- Group 4: 39 files; classes=earring_best; cross_class=False; distance=0–8
+  - earring_best\003_041.png
+  - earring_best\003_043.png
+  - earring_best\004_036.png
+  - earring_best\013_018.png
+  - earring_best\017_087.png
+  - earring_best\017_109.png
+  - earring_best\018_060.png
+  - earring_best\018_062.png
+  - earring_best\019_049.png
+  - earring_best\019_050.png
+  - earring_best\019_054.png
+  - earring_best\021_020.png
+  - earring_best\024_072.png
+  - earring_best\024_075.png
+  - earring_best\024_077.png
+  - earring_best\024_078.png
+  - earring_best\024_080.png
+  - earring_best\024_082.png
+  - earring_best\024_083.png
+  - earring_best\024_108.png
+  - earring_best\024_109.png
+  - earring_best\025_070.png
+  - earring_best\030_092.png
+  - earring_best\030_094.png
+  - earring_best\030_096.png
+  - earring_best\039_061.png
+  - earring_best\040_024.png
+  - earring_best\040_027.png
+  - earring_best\040_040.png
+  - earring_best\040_041.png
+  - earring_best\040_042.png
+  - earring_best\040_082.png
+  - earring_best\042_014.png
+  - earring_best\043_031.png
+  - earring_best\045_005.png
+  - earring_best\045_051.png
+  - earring_best\045_073.png
+  - earring_best\images (99).jpeg
+  - earring_best\images_ER617018_view1_big_peacock-feather-diamond-earrings-1452069541-r-w.jpg
+- Group 5: 25 files; classes=bracelet, earring_best, necklace, ring_best; cross_class=True; distance=2–8
+  - bracelet\EFFLGSR80L22.jpg
+  - bracelet\bracelet_011.jpg
+  - bracelet\bracelet_019.jpg
+  - bracelet\bracelet_029.jpg
+  - bracelet\bracelet_101.jpg
+  - bracelet\bracelet_170.jpg
+  - bracelet\bracelet_198.jpg
+  - bracelet\bracelet_283.jpg
+  - earring_best\027_101.png
+  - earring_best\036_026.png
+  - necklace\0JXM8676YVTV.jpg
+  - necklace\2KCB0164E0WZ.jpg
+  - necklace\4RCQB25SPSI0.jpg
+  - necklace\5TLD8YRN91QT.jpg
+  - necklace\SP428Q03QEEJ.jpg
+  - necklace\necklace_108.jpg
+  - necklace\necklace_128.jpg
+  - necklace\necklace_130.jpg
+  - necklace\necklace_133.jpg
+  - necklace\necklace_144.jpg
+  - necklace\necklace_160.jpg
+  - necklace\necklace_161.jpg
+  - necklace\necklace_164.jpg
+  - necklace\necklace_170.jpg
+  - ring_best\Screenshot_20181116-204038_1542449567926.png
+- Group 6: 18 files; classes=bracelet, necklace; cross_class=True; distance=2–8
+  - bracelet\2JHIRBNXUYR7.jpg
+  - bracelet\HOYHES3NIGLM.jpg
+  - bracelet\S9J4YH41HM2K.jpg
+  - necklace\3NSTN5KXJ3NT.jpg
+  - necklace\5NFSMTJK5YAK.jpg
+  - necklace\7SO8EEU6FTEZ.jpg
+  - necklace\AHCSZ03LGE1E.jpg
+  - necklace\BGHZRXUR7I0Y.jpg
+  - necklace\BVZ4WR9YLOQG.jpg
+  - necklace\KT98NIMGDCYC.jpg
+  - necklace\MKC67M50OHMD.jpg
+  - necklace\OLWX9O2X6R1R.jpg
+  - necklace\SEW2IWG0APPV.jpg
+  - necklace\UQLIU658Z1KF.jpg
+  - necklace\VNC52R9H84YR.jpg
+  - necklace\X41QS437PVQO.jpg
+  - necklace\YHEV5MZR80V4.jpg
+  - necklace\ZOCJKF5K2F0U.jpg
+- Group 7: 17 files; classes=necklace; cross_class=False; distance=0–8
+  - necklace\necklace_210.jpg
+  - necklace\necklace_212.jpg
+  - necklace\necklace_214.jpg
+  - necklace\necklace_215.jpg
+  - necklace\necklace_216.jpg
+  - necklace\necklace_217.jpg
+  - necklace\necklace_218.jpg
+  - necklace\necklace_219.jpg
+  - necklace\necklace_223.jpg
+  - necklace\necklace_224.jpg
+  - necklace\necklace_225.jpg
+  - necklace\necklace_226.jpg
+  - necklace\necklace_227.jpg
+  - necklace\necklace_229.jpg
+  - necklace\necklace_230.jpg
+  - necklace\necklace_237.jpg
+  - necklace\necklace_238.jpg
+- Group 8: 14 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\017_005.png
+  - earring_best\017_006.png
+  - earring_best\018_008.png
+  - earring_best\018_010.png
+  - earring_best\018_011.png
+  - earring_best\018_013.png
+  - earring_best\018_016.png
+  - earring_best\018_017.png
+  - earring_best\018_022.png
+  - earring_best\021_023.png
+  - earring_best\024_015.png
+  - earring_best\024_016.png
+  - earring_best\025_021.png
+  - earring_best\028_017.png
+- Group 9: 14 files; classes=necklace; cross_class=False; distance=2–8
+  - necklace\6SE79YMZ1L10.jpg
+  - necklace\CH01IVURU3DA.jpg
+  - necklace\GI93X1XFXU5Y.jpg
+  - necklace\H1J41MULTOO1.jpg
+  - necklace\MKXRARJK4MGV.jpg
+  - necklace\MR06HMY05J4O.jpg
+  - necklace\PFCAOQEOYB3C.jpg
+  - necklace\RYIRPDF50MDA.jpg
+  - necklace\necklace_104.jpg
+  - necklace\necklace_136.jpg
+  - necklace\necklace_137.jpg
+  - necklace\necklace_147.jpg
+  - necklace\necklace_158.jpg
+  - necklace\necklace_7.jpg
+- Group 10: 12 files; classes=earring_best, necklace; cross_class=True; distance=0–8
+  - earring_best\020_015.png
+  - earring_best\028_056.png
+  - necklace\necklace_271.jpg
+  - necklace\necklace_272.jpg
+  - necklace\necklace_273.jpg
+  - necklace\necklace_274.jpg
+  - necklace\necklace_275.jpg
+  - necklace\necklace_277.jpg
+  - necklace\necklace_279.jpg
+  - necklace\necklace_280.jpg
+  - necklace\necklace_312.jpg
+  - necklace\necklace_313.jpg
+- Group 11: 12 files; classes=necklace; cross_class=False; distance=0–8
+  - necklace\necklace_55.jpg
+  - necklace\necklace_56.jpg
+  - necklace\necklace_57.jpg
+  - necklace\necklace_58.jpg
+  - necklace\necklace_59.jpg
+  - necklace\necklace_60.jpg
+  - necklace\necklace_61.jpg
+  - necklace\necklace_62.jpg
+  - necklace\necklace_63.jpg
+  - necklace\necklace_64.jpg
+  - necklace\necklace_66.jpg
+  - necklace\necklace_68.jpg
+- Group 12: 11 files; classes=bracelet; cross_class=False; distance=4–8
+  - bracelet\R6OZ4AXAY7FH.jpg
+  - bracelet\bracelet_021.jpg
+  - bracelet\bracelet_046.jpg
+  - bracelet\bracelet_052.jpg
+  - bracelet\bracelet_054.jpg
+  - bracelet\bracelet_063.jpg
+  - bracelet\bracelet_073.jpg
+  - bracelet\bracelet_074.jpg
+  - bracelet\bracelet_078.jpg
+  - bracelet\bracelet_079.jpg
+  - bracelet\bracelet_218.jpg
+- Group 13: 10 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\014_011.png
+  - earring_best\014_012.png
+  - earring_best\014_017.png
+  - earring_best\014_018.png
+  - earring_best\014_019.png
+  - earring_best\014_020.png
+  - earring_best\014_021.png
+  - earring_best\014_023.png
+  - earring_best\014_024.png
+  - earring_best\014_025.png
+- Group 14: 9 files; classes=bracelet; cross_class=False; distance=0–8
+  - bracelet\bracelet_008.jpg
+  - bracelet\bracelet_128.jpg
+  - bracelet\bracelet_131.jpg
+  - bracelet\bracelet_133.jpg
+  - bracelet\bracelet_142.jpg
+  - bracelet\bracelet_147.jpg
+  - bracelet\bracelet_150.jpg
+  - bracelet\bracelet_152.jpg
+  - bracelet\bracelet_166.jpg
+- Group 15: 9 files; classes=earring_best; cross_class=False; distance=0–8
+  - earring_best\004_033.png
+  - earring_best\024_074.png
+  - earring_best\024_084.png
+  - earring_best\024_099.png
+  - earring_best\039_034.png
+  - earring_best\039_035.png
+  - earring_best\039_036.png
+  - earring_best\039_063.png
+  - earring_best\039_064.png
+- Group 16: 8 files; classes=bracelet, earring_best; cross_class=True; distance=6–8
+  - bracelet\UUSXYKIJ1VC7.jpg
+  - earring_best\038_018.png
+  - earring_best\038_026.png
+  - earring_best\038_050.png
+  - earring_best\044_046.png
+  - earring_best\044_048.png
+  - earring_best\044_050.png
+  - earring_best\044_051.png
+- Group 17: 8 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\009_019.png
+  - earring_best\009_020.png
+  - earring_best\027_079.png
+  - earring_best\027_081.png
+  - earring_best\027_082.png
+  - earring_best\027_109.png
+  - earring_best\027_110.png
+  - earring_best\029_060.png
+- Group 18: 8 files; classes=earring_best, necklace; cross_class=True; distance=6–8
+  - earring_best\025_038.png
+  - earring_best\039_016.png
+  - earring_best\039_023.png
+  - earring_best\earring_41.jpg
+  - necklace\8PUEYS1Z543V.jpg
+  - necklace\9OQ1W7N6N673.jpg
+  - necklace\AZNSA0BJJT6F.jpg
+  - necklace\KZUJLZ4N9XUW.jpg
+- Group 19: 8 files; classes=earring_best; cross_class=False; distance=4–8
+  - earring_best\039_055.png
+  - earring_best\041_038.png
+  - earring_best\043_020.png
+  - earring_best\044_040.png
+  - earring_best\044_057.png
+  - earring_best\044_058.png
+  - earring_best\044_059.png
+  - earring_best\044_060.png
+- Group 20: 8 files; classes=necklace; cross_class=False; distance=4–8
+  - necklace\necklace_303.jpg
+  - necklace\necklace_308.jpg
+  - necklace\necklace_315.jpg
+  - necklace\necklace_316.jpg
+  - necklace\necklace_317.jpg
+  - necklace\necklace_318.jpg
+  - necklace\necklace_319.jpg
+  - necklace\necklace_320.jpg
+- Group 21: 7 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\001_001.png
+  - earring_best\002_035.png
+  - earring_best\003_003.png
+  - earring_best\003_007.png
+  - earring_best\003_012.png
+  - earring_best\003_015.png
+  - earring_best\031_024.png
+- Group 22: 7 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\001_009.png
+  - earring_best\001_017.png
+  - earring_best\003_018.png
+  - earring_best\011_002.png
+  - earring_best\011_026.png
+  - earring_best\011_035.png
+  - earring_best\011_042.png
+- Group 23: 7 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\earring_2.jpg
+  - earring_best\earring_219.jpg
+  - earring_best\earring_25.jpg
+  - earring_best\earring_30.jpg
+  - earring_best\earring_309.jpg
+  - earring_best\earring_45.jpg
+  - earring_best\earring_55.jpg
+- Group 24: 6 files; classes=bracelet; cross_class=False; distance=6–8
+  - bracelet\18ct-white-gold-2-row-akoya-pearl-0-92ct-diamond-bracelet-p875-4916_image.jpg
+  - bracelet\50079ABYVKED.jpg
+  - bracelet\bracelet_272.jpg
+  - bracelet\bracelet_285.jpg
+  - bracelet\bracelet_295.jpg
+  - bracelet\bracelet_304.jpg
+- Group 25: 6 files; classes=bracelet, necklace; cross_class=True; distance=4–8
+  - bracelet\FHTEGQ0QE6GO.jpg
+  - necklace\617CIVUG5Y7T.jpg
+  - necklace\JAUTP5JDN0WY.jpg
+  - necklace\LZTFB5F7THBK.jpg
+  - necklace\PPQ5I9VK0U9D.jpg
+  - necklace\necklace_122.jpg
+- Group 26: 6 files; classes=bracelet, earring_best, ring_best; cross_class=True; distance=8–8
+  - bracelet\bracelet_279.jpg
+  - bracelet\bracelet_280.jpg
+  - bracelet\bracelet_293.jpg
+  - earring_best\035_001.png
+  - earring_best\046_079.png
+  - ring_best\Screenshot_20181116-203329_1542449759369.png
+- Group 27: 6 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\003_002.png
+  - earring_best\003_004.png
+  - earring_best\003_017.png
+  - earring_best\004_039.png
+  - earring_best\011_012.png
+  - earring_best\016_025.png
+- Group 28: 6 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\003_045.png
+  - earring_best\003_050.png
+  - earring_best\003_051.png
+  - earring_best\016_020.png
+  - earring_best\042_007.png
+  - earring_best\043_030.png
+- Group 29: 6 files; classes=earring_best; cross_class=False; distance=4–8
+  - earring_best\010_001.png
+  - earring_best\010_002.png
+  - earring_best\010_008.png
+  - earring_best\010_012.png
+  - earring_best\023_013.png
+  - earring_best\041_013.png
+- Group 30: 6 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\019_010.png
+  - earring_best\022_060.png
+  - earring_best\040_100.png
+  - earring_best\040_105.png
+  - earring_best\045_071.png
+  - earring_best\ER1069-Mizana-Jewelry.jpg
+- Group 31: 6 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_161.jpg
+  - earring_best\earring_354.jpg
+  - earring_best\earring_355.jpg
+  - earring_best\earring_358.jpg
+  - earring_best\earring_404.jpg
+  - earring_best\images (21).jpeg
+- Group 32: 6 files; classes=necklace; cross_class=False; distance=4–8
+  - necklace\necklace_288.jpg
+  - necklace\necklace_294.jpg
+  - necklace\necklace_298.jpg
+  - necklace\necklace_302.jpg
+  - necklace\necklace_305.jpg
+  - necklace\necklace_307.jpg
+- Group 33: 5 files; classes=bracelet; cross_class=False; distance=6–8
+  - bracelet\bracelet_004.jpg
+  - bracelet\bracelet_015.jpg
+  - bracelet\bracelet_083.jpg
+  - bracelet\bracelet_088.jpg
+  - bracelet\bracelet_158.jpg
+- Group 34: 5 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\002_029.png
+  - earring_best\003_013.png
+  - earring_best\003_025.png
+  - earring_best\013_020.png
+  - earring_best\013_022.png
+- Group 35: 5 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\004_024.png
+  - earring_best\004_026.png
+  - earring_best\004_027.png
+  - earring_best\004_028.png
+  - earring_best\008_047.png
+- Group 36: 5 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\008_038.png
+  - earring_best\038_016.png
+  - earring_best\038_019.png
+  - earring_best\038_023.png
+  - earring_best\038_042.png
+- Group 37: 5 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\009_014.png
+  - earring_best\009_021.png
+  - earring_best\026_073.png
+  - earring_best\027_091.png
+  - earring_best\036_034.png
+- Group 38: 5 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\012_017.png
+  - earring_best\039_041.png
+  - earring_best\042_006.png
+  - earring_best\042_015.png
+  - earring_best\images (39).jpeg
+- Group 39: 5 files; classes=earring_best; cross_class=False; distance=4–8
+  - earring_best\014_006.png
+  - earring_best\014_007.png
+  - earring_best\014_008.png
+  - earring_best\014_010.png
+  - earring_best\014_022.png
+- Group 40: 5 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\016_029.png
+  - earring_best\042_010.png
+  - earring_best\042_032.png
+  - earring_best\042_033.png
+  - earring_best\042_057.png
+- Group 41: 5 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\017_020.png
+  - earring_best\017_072.png
+  - earring_best\017_073.png
+  - earring_best\017_081.png
+  - earring_best\042_012.png
+- Group 42: 5 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\017_101.png
+  - earring_best\022_028.png
+  - earring_best\040_058.png
+  - earring_best\040_062.png
+  - earring_best\042_050.png
+- Group 43: 5 files; classes=earring_best; cross_class=False; distance=2–8
+  - earring_best\018_006.png
+  - earring_best\021_008.png
+  - earring_best\024_010.png
+  - earring_best\031_001.png
+  - earring_best\041_003.png
+- Group 44: 4 files; classes=bracelet; cross_class=False; distance=4–8
+  - bracelet\0X8F0EH1FXYE.jpg
+  - bracelet\5GNWOHTQS771.jpg
+  - bracelet\AAQSFJZOELZ8.jpg
+  - bracelet\EUETWO4ZFI1P.jpg
+- Group 45: 4 files; classes=bracelet, earring_best; cross_class=True; distance=6–8
+  - bracelet\53WY8QXI5ULW.jpg
+  - earring_best\046_075.png
+  - earring_best\046_082.png
+  - earring_best\046_093.png
+- Group 46: 4 files; classes=bracelet, earring_best; cross_class=True; distance=6–8
+  - bracelet\K5YHA2WPNAJ8.jpg
+  - bracelet\OAXZ7Z86VHVH.jpg
+  - bracelet\P55DMC9A6NMO.jpg
+  - earring_best\81LTWvgCIEL._UL1500_.jpg
+- Group 47: 4 files; classes=bracelet; cross_class=False; distance=4–8
+  - bracelet\UV63YSEQEU7W.jpg
+  - bracelet\bracelet_001.jpg
+  - bracelet\bracelet_195.jpg
+  - bracelet\bracelet_214.jpg
+- Group 48: 4 files; classes=bracelet, necklace; cross_class=True; distance=4–8
+  - bracelet\bracelet_130.jpg
+  - bracelet\bracelet_153.jpg
+  - necklace\necklace_102.jpg
+  - necklace\necklace_125.jpg
+- Group 49: 4 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\003_052.png
+  - earring_best\016_017.png
+  - earring_best\016_021.png
+  - earring_best\016_022.png
+- Group 50: 4 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\004_017.png
+  - earring_best\004_020.png
+  - earring_best\011_029.png
+  - earring_best\011_030.png
+- Group 51: 4 files; classes=earring_best, necklace; cross_class=True; distance=0–8
+  - earring_best\006_013.png
+  - earring_best\images (90).jpeg
+  - earring_best\images (93).jpeg
+  - necklace\RXALK577J7GI.jpg
+- Group 52: 4 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\016_023.png
+  - earring_best\042_058.png
+  - earring_best\earring_1.jpg
+  - earring_best\earring_39.jpg
+- Group 53: 4 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\018_007.png
+  - earring_best\019_005.png
+  - earring_best\019_015.png
+  - earring_best\041_004.png
+- Group 54: 4 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\024_017.png
+  - earring_best\030_059.png
+  - earring_best\earring_180.jpg
+  - earring_best\earring_205.jpg
+- Group 55: 4 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\026_092.png
+  - earring_best\046_077.png
+  - earring_best\046_081.png
+  - earring_best\046_084.png
+- Group 56: 4 files; classes=earring_best; cross_class=False; distance=4–8
+  - earring_best\027_004.png
+  - earring_best\027_007.png
+  - earring_best\027_009.png
+  - earring_best\027_010.png
+- Group 57: 4 files; classes=earring_best; cross_class=False; distance=4–8
+  - earring_best\033_019.png
+  - earring_best\033_020.png
+  - earring_best\033_024.png
+  - earring_best\033_030.png
+- Group 58: 4 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\037_020.png
+  - earring_best\037_021.png
+  - earring_best\046_070.png
+  - earring_best\046_073.png
+- Group 59: 4 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\041_026.png
+  - earring_best\042_043.png
+  - earring_best\045_060.png
+  - earring_best\045_064.png
+- Group 60: 4 files; classes=earring_best; cross_class=False; distance=0–8
+  - earring_best\57597_main.jpeg
+  - earring_best\59387_main.jpeg
+  - earring_best\images (46).jpeg
+  - earring_best\images (48).jpeg
+- Group 61: 4 files; classes=earring_best; cross_class=False; distance=4–8
+  - earring_best\earring_142.jpg
+  - earring_best\earring_144.jpg
+  - earring_best\earring_340.jpg
+  - earring_best\earring_450.jpg
+- Group 62: 4 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_192.jpg
+  - earring_best\earring_240.jpg
+  - earring_best\earring_250.jpg
+  - earring_best\earring_336.jpg
+- Group 63: 4 files; classes=earring_best, necklace; cross_class=True; distance=6–8
+  - earring_best\earring_48.jpg
+  - earring_best\earring_49.jpg
+  - earring_best\earring_9.jpg
+  - necklace\IK10JUYTIF5M.jpg
+- Group 64: 4 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\EOHORSKJV95P.jpg
+  - necklace\TQ2TBEQAJTC9.jpg
+  - necklace\necklace_188.jpg
+  - necklace\necklace_197.jpg
+- Group 65: 4 files; classes=necklace; cross_class=False; distance=6–8
+  - necklace\necklace_241.jpg
+  - necklace\necklace_245.jpg
+  - necklace\necklace_246.jpg
+  - necklace\necklace_247.jpg
+- Group 66: 4 files; classes=necklace; cross_class=False; distance=4–8
+  - necklace\necklace_285.jpg
+  - necklace\necklace_304.jpg
+  - necklace\necklace_306.jpg
+  - necklace\necklace_314.jpg
+- Group 67: 4 files; classes=necklace; cross_class=False; distance=6–8
+  - necklace\necklace_91.jpg
+  - necklace\necklace_93.jpg
+  - necklace\necklace_95.jpg
+  - necklace\necklace_96.jpg
+- Group 68: 3 files; classes=bracelet, necklace; cross_class=True; distance=8–8
+  - bracelet\100UP9VF7WMN.jpg
+  - bracelet\AALA5FM70K65.jpg
+  - necklace\necklace_178.jpg
+- Group 69: 3 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\1U7C9X4MCZSN.jpg
+  - bracelet\C4YL9OCB3A53.jpg
+  - bracelet\L5XVZ6HRQHXF.jpg
+- Group 70: 3 files; classes=bracelet; cross_class=False; distance=6–8
+  - bracelet\5CSDN383Z8BQ.jpg
+  - bracelet\bracelet_302.jpg
+  - bracelet\bracelet_307.jpg
+- Group 71: 3 files; classes=bracelet, earring_best; cross_class=True; distance=6–8
+  - bracelet\BRCKV9YQGDWI.jpg
+  - bracelet\IMG_5963.JPG
+  - earring_best\009_018.png
+- Group 72: 3 files; classes=bracelet, earring_best; cross_class=True; distance=6–8
+  - bracelet\IMG_5999.JPG
+  - earring_best\032_019.png
+  - earring_best\032_058.png
+- Group 73: 3 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\R1P2DMB0JHR3.jpg
+  - bracelet\bracelet_175.jpg
+  - bracelet\bracelet_184.jpg
+- Group 74: 3 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\UY91LVTY0BA6.jpg
+  - bracelet\bracelet_305.jpg
+  - bracelet\bracelet_306.jpg
+- Group 75: 3 files; classes=bracelet, necklace; cross_class=True; distance=8–8
+  - bracelet\V5DKSFJ1KT0H.jpg
+  - bracelet\VWVB9K4XZ3F3.jpg
+  - necklace\EVD85R06KNH3.jpg
+- Group 76: 3 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\bracelet_137.jpg
+  - bracelet\bracelet_145.jpg
+  - bracelet\bracelet_174.jpg
+- Group 77: 3 files; classes=bracelet; cross_class=False; distance=4–6
+  - bracelet\bracelet_138.jpg
+  - bracelet\bracelet_141.jpg
+  - bracelet\bracelet_144.jpg
+- Group 78: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\001_005.png
+  - earring_best\002_014.png
+  - earring_best\024_095.png
+- Group 79: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\002_020.png
+  - earring_best\002_027.png
+  - earring_best\002_028.png
+- Group 80: 3 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\005_024.png
+  - earring_best\037_012.png
+  - earring_best\046_076.png
+- Group 81: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\008_004.png
+  - earring_best\018_086.png
+  - earring_best\The20Strawberry20Gold20Stud20For20Baby20Girl.jpg
+- Group 82: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\010_010.png
+  - earring_best\010_011.png
+  - earring_best\023_010.png
+- Group 83: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\010_030.png
+  - earring_best\017_089.png
+  - earring_best\040_084.png
+- Group 84: 3 files; classes=earring_best; cross_class=False; distance=4–6
+  - earring_best\013_027.png
+  - earring_best\042_051.png
+  - earring_best\042_052.png
+- Group 85: 3 files; classes=earring_best; cross_class=False; distance=4–8
+  - earring_best\014_014.png
+  - earring_best\014_015.png
+  - earring_best\014_031.png
+- Group 86: 3 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\016_002.png
+  - earring_best\026_043.png
+  - earring_best\032_042.png
+- Group 87: 3 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\017_024.png
+  - earring_best\030_036.png
+  - earring_best\030_052.png
+- Group 88: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\017_079.png
+  - earring_best\017_096.png
+  - earring_best\040_098.png
+- Group 89: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\018_059.png
+  - earring_best\038_036.png
+  - earring_best\2631_6192tr_front_300x.jpg
+- Group 90: 3 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\019_051.png
+  - earring_best\019_053.png
+  - earring_best\045_066.png
+- Group 91: 3 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\020_038.png
+  - earring_best\022_011.png
+  - earring_best\022_046.png
+- Group 92: 3 files; classes=earring_best; cross_class=False; distance=4–8
+  - earring_best\021_003.png
+  - earring_best\022_055.png
+  - earring_best\031_017.png
+- Group 93: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\024_073.png
+  - earring_best\045_062.png
+  - earring_best\045_065.png
+- Group 94: 3 files; classes=earring_best, necklace; cross_class=True; distance=6–8
+  - earring_best\026_018.png
+  - earring_best\046_003.png
+  - necklace\AW6FAM2DSALW.jpg
+- Group 95: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\034_004.png
+  - earring_best\034_005.png
+  - earring_best\038_006.png
+- Group 96: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\038_039.png
+  - earring_best\038_040.png
+  - earring_best\images (38).jpeg
+- Group 97: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\040_092.png
+  - earring_best\040_096.png
+  - earring_best\maira-series-american-diamond-earrings.jpg
+- Group 98: 3 files; classes=earring_best; cross_class=False; distance=6–8
+  - earring_best\042_011.png
+  - earring_best\042_040.png
+  - earring_best\046_069.png
+- Group 99: 3 files; classes=earring_best, necklace; cross_class=True; distance=2–8
+  - earring_best\043_036.png
+  - necklace\QBN3RCDOG4IG.jpg
+  - necklace\necklace_98.jpg
+- Group 100: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_110.jpg
+  - earring_best\earring_280.jpg
+  - earring_best\earring_412.jpg
+- Group 101: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_152.jpg
+  - earring_best\earring_155.jpg
+  - earring_best\earring_170.jpg
+- Group 102: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_169.jpg
+  - earring_best\earring_359.jpg
+  - earring_best\earring_387.jpg
+- Group 103: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_18.jpg
+  - earring_best\earring_210.jpg
+  - earring_best\earring_433.jpg
+- Group 104: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_231.jpg
+  - earring_best\earring_320.jpg
+  - earring_best\earring_99.jpg
+- Group 105: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_37.jpg
+  - earring_best\earring_389.jpg
+  - earring_best\earring_441.jpg
+- Group 106: 3 files; classes=earring_best; cross_class=False; distance=4–8
+  - earring_best\earring_93.jpg
+  - earring_best\earring_94.jpg
+  - earring_best\earring_95.jpg
+- Group 107: 3 files; classes=necklace; cross_class=False; distance=4–8
+  - necklace\8IACKSIP2ZQ7.jpg
+  - necklace\CRKMYDSH5DW2.jpg
+  - necklace\KBJZSSCOEZEY.jpg
+- Group 108: 3 files; classes=necklace; cross_class=False; distance=2–8
+  - necklace\DRB65CCNAYW1.jpg
+  - necklace\XY7899W6XHQ9.jpg
+  - necklace\necklace_195.jpg
+- Group 109: 3 files; classes=necklace; cross_class=False; distance=4–6
+  - necklace\L1O528YKKU1W.jpg
+  - necklace\necklace_30.jpg
+  - necklace\necklace_31.jpg
+- Group 110: 3 files; classes=necklace; cross_class=False; distance=0–2
+  - necklace\NM6BBE8CX8YE.jpg
+  - necklace\TCQAEJWM3IE9.jpg
+  - necklace\XC80ICY9WJ8Q.jpg
+- Group 111: 3 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\necklace_10.jpg
+  - necklace\necklace_40.jpg
+  - necklace\necklace_45.jpg
+- Group 112: 3 files; classes=necklace; cross_class=False; distance=2–8
+  - necklace\necklace_14.jpg
+  - necklace\necklace_15.jpg
+  - necklace\necklace_16.jpg
+- Group 113: 3 files; classes=necklace; cross_class=False; distance=4–8
+  - necklace\necklace_18.jpg
+  - necklace\necklace_19.jpg
+  - necklace\necklace_20.jpg
+- Group 114: 3 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\necklace_209.jpg
+  - necklace\necklace_249.jpg
+  - necklace\necklace_252.jpg
+- Group 115: 3 files; classes=necklace; cross_class=False; distance=4–8
+  - necklace\necklace_21.jpg
+  - necklace\necklace_22.jpg
+  - necklace\necklace_23.jpg
+- Group 116: 3 files; classes=necklace; cross_class=False; distance=2–8
+  - necklace\necklace_221.jpg
+  - necklace\necklace_231.jpg
+  - necklace\necklace_232.jpg
+- Group 117: 3 files; classes=necklace; cross_class=False; distance=6–8
+  - necklace\necklace_239.jpg
+  - necklace\necklace_242.jpg
+  - necklace\necklace_244.jpg
+- Group 118: 3 files; classes=necklace; cross_class=False; distance=6–8
+  - necklace\necklace_264.jpg
+  - necklace\necklace_266.jpg
+  - necklace\necklace_267.jpg
+- Group 119: 3 files; classes=necklace; cross_class=False; distance=6–8
+  - necklace\necklace_286.jpg
+  - necklace\necklace_291.jpg
+  - necklace\necklace_292.jpg
+- Group 120: 3 files; classes=necklace; cross_class=False; distance=6–8
+  - necklace\necklace_36.jpg
+  - necklace\necklace_37.jpg
+  - necklace\necklace_44.jpg
+- Group 121: 3 files; classes=necklace; cross_class=False; distance=4–8
+  - necklace\necklace_38.jpg
+  - necklace\necklace_41.jpg
+  - necklace\necklace_43.jpg
+- Group 122: 3 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\necklace_82.jpg
+  - necklace\necklace_84.jpg
+  - necklace\necklace_87.jpg
+- Group 123: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\10047527649310.jpg
+  - bracelet\N6H4LLPFXSB9.jpg
+- Group 124: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\1M7ISACWQ2FJ.jpg
+  - bracelet\FXJDYDVLWM87.jpg
+- Group 125: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\1SY23F78RJG6.jpg
+  - bracelet\RWZEEZS3K2T6.jpg
+- Group 126: 2 files; classes=bracelet, earring_best; cross_class=True; distance=6–6
+  - bracelet\5J7UTHWI5OQS.jpg
+  - earring_best\002_019.png
+- Group 127: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\6DT99H9KXR3I.jpg
+  - bracelet\WBA7SBS4MMP5.jpg
+- Group 128: 2 files; classes=bracelet, earring_best; cross_class=True; distance=8–8
+  - bracelet\6DZBJKZL4MII.jpg
+  - earring_best\037_019.png
+- Group 129: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\6HDMAYKV5O9P.jpg
+  - bracelet\bracelet_274.jpg
+- Group 130: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\6RNKVU27FN3G.jpg
+  - bracelet\IMG_5964.JPG
+- Group 131: 2 files; classes=bracelet, necklace; cross_class=True; distance=8–8
+  - bracelet\87Q6DHAYVGNY.jpg
+  - necklace\necklace_110.jpg
+- Group 132: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\8ZSDB0HVLLY6.jpg
+  - bracelet\LOPX85RZHGK2.jpg
+- Group 133: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\98O5L98RN2KN.jpg
+  - bracelet\QJJSQ47YGDJ2.jpg
+- Group 134: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\A6XCULTGR9TH.jpg
+  - bracelet\IMG_5998.JPG
+- Group 135: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\AKQ61AJ8UMRB.jpg
+  - bracelet\bracelet_191.jpg
+- Group 136: 2 files; classes=bracelet, earring_best; cross_class=True; distance=8–8
+  - bracelet\B0003CLP.jpg
+  - earring_best\032_032.png
+- Group 137: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\FX6BK0DO5D42.jpg
+  - bracelet\bracelet_303.jpg
+- Group 138: 2 files; classes=bracelet; cross_class=False; distance=2–2
+  - bracelet\HFC8YYV9CRHF.jpg
+  - bracelet\YIJX2H4AE3YL.jpg
+- Group 139: 2 files; classes=bracelet, earring_best; cross_class=True; distance=8–8
+  - bracelet\O3PO38GLZEB0.jpg
+  - earring_best\039_004.png
+- Group 140: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\QUQDMEFKJP06.jpg
+  - bracelet\V9VPMFSGYDSE.jpg
+- Group 141: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\R7QXQJ7IIXQ4.jpg
+  - bracelet\bracelet_299.jpg
+- Group 142: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\RK4T361EK2U6.jpg
+  - bracelet\W9577ZXZ1A29.jpg
+- Group 143: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\TJE02JOHIE4C.jpg
+  - bracelet\bracelet_089.jpg
+- Group 144: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\VZ2RR1FMFXS4.jpg
+  - bracelet\bracelet_225.jpg
+- Group 145: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\XO5PDPGL4WVM.jpg
+  - bracelet\bracelet_252.jpg
+- Group 146: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\ZDVIDR8Y224Y.jpg
+  - bracelet\bracelet_056.jpg
+- Group 147: 2 files; classes=bracelet, necklace; cross_class=True; distance=8–8
+  - bracelet\ZUDRRQ2ABI4B.jpg
+  - necklace\6JIU2A15NF0Q.jpg
+- Group 148: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_007.jpg
+  - bracelet\bracelet_154.jpg
+- Group 149: 2 files; classes=bracelet; cross_class=False; distance=4–4
+  - bracelet\bracelet_023.jpg
+  - bracelet\bracelet_068.jpg
+- Group 150: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_031.jpg
+  - bracelet\bracelet_260.jpg
+- Group 151: 2 files; classes=bracelet, earring_best; cross_class=True; distance=8–8
+  - bracelet\bracelet_039.jpg
+  - earring_best\028_048.png
+- Group 152: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_043.jpg
+  - bracelet\bracelet_157.jpg
+- Group 153: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\bracelet_051.jpg
+  - bracelet\bracelet_284.jpg
+- Group 154: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_064.jpg
+  - bracelet\bracelet_179.jpg
+- Group 155: 2 files; classes=bracelet, earring_best; cross_class=True; distance=8–8
+  - bracelet\bracelet_069.jpg
+  - earring_best\41rFH0x18bL._SY300_QL70_.jpg
+- Group 156: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\bracelet_081.jpg
+  - bracelet\bracelet_181.jpg
+- Group 157: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\bracelet_124.jpg
+  - bracelet\bracelet_127.jpg
+- Group 158: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\bracelet_238.jpg
+  - bracelet\bracelet_247.jpg
+- Group 159: 2 files; classes=bracelet, earring_best; cross_class=True; distance=8–8
+  - bracelet\bracelet_277.jpg
+  - earring_best\6b0bc98097235140497bb8cbee3956dd.jpg
+- Group 160: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\bracelet_297.jpg
+  - bracelet\bracelet_300.jpg
+- Group 161: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\002_006.png
+  - earring_best\003_005.png
+- Group 162: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\002_037.png
+  - earring_best\030_093.png
+- Group 163: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\003_026.png
+  - earring_best\011_050.png
+- Group 164: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\003_039.png
+  - earring_best\041_035.png
+- Group 165: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\003_040.png
+  - earring_best\004_035.png
+- Group 166: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\003_054.png
+  - earring_best\003_057.png
+- Group 167: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\004_030.png
+  - earring_best\004_042.png
+- Group 168: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\005_003.png
+  - earring_best\005_020.png
+- Group 169: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\005_009.png
+  - earring_best\008_019.png
+- Group 170: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\006_004.png
+  - earring_best\012_020.png
+- Group 171: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\006_007.png
+  - earring_best\007_030.png
+- Group 172: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\006_015.png
+  - earring_best\007_029.png
+- Group 173: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\007_007.png
+  - earring_best\046_001.png
+- Group 174: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\007_040.png
+  - earring_best\037_016.png
+- Group 175: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\007_044.png
+  - earring_best\040_045.png
+- Group 176: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\007_046.png
+  - earring_best\046_083.png
+- Group 177: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\008_013.png
+  - earring_best\032_002.png
+- Group 178: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\008_042.png
+  - earring_best\012_001.png
+- Group 179: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\009_016.png
+  - earring_best\009_034.png
+- Group 180: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\010_006.png
+  - earring_best\023_011.png
+- Group 181: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\011_010.png
+  - earring_best\011_037.png
+- Group 182: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\011_036.png
+  - earring_best\earring_4.jpg
+- Group 183: 2 files; classes=earring_best, necklace; cross_class=True; distance=8–8
+  - earring_best\012_018.png
+  - necklace\ADSS5Z40CWLX.jpg
+- Group 184: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\014_002.png
+  - earring_best\014_003.png
+- Group 185: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\014_013.png
+  - earring_best\014_016.png
+- Group 186: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\014_028.png
+  - earring_best\014_029.png
+- Group 187: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\016_015.png
+  - earring_best\016_016.png
+- Group 188: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\016_018.png
+  - earring_best\019_001.png
+- Group 189: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\017_002.png
+  - earring_best\017_003.png
+- Group 190: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\017_023.png
+  - earring_best\033_001.png
+- Group 191: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\017_102.png
+  - earring_best\040_039.png
+- Group 192: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\018_025.png
+  - earring_best\024_038.png
+- Group 193: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\018_054.png
+  - earring_best\024_032.png
+- Group 194: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\018_064.png
+  - earring_best\045_053.png
+- Group 195: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\019_006.png
+  - earring_best\022_008.png
+- Group 196: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\019_057.png
+  - earring_best\041_033.png
+- Group 197: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\019_060.png
+  - earring_best\031_039.png
+- Group 198: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\020_002.png
+  - earring_best\043_003.png
+- Group 199: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\020_018.png
+  - earring_best\024_070.png
+- Group 200: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\021_007.png
+  - earring_best\022_002.png
+- Group 201: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\021_010.png
+  - earring_best\021_015.png
+- Group 202: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\021_017.png
+  - earring_best\045_007.png
+- Group 203: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\021_061.png
+  - earring_best\022_036.png
+- Group 204: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\022_005.png
+  - earring_best\022_056.png
+- Group 205: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\022_012.png
+  - earring_best\030_100.png
+- Group 206: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\022_013.png
+  - earring_best\043_022.png
+- Group 207: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\022_022.png
+  - earring_best\022_050.png
+- Group 208: 2 files; classes=earring_best, ring_best; cross_class=True; distance=6–6
+  - earring_best\022_033.png
+  - ring_best\ring_063.jpg
+- Group 209: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\022_045.png
+  - earring_best\042_025.png
+- Group 210: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\023_041.png
+  - earring_best\035_003.png
+- Group 211: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\024_045.png
+  - earring_best\earring_299.jpg
+- Group 212: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\024_059.png
+  - earring_best\024_123.png
+- Group 213: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\024_062.png
+  - earring_best\024_063.png
+- Group 214: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\024_118.png
+  - earring_best\images (67).jpeg
+- Group 215: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_008.png
+  - earring_best\025_009.png
+- Group 216: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_010.png
+  - earring_best\025_011.png
+- Group 217: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_012.png
+  - earring_best\025_013.png
+- Group 218: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_014.png
+  - earring_best\025_015.png
+- Group 219: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_042.png
+  - earring_best\025_043.png
+- Group 220: 2 files; classes=earring_best, necklace; cross_class=True; distance=6–6
+  - earring_best\025_069.png
+  - necklace\2L56SAL3QEZQ.jpg
+- Group 221: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\026_007.png
+  - earring_best\046_020.png
+- Group 222: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\026_010.png
+  - earring_best\030_019.png
+- Group 223: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\026_062.png
+  - earring_best\earring_445.jpg
+- Group 224: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\026_071.png
+  - earring_best\026_082.png
+- Group 225: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\026_093.png
+  - earring_best\027_114.png
+- Group 226: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\027_066.png
+  - earring_best\046_063.png
+- Group 227: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\027_077.png
+  - earring_best\036_025.png
+- Group 228: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\027_099.png
+  - earring_best\027_100.png
+- Group 229: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\028_029.png
+  - earring_best\034_003.png
+- Group 230: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\029_071.png
+  - earring_best\046_067.png
+- Group 231: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\030_090.png
+  - earring_best\045_069.png
+- Group 232: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\031_013.png
+  - earring_best\812IYTBbB1L._UY395_.jpg
+- Group 233: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\031_021.png
+  - earring_best\invisible-set-round-diamond-stud-earring-in-18K-rose-gold-FDEAR8388-NL-RG.jpg
+- Group 234: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\032_008.png
+  - earring_best\032_010.png
+- Group 235: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\033_022.png
+  - earring_best\9556046_fpx.jpeg
+- Group 236: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\033_026.png
+  - earring_best\043_034.png
+- Group 237: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\033_033.png
+  - earring_best\038_022.png
+- Group 238: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\033_034.png
+  - earring_best\images (62).jpeg
+- Group 239: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\038_012.png
+  - earring_best\stylish-earrings-by-kaara-san203-large_7e79aaf7b7df7c443e89db3c1b96bac1.jpg
+- Group 240: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\038_025.png
+  - earring_best\ier82.20170628130105.jpg
+- Group 241: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\038_031.png
+  - earring_best\038_049.png
+- Group 242: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\038_035.png
+  - earring_best\038_047.png
+- Group 243: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_002.png
+  - earring_best\041_012.png
+- Group 244: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_006.png
+  - earring_best\039_007.png
+- Group 245: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_008.png
+  - earring_best\039_009.png
+- Group 246: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_010.png
+  - earring_best\039_011.png
+- Group 247: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_012.png
+  - earring_best\039_013.png
+- Group 248: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\039_029.png
+  - earring_best\earring_456.jpg
+- Group 249: 2 files; classes=earring_best, necklace; cross_class=True; distance=8–8
+  - earring_best\039_048.png
+  - necklace\necklace_3.jpg
+- Group 250: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\039_060.png
+  - earring_best\Diamond-Earrings-SMT337_GF-600x600.jpg
+- Group 251: 2 files; classes=earring_best; cross_class=False; distance=4–4
+  - earring_best\040_069.png
+  - earring_best\041_010.png
+- Group 252: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\040_106.png
+  - earring_best\044_055.png
+- Group 253: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\041_005.png
+  - earring_best\041_006.png
+- Group 254: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\042_008.png
+  - earring_best\042_009.png
+- Group 255: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\044_029.png
+  - earring_best\044_030.png
+- Group 256: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\044_070.png
+  - earring_best\Joyas-Stylish-American-Diamond-Jhumka-SDL573009592-1-51439.jpg
+- Group 257: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\045_056.png
+  - earring_best\free-shipping-girls-crystal-drop-earrings-white-gold-plated-dangle-earrings.jpg
+- Group 258: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring (1).jpg
+  - earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring.jpg
+- Group 259: 2 files; classes=earring_best; cross_class=False; distance=2–2
+  - earring_best\41OBUc2qfRL._UY395_.jpg
+  - earring_best\earring_13.jpg
+- Group 260: 2 files; classes=earring_best, necklace; cross_class=True; distance=4–4
+  - earring_best\CFE0686_D.jpg
+  - necklace\necklace_205.jpg
+- Group 261: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\Chandelier_Diamond_Wedding_Earrings_JLE35-750x500.jpg
+  - earring_best\earring_305.jpg
+- Group 262: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\JE03505-YGP900_1_lar.jpg
+  - earring_best\earring_241.jpg
+- Group 263: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\JE03525-YGP900_1_lar.jpg
+  - earring_best\earring_27.jpg
+- Group 264: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\NMPALMX_mz.jpg
+  - earring_best\images (49).jpeg
+- Group 265: 2 files; classes=earring_best, ring_best; cross_class=True; distance=8–8
+  - earring_best\UE00503-YG0000_1_lar.jpg
+  - ring_best\ring_018.jpg
+- Group 266: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_10.jpg
+  - earring_best\earring_115.jpg
+- Group 267: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_124.jpg
+  - earring_best\earring_42.jpg
+- Group 268: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_128.jpg
+  - earring_best\earring_166.jpg
+- Group 269: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_176.jpg
+  - earring_best\earring_313.jpg
+- Group 270: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_276.jpg
+  - earring_best\earring_277.jpg
+- Group 271: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_285.jpg
+  - earring_best\earring_286.jpg
+- Group 272: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_29.jpg
+  - earring_best\earring_89.jpg
+- Group 273: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_291.jpg
+  - earring_best\earring_295.jpg
+- Group 274: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_302.jpg
+  - earring_best\earring_459.jpg
+- Group 275: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\earring_369.jpg
+  - earring_best\images (4).jpeg
+- Group 276: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_374.jpg
+  - earring_best\earring_375.jpg
+- Group 277: 2 files; classes=earring_best, necklace; cross_class=True; distance=8–8
+  - earring_best\earring_51.jpg
+  - necklace\AXUC5EM9GPLC.jpg
+- Group 278: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_62.jpg
+  - earring_best\earring_63.jpg
+- Group 279: 2 files; classes=earring_best, necklace; cross_class=True; distance=8–8
+  - earring_best\images (80).jpeg
+  - necklace\necklace_33.jpg
+- Group 280: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\7720LK0CISQK.jpg
+  - necklace\necklace_50.jpg
+- Group 281: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\7L86P2I3XEUA.jpg
+  - necklace\M02PFQ3907WM.jpg
+- Group 282: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\8BDAS0ZPMTWX.jpg
+  - necklace\necklace_191.jpg
+- Group 283: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\9437QP6RBGEP.jpg
+  - necklace\Y36UCJNDYHG5.jpg
+- Group 284: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\A86B0SBIPBET.jpg
+  - necklace\LXE9TVUVMDYI.jpg
+- Group 285: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\BW8Q7QW5DDQL.jpg
+  - necklace\YISHVTEXJ9VJ.jpg
+- Group 286: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\EPL0QTEDN8UZ.jpg
+  - necklace\necklace_138.jpg
+- Group 287: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\JA4Z0HUGPV0H.jpg
+  - necklace\U1XFYCVH6QA6.jpg
+- Group 288: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\K19ZR1CZDOHA.jpg
+  - necklace\NMI2EBQ8PJ9P.jpg
+- Group 289: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\KY1V3ODQ4HOR.jpg
+  - necklace\OZ9N1MQROWQ7.jpg
+- Group 290: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\L7QNYUL3Q9MS.jpg
+  - necklace\necklace_6.jpg
+- Group 291: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\LSGWSBK34FJU.jpg
+  - necklace\VTPWOACDT8CU.jpg
+- Group 292: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\ORUP2RKJJASX.jpg
+  - necklace\R5W7BOZU6HTG.jpg
+- Group 293: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\QRBTY1BB7CX9.jpg
+  - necklace\necklace_196.jpg
+- Group 294: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\TAUVMRCC665Y.jpg
+  - necklace\U8ZYRG4UXJ3Y.jpg
+- Group 295: 2 files; classes=necklace, ring_best; cross_class=True; distance=8–8
+  - necklace\UTB3XBRB5S86.jpg
+  - ring_best\ring_184.jpg
+- Group 296: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\X0VV6NOA4D3Q.jpg
+  - necklace\X8BPM954AKD8.jpg
+- Group 297: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_203.jpg
+  - necklace\necklace_204.jpg
+- Group 298: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\necklace_233.jpg
+  - necklace\necklace_234.jpg
+- Group 299: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_240.jpg
+  - necklace\necklace_243.jpg
+- Group 300: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_25.jpg
+  - necklace\necklace_26.jpg
+- Group 301: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_256.jpg
+  - necklace\necklace_263.jpg
+- Group 302: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_257.jpg
+  - necklace\necklace_259.jpg
+- Group 303: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_258.jpg
+  - necklace\necklace_262.jpg
+- Group 304: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_27.jpg
+  - necklace\necklace_28.jpg
+- Group 305: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_276.jpg
+  - necklace\necklace_278.jpg
+- Group 306: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\necklace_287.jpg
+  - necklace\necklace_289.jpg
+- Group 307: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\necklace_293.jpg
+  - necklace\necklace_297.jpg
+- Group 308: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\necklace_52.jpg
+  - necklace\necklace_54.jpg
+- Group 309: 2 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_041.jpg
+  - ring_best\ring_042.jpg
+- Group 310: 2 files; classes=ring_best; cross_class=False; distance=8–8
+  - ring_best\ring_090.jpg
+  - ring_best\ring_157.jpg
+- Group 311: 2 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_124.jpg
+  - ring_best\ring_193.jpg
+#### Hamming threshold ≤ 10
+- Group 1: 2736 files; classes=bracelet, earring_best, necklace, ring_best; cross_class=True; distance=0–10
+  - bracelet\0X8F0EH1FXYE.jpg
+  - bracelet\10047527649310.jpg
+  - bracelet\100UP9VF7WMN.jpg
+  - bracelet\18ct-white-gold-2-row-akoya-pearl-0-92ct-diamond-bracelet-p875-4916_image.jpg
+  - bracelet\1U7C9X4MCZSN.jpg
+  - bracelet\21IWBZI4BZEC.jpg
+  - bracelet\2JHIRBNXUYR7.jpg
+  - bracelet\2XJ1BV7UBEN6.jpg
+  - bracelet\3ZAN8BNV9EBV.jpg
+  - bracelet\43DOTJXD75JE.jpg
+  - bracelet\4IZIUT54RT6L.jpg
+  - bracelet\4L1ZLZB2T8PU.jpg
+  - bracelet\4OCSNV1HA0U6.jpg
+  - bracelet\50079ABYVKED.jpg
+  - bracelet\53WY8QXI5ULW.jpg
+  - bracelet\579YZVZ5AD3P.jpg
+  - bracelet\5CSDN383Z8BQ.jpg
+  - bracelet\5GNWOHTQS771.jpg
+  - bracelet\5J7UTHWI5OQS.jpg
+  - bracelet\5ZYKS67SED0A.jpg
+  - bracelet\66Z6Q4HVXVIP.jpg
+  - bracelet\6DZBJKZL4MII.jpg
+  - bracelet\6M575KPCVQZV.jpg
+  - bracelet\6RNKVU27FN3G.jpg
+  - bracelet\7B1IKBKRKSL7.jpg
+  - bracelet\7QD1H3KXNWQI.jpg
+  - bracelet\7UCK2SJYQSN5.jpg
+  - bracelet\87Q6DHAYVGNY.jpg
+  - bracelet\99A8SY6X8FYR.jpg
+  - bracelet\AA3NXVHZEBFT.jpg
+  - bracelet\AALA5FM70K65.jpg
+  - bracelet\AAQSFJZOELZ8.jpg
+  - bracelet\ACVJ5JLH6346.jpg
+  - bracelet\ACVMPAVSWE5J.jpg
+  - bracelet\AKQ61AJ8UMRB.jpg
+  - bracelet\AMR4T8WV5TOB.jpg
+  - bracelet\B0003CLP.jpg
+  - bracelet\BRCKV9YQGDWI.jpg
+  - bracelet\C4YL9OCB3A53.jpg
+  - bracelet\CM22SVEL9601.jpg
+  - bracelet\CYD70ON6Q19S.jpg
+  - bracelet\DDMN43YD8J0H.jpg
+  - bracelet\DN8I4557B6K8.jpg
+  - bracelet\E1UNL404V9EJ.jpg
+  - bracelet\E6OW3GW19GPC.jpg
+  - bracelet\EFFLGSR80L22.jpg
+  - bracelet\EJSYRPEBFVN7.jpg
+  - bracelet\EUETWO4ZFI1P.jpg
+  - bracelet\FHTEGQ0QE6GO.jpg
+  - bracelet\FUGF0W3ROIYF.jpg
+  - bracelet\FX6BK0DO5D42.jpg
+  - bracelet\G2FXTJFFHT1B.jpg
+  - bracelet\GW5GN1ZGUP6H.jpg
+  - bracelet\HGUDWC52JMI7.jpg
+  - bracelet\HOYHES3NIGLM.jpg
+  - bracelet\IMG_5963.JPG
+  - bracelet\IMG_5964.JPG
+  - bracelet\IMG_5984.JPG
+  - bracelet\IMG_5986.JPG
+  - bracelet\IMG_5993.JPG
+  - bracelet\IMG_5995.JPG
+  - bracelet\IMG_5996.JPG
+  - bracelet\IMG_5997.JPG
+  - bracelet\IMG_5999.JPG
+  - bracelet\IR6HOT3IZ2SH.jpg
+  - bracelet\ITA85BGBJPEB.jpg
+  - bracelet\IZPVFIN716X1.jpg
+  - bracelet\K5YHA2WPNAJ8.jpg
+  - bracelet\KA9OD1P8RGYC.jpg
+  - bracelet\KJZYPOJBZBJA.jpg
+  - bracelet\L5XVZ6HRQHXF.jpg
+  - bracelet\N6H4LLPFXSB9.jpg
+  - bracelet\N6O9UDLGO63U.jpg
+  - bracelet\NAHZ4S0IY03D.jpg
+  - bracelet\O3PO38GLZEB0.jpg
+  - bracelet\OA50P0DJUL00.jpg
+  - bracelet\OAXZ7Z86VHVH.jpg
+  - bracelet\OVYT2SCP0D12.jpg
+  - bracelet\P55DMC9A6NMO.jpg
+  - bracelet\QCYBVIQM586R.jpg
+  - bracelet\QUQDMEFKJP06.jpg
+  - bracelet\R1P2DMB0JHR3.jpg
+  - bracelet\R6OZ4AXAY7FH.jpg
+  - bracelet\R7QXQJ7IIXQ4.jpg
+  - bracelet\S9J4YH41HM2K.jpg
+  - bracelet\SF465W97AC9V.jpg
+  - bracelet\SJQVPXUVAYVM.jpg
+  - bracelet\ST0TJTQRMNAU.jpg
+  - bracelet\Screenshot_20181117-124139_1542547103232.png
+  - bracelet\TJE02JOHIE4C.jpg
+  - bracelet\TV0M56UEK825.jpg
+  - bracelet\UUSXYKIJ1VC7.jpg
+  - bracelet\UY91LVTY0BA6.jpg
+  - bracelet\V5DKSFJ1KT0H.jpg
+  - bracelet\V987Y573WA62.jpg
+  - bracelet\V9VPMFSGYDSE.jpg
+  - bracelet\VNEIH94REZXN.jpg
+  - bracelet\VWVB9K4XZ3F3.jpg
+  - bracelet\VZ2RR1FMFXS4.jpg
+  - bracelet\W2ZLQFORF49Q.jpg
+  - bracelet\X8JWM629HZCN.jpg
+  - bracelet\XWQIO9FYSBQM.jpg
+  - bracelet\Y1W6XOV87L47.jpg
+  - bracelet\YKH32HPBGQJ8.jpg
+  - bracelet\YQHZ4HQC5YJ6.jpg
+  - bracelet\YZ69VS64BK99.jpg
+  - bracelet\Z1WGR7EXQXRN.jpg
+  - bracelet\ZACIDUCDSFIC.jpg
+  - bracelet\ZGSJU5GWNYEH.jpg
+  - bracelet\ZSFJDUCYHBN7.jpg
+  - bracelet\ZSMKA187T91S.jpg
+  - bracelet\ZV1T249AJWB1.jpg
+  - bracelet\bracelet-socotra.jpg
+  - bracelet\bracelet_003.jpg
+  - bracelet\bracelet_006.jpg
+  - bracelet\bracelet_007.jpg
+  - bracelet\bracelet_008.jpg
+  - bracelet\bracelet_009.jpg
+  - bracelet\bracelet_010.jpg
+  - bracelet\bracelet_011.jpg
+  - bracelet\bracelet_014.jpg
+  - bracelet\bracelet_018.jpg
+  - bracelet\bracelet_019.jpg
+  - bracelet\bracelet_021.jpg
+  - bracelet\bracelet_022.jpg
+  - bracelet\bracelet_023.jpg
+  - bracelet\bracelet_024.jpg
+  - bracelet\bracelet_026.jpg
+  - bracelet\bracelet_028.jpg
+  - bracelet\bracelet_029.jpg
+  - bracelet\bracelet_031.jpg
+  - bracelet\bracelet_032.jpg
+  - bracelet\bracelet_036.jpg
+  - bracelet\bracelet_037.jpg
+  - bracelet\bracelet_039.jpg
+  - bracelet\bracelet_041.jpg
+  - bracelet\bracelet_042.jpg
+  - bracelet\bracelet_043.jpg
+  - bracelet\bracelet_045.jpg
+  - bracelet\bracelet_046.jpg
+  - bracelet\bracelet_048.jpg
+  - bracelet\bracelet_049.jpg
+  - bracelet\bracelet_051.jpg
+  - bracelet\bracelet_052.jpg
+  - bracelet\bracelet_053.jpg
+  - bracelet\bracelet_054.jpg
+  - bracelet\bracelet_058.jpg
+  - bracelet\bracelet_059.jpg
+  - bracelet\bracelet_060.jpg
+  - bracelet\bracelet_062.jpg
+  - bracelet\bracelet_063.jpg
+  - bracelet\bracelet_066.jpg
+  - bracelet\bracelet_067.jpg
+  - bracelet\bracelet_068.jpg
+  - bracelet\bracelet_069.jpg
+  - bracelet\bracelet_071.jpg
+  - bracelet\bracelet_072.jpg
+  - bracelet\bracelet_073.jpg
+  - bracelet\bracelet_074.jpg
+  - bracelet\bracelet_076.jpg
+  - bracelet\bracelet_077.jpg
+  - bracelet\bracelet_078.jpg
+  - bracelet\bracelet_079.jpg
+  - bracelet\bracelet_080.jpg
+  - bracelet\bracelet_081.jpg
+  - bracelet\bracelet_085.jpg
+  - bracelet\bracelet_087.jpg
+  - bracelet\bracelet_089.jpg
+  - bracelet\bracelet_090.jpg
+  - bracelet\bracelet_093.jpg
+  - bracelet\bracelet_095.jpg
+  - bracelet\bracelet_097.jpg
+  - bracelet\bracelet_098.jpg
+  - bracelet\bracelet_099.jpg
+  - bracelet\bracelet_100.jpg
+  - bracelet\bracelet_101.jpg
+  - bracelet\bracelet_102.jpg
+  - bracelet\bracelet_103.jpg
+  - bracelet\bracelet_104.jpg
+  - bracelet\bracelet_105.jpg
+  - bracelet\bracelet_106.jpg
+  - bracelet\bracelet_107.jpg
+  - bracelet\bracelet_108.jpg
+  - bracelet\bracelet_109.jpg
+  - bracelet\bracelet_110.jpg
+  - bracelet\bracelet_111.jpg
+  - bracelet\bracelet_112.jpg
+  - bracelet\bracelet_113.jpg
+  - bracelet\bracelet_114.jpg
+  - bracelet\bracelet_115.jpg
+  - bracelet\bracelet_116.jpg
+  - bracelet\bracelet_117.jpg
+  - bracelet\bracelet_118.jpg
+  - bracelet\bracelet_119.jpg
+  - bracelet\bracelet_120.jpg
+  - bracelet\bracelet_121.jpg
+  - bracelet\bracelet_125.jpg
+  - bracelet\bracelet_126.jpg
+  - bracelet\bracelet_128.jpg
+  - bracelet\bracelet_129.jpg
+  - bracelet\bracelet_130.jpg
+  - bracelet\bracelet_131.jpg
+  - bracelet\bracelet_133.jpg
+  - bracelet\bracelet_134.jpg
+  - bracelet\bracelet_136.jpg
+  - bracelet\bracelet_137.jpg
+  - bracelet\bracelet_142.jpg
+  - bracelet\bracelet_143.jpg
+  - bracelet\bracelet_145.jpg
+  - bracelet\bracelet_147.jpg
+  - bracelet\bracelet_148.jpg
+  - bracelet\bracelet_149.jpg
+  - bracelet\bracelet_150.jpg
+  - bracelet\bracelet_151.jpg
+  - bracelet\bracelet_152.jpg
+  - bracelet\bracelet_153.jpg
+  - bracelet\bracelet_154.jpg
+  - bracelet\bracelet_157.jpg
+  - bracelet\bracelet_160.jpg
+  - bracelet\bracelet_164.jpg
+  - bracelet\bracelet_166.jpg
+  - bracelet\bracelet_170.jpg
+  - bracelet\bracelet_171.jpg
+  - bracelet\bracelet_173.jpg
+  - bracelet\bracelet_174.jpg
+  - bracelet\bracelet_175.jpg
+  - bracelet\bracelet_176.jpg
+  - bracelet\bracelet_177.jpg
+  - bracelet\bracelet_178.jpg
+  - bracelet\bracelet_180.jpg
+  - bracelet\bracelet_181.jpg
+  - bracelet\bracelet_182.jpg
+  - bracelet\bracelet_183.jpg
+  - bracelet\bracelet_184.jpg
+  - bracelet\bracelet_186.jpg
+  - bracelet\bracelet_187.jpg
+  - bracelet\bracelet_188.jpg
+  - bracelet\bracelet_189.jpg
+  - bracelet\bracelet_190.jpg
+  - bracelet\bracelet_191.jpg
+  - bracelet\bracelet_192.jpg
+  - bracelet\bracelet_193.jpg
+  - bracelet\bracelet_194.jpg
+  - bracelet\bracelet_196.jpg
+  - bracelet\bracelet_198.jpg
+  - bracelet\bracelet_200.jpg
+  - bracelet\bracelet_203.jpg
+  - bracelet\bracelet_204.jpg
+  - bracelet\bracelet_210.jpg
+  - bracelet\bracelet_211.jpg
+  - bracelet\bracelet_213.jpg
+  - bracelet\bracelet_216.jpg
+  - bracelet\bracelet_217.jpg
+  - bracelet\bracelet_218.jpg
+  - bracelet\bracelet_220.jpg
+  - bracelet\bracelet_222.jpg
+  - bracelet\bracelet_225.jpg
+  - bracelet\bracelet_227.jpg
+  - bracelet\bracelet_228.jpg
+  - bracelet\bracelet_230.jpg
+  - bracelet\bracelet_231.jpg
+  - bracelet\bracelet_232.jpg
+  - bracelet\bracelet_233.jpg
+  - bracelet\bracelet_236.jpg
+  - bracelet\bracelet_241.jpg
+  - bracelet\bracelet_248.jpg
+  - bracelet\bracelet_253.jpg
+  - bracelet\bracelet_254.jpg
+  - bracelet\bracelet_255.jpg
+  - bracelet\bracelet_256.jpg
+  - bracelet\bracelet_257.jpg
+  - bracelet\bracelet_260.jpg
+  - bracelet\bracelet_261.jpg
+  - bracelet\bracelet_262.jpg
+  - bracelet\bracelet_264.jpg
+  - bracelet\bracelet_265.jpg
+  - bracelet\bracelet_272.jpg
+  - bracelet\bracelet_276.jpg
+  - bracelet\bracelet_277.jpg
+  - bracelet\bracelet_279.jpg
+  - bracelet\bracelet_280.jpg
+  - bracelet\bracelet_281.jpg
+  - bracelet\bracelet_283.jpg
+  - bracelet\bracelet_284.jpg
+  - bracelet\bracelet_285.jpg
+  - bracelet\bracelet_286.jpg
+  - bracelet\bracelet_290.jpg
+  - bracelet\bracelet_292.jpg
+  - bracelet\bracelet_293.jpg
+  - bracelet\bracelet_295.jpg
+  - bracelet\bracelet_299.jpg
+  - bracelet\bracelet_302.jpg
+  - bracelet\bracelet_303.jpg
+  - bracelet\bracelet_304.jpg
+  - bracelet\bracelet_305.jpg
+  - bracelet\bracelet_306.jpg
+  - bracelet\bracelet_307.jpg
+  - bracelet\bracelet_309.jpg
+  - bracelet\d3d801008a90f354231c3f57544c9328b26269f8.jpg
+  - bracelet\zver-001-KNOTS-WAXED-CORD-LAVA-BEADS-925-SILVER-120-euro.jpg
+  - earring_best\001_001.png
+  - earring_best\001_002.png
+  - earring_best\001_005.png
+  - earring_best\001_006.png
+  - earring_best\001_008.png
+  - earring_best\001_009.png
+  - earring_best\001_010.png
+  - earring_best\001_011.png
+  - earring_best\001_013.png
+  - earring_best\001_014.png
+  - earring_best\001_015.png
+  - earring_best\001_016.png
+  - earring_best\001_017.png
+  - earring_best\001_018.png
+  - earring_best\001_021.png
+  - earring_best\002_001.png
+  - earring_best\002_004.png
+  - earring_best\002_005.png
+  - earring_best\002_006.png
+  - earring_best\002_007.png
+  - earring_best\002_010.png
+  - earring_best\002_012.png
+  - earring_best\002_014.png
+  - earring_best\002_015.png
+  - earring_best\002_019.png
+  - earring_best\002_020.png
+  - earring_best\002_025.png
+  - earring_best\002_027.png
+  - earring_best\002_028.png
+  - earring_best\002_029.png
+  - earring_best\002_031.png
+  - earring_best\002_032.png
+  - earring_best\002_033.png
+  - earring_best\002_035.png
+  - earring_best\002_036.png
+  - earring_best\002_037.png
+  - earring_best\002_038.png
+  - earring_best\002_040.png
+  - earring_best\002_043.png
+  - earring_best\003_001.png
+  - earring_best\003_002.png
+  - earring_best\003_003.png
+  - earring_best\003_004.png
+  - earring_best\003_005.png
+  - earring_best\003_007.png
+  - earring_best\003_008.png
+  - earring_best\003_009.png
+  - earring_best\003_011.png
+  - earring_best\003_012.png
+  - earring_best\003_013.png
+  - earring_best\003_014.png
+  - earring_best\003_015.png
+  - earring_best\003_017.png
+  - earring_best\003_018.png
+  - earring_best\003_021.png
+  - earring_best\003_022.png
+  - earring_best\003_023.png
+  - earring_best\003_025.png
+  - earring_best\003_026.png
+  - earring_best\003_027.png
+  - earring_best\003_028.png
+  - earring_best\003_029.png
+  - earring_best\003_035.png
+  - earring_best\003_039.png
+  - earring_best\003_041.png
+  - earring_best\003_042.png
+  - earring_best\003_043.png
+  - earring_best\003_045.png
+  - earring_best\003_047.png
+  - earring_best\003_048.png
+  - earring_best\003_049.png
+  - earring_best\003_050.png
+  - earring_best\003_051.png
+  - earring_best\003_052.png
+  - earring_best\003_054.png
+  - earring_best\003_055.png
+  - earring_best\003_057.png
+  - earring_best\004_001.png
+  - earring_best\004_002.png
+  - earring_best\004_003.png
+  - earring_best\004_004.png
+  - earring_best\004_005.png
+  - earring_best\004_007.png
+  - earring_best\004_009.png
+  - earring_best\004_010.png
+  - earring_best\004_011.png
+  - earring_best\004_012.png
+  - earring_best\004_013.png
+  - earring_best\004_016.png
+  - earring_best\004_017.png
+  - earring_best\004_018.png
+  - earring_best\004_019.png
+  - earring_best\004_020.png
+  - earring_best\004_021.png
+  - earring_best\004_030.png
+  - earring_best\004_033.png
+  - earring_best\004_036.png
+  - earring_best\004_039.png
+  - earring_best\004_041.png
+  - earring_best\004_042.png
+  - earring_best\005_023.png
+  - earring_best\006_002.png
+  - earring_best\006_005.png
+  - earring_best\006_006.png
+  - earring_best\006_007.png
+  - earring_best\006_008.png
+  - earring_best\006_010.png
+  - earring_best\006_011.png
+  - earring_best\006_012.png
+  - earring_best\006_013.png
+  - earring_best\006_014.png
+  - earring_best\006_015.png
+  - earring_best\007_018.png
+  - earring_best\007_021.png
+  - earring_best\007_023.png
+  - earring_best\007_024.png
+  - earring_best\007_025.png
+  - earring_best\007_026.png
+  - earring_best\007_027.png
+  - earring_best\007_029.png
+  - earring_best\007_030.png
+  - earring_best\007_031.png
+  - earring_best\007_033.png
+  - earring_best\007_034.png
+  - earring_best\007_036.png
+  - earring_best\007_037.png
+  - earring_best\007_038.png
+  - earring_best\007_040.png
+  - earring_best\007_042.png
+  - earring_best\007_044.png
+  - earring_best\007_045.png
+  - earring_best\007_046.png
+  - earring_best\007_047.png
+  - earring_best\007_048.png
+  - earring_best\008_001.png
+  - earring_best\008_002.png
+  - earring_best\008_003.png
+  - earring_best\008_004.png
+  - earring_best\008_005.png
+  - earring_best\008_034.png
+  - earring_best\008_035.png
+  - earring_best\008_037.png
+  - earring_best\008_038.png
+  - earring_best\008_041.png
+  - earring_best\008_042.png
+  - earring_best\008_043.png
+  - earring_best\008_050.png
+  - earring_best\008_051.png
+  - earring_best\008_052.png
+  - earring_best\009_014.png
+  - earring_best\009_015.png
+  - earring_best\009_016.png
+  - earring_best\009_017.png
+  - earring_best\009_018.png
+  - earring_best\009_019.png
+  - earring_best\009_020.png
+  - earring_best\009_021.png
+  - earring_best\009_023.png
+  - earring_best\009_024.png
+  - earring_best\009_025.png
+  - earring_best\009_026.png
+  - earring_best\009_027.png
+  - earring_best\009_028.png
+  - earring_best\009_030.png
+  - earring_best\009_031.png
+  - earring_best\009_032.png
+  - earring_best\009_033.png
+  - earring_best\009_034.png
+  - earring_best\009_036.png
+  - earring_best\010_015.png
+  - earring_best\010_016.png
+  - earring_best\010_017.png
+  - earring_best\010_018.png
+  - earring_best\010_019.png
+  - earring_best\010_020.png
+  - earring_best\010_021.png
+  - earring_best\010_022.png
+  - earring_best\010_023.png
+  - earring_best\010_025.png
+  - earring_best\010_026.png
+  - earring_best\010_028.png
+  - earring_best\010_029.png
+  - earring_best\010_030.png
+  - earring_best\010_031.png
+  - earring_best\010_033.png
+  - earring_best\010_035.png
+  - earring_best\011_002.png
+  - earring_best\011_007.png
+  - earring_best\011_008.png
+  - earring_best\011_009.png
+  - earring_best\011_010.png
+  - earring_best\011_012.png
+  - earring_best\011_013.png
+  - earring_best\011_017.png
+  - earring_best\011_021.png
+  - earring_best\011_022.png
+  - earring_best\011_026.png
+  - earring_best\011_029.png
+  - earring_best\011_030.png
+  - earring_best\011_031.png
+  - earring_best\011_032.png
+  - earring_best\011_033.png
+  - earring_best\011_034.png
+  - earring_best\011_035.png
+  - earring_best\011_036.png
+  - earring_best\011_037.png
+  - earring_best\011_038.png
+  - earring_best\011_039.png
+  - earring_best\011_040.png
+  - earring_best\011_041.png
+  - earring_best\011_042.png
+  - earring_best\011_043.png
+  - earring_best\011_044.png
+  - earring_best\011_046.png
+  - earring_best\011_047.png
+  - earring_best\011_048.png
+  - earring_best\011_049.png
+  - earring_best\011_050.png
+  - earring_best\011_054.png
+  - earring_best\011_055.png
+  - earring_best\012_001.png
+  - earring_best\012_002.png
+  - earring_best\012_003.png
+  - earring_best\012_004.png
+  - earring_best\012_005.png
+  - earring_best\012_006.png
+  - earring_best\012_007.png
+  - earring_best\012_009.png
+  - earring_best\012_010.png
+  - earring_best\012_011.png
+  - earring_best\012_012.png
+  - earring_best\012_013.png
+  - earring_best\012_015.png
+  - earring_best\012_016.png
+  - earring_best\012_017.png
+  - earring_best\012_021.png
+  - earring_best\012_022.png
+  - earring_best\012_023.png
+  - earring_best\012_024.png
+  - earring_best\013_002.png
+  - earring_best\013_003.png
+  - earring_best\013_004.png
+  - earring_best\013_005.png
+  - earring_best\013_006.png
+  - earring_best\013_009.png
+  - earring_best\013_010.png
+  - earring_best\013_011.png
+  - earring_best\013_013.png
+  - earring_best\013_014.png
+  - earring_best\013_015.png
+  - earring_best\013_016.png
+  - earring_best\013_018.png
+  - earring_best\013_020.png
+  - earring_best\013_021.png
+  - earring_best\013_022.png
+  - earring_best\013_023.png
+  - earring_best\013_025.png
+  - earring_best\013_027.png
+  - earring_best\013_028.png
+  - earring_best\013_029.png
+  - earring_best\013_030.png
+  - earring_best\014_001.png
+  - earring_best\014_006.png
+  - earring_best\014_007.png
+  - earring_best\014_008.png
+  - earring_best\014_009.png
+  - earring_best\014_010.png
+  - earring_best\014_011.png
+  - earring_best\014_012.png
+  - earring_best\014_013.png
+  - earring_best\014_016.png
+  - earring_best\014_017.png
+  - earring_best\014_018.png
+  - earring_best\014_019.png
+  - earring_best\014_020.png
+  - earring_best\014_021.png
+  - earring_best\014_022.png
+  - earring_best\014_023.png
+  - earring_best\014_024.png
+  - earring_best\014_025.png
+  - earring_best\014_026.png
+  - earring_best\015_006.png
+  - earring_best\015_012.png
+  - earring_best\015_016.png
+  - earring_best\016_002.png
+  - earring_best\016_004.png
+  - earring_best\016_005.png
+  - earring_best\016_006.png
+  - earring_best\016_007.png
+  - earring_best\016_008.png
+  - earring_best\016_009.png
+  - earring_best\016_010.png
+  - earring_best\016_011.png
+  - earring_best\016_012.png
+  - earring_best\016_015.png
+  - earring_best\016_016.png
+  - earring_best\016_017.png
+  - earring_best\016_018.png
+  - earring_best\016_020.png
+  - earring_best\016_021.png
+  - earring_best\016_022.png
+  - earring_best\016_025.png
+  - earring_best\016_027.png
+  - earring_best\016_029.png
+  - earring_best\016_030.png
+  - earring_best\017_007.png
+  - earring_best\017_008.png
+  - earring_best\017_009.png
+  - earring_best\017_010.png
+  - earring_best\017_011.png
+  - earring_best\017_012.png
+  - earring_best\017_013.png
+  - earring_best\017_014.png
+  - earring_best\017_016.png
+  - earring_best\017_018.png
+  - earring_best\017_020.png
+  - earring_best\017_021.png
+  - earring_best\017_022.png
+  - earring_best\017_023.png
+  - earring_best\017_024.png
+  - earring_best\017_025.png
+  - earring_best\017_026.png
+  - earring_best\017_027.png
+  - earring_best\017_028.png
+  - earring_best\017_029.png
+  - earring_best\017_030.png
+  - earring_best\017_031.png
+  - earring_best\017_032.png
+  - earring_best\017_033.png
+  - earring_best\017_034.png
+  - earring_best\017_035.png
+  - earring_best\017_036.png
+  - earring_best\017_038.png
+  - earring_best\017_039.png
+  - earring_best\017_040.png
+  - earring_best\017_041.png
+  - earring_best\017_042.png
+  - earring_best\017_043.png
+  - earring_best\017_044.png
+  - earring_best\017_045.png
+  - earring_best\017_046.png
+  - earring_best\017_047.png
+  - earring_best\017_048.png
+  - earring_best\017_049.png
+  - earring_best\017_050.png
+  - earring_best\017_051.png
+  - earring_best\017_052.png
+  - earring_best\017_053.png
+  - earring_best\017_054.png
+  - earring_best\017_055.png
+  - earring_best\017_056.png
+  - earring_best\017_057.png
+  - earring_best\017_060.png
+  - earring_best\017_062.png
+  - earring_best\017_063.png
+  - earring_best\017_064.png
+  - earring_best\017_066.png
+  - earring_best\017_067.png
+  - earring_best\017_068.png
+  - earring_best\017_069.png
+  - earring_best\017_070.png
+  - earring_best\017_071.png
+  - earring_best\017_072.png
+  - earring_best\017_073.png
+  - earring_best\017_074.png
+  - earring_best\017_075.png
+  - earring_best\017_078.png
+  - earring_best\017_079.png
+  - earring_best\017_080.png
+  - earring_best\017_081.png
+  - earring_best\017_082.png
+  - earring_best\017_083.png
+  - earring_best\017_085.png
+  - earring_best\017_086.png
+  - earring_best\017_087.png
+  - earring_best\017_089.png
+  - earring_best\017_092.png
+  - earring_best\017_093.png
+  - earring_best\017_094.png
+  - earring_best\017_095.png
+  - earring_best\017_096.png
+  - earring_best\017_097.png
+  - earring_best\017_098.png
+  - earring_best\017_099.png
+  - earring_best\017_100.png
+  - earring_best\017_101.png
+  - earring_best\017_102.png
+  - earring_best\017_103.png
+  - earring_best\017_104.png
+  - earring_best\017_107.png
+  - earring_best\017_108.png
+  - earring_best\017_109.png
+  - earring_best\017_59.png
+  - earring_best\018_019.png
+  - earring_best\018_020.png
+  - earring_best\018_024.png
+  - earring_best\018_025.png
+  - earring_best\018_026.png
+  - earring_best\018_027.png
+  - earring_best\018_028.png
+  - earring_best\018_029.png
+  - earring_best\018_030.png
+  - earring_best\018_032.png
+  - earring_best\018_033.png
+  - earring_best\018_034.png
+  - earring_best\018_035.png
+  - earring_best\018_036.png
+  - earring_best\018_037.png
+  - earring_best\018_038.png
+  - earring_best\018_039.png
+  - earring_best\018_040.png
+  - earring_best\018_041.png
+  - earring_best\018_042.png
+  - earring_best\018_043.png
+  - earring_best\018_044.png
+  - earring_best\018_045.png
+  - earring_best\018_046.png
+  - earring_best\018_047.png
+  - earring_best\018_049.png
+  - earring_best\018_050.png
+  - earring_best\018_051.png
+  - earring_best\018_052.png
+  - earring_best\018_053.png
+  - earring_best\018_054.png
+  - earring_best\018_055.png
+  - earring_best\018_056.png
+  - earring_best\018_057.png
+  - earring_best\018_058.png
+  - earring_best\018_059.png
+  - earring_best\018_060.png
+  - earring_best\018_062.png
+  - earring_best\018_063.png
+  - earring_best\018_064.png
+  - earring_best\018_066.png
+  - earring_best\018_067.png
+  - earring_best\018_069.png
+  - earring_best\018_070.png
+  - earring_best\018_071.png
+  - earring_best\018_074.png
+  - earring_best\018_075.png
+  - earring_best\018_076.png
+  - earring_best\018_079.png
+  - earring_best\018_080.png
+  - earring_best\018_081.png
+  - earring_best\018_083.png
+  - earring_best\018_085.png
+  - earring_best\018_086.png
+  - earring_best\018_31.png
+  - earring_best\019_001.png
+  - earring_best\019_002.png
+  - earring_best\019_010.png
+  - earring_best\019_011.png
+  - earring_best\019_017.png
+  - earring_best\019_018.png
+  - earring_best\019_019.png
+  - earring_best\019_020.png
+  - earring_best\019_022.png
+  - earring_best\019_023.png
+  - earring_best\019_024.png
+  - earring_best\019_025.png
+  - earring_best\019_026.png
+  - earring_best\019_027.png
+  - earring_best\019_028.png
+  - earring_best\019_029.png
+  - earring_best\019_030.png
+  - earring_best\019_031.png
+  - earring_best\019_032.png
+  - earring_best\019_033.png
+  - earring_best\019_034.png
+  - earring_best\019_035.png
+  - earring_best\019_037.png
+  - earring_best\019_038.png
+  - earring_best\019_039.png
+  - earring_best\019_040.png
+  - earring_best\019_041.png
+  - earring_best\019_042.png
+  - earring_best\019_043.png
+  - earring_best\019_044.png
+  - earring_best\019_045.png
+  - earring_best\019_047.png
+  - earring_best\019_049.png
+  - earring_best\019_050.png
+  - earring_best\019_052.png
+  - earring_best\019_054.png
+  - earring_best\020_001.png
+  - earring_best\020_003.png
+  - earring_best\020_004.png
+  - earring_best\020_005.png
+  - earring_best\020_006.png
+  - earring_best\020_007.png
+  - earring_best\020_008.png
+  - earring_best\020_009.png
+  - earring_best\020_010.png
+  - earring_best\020_011.png
+  - earring_best\020_012.png
+  - earring_best\020_013.png
+  - earring_best\020_014.png
+  - earring_best\020_015.png
+  - earring_best\020_017.png
+  - earring_best\020_018.png
+  - earring_best\020_019.png
+  - earring_best\020_021.png
+  - earring_best\020_031.png
+  - earring_best\020_035.png
+  - earring_best\020_038.png
+  - earring_best\021_002.png
+  - earring_best\021_006.png
+  - earring_best\021_011.png
+  - earring_best\021_012.png
+  - earring_best\021_013.png
+  - earring_best\021_014.png
+  - earring_best\021_020.png
+  - earring_best\021_025.png
+  - earring_best\021_026.png
+  - earring_best\021_027.png
+  - earring_best\021_028.png
+  - earring_best\021_030.png
+  - earring_best\021_031.png
+  - earring_best\021_032.png
+  - earring_best\021_034.png
+  - earring_best\021_035.png
+  - earring_best\021_036.png
+  - earring_best\021_037.png
+  - earring_best\021_038.png
+  - earring_best\021_039.png
+  - earring_best\021_040.png
+  - earring_best\021_041.png
+  - earring_best\021_042.png
+  - earring_best\021_043.png
+  - earring_best\021_044.png
+  - earring_best\021_045.png
+  - earring_best\021_046.png
+  - earring_best\021_047.png
+  - earring_best\021_048.png
+  - earring_best\021_049.png
+  - earring_best\021_052.png
+  - earring_best\021_053.png
+  - earring_best\021_054.png
+  - earring_best\021_055.png
+  - earring_best\021_056.png
+  - earring_best\021_057.png
+  - earring_best\021_060.png
+  - earring_best\021_061.png
+  - earring_best\021_062.png
+  - earring_best\021_063.png
+  - earring_best\021_064.png
+  - earring_best\021_065.png
+  - earring_best\021_066.png
+  - earring_best\021_067.png
+  - earring_best\021_068.png
+  - earring_best\021_069.png
+  - earring_best\021_070.png
+  - earring_best\021_071.png
+  - earring_best\021_072.png
+  - earring_best\021_073.png
+  - earring_best\021_074.png
+  - earring_best\021_075.png
+  - earring_best\021_076.png
+  - earring_best\021_078.png
+  - earring_best\021_079.png
+  - earring_best\022_003.png
+  - earring_best\022_004.png
+  - earring_best\022_005.png
+  - earring_best\022_011.png
+  - earring_best\022_012.png
+  - earring_best\022_013.png
+  - earring_best\022_014.png
+  - earring_best\022_015.png
+  - earring_best\022_016.png
+  - earring_best\022_017.png
+  - earring_best\022_018.png
+  - earring_best\022_019.png
+  - earring_best\022_020.png
+  - earring_best\022_021.png
+  - earring_best\022_022.png
+  - earring_best\022_024.png
+  - earring_best\022_025.png
+  - earring_best\022_026.png
+  - earring_best\022_027.png
+  - earring_best\022_028.png
+  - earring_best\022_029.png
+  - earring_best\022_030.png
+  - earring_best\022_031.png
+  - earring_best\022_032.png
+  - earring_best\022_034.png
+  - earring_best\022_036.png
+  - earring_best\022_038.png
+  - earring_best\022_039.png
+  - earring_best\022_040.png
+  - earring_best\022_041.png
+  - earring_best\022_042.png
+  - earring_best\022_044.png
+  - earring_best\022_045.png
+  - earring_best\022_046.png
+  - earring_best\022_048.png
+  - earring_best\022_049.png
+  - earring_best\022_050.png
+  - earring_best\022_052.png
+  - earring_best\022_056.png
+  - earring_best\022_057.png
+  - earring_best\022_060.png
+  - earring_best\022_062.png
+  - earring_best\022_063.png
+  - earring_best\023_006.png
+  - earring_best\023_007.png
+  - earring_best\023_014.png
+  - earring_best\023_015.png
+  - earring_best\023_016.png
+  - earring_best\023_017.png
+  - earring_best\023_018.png
+  - earring_best\023_019.png
+  - earring_best\023_020.png
+  - earring_best\023_021.png
+  - earring_best\023_022.png
+  - earring_best\023_023.png
+  - earring_best\023_024.png
+  - earring_best\023_025.png
+  - earring_best\023_026.png
+  - earring_best\023_027.png
+  - earring_best\023_028.png
+  - earring_best\023_029.png
+  - earring_best\023_030.png
+  - earring_best\023_031.png
+  - earring_best\023_032.png
+  - earring_best\023_033.png
+  - earring_best\023_034.png
+  - earring_best\023_035.png
+  - earring_best\023_036.png
+  - earring_best\023_037.png
+  - earring_best\023_038.png
+  - earring_best\023_040.png
+  - earring_best\023_041.png
+  - earring_best\024_001.png
+  - earring_best\024_002.png
+  - earring_best\024_003.png
+  - earring_best\024_004.png
+  - earring_best\024_005.png
+  - earring_best\024_007.png
+  - earring_best\024_009.png
+  - earring_best\024_011.png
+  - earring_best\024_013.png
+  - earring_best\024_014.png
+  - earring_best\024_017.png
+  - earring_best\024_018.png
+  - earring_best\024_020.png
+  - earring_best\024_022.png
+  - earring_best\024_024.png
+  - earring_best\024_025.png
+  - earring_best\024_026.png
+  - earring_best\024_027.png
+  - earring_best\024_028.png
+  - earring_best\024_030.png
+  - earring_best\024_031.png
+  - earring_best\024_032.png
+  - earring_best\024_033.png
+  - earring_best\024_034.png
+  - earring_best\024_035.png
+  - earring_best\024_036.png
+  - earring_best\024_037.png
+  - earring_best\024_038.png
+  - earring_best\024_039.png
+  - earring_best\024_040.png
+  - earring_best\024_041.png
+  - earring_best\024_042.png
+  - earring_best\024_043.png
+  - earring_best\024_044.png
+  - earring_best\024_045.png
+  - earring_best\024_046.png
+  - earring_best\024_047.png
+  - earring_best\024_048.png
+  - earring_best\024_049.png
+  - earring_best\024_050.png
+  - earring_best\024_051.png
+  - earring_best\024_052.png
+  - earring_best\024_053.png
+  - earring_best\024_054.png
+  - earring_best\024_055.png
+  - earring_best\024_056.png
+  - earring_best\024_057.png
+  - earring_best\024_058.png
+  - earring_best\024_059.png
+  - earring_best\024_060.png
+  - earring_best\024_064.png
+  - earring_best\024_065.png
+  - earring_best\024_070.png
+  - earring_best\024_071.png
+  - earring_best\024_072.png
+  - earring_best\024_073.png
+  - earring_best\024_074.png
+  - earring_best\024_075.png
+  - earring_best\024_076.png
+  - earring_best\024_077.png
+  - earring_best\024_078.png
+  - earring_best\024_079.png
+  - earring_best\024_080.png
+  - earring_best\024_081.png
+  - earring_best\024_082.png
+  - earring_best\024_083.png
+  - earring_best\024_084.png
+  - earring_best\024_086.png
+  - earring_best\024_093.png
+  - earring_best\024_094.png
+  - earring_best\024_095.png
+  - earring_best\024_096.png
+  - earring_best\024_097.png
+  - earring_best\024_099.png
+  - earring_best\024_100.png
+  - earring_best\024_101.png
+  - earring_best\024_102.png
+  - earring_best\024_103.png
+  - earring_best\024_104.png
+  - earring_best\024_105.png
+  - earring_best\024_106.png
+  - earring_best\024_107.png
+  - earring_best\024_108.png
+  - earring_best\024_109.png
+  - earring_best\024_111.png
+  - earring_best\024_112.png
+  - earring_best\024_113.png
+  - earring_best\024_114.png
+  - earring_best\024_115.png
+  - earring_best\024_117.png
+  - earring_best\024_118.png
+  - earring_best\024_119.png
+  - earring_best\024_120.png
+  - earring_best\024_122.png
+  - earring_best\024_123.png
+  - earring_best\025_003.png
+  - earring_best\025_004.png
+  - earring_best\025_005.png
+  - earring_best\025_018.png
+  - earring_best\025_029.png
+  - earring_best\025_030.png
+  - earring_best\025_031.png
+  - earring_best\025_033.png
+  - earring_best\025_034.png
+  - earring_best\025_035.png
+  - earring_best\025_036.png
+  - earring_best\025_037.png
+  - earring_best\025_038.png
+  - earring_best\025_039.png
+  - earring_best\025_040.png
+  - earring_best\025_041.png
+  - earring_best\025_044.png
+  - earring_best\025_045.png
+  - earring_best\025_046.png
+  - earring_best\025_047.png
+  - earring_best\025_048.png
+  - earring_best\025_051.png
+  - earring_best\025_052.png
+  - earring_best\025_054.png
+  - earring_best\025_055.png
+  - earring_best\025_056.png
+  - earring_best\025_057.png
+  - earring_best\025_059.png
+  - earring_best\025_061.png
+  - earring_best\025_063.png
+  - earring_best\025_066.png
+  - earring_best\025_067.png
+  - earring_best\025_070.png
+  - earring_best\025_072.png
+  - earring_best\025_073.png
+  - earring_best\025_076.png
+  - earring_best\025_077.png
+  - earring_best\026_001.png
+  - earring_best\026_002.png
+  - earring_best\026_004.png
+  - earring_best\026_005.png
+  - earring_best\026_006.png
+  - earring_best\026_007.png
+  - earring_best\026_008.png
+  - earring_best\026_009.png
+  - earring_best\026_010.png
+  - earring_best\026_011.png
+  - earring_best\026_036.png
+  - earring_best\026_037.png
+  - earring_best\026_038.png
+  - earring_best\026_039.png
+  - earring_best\026_040.png
+  - earring_best\026_041.png
+  - earring_best\026_042.png
+  - earring_best\026_043.png
+  - earring_best\026_044.png
+  - earring_best\026_045.png
+  - earring_best\026_046.png
+  - earring_best\026_048.png
+  - earring_best\026_049.png
+  - earring_best\026_050.png
+  - earring_best\026_052.png
+  - earring_best\026_053.png
+  - earring_best\026_054.png
+  - earring_best\026_055.png
+  - earring_best\026_056.png
+  - earring_best\026_057.png
+  - earring_best\026_058.png
+  - earring_best\026_059.png
+  - earring_best\026_060.png
+  - earring_best\026_061.png
+  - earring_best\026_062.png
+  - earring_best\026_063.png
+  - earring_best\026_064.png
+  - earring_best\026_065.png
+  - earring_best\026_066.png
+  - earring_best\026_068.png
+  - earring_best\026_069.png
+  - earring_best\026_070.png
+  - earring_best\026_071.png
+  - earring_best\026_072.png
+  - earring_best\026_073.png
+  - earring_best\026_075.png
+  - earring_best\026_079.png
+  - earring_best\026_081.png
+  - earring_best\026_082.png
+  - earring_best\026_083.png
+  - earring_best\026_084.png
+  - earring_best\026_086.png
+  - earring_best\026_088.png
+  - earring_best\026_090.png
+  - earring_best\026_092.png
+  - earring_best\026_093.png
+  - earring_best\026_095.png
+  - earring_best\026_096.png
+  - earring_best\026_100.png
+  - earring_best\027_001.png
+  - earring_best\027_002.png
+  - earring_best\027_011.png
+  - earring_best\027_012.png
+  - earring_best\027_013.png
+  - earring_best\027_014.png
+  - earring_best\027_015.png
+  - earring_best\027_016.png
+  - earring_best\027_017.png
+  - earring_best\027_018.png
+  - earring_best\027_019.png
+  - earring_best\027_020.png
+  - earring_best\027_021.png
+  - earring_best\027_022.png
+  - earring_best\027_023.png
+  - earring_best\027_024.png
+  - earring_best\027_025.png
+  - earring_best\027_026.png
+  - earring_best\027_027.png
+  - earring_best\027_028.png
+  - earring_best\027_029.png
+  - earring_best\027_030.png
+  - earring_best\027_031.png
+  - earring_best\027_032.png
+  - earring_best\027_033.png
+  - earring_best\027_034.png
+  - earring_best\027_035.png
+  - earring_best\027_036.png
+  - earring_best\027_037.png
+  - earring_best\027_038.png
+  - earring_best\027_039.png
+  - earring_best\027_040.png
+  - earring_best\027_041.png
+  - earring_best\027_042.png
+  - earring_best\027_043.png
+  - earring_best\027_044.png
+  - earring_best\027_045.png
+  - earring_best\027_046.png
+  - earring_best\027_047.png
+  - earring_best\027_048.png
+  - earring_best\027_049.png
+  - earring_best\027_050.png
+  - earring_best\027_051.png
+  - earring_best\027_052.png
+  - earring_best\027_053.png
+  - earring_best\027_054.png
+  - earring_best\027_055.png
+  - earring_best\027_056.png
+  - earring_best\027_057.png
+  - earring_best\027_058.png
+  - earring_best\027_059.png
+  - earring_best\027_060.png
+  - earring_best\027_061.png
+  - earring_best\027_062.png
+  - earring_best\027_063.png
+  - earring_best\027_064.png
+  - earring_best\027_065.png
+  - earring_best\027_066.png
+  - earring_best\027_067.png
+  - earring_best\027_068.png
+  - earring_best\027_069.png
+  - earring_best\027_070.png
+  - earring_best\027_071.png
+  - earring_best\027_072.png
+  - earring_best\027_073.png
+  - earring_best\027_074.png
+  - earring_best\027_075.png
+  - earring_best\027_076.png
+  - earring_best\027_077.png
+  - earring_best\027_078.png
+  - earring_best\027_079.png
+  - earring_best\027_080.png
+  - earring_best\027_081.png
+  - earring_best\027_082.png
+  - earring_best\027_084.png
+  - earring_best\027_085.png
+  - earring_best\027_086.png
+  - earring_best\027_088.png
+  - earring_best\027_089.png
+  - earring_best\027_090.png
+  - earring_best\027_091.png
+  - earring_best\027_093.png
+  - earring_best\027_095.png
+  - earring_best\027_096.png
+  - earring_best\027_099.png
+  - earring_best\027_100.png
+  - earring_best\027_101.png
+  - earring_best\027_102.png
+  - earring_best\027_103.png
+  - earring_best\027_104.png
+  - earring_best\027_105.png
+  - earring_best\027_106.png
+  - earring_best\027_107.png
+  - earring_best\027_109.png
+  - earring_best\027_110.png
+  - earring_best\027_111.png
+  - earring_best\027_112.png
+  - earring_best\027_114.png
+  - earring_best\027_115.png
+  - earring_best\028_003.png
+  - earring_best\028_013.png
+  - earring_best\028_014.png
+  - earring_best\028_018.png
+  - earring_best\028_019.png
+  - earring_best\028_020.png
+  - earring_best\028_021.png
+  - earring_best\028_022.png
+  - earring_best\028_023.png
+  - earring_best\028_024.png
+  - earring_best\028_025.png
+  - earring_best\028_026.png
+  - earring_best\028_027.png
+  - earring_best\028_028.png
+  - earring_best\028_029.png
+  - earring_best\028_030.png
+  - earring_best\028_031.png
+  - earring_best\028_032.png
+  - earring_best\028_033.png
+  - earring_best\028_034.png
+  - earring_best\028_035.png
+  - earring_best\028_036.png
+  - earring_best\028_037.png
+  - earring_best\028_038.png
+  - earring_best\028_039.png
+  - earring_best\028_040.png
+  - earring_best\028_041.png
+  - earring_best\028_042.png
+  - earring_best\028_043.png
+  - earring_best\028_048.png
+  - earring_best\028_052.png
+  - earring_best\028_053.png
+  - earring_best\028_054.png
+  - earring_best\028_055.png
+  - earring_best\028_056.png
+  - earring_best\029_001.png
+  - earring_best\029_002.png
+  - earring_best\029_003.png
+  - earring_best\029_004.png
+  - earring_best\029_007.png
+  - earring_best\029_011.png
+  - earring_best\029_012.png
+  - earring_best\029_013.png
+  - earring_best\029_014.png
+  - earring_best\029_015.png
+  - earring_best\029_016.png
+  - earring_best\029_017.png
+  - earring_best\029_019.png
+  - earring_best\029_020.png
+  - earring_best\029_021.png
+  - earring_best\029_022.png
+  - earring_best\029_023.png
+  - earring_best\029_024.png
+  - earring_best\029_025.png
+  - earring_best\029_026.png
+  - earring_best\029_027.png
+  - earring_best\029_028.png
+  - earring_best\029_029.png
+  - earring_best\029_030.png
+  - earring_best\029_031.png
+  - earring_best\029_032.png
+  - earring_best\029_033.png
+  - earring_best\029_034.png
+  - earring_best\029_036.png
+  - earring_best\029_037.png
+  - earring_best\029_038.png
+  - earring_best\029_039.png
+  - earring_best\029_040.png
+  - earring_best\029_041.png
+  - earring_best\029_042.png
+  - earring_best\029_043.png
+  - earring_best\029_044.png
+  - earring_best\029_045.png
+  - earring_best\029_046.png
+  - earring_best\029_047.png
+  - earring_best\029_048.png
+  - earring_best\029_049.png
+  - earring_best\029_050.png
+  - earring_best\029_051.png
+  - earring_best\029_052.png
+  - earring_best\029_053.png
+  - earring_best\029_054.png
+  - earring_best\029_055.png
+  - earring_best\029_057.png
+  - earring_best\029_058.png
+  - earring_best\029_059.png
+  - earring_best\029_060.png
+  - earring_best\029_061.png
+  - earring_best\029_063.png
+  - earring_best\029_064.png
+  - earring_best\029_066.png
+  - earring_best\029_068.png
+  - earring_best\029_069.png
+  - earring_best\029_070.png
+  - earring_best\029_073.png
+  - earring_best\029_074.png
+  - earring_best\029_076.png
+  - earring_best\029_077.png
+  - earring_best\029_078.png
+  - earring_best\029_079.png
+  - earring_best\030_001.png
+  - earring_best\030_002.png
+  - earring_best\030_003.png
+  - earring_best\030_004.png
+  - earring_best\030_005.png
+  - earring_best\030_006.png
+  - earring_best\030_007.png
+  - earring_best\030_008.png
+  - earring_best\030_009.png
+  - earring_best\030_010.png
+  - earring_best\030_011.png
+  - earring_best\030_012.png
+  - earring_best\030_013.png
+  - earring_best\030_014.png
+  - earring_best\030_015.png
+  - earring_best\030_016.png
+  - earring_best\030_017.png
+  - earring_best\030_018.png
+  - earring_best\030_019.png
+  - earring_best\030_020.png
+  - earring_best\030_021.png
+  - earring_best\030_022.png
+  - earring_best\030_023.png
+  - earring_best\030_024.png
+  - earring_best\030_025.png
+  - earring_best\030_026.png
+  - earring_best\030_027.png
+  - earring_best\030_028.png
+  - earring_best\030_029.png
+  - earring_best\030_030.png
+  - earring_best\030_031.png
+  - earring_best\030_032.png
+  - earring_best\030_033.png
+  - earring_best\030_034.png
+  - earring_best\030_035.png
+  - earring_best\030_036.png
+  - earring_best\030_039.png
+  - earring_best\030_040.png
+  - earring_best\030_041.png
+  - earring_best\030_042.png
+  - earring_best\030_043.png
+  - earring_best\030_044.png
+  - earring_best\030_045.png
+  - earring_best\030_046.png
+  - earring_best\030_047.png
+  - earring_best\030_048.png
+  - earring_best\030_049.png
+  - earring_best\030_050.png
+  - earring_best\030_051.png
+  - earring_best\030_052.png
+  - earring_best\030_053.png
+  - earring_best\030_054.png
+  - earring_best\030_055.png
+  - earring_best\030_056.png
+  - earring_best\030_057.png
+  - earring_best\030_058.png
+  - earring_best\030_059.png
+  - earring_best\030_060.png
+  - earring_best\030_062.png
+  - earring_best\030_063.png
+  - earring_best\030_064.png
+  - earring_best\030_065.png
+  - earring_best\030_066.png
+  - earring_best\030_067.png
+  - earring_best\030_068.png
+  - earring_best\030_069.png
+  - earring_best\030_071.png
+  - earring_best\030_072.png
+  - earring_best\030_073.png
+  - earring_best\030_074.png
+  - earring_best\030_075.png
+  - earring_best\030_076.png
+  - earring_best\030_077.png
+  - earring_best\030_078.png
+  - earring_best\030_079.png
+  - earring_best\030_080.png
+  - earring_best\030_082.png
+  - earring_best\030_083.png
+  - earring_best\030_086.png
+  - earring_best\030_087.png
+  - earring_best\030_090.png
+  - earring_best\030_091.png
+  - earring_best\030_092.png
+  - earring_best\030_093.png
+  - earring_best\030_094.png
+  - earring_best\030_095.png
+  - earring_best\030_096.png
+  - earring_best\030_098.png
+  - earring_best\030_099.png
+  - earring_best\030_100.png
+  - earring_best\030_101.png
+  - earring_best\030_102.png
+  - earring_best\031_002.png
+  - earring_best\031_003.png
+  - earring_best\031_005.png
+  - earring_best\031_006.png
+  - earring_best\031_007.png
+  - earring_best\031_008.png
+  - earring_best\031_009.png
+  - earring_best\031_010.png
+  - earring_best\031_011.png
+  - earring_best\031_012.png
+  - earring_best\031_013.png
+  - earring_best\031_014.png
+  - earring_best\031_020.png
+  - earring_best\031_021.png
+  - earring_best\031_023.png
+  - earring_best\031_024.png
+  - earring_best\031_026.png
+  - earring_best\031_027.png
+  - earring_best\031_029.png
+  - earring_best\031_030.png
+  - earring_best\031_032.png
+  - earring_best\031_034.png
+  - earring_best\031_036.png
+  - earring_best\031_040.png
+  - earring_best\031_041.png
+  - earring_best\032_017.png
+  - earring_best\032_018.png
+  - earring_best\032_019.png
+  - earring_best\032_020.png
+  - earring_best\032_021.png
+  - earring_best\032_022.png
+  - earring_best\032_023.png
+  - earring_best\032_024.png
+  - earring_best\032_025.png
+  - earring_best\032_026.png
+  - earring_best\032_027.png
+  - earring_best\032_028.png
+  - earring_best\032_029.png
+  - earring_best\032_030.png
+  - earring_best\032_031.png
+  - earring_best\032_032.png
+  - earring_best\032_034.png
+  - earring_best\032_035.png
+  - earring_best\032_036.png
+  - earring_best\032_037.png
+  - earring_best\032_038.png
+  - earring_best\032_039.png
+  - earring_best\032_040.png
+  - earring_best\032_041.png
+  - earring_best\032_042.png
+  - earring_best\032_043.png
+  - earring_best\032_044.png
+  - earring_best\032_045.png
+  - earring_best\032_046.png
+  - earring_best\032_047.png
+  - earring_best\032_048.png
+  - earring_best\032_049.png
+  - earring_best\032_050.png
+  - earring_best\032_051.png
+  - earring_best\032_052.png
+  - earring_best\032_053.png
+  - earring_best\032_054.png
+  - earring_best\032_055.png
+  - earring_best\032_056.png
+  - earring_best\032_057.png
+  - earring_best\032_058.png
+  - earring_best\032_059.png
+  - earring_best\032_060.png
+  - earring_best\032_061.png
+  - earring_best\032_062.png
+  - earring_best\032_064.png
+  - earring_best\032_065.png
+  - earring_best\032_068.png
+  - earring_best\032_069.png
+  - earring_best\033_001.png
+  - earring_best\033_002.png
+  - earring_best\033_003.png
+  - earring_best\033_004.png
+  - earring_best\033_005.png
+  - earring_best\033_006.png
+  - earring_best\033_007.png
+  - earring_best\033_008.png
+  - earring_best\033_009.png
+  - earring_best\033_010.png
+  - earring_best\033_011.png
+  - earring_best\033_012.png
+  - earring_best\033_013.png
+  - earring_best\033_015.png
+  - earring_best\033_016.png
+  - earring_best\033_017.png
+  - earring_best\033_018.png
+  - earring_best\033_019.png
+  - earring_best\033_020.png
+  - earring_best\033_021.png
+  - earring_best\033_022.png
+  - earring_best\033_023.png
+  - earring_best\033_024.png
+  - earring_best\033_029.png
+  - earring_best\033_030.png
+  - earring_best\033_032.png
+  - earring_best\033_033.png
+  - earring_best\033_034.png
+  - earring_best\033_035.png
+  - earring_best\033_036.png
+  - earring_best\034_001.png
+  - earring_best\034_002.png
+  - earring_best\034_003.png
+  - earring_best\034_006.png
+  - earring_best\034_007.png
+  - earring_best\034_011.png
+  - earring_best\034_014.png
+  - earring_best\034_017.png
+  - earring_best\034_018.png
+  - earring_best\034_019.png
+  - earring_best\034_021.png
+  - earring_best\034_026.png
+  - earring_best\034_029.png
+  - earring_best\035_001.png
+  - earring_best\035_003.png
+  - earring_best\035_004.png
+  - earring_best\035_005.png
+  - earring_best\035_006.png
+  - earring_best\035_007.png
+  - earring_best\035_008.png
+  - earring_best\035_010.png
+  - earring_best\035_011.png
+  - earring_best\035_012.png
+  - earring_best\035_013.png
+  - earring_best\035_014.png
+  - earring_best\035_015.png
+  - earring_best\035_016.png
+  - earring_best\035_017.png
+  - earring_best\035_019.png
+  - earring_best\035_020.png
+  - earring_best\036_002.png
+  - earring_best\036_004.png
+  - earring_best\036_005.png
+  - earring_best\036_006.png
+  - earring_best\036_007.png
+  - earring_best\036_008.png
+  - earring_best\036_009.png
+  - earring_best\036_010.png
+  - earring_best\036_011.png
+  - earring_best\036_012.png
+  - earring_best\036_013.png
+  - earring_best\036_014.png
+  - earring_best\036_015.png
+  - earring_best\036_016.png
+  - earring_best\036_017.png
+  - earring_best\036_018.png
+  - earring_best\036_019.png
+  - earring_best\036_020.png
+  - earring_best\036_021.png
+  - earring_best\036_022.png
+  - earring_best\036_023.png
+  - earring_best\036_024.png
+  - earring_best\036_025.png
+  - earring_best\036_026.png
+  - earring_best\036_027.png
+  - earring_best\036_028.png
+  - earring_best\036_031.png
+  - earring_best\036_033.png
+  - earring_best\036_034.png
+  - earring_best\036_035.png
+  - earring_best\037_001.png
+  - earring_best\037_002.png
+  - earring_best\037_003.png
+  - earring_best\037_004.png
+  - earring_best\037_005.png
+  - earring_best\037_006.png
+  - earring_best\037_007.png
+  - earring_best\037_008.png
+  - earring_best\037_009.png
+  - earring_best\037_010.png
+  - earring_best\037_011.png
+  - earring_best\037_013.png
+  - earring_best\037_014.png
+  - earring_best\037_015.png
+  - earring_best\037_016.png
+  - earring_best\037_017.png
+  - earring_best\037_018.png
+  - earring_best\037_019.png
+  - earring_best\037_020.png
+  - earring_best\037_021.png
+  - earring_best\037_022.png
+  - earring_best\038_002.png
+  - earring_best\038_005.png
+  - earring_best\038_008.png
+  - earring_best\038_009.png
+  - earring_best\038_010.png
+  - earring_best\038_011.png
+  - earring_best\038_012.png
+  - earring_best\038_013.png
+  - earring_best\038_014.png
+  - earring_best\038_015.png
+  - earring_best\038_016.png
+  - earring_best\038_017.png
+  - earring_best\038_018.png
+  - earring_best\038_019.png
+  - earring_best\038_021.png
+  - earring_best\038_022.png
+  - earring_best\038_023.png
+  - earring_best\038_024.png
+  - earring_best\038_025.png
+  - earring_best\038_026.png
+  - earring_best\038_028.png
+  - earring_best\038_031.png
+  - earring_best\038_032.png
+  - earring_best\038_033.png
+  - earring_best\038_034.png
+  - earring_best\038_035.png
+  - earring_best\038_036.png
+  - earring_best\038_037.png
+  - earring_best\038_038.png
+  - earring_best\038_039.png
+  - earring_best\038_040.png
+  - earring_best\038_041.png
+  - earring_best\038_042.png
+  - earring_best\038_044.png
+  - earring_best\038_045.png
+  - earring_best\038_046.png
+  - earring_best\038_047.png
+  - earring_best\038_048.png
+  - earring_best\038_049.png
+  - earring_best\038_050.png
+  - earring_best\038_059.png
+  - earring_best\038_061.png
+  - earring_best\038_062.png
+  - earring_best\038_063.png
+  - earring_best\038_065.png
+  - earring_best\038_066.png
+  - earring_best\038_067.png
+  - earring_best\038_068.png
+  - earring_best\038_071.png
+  - earring_best\038_075.png
+  - earring_best\038_078.png
+  - earring_best\038_079.png
+  - earring_best\039_004.png
+  - earring_best\039_016.png
+  - earring_best\039_017.png
+  - earring_best\039_019.png
+  - earring_best\039_020.png
+  - earring_best\039_021.png
+  - earring_best\039_022.png
+  - earring_best\039_023.png
+  - earring_best\039_024.png
+  - earring_best\039_025.png
+  - earring_best\039_026.png
+  - earring_best\039_027.png
+  - earring_best\039_030.png
+  - earring_best\039_031.png
+  - earring_best\039_033.png
+  - earring_best\039_034.png
+  - earring_best\039_035.png
+  - earring_best\039_036.png
+  - earring_best\039_038.png
+  - earring_best\039_039.png
+  - earring_best\039_040.png
+  - earring_best\039_041.png
+  - earring_best\039_042.png
+  - earring_best\039_045.png
+  - earring_best\039_046.png
+  - earring_best\039_047.png
+  - earring_best\039_048.png
+  - earring_best\039_049.png
+  - earring_best\039_051.png
+  - earring_best\039_052.png
+  - earring_best\039_053.png
+  - earring_best\039_055.png
+  - earring_best\039_056.png
+  - earring_best\039_057.png
+  - earring_best\039_058.png
+  - earring_best\039_060.png
+  - earring_best\039_061.png
+  - earring_best\039_063.png
+  - earring_best\039_064.png
+  - earring_best\039_066.png
+  - earring_best\040_002.png
+  - earring_best\040_003.png
+  - earring_best\040_004.png
+  - earring_best\040_005.png
+  - earring_best\040_006.png
+  - earring_best\040_007.png
+  - earring_best\040_008.png
+  - earring_best\040_009.png
+  - earring_best\040_010.png
+  - earring_best\040_011.png
+  - earring_best\040_012.png
+  - earring_best\040_013.png
+  - earring_best\040_014.png
+  - earring_best\040_015.png
+  - earring_best\040_016.png
+  - earring_best\040_017.png
+  - earring_best\040_018.png
+  - earring_best\040_019.png
+  - earring_best\040_022.png
+  - earring_best\040_023.png
+  - earring_best\040_024.png
+  - earring_best\040_025.png
+  - earring_best\040_027.png
+  - earring_best\040_033.png
+  - earring_best\040_035.png
+  - earring_best\040_036.png
+  - earring_best\040_037.png
+  - earring_best\040_038.png
+  - earring_best\040_039.png
+  - earring_best\040_040.png
+  - earring_best\040_041.png
+  - earring_best\040_042.png
+  - earring_best\040_045.png
+  - earring_best\040_047.png
+  - earring_best\040_048.png
+  - earring_best\040_049.png
+  - earring_best\040_050.png
+  - earring_best\040_051.png
+  - earring_best\040_053.png
+  - earring_best\040_055.png
+  - earring_best\040_056.png
+  - earring_best\040_057.png
+  - earring_best\040_058.png
+  - earring_best\040_059.png
+  - earring_best\040_060.png
+  - earring_best\040_062.png
+  - earring_best\040_064.png
+  - earring_best\040_065.png
+  - earring_best\040_066.png
+  - earring_best\040_067.png
+  - earring_best\040_068.png
+  - earring_best\040_069.png
+  - earring_best\040_070.png
+  - earring_best\040_071.png
+  - earring_best\040_072.png
+  - earring_best\040_073.png
+  - earring_best\040_074.png
+  - earring_best\040_075.png
+  - earring_best\040_076.png
+  - earring_best\040_077.png
+  - earring_best\040_078.png
+  - earring_best\040_082.png
+  - earring_best\040_083.png
+  - earring_best\040_084.png
+  - earring_best\040_086.png
+  - earring_best\040_089.png
+  - earring_best\040_091.png
+  - earring_best\040_092.png
+  - earring_best\040_093.png
+  - earring_best\040_094.png
+  - earring_best\040_095.png
+  - earring_best\040_096.png
+  - earring_best\040_097.png
+  - earring_best\040_098.png
+  - earring_best\040_099.png
+  - earring_best\040_100.png
+  - earring_best\040_101.png
+  - earring_best\040_102.png
+  - earring_best\040_103.png
+  - earring_best\040_104.png
+  - earring_best\040_105.png
+  - earring_best\041_010.png
+  - earring_best\041_011.png
+  - earring_best\041_016.png
+  - earring_best\041_017.png
+  - earring_best\041_018.png
+  - earring_best\041_019.png
+  - earring_best\041_020.png
+  - earring_best\041_021.png
+  - earring_best\041_022.png
+  - earring_best\041_023.png
+  - earring_best\041_024.png
+  - earring_best\041_026.png
+  - earring_best\041_027.png
+  - earring_best\041_028.png
+  - earring_best\041_030.png
+  - earring_best\041_031.png
+  - earring_best\041_035.png
+  - earring_best\041_037.png
+  - earring_best\041_038.png
+  - earring_best\041_039.png
+  - earring_best\042_001.png
+  - earring_best\042_002.png
+  - earring_best\042_003.png
+  - earring_best\042_006.png
+  - earring_best\042_007.png
+  - earring_best\042_010.png
+  - earring_best\042_011.png
+  - earring_best\042_012.png
+  - earring_best\042_013.png
+  - earring_best\042_014.png
+  - earring_best\042_015.png
+  - earring_best\042_017.png
+  - earring_best\042_020.png
+  - earring_best\042_022.png
+  - earring_best\042_023.png
+  - earring_best\042_025.png
+  - earring_best\042_026.png
+  - earring_best\042_027.png
+  - earring_best\042_031.png
+  - earring_best\042_032.png
+  - earring_best\042_033.png
+  - earring_best\042_036.png
+  - earring_best\042_038.png
+  - earring_best\042_039.png
+  - earring_best\042_040.png
+  - earring_best\042_041.png
+  - earring_best\042_042.png
+  - earring_best\042_043.png
+  - earring_best\042_044.png
+  - earring_best\042_048.png
+  - earring_best\042_050.png
+  - earring_best\042_051.png
+  - earring_best\042_052.png
+  - earring_best\042_053.png
+  - earring_best\042_054.png
+  - earring_best\042_055.png
+  - earring_best\042_056.png
+  - earring_best\042_057.png
+  - earring_best\043_001.png
+  - earring_best\043_002.png
+  - earring_best\043_010.png
+  - earring_best\043_016.png
+  - earring_best\043_019.png
+  - earring_best\043_020.png
+  - earring_best\043_021.png
+  - earring_best\043_022.png
+  - earring_best\043_024.png
+  - earring_best\043_025.png
+  - earring_best\043_028.png
+  - earring_best\043_030.png
+  - earring_best\043_031.png
+  - earring_best\043_032.png
+  - earring_best\043_033.png
+  - earring_best\043_036.png
+  - earring_best\044_003.png
+  - earring_best\044_004.png
+  - earring_best\044_005.png
+  - earring_best\044_006.png
+  - earring_best\044_007.png
+  - earring_best\044_008.png
+  - earring_best\044_009.png
+  - earring_best\044_010.png
+  - earring_best\044_011.png
+  - earring_best\044_012.png
+  - earring_best\044_013.png
+  - earring_best\044_014.png
+  - earring_best\044_015.png
+  - earring_best\044_016.png
+  - earring_best\044_017.png
+  - earring_best\044_018.png
+  - earring_best\044_019.png
+  - earring_best\044_020.png
+  - earring_best\044_021.png
+  - earring_best\044_022.png
+  - earring_best\044_023.png
+  - earring_best\044_024.png
+  - earring_best\044_025.png
+  - earring_best\044_026.png
+  - earring_best\044_027.png
+  - earring_best\044_028.png
+  - earring_best\044_032.png
+  - earring_best\044_033.png
+  - earring_best\044_034.png
+  - earring_best\044_035.png
+  - earring_best\044_036.png
+  - earring_best\044_038.png
+  - earring_best\044_039.png
+  - earring_best\044_040.png
+  - earring_best\044_044.png
+  - earring_best\044_046.png
+  - earring_best\044_048.png
+  - earring_best\044_050.png
+  - earring_best\044_051.png
+  - earring_best\044_053.png
+  - earring_best\044_056.png
+  - earring_best\044_057.png
+  - earring_best\044_058.png
+  - earring_best\044_059.png
+  - earring_best\044_060.png
+  - earring_best\044_063.png
+  - earring_best\044_064.png
+  - earring_best\044_065.png
+  - earring_best\044_066.png
+  - earring_best\044_067.png
+  - earring_best\044_069.png
+  - earring_best\045_001.png
+  - earring_best\045_002.png
+  - earring_best\045_004.png
+  - earring_best\045_005.png
+  - earring_best\045_006.png
+  - earring_best\045_008.png
+  - earring_best\045_009.png
+  - earring_best\045_010.png
+  - earring_best\045_011.png
+  - earring_best\045_012.png
+  - earring_best\045_013.png
+  - earring_best\045_014.png
+  - earring_best\045_015.png
+  - earring_best\045_016.png
+  - earring_best\045_017.png
+  - earring_best\045_018.png
+  - earring_best\045_019.png
+  - earring_best\045_020.png
+  - earring_best\045_021.png
+  - earring_best\045_022.png
+  - earring_best\045_023.png
+  - earring_best\045_024.png
+  - earring_best\045_025.png
+  - earring_best\045_026.png
+  - earring_best\045_027.png
+  - earring_best\045_028.png
+  - earring_best\045_029.png
+  - earring_best\045_030.png
+  - earring_best\045_031.png
+  - earring_best\045_032.png
+  - earring_best\045_033.png
+  - earring_best\045_034.png
+  - earring_best\045_035.png
+  - earring_best\045_036.png
+  - earring_best\045_037.png
+  - earring_best\045_038.png
+  - earring_best\045_039.png
+  - earring_best\045_040.png
+  - earring_best\045_041.png
+  - earring_best\045_042.png
+  - earring_best\045_044.png
+  - earring_best\045_045.png
+  - earring_best\045_046.png
+  - earring_best\045_047.png
+  - earring_best\045_049.png
+  - earring_best\045_051.png
+  - earring_best\045_052.png
+  - earring_best\045_053.png
+  - earring_best\045_055.png
+  - earring_best\045_056.png
+  - earring_best\045_059.png
+  - earring_best\045_060.png
+  - earring_best\045_062.png
+  - earring_best\045_063.png
+  - earring_best\045_064.png
+  - earring_best\045_065.png
+  - earring_best\045_068.png
+  - earring_best\045_069.png
+  - earring_best\045_071.png
+  - earring_best\045_072.png
+  - earring_best\045_073.png
+  - earring_best\046_005.png
+  - earring_best\046_006.png
+  - earring_best\046_007.png
+  - earring_best\046_008.png
+  - earring_best\046_009.png
+  - earring_best\046_010.png
+  - earring_best\046_011.png
+  - earring_best\046_012.png
+  - earring_best\046_013.png
+  - earring_best\046_014.png
+  - earring_best\046_015.png
+  - earring_best\046_016.png
+  - earring_best\046_017.png
+  - earring_best\046_018.png
+  - earring_best\046_019.png
+  - earring_best\046_020.png
+  - earring_best\046_021.png
+  - earring_best\046_022.png
+  - earring_best\046_023.png
+  - earring_best\046_024.png
+  - earring_best\046_025.png
+  - earring_best\046_026.png
+  - earring_best\046_027.png
+  - earring_best\046_028.png
+  - earring_best\046_030.png
+  - earring_best\046_031.png
+  - earring_best\046_032.png
+  - earring_best\046_033.png
+  - earring_best\046_034.png
+  - earring_best\046_035.png
+  - earring_best\046_036.png
+  - earring_best\046_037.png
+  - earring_best\046_038.png
+  - earring_best\046_039.png
+  - earring_best\046_040.png
+  - earring_best\046_041.png
+  - earring_best\046_042.png
+  - earring_best\046_043.png
+  - earring_best\046_044.png
+  - earring_best\046_045.png
+  - earring_best\046_046.png
+  - earring_best\046_047.png
+  - earring_best\046_048.png
+  - earring_best\046_049.png
+  - earring_best\046_050.png
+  - earring_best\046_051.png
+  - earring_best\046_052.png
+  - earring_best\046_053.png
+  - earring_best\046_054.png
+  - earring_best\046_055.png
+  - earring_best\046_056.png
+  - earring_best\046_057.png
+  - earring_best\046_058.png
+  - earring_best\046_059.png
+  - earring_best\046_060.png
+  - earring_best\046_061.png
+  - earring_best\046_062.png
+  - earring_best\046_063.png
+  - earring_best\046_064.png
+  - earring_best\046_065.png
+  - earring_best\046_066.png
+  - earring_best\046_068.png
+  - earring_best\046_069.png
+  - earring_best\046_070.png
+  - earring_best\046_071.png
+  - earring_best\046_072.png
+  - earring_best\046_073.png
+  - earring_best\046_074.png
+  - earring_best\046_075.png
+  - earring_best\046_077.png
+  - earring_best\046_079.png
+  - earring_best\046_081.png
+  - earring_best\046_082.png
+  - earring_best\046_083.png
+  - earring_best\046_084.png
+  - earring_best\046_086.png
+  - earring_best\046_087.png
+  - earring_best\046_089.png
+  - earring_best\046_090.png
+  - earring_best\046_091.png
+  - earring_best\046_093.png
+  - earring_best\046_094.png
+  - earring_best\046_095.png
+  - earring_best\046_096.png
+  - earring_best\046_097.png
+  - earring_best\1 (1).jpg
+  - earring_best\1.jpg
+  - earring_best\11495432936270-Zaveri-Pearls-Women-Earrings-2751495432936199-1.jpg
+  - earring_best\11512189537872-Zaveri-Pearls-Gold-Toned-Chandbalis-6931512189537849-1.jpg
+  - earring_best\1398.Jpg
+  - earring_best\153372934957324276-youbella-goldplated-moti-fancy-partywear-jhumka.jpg
+  - earring_best\2631_6192tr_front_300x.jpg
+  - earring_best\3dropearring_grande.jpg
+  - earring_best\41rFH0x18bL._SY300_QL70_.jpg
+  - earring_best\41vkv3vYSkL.jpg
+  - earring_best\513FXlFj-AL._SY395._SX._UX._SY._UY_.jpg
+  - earring_best\57597_main.jpeg
+  - earring_best\59387_main.jpeg
+  - earring_best\61TqDlj3i6L._UY395_.jpg
+  - earring_best\61YsSHH+fpL._UY500_.jpg
+  - earring_best\61pAcjkFtoL._UY500_ (1).jpg
+  - earring_best\61pAcjkFtoL._UY500_.jpg
+  - earring_best\6b0bc98097235140497bb8cbee3956dd.jpg
+  - earring_best\812IYTBbB1L._UY395_.jpg
+  - earring_best\81LTWvgCIEL._UL1500_.jpg
+  - earring_best\8798247_fpx.jpeg
+  - earring_best\9556046_fpx.jpeg
+  - earring_best\Chandelier_Diamond_Wedding_Earrings_JLE35-750x500.jpg
+  - earring_best\Cheerful-Diamond-Drop-Earrings-1.jpg
+  - earring_best\Diamond-Earrings-SMT337_GF-600x600.jpg
+  - earring_best\ER1069-Mizana-Jewelry.jpg
+  - earring_best\Earrings_PDRSVE016_01-600x600.jpg
+  - earring_best\Handluv-Gold-American-Diamond-Earrings-SDL352813271-1-944d6.jpg
+  - earring_best\JE03505-YGP900_1_lar.jpg
+  - earring_best\JE03706-YGP900_1_lar.jpg
+  - earring_best\JE04410-YGP9OS_1_lar.jpg
+  - earring_best\MP000000002964268_437Wx649H_20180411025830.jpeg
+  - earring_best\Resin-Rhinestone-Butterfly-Stud-Earrings__30519_zoom.jpg
+  - earring_best\The20Strawberry20Gold20Stud20For20Baby20Girl.jpg
+  - earring_best\UE00012-YG0000_1_lar.jpg
+  - earring_best\UE00018-YG0000_1_lar.jpg
+  - earring_best\UE00497-YG0000_1_lar.jpg
+  - earring_best\UE00503-YG0000_1_lar.jpg
+  - earring_best\UE00694-2Y0000_1_lar.jpg
+  - earring_best\buti-earring-250x250.jpg
+  - earring_best\earring_10.jpg
+  - earring_best\earring_100.jpg
+  - earring_best\earring_103.jpg
+  - earring_best\earring_104.jpg
+  - earring_best\earring_106.jpg
+  - earring_best\earring_108.jpg
+  - earring_best\earring_109.jpg
+  - earring_best\earring_110.jpg
+  - earring_best\earring_111.jpg
+  - earring_best\earring_113.jpg
+  - earring_best\earring_115.jpg
+  - earring_best\earring_117.jpg
+  - earring_best\earring_118.jpg
+  - earring_best\earring_119.jpg
+  - earring_best\earring_120.jpg
+  - earring_best\earring_121.jpg
+  - earring_best\earring_122.jpg
+  - earring_best\earring_123.jpg
+  - earring_best\earring_124.jpg
+  - earring_best\earring_125.jpg
+  - earring_best\earring_126.jpg
+  - earring_best\earring_127.jpg
+  - earring_best\earring_130.jpg
+  - earring_best\earring_131.jpg
+  - earring_best\earring_132.jpg
+  - earring_best\earring_133.jpg
+  - earring_best\earring_134.jpg
+  - earring_best\earring_135.jpg
+  - earring_best\earring_136.jpg
+  - earring_best\earring_137.jpg
+  - earring_best\earring_138.jpg
+  - earring_best\earring_139.jpg
+  - earring_best\earring_140.jpg
+  - earring_best\earring_141.jpg
+  - earring_best\earring_145.jpg
+  - earring_best\earring_146.jpg
+  - earring_best\earring_147.jpg
+  - earring_best\earring_149.jpg
+  - earring_best\earring_150.jpg
+  - earring_best\earring_151.jpg
+  - earring_best\earring_152.jpg
+  - earring_best\earring_153.jpg
+  - earring_best\earring_154.jpg
+  - earring_best\earring_155.jpg
+  - earring_best\earring_156.jpg
+  - earring_best\earring_157.jpg
+  - earring_best\earring_159.jpg
+  - earring_best\earring_16.jpg
+  - earring_best\earring_160.jpg
+  - earring_best\earring_161.jpg
+  - earring_best\earring_163.jpg
+  - earring_best\earring_168.jpg
+  - earring_best\earring_169.jpg
+  - earring_best\earring_17.jpg
+  - earring_best\earring_170.jpg
+  - earring_best\earring_171.jpg
+  - earring_best\earring_172.jpg
+  - earring_best\earring_173.jpg
+  - earring_best\earring_174.jpg
+  - earring_best\earring_175.jpg
+  - earring_best\earring_178.jpg
+  - earring_best\earring_179.jpg
+  - earring_best\earring_18.jpg
+  - earring_best\earring_180.jpg
+  - earring_best\earring_181.jpg
+  - earring_best\earring_182.jpg
+  - earring_best\earring_183.jpg
+  - earring_best\earring_184.jpg
+  - earring_best\earring_185.jpg
+  - earring_best\earring_188.jpg
+  - earring_best\earring_189.jpg
+  - earring_best\earring_19.jpg
+  - earring_best\earring_191.jpg
+  - earring_best\earring_193.jpg
+  - earring_best\earring_195.jpg
+  - earring_best\earring_197.jpg
+  - earring_best\earring_199.jpg
+  - earring_best\earring_2.jpg
+  - earring_best\earring_200.jpg
+  - earring_best\earring_201.jpg
+  - earring_best\earring_202.jpg
+  - earring_best\earring_203.jpg
+  - earring_best\earring_205.jpg
+  - earring_best\earring_207.jpg
+  - earring_best\earring_208.jpg
+  - earring_best\earring_209.jpg
+  - earring_best\earring_210.jpg
+  - earring_best\earring_211.jpg
+  - earring_best\earring_212.jpg
+  - earring_best\earring_214.jpg
+  - earring_best\earring_215.jpg
+  - earring_best\earring_216.jpg
+  - earring_best\earring_217.jpg
+  - earring_best\earring_218.jpg
+  - earring_best\earring_219.jpg
+  - earring_best\earring_22.jpg
+  - earring_best\earring_220.jpg
+  - earring_best\earring_221.jpg
+  - earring_best\earring_223.jpg
+  - earring_best\earring_224.jpg
+  - earring_best\earring_225.jpg
+  - earring_best\earring_228.jpg
+  - earring_best\earring_229.jpg
+  - earring_best\earring_230.jpg
+  - earring_best\earring_231.jpg
+  - earring_best\earring_232.jpg
+  - earring_best\earring_233.jpg
+  - earring_best\earring_234.jpg
+  - earring_best\earring_235.jpg
+  - earring_best\earring_237.jpg
+  - earring_best\earring_239.jpg
+  - earring_best\earring_24.jpg
+  - earring_best\earring_241.jpg
+  - earring_best\earring_244.jpg
+  - earring_best\earring_25.jpg
+  - earring_best\earring_256.jpg
+  - earring_best\earring_257.jpg
+  - earring_best\earring_258.jpg
+  - earring_best\earring_259.jpg
+  - earring_best\earring_262.jpg
+  - earring_best\earring_263.jpg
+  - earring_best\earring_264.jpg
+  - earring_best\earring_267.jpg
+  - earring_best\earring_268.jpg
+  - earring_best\earring_269.jpg
+  - earring_best\earring_270.jpg
+  - earring_best\earring_272.jpg
+  - earring_best\earring_273.jpg
+  - earring_best\earring_274.jpg
+  - earring_best\earring_275.jpg
+  - earring_best\earring_278.jpg
+  - earring_best\earring_279.jpg
+  - earring_best\earring_280.jpg
+  - earring_best\earring_281.jpg
+  - earring_best\earring_283.jpg
+  - earring_best\earring_284.jpg
+  - earring_best\earring_287.jpg
+  - earring_best\earring_288.jpg
+  - earring_best\earring_292.jpg
+  - earring_best\earring_294.jpg
+  - earring_best\earring_297.jpg
+  - earring_best\earring_299.jpg
+  - earring_best\earring_3.jpg
+  - earring_best\earring_30.jpg
+  - earring_best\earring_301.jpg
+  - earring_best\earring_302.jpg
+  - earring_best\earring_303.jpg
+  - earring_best\earring_305.jpg
+  - earring_best\earring_306.jpg
+  - earring_best\earring_308.jpg
+  - earring_best\earring_309.jpg
+  - earring_best\earring_31.jpg
+  - earring_best\earring_310.jpg
+  - earring_best\earring_311.jpg
+  - earring_best\earring_312.jpg
+  - earring_best\earring_317.jpg
+  - earring_best\earring_318.jpg
+  - earring_best\earring_32.jpg
+  - earring_best\earring_320.jpg
+  - earring_best\earring_322.jpg
+  - earring_best\earring_324.jpg
+  - earring_best\earring_325.jpg
+  - earring_best\earring_326.jpg
+  - earring_best\earring_331.jpg
+  - earring_best\earring_333.jpg
+  - earring_best\earring_335.jpg
+  - earring_best\earring_337.jpg
+  - earring_best\earring_342.jpg
+  - earring_best\earring_343.jpg
+  - earring_best\earring_344.jpg
+  - earring_best\earring_345.jpg
+  - earring_best\earring_348.jpg
+  - earring_best\earring_349.jpg
+  - earring_best\earring_35.jpg
+  - earring_best\earring_351.jpg
+  - earring_best\earring_354.jpg
+  - earring_best\earring_355.jpg
+  - earring_best\earring_357.jpg
+  - earring_best\earring_358.jpg
+  - earring_best\earring_359.jpg
+  - earring_best\earring_36.jpg
+  - earring_best\earring_363.jpg
+  - earring_best\earring_37.jpg
+  - earring_best\earring_371.jpg
+  - earring_best\earring_373.jpg
+  - earring_best\earring_374.jpg
+  - earring_best\earring_375.jpg
+  - earring_best\earring_377.jpg
+  - earring_best\earring_378.jpg
+  - earring_best\earring_379.jpg
+  - earring_best\earring_380.jpg
+  - earring_best\earring_381.jpg
+  - earring_best\earring_382.jpg
+  - earring_best\earring_383.jpg
+  - earring_best\earring_384.jpg
+  - earring_best\earring_387.jpg
+  - earring_best\earring_388.jpg
+  - earring_best\earring_389.jpg
+  - earring_best\earring_391.jpg
+  - earring_best\earring_392.jpg
+  - earring_best\earring_393.jpg
+  - earring_best\earring_394.jpg
+  - earring_best\earring_395.jpg
+  - earring_best\earring_396.jpg
+  - earring_best\earring_397.jpg
+  - earring_best\earring_398.jpg
+  - earring_best\earring_4.jpg
+  - earring_best\earring_401.jpg
+  - earring_best\earring_402.jpg
+  - earring_best\earring_404.jpg
+  - earring_best\earring_406.jpg
+  - earring_best\earring_407.jpg
+  - earring_best\earring_408.jpg
+  - earring_best\earring_41.jpg
+  - earring_best\earring_410.jpg
+  - earring_best\earring_411.jpg
+  - earring_best\earring_412.jpg
+  - earring_best\earring_414.jpg
+  - earring_best\earring_415.jpg
+  - earring_best\earring_416.jpg
+  - earring_best\earring_417.jpg
+  - earring_best\earring_419.jpg
+  - earring_best\earring_42.jpg
+  - earring_best\earring_421.jpg
+  - earring_best\earring_423.jpg
+  - earring_best\earring_424.jpg
+  - earring_best\earring_425.jpg
+  - earring_best\earring_426.jpg
+  - earring_best\earring_427.jpg
+  - earring_best\earring_428.jpg
+  - earring_best\earring_431.jpg
+  - earring_best\earring_432.jpg
+  - earring_best\earring_433.jpg
+  - earring_best\earring_437.jpg
+  - earring_best\earring_438.jpg
+  - earring_best\earring_44.jpg
+  - earring_best\earring_440.jpg
+  - earring_best\earring_441.jpg
+  - earring_best\earring_443.jpg
+  - earring_best\earring_445.jpg
+  - earring_best\earring_45.jpg
+  - earring_best\earring_455.jpg
+  - earring_best\earring_458.jpg
+  - earring_best\earring_459.jpg
+  - earring_best\earring_46.jpg
+  - earring_best\earring_460.jpg
+  - earring_best\earring_461.jpg
+  - earring_best\earring_462.jpg
+  - earring_best\earring_463.jpg
+  - earring_best\earring_464.jpg
+  - earring_best\earring_466.jpg
+  - earring_best\earring_467.jpg
+  - earring_best\earring_469.jpg
+  - earring_best\earring_47.jpg
+  - earring_best\earring_470.jpg
+  - earring_best\earring_474.jpg
+  - earring_best\earring_475.jpg
+  - earring_best\earring_48.jpg
+  - earring_best\earring_49.jpg
+  - earring_best\earring_50.jpg
+  - earring_best\earring_52.jpg
+  - earring_best\earring_53.jpg
+  - earring_best\earring_54.jpg
+  - earring_best\earring_55.jpg
+  - earring_best\earring_57.jpg
+  - earring_best\earring_6.jpg
+  - earring_best\earring_61.jpg
+  - earring_best\earring_7.jpg
+  - earring_best\earring_70.jpg
+  - earring_best\earring_71.jpg
+  - earring_best\earring_72.jpg
+  - earring_best\earring_76.jpg
+  - earring_best\earring_77.jpg
+  - earring_best\earring_78.jpg
+  - earring_best\earring_79.jpg
+  - earring_best\earring_8.jpg
+  - earring_best\earring_81.jpg
+  - earring_best\earring_86.jpg
+  - earring_best\earring_87.jpg
+  - earring_best\earring_9.jpg
+  - earring_best\earring_90.jpg
+  - earring_best\earring_91.jpg
+  - earring_best\earring_92.jpg
+  - earring_best\earring_96.jpg
+  - earring_best\earring_98.jpg
+  - earring_best\earring_99.jpg
+  - earring_best\free-shipping-girls-crystal-drop-earrings-white-gold-plated-dangle-earrings.jpg
+  - earring_best\ier82.20170628130105.jpg
+  - earring_best\images (1).jpeg
+  - earring_best\images (16).jpeg
+  - earring_best\images (21).jpeg
+  - earring_best\images (22).jpeg
+  - earring_best\images (23).jpeg
+  - earring_best\images (25).jpeg
+  - earring_best\images (26).jpeg
+  - earring_best\images (3).jpeg
+  - earring_best\images (31).jpeg
+  - earring_best\images (37).jpeg
+  - earring_best\images (38).jpeg
+  - earring_best\images (39).jpeg
+  - earring_best\images (40).jpeg
+  - earring_best\images (41).jpeg
+  - earring_best\images (43).jpeg
+  - earring_best\images (45).jpeg
+  - earring_best\images (46).jpeg
+  - earring_best\images (48).jpeg
+  - earring_best\images (62).jpeg
+  - earring_best\images (65).jpeg
+  - earring_best\images (66).jpeg
+  - earring_best\images (67).jpeg
+  - earring_best\images (70).jpeg
+  - earring_best\images (71).jpeg
+  - earring_best\images (72).jpeg
+  - earring_best\images (74).jpeg
+  - earring_best\images (79).jpeg
+  - earring_best\images (8).jpeg
+  - earring_best\images (80).jpeg
+  - earring_best\images (82).jpeg
+  - earring_best\images (83).jpeg
+  - earring_best\images (86).jpeg
+  - earring_best\images (90).jpeg
+  - earring_best\images (91).jpeg
+  - earring_best\images (92).jpeg
+  - earring_best\images (93).jpeg
+  - earring_best\images (98).jpeg
+  - earring_best\images (99).jpeg
+  - earring_best\images_ER617018_view1_big_peacock-feather-diamond-earrings-1452069541-r-w.jpg
+  - earring_best\invisible-set-round-diamond-stud-earring-in-18K-rose-gold-FDEAR8388-NL-RG.jpg
+  - earring_best\k_1_4_1.jpeg
+  - earring_best\maira-series-american-diamond-earrings.jpg
+  - earring_best\princess-cut-halo-diamond-earring-with-ruby-in-14K-yellow-gold-FDOEAR40538GRUDR-NL-YG.jpg
+  - earring_best\product-hugerect-449558-169254-1423069448-3db6c3d4b4887a223a91e64c58b6d3e5.jpg
+  - earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e (1).jpg
+  - earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e.jpg
+  - earring_best\stylish-earrings-by-kaara-san203-large_7e79aaf7b7df7c443e89db3c1b96bac1.jpg
+  - necklace\05MD7PLPEVBL.jpg
+  - necklace\07MQQDPM75GI.jpg
+  - necklace\0IWH80RS6UHO.jpg
+  - necklace\0JXM8676YVTV.jpg
+  - necklace\1330DV7U37AY.jpg
+  - necklace\1SFM9OPQWFU6.jpg
+  - necklace\2KCB0164E0WZ.jpg
+  - necklace\2NXSPEDKO62B.jpg
+  - necklace\38M736KC7Y0J.jpg
+  - necklace\3JJFXBP6BIEC.jpg
+  - necklace\3NSTN5KXJ3NT.jpg
+  - necklace\3X42YAK093FU.jpg
+  - necklace\47NAHE95E9RR.jpg
+  - necklace\4RCQB25SPSI0.jpg
+  - necklace\5NFSMTJK5YAK.jpg
+  - necklace\5SPIPWEY7ST7.jpg
+  - necklace\5TLD8YRN91QT.jpg
+  - necklace\617CIVUG5Y7T.jpg
+  - necklace\6SE79YMZ1L10.jpg
+  - necklace\72EWSM49RHF1.jpg
+  - necklace\74O9NUZ871QO.jpg
+  - necklace\7SO8EEU6FTEZ.jpg
+  - necklace\8E23JHTFVKKU.jpg
+  - necklace\8IACKSIP2ZQ7.jpg
+  - necklace\8OAN6DV8OQCM.jpg
+  - necklace\8PUEYS1Z543V.jpg
+  - necklace\9F0Y1XGW84G4.jpg
+  - necklace\9F2ZKUOG6BCA.jpg
+  - necklace\9OQ1W7N6N673.jpg
+  - necklace\9R0X8L91YOQ9.jpg
+  - necklace\A9MSN0598UA0.jpg
+  - necklace\AHCSZ03LGE1E.jpg
+  - necklace\ARUR3T9KJ1SK.jpg
+  - necklace\AXH5UHWSFS9C.jpg
+  - necklace\AZNSA0BJJT6F.jpg
+  - necklace\BGHZRXUR7I0Y.jpg
+  - necklace\BIRNMHHB9ZME.jpg
+  - necklace\BMVNHPAR3149.jpg
+  - necklace\BVZ4WR9YLOQG.jpg
+  - necklace\CBVYWU7YHJNZ.jpg
+  - necklace\CH01IVURU3DA.jpg
+  - necklace\CRKMYDSH5DW2.jpg
+  - necklace\DA0MGVUB0YDL.jpg
+  - necklace\DPIYJYHLITA4.jpg
+  - necklace\DQ0SKAJRPQES.jpg
+  - necklace\EVD85R06KNH3.jpg
+  - necklace\F4NQTFUYD5Z0.jpg
+  - necklace\F77MYU2DVTRQ.jpg
+  - necklace\F7RET5AIN7CD.jpg
+  - necklace\FR91BQB4Y8UI.jpg
+  - necklace\GI93X1XFXU5Y.jpg
+  - necklace\GVV75ZZ1DKSA.jpg
+  - necklace\H1J41MULTOO1.jpg
+  - necklace\HDC351EIKY6P.jpg
+  - necklace\HMTR0QW1DF44.jpg
+  - necklace\HZUVI3NCLZMV.jpg
+  - necklace\IK10JUYTIF5M.jpg
+  - necklace\IO3105TSVTDK.jpg
+  - necklace\JA7J7A85A0UV.jpg
+  - necklace\JAUTP5JDN0WY.jpg
+  - necklace\KBJZSSCOEZEY.jpg
+  - necklace\KGIA7QADG5RI.jpg
+  - necklace\KPGETF9YBAF2.jpg
+  - necklace\KT98NIMGDCYC.jpg
+  - necklace\KZUJLZ4N9XUW.jpg
+  - necklace\L7QNYUL3Q9MS.jpg
+  - necklace\LQTXI11R923Z.jpg
+  - necklace\LZTFB5F7THBK.jpg
+  - necklace\MJ2SVLOFGEPF.jpg
+  - necklace\MKC67M50OHMD.jpg
+  - necklace\MKXRARJK4MGV.jpg
+  - necklace\MM2I47DEXGLX.jpg
+  - necklace\MR06HMY05J4O.jpg
+  - necklace\ND9BSRJZ1G49.jpg
+  - necklace\NS1NO6GQMC4D.jpg
+  - necklace\O5TUG2IPZGR9.jpg
+  - necklace\O9MMXONRGQLQ.jpg
+  - necklace\OGHQ2SWTSORV.jpg
+  - necklace\OGRQWDXHYO69.jpg
+  - necklace\OLSP73XANWEO.jpg
+  - necklace\OLWX9O2X6R1R.jpg
+  - necklace\OMSZI1IEY4Z6.jpg
+  - necklace\P8Y5N4GSQE6K.jpg
+  - necklace\P9FJTOV9AK42.jpg
+  - necklace\PDOKVKB2KM6F.jpg
+  - necklace\PFCAOQEOYB3C.jpg
+  - necklace\PHGU07UM1P5A.jpg
+  - necklace\PPQ5I9VK0U9D.jpg
+  - necklace\Q26H2FUCW66V.jpg
+  - necklace\QBN3RCDOG4IG.jpg
+  - necklace\QF0L4B6KK3B1.jpg
+  - necklace\QTX5H4385B66.jpg
+  - necklace\QVZLZUN1ES1Q.jpg
+  - necklace\R13O5HME2DJE.jpg
+  - necklace\RB2QX5KO1LB9.jpg
+  - necklace\RIV49BBQLB6S.jpg
+  - necklace\RXALK577J7GI.jpg
+  - necklace\RYIRPDF50MDA.jpg
+  - necklace\SEW2IWG0APPV.jpg
+  - necklace\SP428Q03QEEJ.jpg
+  - necklace\SXGL70XZVNRW.jpg
+  - necklace\T2YFM7GKAJC4.jpg
+  - necklace\UOLVOKCL2QEY.jpg
+  - necklace\UQLIU658Z1KF.jpg
+  - necklace\VC41N7D3STNJ.jpg
+  - necklace\VKE72851P4K1.jpg
+  - necklace\VNC52R9H84YR.jpg
+  - necklace\WQHY95AZQWBY.jpg
+  - necklace\X41QS437PVQO.jpg
+  - necklace\XIZ7D9O6MPCP.jpg
+  - necklace\Y5CSO4G4TXEZ.jpg
+  - necklace\YHEV5MZR80V4.jpg
+  - necklace\Z4VV8P04Y6RK.jpg
+  - necklace\ZOCJKF5K2F0U.jpg
+  - necklace\necklace_102.jpg
+  - necklace\necklace_104.jpg
+  - necklace\necklace_105.jpg
+  - necklace\necklace_107.jpg
+  - necklace\necklace_108.jpg
+  - necklace\necklace_109.jpg
+  - necklace\necklace_110.jpg
+  - necklace\necklace_115.jpg
+  - necklace\necklace_118.jpg
+  - necklace\necklace_121.jpg
+  - necklace\necklace_122.jpg
+  - necklace\necklace_123.jpg
+  - necklace\necklace_125.jpg
+  - necklace\necklace_126.jpg
+  - necklace\necklace_128.jpg
+  - necklace\necklace_130.jpg
+  - necklace\necklace_133.jpg
+  - necklace\necklace_134.jpg
+  - necklace\necklace_135.jpg
+  - necklace\necklace_136.jpg
+  - necklace\necklace_137.jpg
+  - necklace\necklace_139.jpg
+  - necklace\necklace_144.jpg
+  - necklace\necklace_145.jpg
+  - necklace\necklace_147.jpg
+  - necklace\necklace_158.jpg
+  - necklace\necklace_160.jpg
+  - necklace\necklace_161.jpg
+  - necklace\necklace_164.jpg
+  - necklace\necklace_170.jpg
+  - necklace\necklace_171.jpg
+  - necklace\necklace_176.jpg
+  - necklace\necklace_178.jpg
+  - necklace\necklace_184.jpg
+  - necklace\necklace_185.jpg
+  - necklace\necklace_189.jpg
+  - necklace\necklace_193.jpg
+  - necklace\necklace_202.jpg
+  - necklace\necklace_207.jpg
+  - necklace\necklace_271.jpg
+  - necklace\necklace_272.jpg
+  - necklace\necklace_273.jpg
+  - necklace\necklace_274.jpg
+  - necklace\necklace_275.jpg
+  - necklace\necklace_277.jpg
+  - necklace\necklace_279.jpg
+  - necklace\necklace_280.jpg
+  - necklace\necklace_281.jpg
+  - necklace\necklace_283.jpg
+  - necklace\necklace_285.jpg
+  - necklace\necklace_286.jpg
+  - necklace\necklace_288.jpg
+  - necklace\necklace_291.jpg
+  - necklace\necklace_292.jpg
+  - necklace\necklace_293.jpg
+  - necklace\necklace_294.jpg
+  - necklace\necklace_297.jpg
+  - necklace\necklace_298.jpg
+  - necklace\necklace_3.jpg
+  - necklace\necklace_302.jpg
+  - necklace\necklace_303.jpg
+  - necklace\necklace_304.jpg
+  - necklace\necklace_305.jpg
+  - necklace\necklace_306.jpg
+  - necklace\necklace_307.jpg
+  - necklace\necklace_308.jpg
+  - necklace\necklace_311.jpg
+  - necklace\necklace_312.jpg
+  - necklace\necklace_313.jpg
+  - necklace\necklace_314.jpg
+  - necklace\necklace_315.jpg
+  - necklace\necklace_316.jpg
+  - necklace\necklace_317.jpg
+  - necklace\necklace_318.jpg
+  - necklace\necklace_319.jpg
+  - necklace\necklace_320.jpg
+  - necklace\necklace_33.jpg
+  - necklace\necklace_39.jpg
+  - necklace\necklace_4.jpg
+  - necklace\necklace_48.jpg
+  - necklace\necklace_6.jpg
+  - necklace\necklace_65.jpg
+  - necklace\necklace_67.jpg
+  - necklace\necklace_7.jpg
+  - necklace\necklace_73.jpg
+  - necklace\necklace_75.jpg
+  - necklace\necklace_76.jpg
+  - necklace\necklace_97.jpg
+  - necklace\necklace_98.jpg
+  - ring_best\IMG_6007.JPG
+  - ring_best\Screenshot_20181116-203329_1542449759369.png
+  - ring_best\Screenshot_20181116-204038_1542449567926.png
+  - ring_best\Screenshot_20181116-204258_1542449483238.png
+  - ring_best\ring_004.jpg
+  - ring_best\ring_008.jpg
+  - ring_best\ring_018.jpg
+  - ring_best\ring_046.jpg
+  - ring_best\ring_051.jpg
+  - ring_best\ring_057.jpg
+  - ring_best\ring_058.jpg
+  - ring_best\ring_060.jpg
+  - ring_best\ring_064.png
+  - ring_best\ring_065.jpg
+  - ring_best\ring_066.jpg
+  - ring_best\ring_067.jpg
+  - ring_best\ring_068.jpg
+  - ring_best\ring_069.jpg
+  - ring_best\ring_071.jpg
+  - ring_best\ring_072.jpg
+  - ring_best\ring_073.jpg
+  - ring_best\ring_074.jpg
+  - ring_best\ring_075.jpg
+  - ring_best\ring_076.jpg
+  - ring_best\ring_078.jpg
+  - ring_best\ring_079.jpg
+  - ring_best\ring_080.jpg
+  - ring_best\ring_081.jpg
+  - ring_best\ring_083.jpg
+  - ring_best\ring_084.jpg
+  - ring_best\ring_085.jpg
+  - ring_best\ring_086.jpg
+  - ring_best\ring_087.jpg
+  - ring_best\ring_088.jpg
+  - ring_best\ring_089.jpg
+  - ring_best\ring_090.jpg
+  - ring_best\ring_091.jpg
+  - ring_best\ring_093.jpg
+  - ring_best\ring_094.jpg
+  - ring_best\ring_096.jpg
+  - ring_best\ring_097.jpg
+  - ring_best\ring_099.jpg
+  - ring_best\ring_100.jpg
+  - ring_best\ring_101.jpg
+  - ring_best\ring_102.jpg
+  - ring_best\ring_103.jpg
+  - ring_best\ring_104.jpg
+  - ring_best\ring_105.jpg
+  - ring_best\ring_106.jpg
+  - ring_best\ring_107.jpg
+  - ring_best\ring_108.jpg
+  - ring_best\ring_109.jpg
+  - ring_best\ring_111.jpg
+  - ring_best\ring_112.jpg
+  - ring_best\ring_114.jpg
+  - ring_best\ring_115.jpg
+  - ring_best\ring_116.jpg
+  - ring_best\ring_117.jpg
+  - ring_best\ring_118.jpg
+  - ring_best\ring_119.jpg
+  - ring_best\ring_120.jpg
+  - ring_best\ring_121.jpg
+  - ring_best\ring_123.jpg
+  - ring_best\ring_126.jpg
+  - ring_best\ring_128.jpg
+  - ring_best\ring_129.jpg
+  - ring_best\ring_131.jpg
+  - ring_best\ring_132.jpg
+  - ring_best\ring_133.jpg
+  - ring_best\ring_134.jpg
+  - ring_best\ring_135.jpg
+  - ring_best\ring_136.jpg
+  - ring_best\ring_137.jpg
+  - ring_best\ring_138.jpg
+  - ring_best\ring_139.jpg
+  - ring_best\ring_140.jpg
+  - ring_best\ring_141.jpg
+  - ring_best\ring_142.jpg
+  - ring_best\ring_143.jpg
+  - ring_best\ring_145.jpg
+  - ring_best\ring_146.jpg
+  - ring_best\ring_147.jpg
+  - ring_best\ring_148.jpg
+  - ring_best\ring_149.jpg
+  - ring_best\ring_150.jpg
+  - ring_best\ring_152.jpg
+  - ring_best\ring_153.jpg
+  - ring_best\ring_154.jpg
+  - ring_best\ring_155.jpg
+  - ring_best\ring_156.jpg
+  - ring_best\ring_157.jpg
+  - ring_best\ring_159.jpg
+  - ring_best\ring_161.jpg
+  - ring_best\ring_162.jpg
+  - ring_best\ring_163.jpg
+  - ring_best\ring_164.jpg
+  - ring_best\ring_165.jpg
+  - ring_best\ring_166.jpg
+  - ring_best\ring_167.jpg
+  - ring_best\ring_168.jpg
+  - ring_best\ring_169.jpg
+  - ring_best\ring_170.jpg
+  - ring_best\ring_172.jpg
+  - ring_best\ring_173.jpg
+  - ring_best\ring_176.jpg
+  - ring_best\ring_179.jpg
+  - ring_best\ring_180.jpg
+  - ring_best\ring_181.jpg
+  - ring_best\ring_182.jpg
+  - ring_best\ring_183.jpg
+  - ring_best\ring_185.jpg
+  - ring_best\ring_187.jpg
+  - ring_best\ring_188.jpg
+  - ring_best\ring_189.jpg
+  - ring_best\ring_191.jpg
+- Group 2: 21 files; classes=bracelet, necklace; cross_class=True; distance=0–10
+  - bracelet\C9D8D1SN57Z9.jpg
+  - necklace\ZX8VA6U905XU.jpg
+  - necklace\necklace_210.jpg
+  - necklace\necklace_212.jpg
+  - necklace\necklace_213.jpg
+  - necklace\necklace_214.jpg
+  - necklace\necklace_215.jpg
+  - necklace\necklace_216.jpg
+  - necklace\necklace_217.jpg
+  - necklace\necklace_218.jpg
+  - necklace\necklace_219.jpg
+  - necklace\necklace_223.jpg
+  - necklace\necklace_224.jpg
+  - necklace\necklace_225.jpg
+  - necklace\necklace_226.jpg
+  - necklace\necklace_227.jpg
+  - necklace\necklace_228.jpg
+  - necklace\necklace_229.jpg
+  - necklace\necklace_230.jpg
+  - necklace\necklace_237.jpg
+  - necklace\necklace_238.jpg
+- Group 3: 20 files; classes=earring_best; cross_class=False; distance=6–10
+  - earring_best\017_005.png
+  - earring_best\017_006.png
+  - earring_best\018_001.png
+  - earring_best\018_008.png
+  - earring_best\018_010.png
+  - earring_best\018_011.png
+  - earring_best\018_013.png
+  - earring_best\018_016.png
+  - earring_best\018_017.png
+  - earring_best\018_018.png
+  - earring_best\018_022.png
+  - earring_best\019_008.png
+  - earring_best\021_016.png
+  - earring_best\021_022.png
+  - earring_best\021_023.png
+  - earring_best\021_024.png
+  - earring_best\024_015.png
+  - earring_best\024_016.png
+  - earring_best\025_021.png
+  - earring_best\028_017.png
+- Group 4: 14 files; classes=earring_best; cross_class=False; distance=0–10
+  - earring_best\018_006.png
+  - earring_best\019_006.png
+  - earring_best\021_008.png
+  - earring_best\021_010.png
+  - earring_best\021_015.png
+  - earring_best\021_017.png
+  - earring_best\022_006.png
+  - earring_best\022_008.png
+  - earring_best\024_010.png
+  - earring_best\031_001.png
+  - earring_best\041_003.png
+  - earring_best\041_005.png
+  - earring_best\041_006.png
+  - earring_best\045_007.png
+- Group 5: 13 files; classes=necklace; cross_class=False; distance=0–10
+  - necklace\O8K8COGC9SJU.jpg
+  - necklace\necklace_55.jpg
+  - necklace\necklace_56.jpg
+  - necklace\necklace_57.jpg
+  - necklace\necklace_58.jpg
+  - necklace\necklace_59.jpg
+  - necklace\necklace_60.jpg
+  - necklace\necklace_61.jpg
+  - necklace\necklace_62.jpg
+  - necklace\necklace_63.jpg
+  - necklace\necklace_64.jpg
+  - necklace\necklace_66.jpg
+  - necklace\necklace_68.jpg
+- Group 6: 12 files; classes=bracelet, necklace; cross_class=True; distance=2–10
+  - bracelet\0FB6U4NLW1KR.jpg
+  - bracelet\UV63YSEQEU7W.jpg
+  - bracelet\bracelet_001.jpg
+  - bracelet\bracelet_020.jpg
+  - bracelet\bracelet_195.jpg
+  - bracelet\bracelet_214.jpg
+  - necklace\6OTJE9T65BNP.jpg
+  - necklace\BW8Q7QW5DDQL.jpg
+  - necklace\IVUQJZU2AUDE.jpg
+  - necklace\ORUP2RKJJASX.jpg
+  - necklace\R5W7BOZU6HTG.jpg
+  - necklace\YISHVTEXJ9VJ.jpg
+- Group 7: 11 files; classes=earring_best, necklace; cross_class=True; distance=8–10
+  - earring_best\006_004.png
+  - earring_best\007_032.png
+  - earring_best\008_039.png
+  - earring_best\012_018.png
+  - earring_best\012_019.png
+  - earring_best\012_020.png
+  - earring_best\029_065.png
+  - earring_best\029_071.png
+  - earring_best\036_032.png
+  - earring_best\046_067.png
+  - necklace\ADSS5Z40CWLX.jpg
+- Group 8: 10 files; classes=earring_best; cross_class=False; distance=4–10
+  - earring_best\007_010.png
+  - earring_best\010_001.png
+  - earring_best\010_002.png
+  - earring_best\010_008.png
+  - earring_best\010_010.png
+  - earring_best\010_011.png
+  - earring_best\010_012.png
+  - earring_best\023_010.png
+  - earring_best\023_013.png
+  - earring_best\041_013.png
+- Group 9: 10 files; classes=necklace; cross_class=False; distance=4–10
+  - necklace\necklace_10.jpg
+  - necklace\necklace_36.jpg
+  - necklace\necklace_37.jpg
+  - necklace\necklace_38.jpg
+  - necklace\necklace_40.jpg
+  - necklace\necklace_41.jpg
+  - necklace\necklace_43.jpg
+  - necklace\necklace_44.jpg
+  - necklace\necklace_45.jpg
+  - necklace\necklace_46.jpg
+- Group 10: 9 files; classes=earring_best; cross_class=False; distance=8–10
+  - earring_best\016_023.png
+  - earring_best\020_037.png
+  - earring_best\022_058.png
+  - earring_best\042_058.png
+  - earring_best\earring_1.jpg
+  - earring_best\earring_39.jpg
+  - earring_best\earring_62.jpg
+  - earring_best\earring_63.jpg
+  - earring_best\earring_97.jpg
+- Group 11: 9 files; classes=earring_best, necklace, ring_best; cross_class=True; distance=2–10
+  - earring_best\044_070.png
+  - earring_best\Joyas-Stylish-American-Diamond-Jhumka-SDL573009592-1-51439.jpg
+  - necklace\CE425DDVUDL2.jpg
+  - necklace\DRB65CCNAYW1.jpg
+  - necklace\UTB3XBRB5S86.jpg
+  - necklace\XY7899W6XHQ9.jpg
+  - necklace\necklace_195.jpg
+  - ring_best\ring_014.jpg
+  - ring_best\ring_184.jpg
+- Group 12: 9 files; classes=necklace; cross_class=False; distance=6–10
+  - necklace\FAYJHCPIK0LJ.jpg
+  - necklace\MXXBFEW9OH78.jpg
+  - necklace\necklace_82.jpg
+  - necklace\necklace_84.jpg
+  - necklace\necklace_87.jpg
+  - necklace\necklace_91.jpg
+  - necklace\necklace_93.jpg
+  - necklace\necklace_95.jpg
+  - necklace\necklace_96.jpg
+- Group 13: 9 files; classes=necklace; cross_class=False; distance=2–10
+  - necklace\necklace_14.jpg
+  - necklace\necklace_15.jpg
+  - necklace\necklace_16.jpg
+  - necklace\necklace_18.jpg
+  - necklace\necklace_19.jpg
+  - necklace\necklace_20.jpg
+  - necklace\necklace_21.jpg
+  - necklace\necklace_22.jpg
+  - necklace\necklace_23.jpg
+- Group 14: 8 files; classes=bracelet, necklace; cross_class=True; distance=8–10
+  - bracelet\bracelet_168.jpg
+  - bracelet\bracelet_297.jpg
+  - bracelet\bracelet_300.jpg
+  - necklace\9437QP6RBGEP.jpg
+  - necklace\FXD6FJ75K5P2.jpg
+  - necklace\O5HR048P25Y9.jpg
+  - necklace\Y36UCJNDYHG5.jpg
+  - necklace\necklace_88.jpg
+- Group 15: 8 files; classes=earring_best; cross_class=False; distance=8–10
+  - earring_best\005_003.png
+  - earring_best\005_020.png
+  - earring_best\008_018.png
+  - earring_best\009_010.png
+  - earring_best\010_013.png
+  - earring_best\026_021.png
+  - earring_best\026_022.png
+  - earring_best\027_008.png
+- Group 16: 8 files; classes=necklace; cross_class=False; distance=6–10
+  - necklace\necklace_239.jpg
+  - necklace\necklace_241.jpg
+  - necklace\necklace_242.jpg
+  - necklace\necklace_244.jpg
+  - necklace\necklace_245.jpg
+  - necklace\necklace_246.jpg
+  - necklace\necklace_247.jpg
+  - necklace\necklace_254.jpg
+- Group 17: 7 files; classes=earring_best; cross_class=False; distance=6–10
+  - earring_best\004_024.png
+  - earring_best\004_025.png
+  - earring_best\004_026.png
+  - earring_best\004_027.png
+  - earring_best\004_028.png
+  - earring_best\008_046.png
+  - earring_best\008_047.png
+- Group 18: 7 files; classes=necklace; cross_class=False; distance=8–10
+  - necklace\I9FZK5OSA5ND.jpg
+  - necklace\JIJ61UCY6EZG.jpg
+  - necklace\NXVLEJHJTHL7.jpg
+  - necklace\QRBTY1BB7CX9.jpg
+  - necklace\SZR8HYM6SWU3.jpg
+  - necklace\X4RYNC0CX87R.jpg
+  - necklace\necklace_196.jpg
+- Group 19: 6 files; classes=bracelet, earring_best, necklace; cross_class=True; distance=8–10
+  - bracelet\RK4T361EK2U6.jpg
+  - bracelet\W9577ZXZ1A29.jpg
+  - earring_best\004_043.png
+  - earring_best\008_053.png
+  - earring_best\026_080.png
+  - necklace\4LT08FYIHOWW.jpg
+- Group 20: 6 files; classes=bracelet; cross_class=False; distance=6–10
+  - bracelet\bracelet_004.jpg
+  - bracelet\bracelet_015.jpg
+  - bracelet\bracelet_083.jpg
+  - bracelet\bracelet_084.jpg
+  - bracelet\bracelet_088.jpg
+  - bracelet\bracelet_158.jpg
+- Group 21: 6 files; classes=earring_best; cross_class=False; distance=4–10
+  - earring_best\014_014.png
+  - earring_best\014_015.png
+  - earring_best\014_031.png
+  - earring_best\014_032.png
+  - earring_best\025_050.png
+  - earring_best\ladies-fancy-earring-500x500.jpg
+- Group 22: 6 files; classes=earring_best; cross_class=False; distance=6–10
+  - earring_best\018_007.png
+  - earring_best\019_005.png
+  - earring_best\019_015.png
+  - earring_best\021_007.png
+  - earring_best\022_002.png
+  - earring_best\041_004.png
+- Group 23: 6 files; classes=earring_best, necklace; cross_class=True; distance=4–10
+  - earring_best\039_014.png
+  - earring_best\CFE0686_D.jpg
+  - necklace\IWRYJ79YYEUH.jpg
+  - necklace\necklace_203.jpg
+  - necklace\necklace_204.jpg
+  - necklace\necklace_205.jpg
+- Group 24: 6 files; classes=earring_best; cross_class=False; distance=4–10
+  - earring_best\earring_142.jpg
+  - earring_best\earring_144.jpg
+  - earring_best\earring_198.jpg
+  - earring_best\earring_340.jpg
+  - earring_best\earring_341.jpg
+  - earring_best\earring_450.jpg
+- Group 25: 6 files; classes=necklace; cross_class=False; distance=2–10
+  - necklace\necklace_209.jpg
+  - necklace\necklace_221.jpg
+  - necklace\necklace_231.jpg
+  - necklace\necklace_232.jpg
+  - necklace\necklace_249.jpg
+  - necklace\necklace_252.jpg
+- Group 26: 6 files; classes=necklace; cross_class=False; distance=6–10
+  - necklace\necklace_256.jpg
+  - necklace\necklace_258.jpg
+  - necklace\necklace_260.jpg
+  - necklace\necklace_261.jpg
+  - necklace\necklace_262.jpg
+  - necklace\necklace_263.jpg
+- Group 27: 5 files; classes=earring_best, necklace; cross_class=True; distance=6–10
+  - earring_best\005_004.png
+  - earring_best\026_018.png
+  - earring_best\026_028.png
+  - earring_best\046_003.png
+  - necklace\AW6FAM2DSALW.jpg
+- Group 28: 5 files; classes=earring_best; cross_class=False; distance=0–10
+  - earring_best\005_022.png
+  - earring_best\024_008.png
+  - earring_best\025_014.png
+  - earring_best\025_015.png
+  - earring_best\039_003.png
+- Group 29: 5 files; classes=earring_best; cross_class=False; distance=6–10
+  - earring_best\005_024.png
+  - earring_best\007_041.png
+  - earring_best\037_012.png
+  - earring_best\045_050.png
+  - earring_best\046_076.png
+- Group 30: 5 files; classes=earring_best; cross_class=False; distance=2–10
+  - earring_best\025_032.png
+  - earring_best\41OBUc2qfRL._UY395_.jpg
+  - earring_best\earring_13.jpg
+  - earring_best\earring_28.jpg
+  - earring_best\earring_43.jpg
+- Group 31: 5 files; classes=earring_best, necklace; cross_class=True; distance=8–10
+  - earring_best\042_004.png
+  - earring_best\042_008.png
+  - earring_best\042_009.png
+  - earring_best\042_037.png
+  - necklace\FAIEPEPPFIRY.jpg
+- Group 32: 5 files; classes=earring_best; cross_class=False; distance=4–10
+  - earring_best\earring_128.jpg
+  - earring_best\earring_166.jpg
+  - earring_best\earring_93.jpg
+  - earring_best\earring_94.jpg
+  - earring_best\earring_95.jpg
+- Group 33: 5 files; classes=earring_best; cross_class=False; distance=8–10
+  - earring_best\earring_192.jpg
+  - earring_best\earring_240.jpg
+  - earring_best\earring_250.jpg
+  - earring_best\earring_261.jpg
+  - earring_best\earring_336.jpg
+- Group 34: 5 files; classes=necklace; cross_class=False; distance=8–10
+  - necklace\7HBMNVY6QTHN.jpg
+  - necklace\EOHORSKJV95P.jpg
+  - necklace\TQ2TBEQAJTC9.jpg
+  - necklace\necklace_188.jpg
+  - necklace\necklace_197.jpg
+- Group 35: 4 files; classes=bracelet; cross_class=False; distance=8–10
+  - bracelet\7XAQHT3YM9JB.jpg
+  - bracelet\XO5PDPGL4WVM.jpg
+  - bracelet\bracelet_245.jpg
+  - bracelet\bracelet_252.jpg
+- Group 36: 4 files; classes=bracelet; cross_class=False; distance=4–10
+  - bracelet\bracelet_013.jpg
+  - bracelet\bracelet_138.jpg
+  - bracelet\bracelet_141.jpg
+  - bracelet\bracelet_144.jpg
+- Group 37: 4 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\005_006.png
+  - earring_best\005_018.png
+  - earring_best\009_002.png
+  - earring_best\026_014.png
+- Group 38: 4 files; classes=earring_best; cross_class=False; distance=8–10
+  - earring_best\005_007.png
+  - earring_best\005_009.png
+  - earring_best\005_013.png
+  - earring_best\008_019.png
+- Group 39: 4 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\008_007.png
+  - earring_best\038_058.png
+  - earring_best\038_060.png
+  - earring_best\038_073.png
+- Group 40: 4 files; classes=earring_best; cross_class=False; distance=8–10
+  - earring_best\017_002.png
+  - earring_best\017_003.png
+  - earring_best\017_004.png
+  - earring_best\018_002.png
+- Group 41: 4 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\017_091.png
+  - earring_best\024_121.png
+  - earring_best\030_084.png
+  - earring_best\030_085.png
+- Group 42: 4 files; classes=earring_best; cross_class=False; distance=4–10
+  - earring_best\027_004.png
+  - earring_best\027_007.png
+  - earring_best\027_009.png
+  - earring_best\027_010.png
+- Group 43: 4 files; classes=necklace; cross_class=False; distance=8–10
+  - necklace\63YMX5IZGI8Y.jpg
+  - necklace\LSGWSBK34FJU.jpg
+  - necklace\O8ME77B6V52B.jpg
+  - necklace\VTPWOACDT8CU.jpg
+- Group 44: 3 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\03WI4QOA9EUK.jpg
+  - bracelet\GUPO8NA17XZ0.jpg
+  - bracelet\H91CYQHY2LV9.jpg
+- Group 45: 3 files; classes=bracelet, necklace; cross_class=True; distance=10–10
+  - bracelet\0J4OHJWD35A8.jpg
+  - bracelet\YNVHD5SK1UJ8.jpg
+  - necklace\T8Q5A1JSV7Z9.jpg
+- Group 46: 3 files; classes=bracelet; cross_class=False; distance=2–10
+  - bracelet\1CIZFWA6KG94.jpg
+  - bracelet\HFC8YYV9CRHF.jpg
+  - bracelet\YIJX2H4AE3YL.jpg
+- Group 47: 3 files; classes=bracelet; cross_class=False; distance=8–10
+  - bracelet\1SY23F78RJG6.jpg
+  - bracelet\8AC6BF27UBH2.jpg
+  - bracelet\RWZEEZS3K2T6.jpg
+- Group 48: 3 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\49NWAOBUYO2B.jpg
+  - bracelet\YGJ83YTQNHMF.jpg
+  - bracelet\bracelet_034.jpg
+- Group 49: 3 files; classes=bracelet, earring_best; cross_class=True; distance=10–10
+  - bracelet\6W5XCQ9DI988.jpg
+  - earring_best\013_012.png
+  - earring_best\025_068.png
+- Group 50: 3 files; classes=bracelet; cross_class=False; distance=4–10
+  - bracelet\98O5L98RN2KN.jpg
+  - bracelet\QJJSQ47YGDJ2.jpg
+  - bracelet\bracelet_075.jpg
+- Group 51: 3 files; classes=bracelet, earring_best; cross_class=True; distance=10–10
+  - bracelet\D1U3HYF2KDGG.jpg
+  - bracelet\ZQJCP2PPBZ1R.jpg
+  - earring_best\014_004.png
+- Group 52: 3 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\IMG_5988.JPG
+  - bracelet\IZ3P9WWEEY5I.jpg
+  - bracelet\LWGEKUNSKJX0.jpg
+- Group 53: 3 files; classes=bracelet, earring_best, ring_best; cross_class=True; distance=10–10
+  - bracelet\JNFHSVXZ9NVY.jpg
+  - earring_best\034_010.png
+  - ring_best\ring_050.jpg
+- Group 54: 3 files; classes=bracelet, earring_best; cross_class=True; distance=10–10
+  - bracelet\R38NJIJU04XA.jpg
+  - earring_best\007_043.png
+  - earring_best\029_062.png
+- Group 55: 3 files; classes=bracelet, necklace; cross_class=True; distance=8–10
+  - bracelet\ZCM4741RH5J4.jpg
+  - necklace\KY1V3ODQ4HOR.jpg
+  - necklace\OZ9N1MQROWQ7.jpg
+- Group 56: 3 files; classes=bracelet, earring_best; cross_class=True; distance=8–10
+  - bracelet\ZDVIDR8Y224Y.jpg
+  - bracelet\bracelet_056.jpg
+  - earring_best\marshall_pierce_company_chicago_fine_jewelry_pearl_and_diamond_bracelet_256-10305.jpg
+- Group 57: 3 files; classes=bracelet, earring_best; cross_class=True; distance=10–10
+  - bracelet\bracelet_030.jpg
+  - bracelet\bracelet_096.jpg
+  - earring_best\earring_14.jpg
+- Group 58: 3 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\004_038.png
+  - earring_best\015_017.png
+  - earring_best\034_025.png
+- Group 59: 3 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\007_012.png
+  - earring_best\008_008.png
+  - earring_best\009_003.png
+- Group 60: 3 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\009_005.png
+  - earring_best\028_011.png
+  - earring_best\032_001.png
+- Group 61: 3 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\010_032.png
+  - earring_best\038_052.png
+  - earring_best\041_025.png
+- Group 62: 3 files; classes=earring_best, necklace; cross_class=True; distance=8–10
+  - earring_best\019_016.png
+  - necklace\JA4Z0HUGPV0H.jpg
+  - necklace\U1XFYCVH6QA6.jpg
+- Group 63: 3 files; classes=earring_best; cross_class=False; distance=6–10
+  - earring_best\019_051.png
+  - earring_best\019_053.png
+  - earring_best\045_066.png
+- Group 64: 3 files; classes=earring_best; cross_class=False; distance=6–10
+  - earring_best\019_060.png
+  - earring_best\020_034.png
+  - earring_best\031_039.png
+- Group 65: 3 files; classes=earring_best; cross_class=False; distance=8–10
+  - earring_best\020_029.png
+  - earring_best\033_026.png
+  - earring_best\043_034.png
+- Group 66: 3 files; classes=earring_best; cross_class=False; distance=4–8
+  - earring_best\021_003.png
+  - earring_best\022_055.png
+  - earring_best\031_017.png
+- Group 67: 3 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\021_077.png
+  - earring_best\Diamond-Earrings-T7743_GF-600x600.jpg
+  - earring_best\ramleela-earrings-black.jpg
+- Group 68: 3 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\021_080.png
+  - earring_best\038_077.png
+  - earring_best\earring_65.jpg
+- Group 69: 3 files; classes=earring_best; cross_class=False; distance=0–10
+  - earring_best\025_020.png
+  - earring_best\039_006.png
+  - earring_best\039_007.png
+- Group 70: 3 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\026_051.png
+  - earring_best\035_009.png
+  - earring_best\035_018.png
+- Group 71: 3 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\034_004.png
+  - earring_best\034_005.png
+  - earring_best\038_006.png
+- Group 72: 3 files; classes=earring_best; cross_class=False; distance=4–10
+  - earring_best\039_018.png
+  - earring_best\039_029.png
+  - earring_best\earring_456.jpg
+- Group 73: 3 files; classes=earring_best; cross_class=False; distance=8–10
+  - earring_best\040_106.png
+  - earring_best\044_047.png
+  - earring_best\044_055.png
+- Group 74: 3 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\earring_307.jpg
+  - earring_best\earring_390.jpg
+  - earring_best\earring_418.jpg
+- Group 75: 3 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\43WY648HEQOM.jpg
+  - necklace\P30NW3CWVI3C.jpg
+  - necklace\necklace_172.jpg
+- Group 76: 3 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\BUFUVET2NH5Z.jpg
+  - necklace\CRKXFC9ZIY0A.jpg
+  - necklace\MYEBPOLV1DGQ.jpg
+- Group 77: 3 files; classes=necklace; cross_class=False; distance=4–10
+  - necklace\L1O528YKKU1W.jpg
+  - necklace\necklace_30.jpg
+  - necklace\necklace_31.jpg
+- Group 78: 3 files; classes=necklace; cross_class=False; distance=0–2
+  - necklace\NM6BBE8CX8YE.jpg
+  - necklace\TCQAEJWM3IE9.jpg
+  - necklace\XC80ICY9WJ8Q.jpg
+- Group 79: 3 files; classes=necklace; cross_class=False; distance=6–10
+  - necklace\necklace_24.jpg
+  - necklace\necklace_25.jpg
+  - necklace\necklace_26.jpg
+- Group 80: 3 files; classes=necklace; cross_class=False; distance=6–8
+  - necklace\necklace_264.jpg
+  - necklace\necklace_266.jpg
+  - necklace\necklace_267.jpg
+- Group 81: 3 files; classes=ring_best; cross_class=False; distance=6–10
+  - ring_best\Screenshot_20181116-204341_1542449441847.png
+  - ring_best\ring_041.jpg
+  - ring_best\ring_042.jpg
+- Group 82: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\1EJ4YT88W2FA.jpg
+  - bracelet\9CIWHEQYX04B.jpg
+- Group 83: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\1M7ISACWQ2FJ.jpg
+  - bracelet\FXJDYDVLWM87.jpg
+- Group 84: 2 files; classes=bracelet, necklace; cross_class=True; distance=10–10
+  - bracelet\2DDDCOBDYJV4.jpg
+  - necklace\8AZCYXTMFVZC.jpg
+- Group 85: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\6DT99H9KXR3I.jpg
+  - bracelet\WBA7SBS4MMP5.jpg
+- Group 86: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\6HDMAYKV5O9P.jpg
+  - bracelet\bracelet_274.jpg
+- Group 87: 2 files; classes=bracelet, necklace; cross_class=True; distance=10–10
+  - bracelet\6HSP9PH8ACDI.jpg
+  - necklace\NBOHXF0075WB.jpg
+- Group 88: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\8ZSDB0HVLLY6.jpg
+  - bracelet\LOPX85RZHGK2.jpg
+- Group 89: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\A6XCULTGR9TH.jpg
+  - bracelet\IMG_5998.JPG
+- Group 90: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\AJAVA6GTR0JB.jpg
+  - bracelet\H6D6CMVEEZPD.jpg
+- Group 91: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\DJVA2P8DAGPP.jpg
+  - bracelet\MCLXEA9ONTJ5.jpg
+- Group 92: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\IB5F0X3NDTKR.jpg
+  - bracelet\wedding-anniversary-gifts-payal-design-with-price.jpg
+- Group 93: 2 files; classes=bracelet, earring_best; cross_class=True; distance=10–10
+  - bracelet\IMG_5990.JPG
+  - earring_best\034_027.png
+- Group 94: 2 files; classes=bracelet, earring_best; cross_class=True; distance=10–10
+  - bracelet\R6RVUU8DOD54.jpg
+  - earring_best\031_035.png
+- Group 95: 2 files; classes=bracelet, earring_best; cross_class=True; distance=10–10
+  - bracelet\SL28DZBTM38B.jpg
+  - earring_best\034_015.png
+- Group 96: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\SYT1KV59VV21.jpg
+  - bracelet\T1D1E7B72PMW.jpg
+- Group 97: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\Screenshot_20181117-123917_1542547218003.png
+  - bracelet\bracelet_296.jpg
+- Group 98: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\Screenshot_20181117-124121_1542547121806.png
+  - bracelet\bracelet_268.jpg
+- Group 99: 2 files; classes=bracelet, necklace; cross_class=True; distance=10–10
+  - bracelet\TLFB1EJS4MUB.jpg
+  - necklace\necklace_177.jpg
+- Group 100: 2 files; classes=bracelet, necklace; cross_class=True; distance=8–8
+  - bracelet\ZUDRRQ2ABI4B.jpg
+  - necklace\6JIU2A15NF0Q.jpg
+- Group 101: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\bracelet_002.jpg
+  - bracelet\bracelet_208.jpg
+- Group 102: 2 files; classes=bracelet; cross_class=False; distance=6–6
+  - bracelet\bracelet_064.jpg
+  - bracelet\bracelet_179.jpg
+- Group 103: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\bracelet_124.jpg
+  - bracelet\bracelet_127.jpg
+- Group 104: 2 files; classes=bracelet, necklace; cross_class=True; distance=10–10
+  - bracelet\bracelet_139.jpg
+  - necklace\LUUL6HXC64KD.jpg
+- Group 105: 2 files; classes=bracelet, necklace; cross_class=True; distance=10–10
+  - bracelet\bracelet_202.jpg
+  - necklace\FLD16WTPQ3XO.jpg
+- Group 106: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\bracelet_234.jpg
+  - bracelet\bracelet_239.jpg
+- Group 107: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\bracelet_238.jpg
+  - bracelet\bracelet_247.jpg
+- Group 108: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\bracelet_240.jpg
+  - bracelet\bracelet_244.jpg
+- Group 109: 2 files; classes=bracelet, necklace; cross_class=True; distance=10–10
+  - bracelet\bracelet_243.jpg
+  - necklace\8FJ4JYQGA4KA.jpg
+- Group 110: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\bracelet_271.jpg
+  - bracelet\bracelet_287.jpg
+- Group 111: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\002_039.png
+  - earring_best\013_026.png
+- Group 112: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\002_042.png
+  - earring_best\images (50).jpeg
+- Group 113: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\003_040.png
+  - earring_best\004_035.png
+- Group 114: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\005_002.png
+  - earring_best\007_002.png
+- Group 115: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\007_007.png
+  - earring_best\046_001.png
+- Group 116: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\007_008.png
+  - earring_best\009_009.png
+- Group 117: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\007_049.png
+  - earring_best\029_080.png
+- Group 118: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\008_006.png
+  - earring_best\020_032.png
+- Group 119: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\008_013.png
+  - earring_best\032_002.png
+- Group 120: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\009_022.png
+  - earring_best\026_097.png
+- Group 121: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\010_004.png
+  - earring_best\022_009.png
+- Group 122: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\010_006.png
+  - earring_best\023_011.png
+- Group 123: 2 files; classes=earring_best, ring_best; cross_class=True; distance=10–10
+  - earring_best\011_023.png
+  - ring_best\ring_098.jpg
+- Group 124: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\012_025.png
+  - earring_best\027_083.png
+- Group 125: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\013_017.png
+  - earring_best\043_009.png
+- Group 126: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\014_002.png
+  - earring_best\014_003.png
+- Group 127: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\014_028.png
+  - earring_best\014_029.png
+- Group 128: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\015_002.png
+  - earring_best\031_015.png
+- Group 129: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\016_026.png
+  - earring_best\044_043.png
+- Group 130: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\016_031.png
+  - earring_best\022_023.png
+- Group 131: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\018_077.png
+  - earring_best\035_021.png
+- Group 132: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\019_057.png
+  - earring_best\041_033.png
+- Group 133: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\020_002.png
+  - earring_best\043_003.png
+- Group 134: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\020_033.png
+  - earring_best\images (34).jpeg
+- Group 135: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\021_001.png
+  - earring_best\031_031.png
+- Group 136: 2 files; classes=earring_best, ring_best; cross_class=True; distance=6–6
+  - earring_best\022_033.png
+  - ring_best\ring_063.jpg
+- Group 137: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\022_037.png
+  - earring_best\042_034.png
+- Group 138: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\023_001.png
+  - earring_best\026_016.png
+- Group 139: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\023_005.png
+  - earring_best\041_008.png
+- Group 140: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\024_062.png
+  - earring_best\024_063.png
+- Group 141: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\024_092.png
+  - earring_best\025_062.png
+- Group 142: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_008.png
+  - earring_best\025_009.png
+- Group 143: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_010.png
+  - earring_best\025_011.png
+- Group 144: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_012.png
+  - earring_best\025_013.png
+- Group 145: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_042.png
+  - earring_best\025_043.png
+- Group 146: 2 files; classes=earring_best, necklace; cross_class=True; distance=6–6
+  - earring_best\025_069.png
+  - necklace\2L56SAL3QEZQ.jpg
+- Group 147: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\026_015.png
+  - earring_best\028_009.png
+- Group 148: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\027_005.png
+  - earring_best\pirouette_by_harry_winston_earrings__diamond__EADPRFPRSPIR_trans-1h.png
+- Group 149: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\027_113.png
+  - earring_best\029_072.png
+- Group 150: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\028_044.png
+  - earring_best\028_045.png
+- Group 151: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\031_018.png
+  - earring_best\031_037.png
+- Group 152: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\032_008.png
+  - earring_best\032_010.png
+- Group 153: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\036_001.png
+  - earring_best\043_011.png
+- Group 154: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\038_056.png
+  - earring_best\042_049.png
+- Group 155: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_002.png
+  - earring_best\041_012.png
+- Group 156: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_008.png
+  - earring_best\039_009.png
+- Group 157: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_010.png
+  - earring_best\039_011.png
+- Group 158: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_012.png
+  - earring_best\039_013.png
+- Group 159: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\042_019.png
+  - earring_best\046_088.png
+- Group 160: 2 files; classes=earring_best, ring_best; cross_class=True; distance=10–10
+  - earring_best\043_007.png
+  - ring_best\Screenshot_20181116-203358_1542449694567.png
+- Group 161: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\043_013.png
+  - earring_best\043_038.png
+- Group 162: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\044_029.png
+  - earring_best\044_030.png
+- Group 163: 2 files; classes=earring_best, ring_best; cross_class=True; distance=10–10
+  - earring_best\044_041.png
+  - ring_best\ring_082.jpg
+- Group 164: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring (1).jpg
+  - earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring.jpg
+- Group 165: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\DIDE0015_1Y.jpg
+  - earring_best\earring_365.jpg
+- Group 166: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\JE03525-YGP900_1_lar.jpg
+  - earring_best\earring_27.jpg
+- Group 167: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\NMPALMX_mz.jpg
+  - earring_best\images (49).jpeg
+- Group 168: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\earring_114.jpg
+  - earring_best\earring_282.jpg
+- Group 169: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\earring_116.jpg
+  - earring_best\earring_332.jpg
+- Group 170: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_176.jpg
+  - earring_best\earring_313.jpg
+- Group 171: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\earring_227.jpg
+  - earring_best\earring_248.jpg
+- Group 172: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\earring_271.jpg
+  - earring_best\earring_429.jpg
+- Group 173: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_276.jpg
+  - earring_best\earring_277.jpg
+- Group 174: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\earring_285.jpg
+  - earring_best\earring_286.jpg
+- Group 175: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_29.jpg
+  - earring_best\earring_89.jpg
+- Group 176: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_291.jpg
+  - earring_best\earring_295.jpg
+- Group 177: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\earring_369.jpg
+  - earring_best\images (4).jpeg
+- Group 178: 2 files; classes=earring_best, necklace; cross_class=True; distance=10–10
+  - earring_best\earring_40.jpg
+  - necklace\QCELPE82D03B.jpg
+- Group 179: 2 files; classes=earring_best, necklace; cross_class=True; distance=8–8
+  - earring_best\earring_51.jpg
+  - necklace\AXUC5EM9GPLC.jpg
+- Group 180: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\1BP62KNLR856.jpg
+  - necklace\MMB8NOHFDX6S.jpg
+- Group 181: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\2CUNGGQ7HELG.jpg
+  - necklace\P5XYFN465RKC.jpg
+- Group 182: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\31PZN04QOIRT.jpg
+  - necklace\WCJZ72MIGBRC.jpg
+- Group 183: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\48WHHDAZ7RPY.jpg
+  - necklace\VD0VBMVKAZQE.jpg
+- Group 184: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\7720LK0CISQK.jpg
+  - necklace\necklace_50.jpg
+- Group 185: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\7L86P2I3XEUA.jpg
+  - necklace\M02PFQ3907WM.jpg
+- Group 186: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\8BDAS0ZPMTWX.jpg
+  - necklace\necklace_191.jpg
+- Group 187: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\907J22O5ZMV8.jpg
+  - necklace\AZKH9HO1G920.jpg
+- Group 188: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\A86B0SBIPBET.jpg
+  - necklace\LXE9TVUVMDYI.jpg
+- Group 189: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\DDJKTEIDCVVA.jpg
+  - necklace\DGT8FRCHX2ZG.jpg
+- Group 190: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\EPL0QTEDN8UZ.jpg
+  - necklace\necklace_138.jpg
+- Group 191: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\H4FNIREPMHJU.jpg
+  - necklace\necklace_162.jpg
+- Group 192: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\IJIYFKBUG5J9.jpg
+  - necklace\necklace_74.jpg
+- Group 193: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\K19ZR1CZDOHA.jpg
+  - necklace\NMI2EBQ8PJ9P.jpg
+- Group 194: 2 files; classes=necklace, ring_best; cross_class=True; distance=10–10
+  - necklace\LZWLY26Y1DVX.jpg
+  - ring_best\ring_077.jpg
+- Group 195: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\N3ACFOQFIK38.jpg
+  - necklace\Y8SPAP0ZMEFW.jpg
+- Group 196: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\NH9ER44NQLVW.jpg
+  - necklace\WYM5FUSDUM2P.jpg
+- Group 197: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\QVDFZT49SWET.jpg
+  - necklace\necklace_155.jpg
+- Group 198: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\SPXT5PV6EWY0.jpg
+  - necklace\necklace_179.jpg
+- Group 199: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\TAUVMRCC665Y.jpg
+  - necklace\U8ZYRG4UXJ3Y.jpg
+- Group 200: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\TT7TRUEO0786.jpg
+  - necklace\necklace_53.jpg
+- Group 201: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\X0VV6NOA4D3Q.jpg
+  - necklace\X8BPM954AKD8.jpg
+- Group 202: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\necklace_106.jpg
+  - necklace\necklace_169.jpg
+- Group 203: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\necklace_129.jpg
+  - necklace\necklace_149.jpg
+- Group 204: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\necklace_233.jpg
+  - necklace\necklace_234.jpg
+- Group 205: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_240.jpg
+  - necklace\necklace_243.jpg
+- Group 206: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_257.jpg
+  - necklace\necklace_259.jpg
+- Group 207: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_27.jpg
+  - necklace\necklace_28.jpg
+- Group 208: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_276.jpg
+  - necklace\necklace_278.jpg
+- Group 209: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\necklace_287.jpg
+  - necklace\necklace_289.jpg
+- Group 210: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\necklace_299.jpg
+  - necklace\necklace_310.jpg
+- Group 211: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\necklace_52.jpg
+  - necklace\necklace_54.jpg
+- Group 212: 2 files; classes=ring_best; cross_class=False; distance=10–10
+  - ring_best\IMG_6014.JPG
+  - ring_best\ring_052.jpg
+- Group 213: 2 files; classes=ring_best; cross_class=False; distance=10–10
+  - ring_best\Screenshot_20181116-204201_1542449544117.png
+  - ring_best\ring_061.jpg
+- Group 214: 2 files; classes=ring_best; cross_class=False; distance=10–10
+  - ring_best\ring_015.jpg
+  - ring_best\ring_031.jpg
+- Group 215: 2 files; classes=ring_best; cross_class=False; distance=10–10
+  - ring_best\ring_110.jpg
+  - ring_best\ring_174.jpg
+- Group 216: 2 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_124.jpg
+  - ring_best\ring_193.jpg
+#### Hamming threshold ≤ 12
+- Group 1: 4056 files; classes=bracelet, earring_best, necklace, ring_best; cross_class=True; distance=0–12
+  - bracelet\03WI4QOA9EUK.jpg
+  - bracelet\09T1R2G1IRZ0.jpg
+  - bracelet\0FB6U4NLW1KR.jpg
+  - bracelet\0J4OHJWD35A8.jpg
+  - bracelet\0LMDJG11WE0S.jpg
+  - bracelet\0TW1LGMLRAWX.jpg
+  - bracelet\0X8F0EH1FXYE.jpg
+  - bracelet\10047527649310.jpg
+  - bracelet\100UP9VF7WMN.jpg
+  - bracelet\10530C32BLTK.jpg
+  - bracelet\18ct-white-gold-2-row-akoya-pearl-0-92ct-diamond-bracelet-p875-4916_image.jpg
+  - bracelet\1EJ4YT88W2FA.jpg
+  - bracelet\1KN3NNCZUKM9.jpg
+  - bracelet\1NLZL9TQ1RBN.jpg
+  - bracelet\1U7C9X4MCZSN.jpg
+  - bracelet\20WQIS8HSYW8.jpg
+  - bracelet\21IWBZI4BZEC.jpg
+  - bracelet\22O1ZFD6TSKL.jpg
+  - bracelet\2DDDCOBDYJV4.jpg
+  - bracelet\2DP6FEGXVJ1Q.jpg
+  - bracelet\2JHIRBNXUYR7.jpg
+  - bracelet\2WGZHVH8O1V3.jpg
+  - bracelet\2XJ1BV7UBEN6.jpg
+  - bracelet\34CUB6GAXYUF.jpg
+  - bracelet\3YBQ4Z599KNK.jpg
+  - bracelet\3ZAN8BNV9EBV.jpg
+  - bracelet\43DOTJXD75JE.jpg
+  - bracelet\49NWAOBUYO2B.jpg
+  - bracelet\4IZIUT54RT6L.jpg
+  - bracelet\4JOSFGGU72VN.jpg
+  - bracelet\4L1ZLZB2T8PU.jpg
+  - bracelet\4O0PRFGCK2T7.jpg
+  - bracelet\4OCSNV1HA0U6.jpg
+  - bracelet\4TNW5DWZ0GDH.jpg
+  - bracelet\50079ABYVKED.jpg
+  - bracelet\51W6O3XH8PTC.jpg
+  - bracelet\53WY8QXI5ULW.jpg
+  - bracelet\579YZVZ5AD3P.jpg
+  - bracelet\5CSDN383Z8BQ.jpg
+  - bracelet\5FT93A4O6YJA.jpg
+  - bracelet\5FX2SBKTITYC.jpg
+  - bracelet\5GNWOHTQS771.jpg
+  - bracelet\5J7UTHWI5OQS.jpg
+  - bracelet\5JB47ZDA3SS0.jpg
+  - bracelet\5ZYKS67SED0A.jpg
+  - bracelet\61987W5RETMX.jpg
+  - bracelet\66Z6Q4HVXVIP.jpg
+  - bracelet\6DT99H9KXR3I.jpg
+  - bracelet\6DZBJKZL4MII.jpg
+  - bracelet\6HDMAYKV5O9P.jpg
+  - bracelet\6HSP9PH8ACDI.jpg
+  - bracelet\6M575KPCVQZV.jpg
+  - bracelet\6RNKVU27FN3G.jpg
+  - bracelet\6W5XCQ9DI988.jpg
+  - bracelet\7350_main.jpeg
+  - bracelet\7ANI104KBGDB.jpg
+  - bracelet\7B1IKBKRKSL7.jpg
+  - bracelet\7QD1H3KXNWQI.jpg
+  - bracelet\7UCK2SJYQSN5.jpg
+  - bracelet\7XAQHT3YM9JB.jpg
+  - bracelet\87Q6DHAYVGNY.jpg
+  - bracelet\8FXC51IQV0K6.jpg
+  - bracelet\8TBNKHRFLSOC.jpg
+  - bracelet\8W6N33F0SDIO.jpg
+  - bracelet\8ZSDB0HVLLY6.jpg
+  - bracelet\92XG9XMRDY5Q.jpg
+  - bracelet\98O5L98RN2KN.jpg
+  - bracelet\99A8SY6X8FYR.jpg
+  - bracelet\9CIWHEQYX04B.jpg
+  - bracelet\9JGLH1B7IGWB.jpg
+  - bracelet\9XZ0VWTZEVRO.jpg
+  - bracelet\A6XCULTGR9TH.jpg
+  - bracelet\AA3NXVHZEBFT.jpg
+  - bracelet\AALA5FM70K65.jpg
+  - bracelet\AAQSFJZOELZ8.jpg
+  - bracelet\ACVJ5JLH6346.jpg
+  - bracelet\ACVMPAVSWE5J.jpg
+  - bracelet\AKQ61AJ8UMRB.jpg
+  - bracelet\AMR4T8WV5TOB.jpg
+  - bracelet\Aradhya-Designer-18k-Gold-Plated-SDL044078684-1-bfa9e.JPG
+  - bracelet\B0003CLP.jpg
+  - bracelet\BRCKV9YQGDWI.jpg
+  - bracelet\C4YL9OCB3A53.jpg
+  - bracelet\C9D8D1SN57Z9.jpg
+  - bracelet\CM22SVEL9601.jpg
+  - bracelet\CT6YDSUGAXUW.jpg
+  - bracelet\CYD70ON6Q19S.jpg
+  - bracelet\D1U3HYF2KDGG.jpg
+  - bracelet\D9CMPUYLZ7O1.jpg
+  - bracelet\DALA8MOA17B4.jpg
+  - bracelet\DDMN43YD8J0H.jpg
+  - bracelet\DJVA2P8DAGPP.jpg
+  - bracelet\DM8VSAECYXIJ.jpg
+  - bracelet\DN8I4557B6K8.jpg
+  - bracelet\DTVA1NDF8T4F.jpg
+  - bracelet\DU0S4WQTT1N3.jpg
+  - bracelet\DZ1XYVV2FJVC.jpg
+  - bracelet\E1UNL404V9EJ.jpg
+  - bracelet\E6OW3GW19GPC.jpg
+  - bracelet\EFFLGSR80L22.jpg
+  - bracelet\EFNM3TM5RCYZ.jpg
+  - bracelet\EJSYRPEBFVN7.jpg
+  - bracelet\EUETWO4ZFI1P.jpg
+  - bracelet\EXA3UGR13R6Z.jpg
+  - bracelet\F9656BIDN1YJ.jpg
+  - bracelet\FHTEGQ0QE6GO.jpg
+  - bracelet\FOTA3W7JVQ02.jpg
+  - bracelet\FQ6OYYZG5SRY.jpg
+  - bracelet\FQRTL50P2WR2.jpg
+  - bracelet\FUGF0W3ROIYF.jpg
+  - bracelet\FX6BK0DO5D42.jpg
+  - bracelet\G2FXTJFFHT1B.jpg
+  - bracelet\G42U866H5DQI.jpg
+  - bracelet\GUPO8NA17XZ0.jpg
+  - bracelet\GW5GN1ZGUP6H.jpg
+  - bracelet\GXS3G79DV2EO.jpg
+  - bracelet\H6U5A2ODEFF7.jpg
+  - bracelet\H91CYQHY2LV9.jpg
+  - bracelet\HGUDWC52JMI7.jpg
+  - bracelet\HIYKRD75YUKY.jpg
+  - bracelet\HOYHES3NIGLM.jpg
+  - bracelet\HQ7IJZOX4A0O.jpg
+  - bracelet\HR41X6CF0R45.jpg
+  - bracelet\HZ0B0IJB4FKD.jpg
+  - bracelet\I7RENEX1GN2X.jpg
+  - bracelet\IB4RZ0RNBVML.jpg
+  - bracelet\IEDSHYH78OMT.jpg
+  - bracelet\IMG_5961.JPG
+  - bracelet\IMG_5963.JPG
+  - bracelet\IMG_5964.JPG
+  - bracelet\IMG_5984.JPG
+  - bracelet\IMG_5986.JPG
+  - bracelet\IMG_5988.JPG
+  - bracelet\IMG_5990.JPG
+  - bracelet\IMG_5991.JPG
+  - bracelet\IMG_5992.JPG
+  - bracelet\IMG_5993.JPG
+  - bracelet\IMG_5995.JPG
+  - bracelet\IMG_5996.JPG
+  - bracelet\IMG_5997.JPG
+  - bracelet\IMG_5998.JPG
+  - bracelet\IMG_5999.JPG
+  - bracelet\IR6HOT3IZ2SH.jpg
+  - bracelet\ITA85BGBJPEB.jpg
+  - bracelet\IZ3P9WWEEY5I.jpg
+  - bracelet\IZ9K252VDIUG.jpg
+  - bracelet\IZPVFIN716X1.jpg
+  - bracelet\J7B382BT54XT.jpg
+  - bracelet\JIIIEG96N2R6.jpg
+  - bracelet\JNFHSVXZ9NVY.jpg
+  - bracelet\K0YMSMQE6WSZ.jpg
+  - bracelet\K5YHA2WPNAJ8.jpg
+  - bracelet\KA9OD1P8RGYC.jpg
+  - bracelet\KJZYPOJBZBJA.jpg
+  - bracelet\L5PCRC23MS9D.jpg
+  - bracelet\L5XVZ6HRQHXF.jpg
+  - bracelet\L8BYA369NPK0.jpg
+  - bracelet\L9H1NQQ27YC2.jpg
+  - bracelet\LM3OXWYO2E7R.jpg
+  - bracelet\LOPX85RZHGK2.jpg
+  - bracelet\LPPQ1CKBTMCZ.jpg
+  - bracelet\LWGEKUNSKJX0.jpg
+  - bracelet\MCKTUBM2N4PI.jpg
+  - bracelet\MCLXEA9ONTJ5.jpg
+  - bracelet\N6H4LLPFXSB9.jpg
+  - bracelet\N6O9UDLGO63U.jpg
+  - bracelet\NAHZ4S0IY03D.jpg
+  - bracelet\NM8CAB8LBQXN.jpg
+  - bracelet\NTPJEQ5QV3IT.jpg
+  - bracelet\O1UVRCTB6TRI.jpg
+  - bracelet\O3PO38GLZEB0.jpg
+  - bracelet\O5172S8DF5HI.jpg
+  - bracelet\O80Y9786TA70.jpg
+  - bracelet\OA50P0DJUL00.jpg
+  - bracelet\OAXZ7Z86VHVH.jpg
+  - bracelet\OPC7HJH66AH8.jpg
+  - bracelet\OVYT2SCP0D12.jpg
+  - bracelet\OY2RCY7OCEE8.jpg
+  - bracelet\P55DMC9A6NMO.jpg
+  - bracelet\PFDJEWCEJE2V.jpg
+  - bracelet\PIBPCZ7EDSAB.jpg
+  - bracelet\PR5PNU27D5CV.jpg
+  - bracelet\Q9XVT4HTVIEC.jpg
+  - bracelet\QCYBVIQM586R.jpg
+  - bracelet\QJJSQ47YGDJ2.jpg
+  - bracelet\QPREK18TPAXB.jpg
+  - bracelet\QUQDMEFKJP06.jpg
+  - bracelet\QX8V4K34YDW5.jpg
+  - bracelet\R1P2DMB0JHR3.jpg
+  - bracelet\R36PG111ZBO1.jpg
+  - bracelet\R38NJIJU04XA.jpg
+  - bracelet\R6OZ4AXAY7FH.jpg
+  - bracelet\R7QXQJ7IIXQ4.jpg
+  - bracelet\RCDRLFRVPP74.jpg
+  - bracelet\RCMSOUYKNR64.jpg
+  - bracelet\RDIJQQIL7UIZ.jpg
+  - bracelet\RK4T361EK2U6.jpg
+  - bracelet\RQ10OXL1DQ3I.jpg
+  - bracelet\RRNL38WWQFQZ.jpg
+  - bracelet\S9J4YH41HM2K.jpg
+  - bracelet\SF465W97AC9V.jpg
+  - bracelet\SJQVPXUVAYVM.jpg
+  - bracelet\ST0TJTQRMNAU.jpg
+  - bracelet\SWD0XRBAF66F.jpg
+  - bracelet\Screenshot_20181117-123847_1542547233069.png
+  - bracelet\Screenshot_20181117-124121_1542547121806.png
+  - bracelet\Screenshot_20181117-124139_1542547103232.png
+  - bracelet\Screenshot_20181117-124433_1542547075664.png
+  - bracelet\Screenshot_20181117-124641_1542547058396.png
+  - bracelet\T8TFRYZ254PJ.jpg
+  - bracelet\TDWNF4EOXT1Q.jpg
+  - bracelet\TJE02JOHIE4C.jpg
+  - bracelet\TLFB1EJS4MUB.jpg
+  - bracelet\TV0M56UEK825.jpg
+  - bracelet\U1PC5QKZQS55.jpg
+  - bracelet\UB0OZCM2WDYK.jpg
+  - bracelet\UQVS9NQPEXF1.jpg
+  - bracelet\UUSXYKIJ1VC7.jpg
+  - bracelet\UV63YSEQEU7W.jpg
+  - bracelet\UY91LVTY0BA6.jpg
+  - bracelet\V5DKSFJ1KT0H.jpg
+  - bracelet\V987Y573WA62.jpg
+  - bracelet\V9VPMFSGYDSE.jpg
+  - bracelet\VNEIH94REZXN.jpg
+  - bracelet\VWVB9K4XZ3F3.jpg
+  - bracelet\VZ2RR1FMFXS4.jpg
+  - bracelet\W04N11GEBB62.jpg
+  - bracelet\W2GBLWZ8ARDI.jpg
+  - bracelet\W2ZLQFORF49Q.jpg
+  - bracelet\W9577ZXZ1A29.jpg
+  - bracelet\WBA7SBS4MMP5.jpg
+  - bracelet\WE7BC7BU05O9.jpg
+  - bracelet\WI08825952GY.jpg
+  - bracelet\X4HFX3ZORHLX.jpg
+  - bracelet\X8JWM629HZCN.jpg
+  - bracelet\XO5PDPGL4WVM.jpg
+  - bracelet\XPMWXSHEUJCJ.jpg
+  - bracelet\XVSU6697TYEZ.jpg
+  - bracelet\XWQIO9FYSBQM.jpg
+  - bracelet\Y1W6XOV87L47.jpg
+  - bracelet\Y55IL70MSZ4O.jpg
+  - bracelet\YGJ83YTQNHMF.jpg
+  - bracelet\YKH32HPBGQJ8.jpg
+  - bracelet\YNVHD5SK1UJ8.jpg
+  - bracelet\YQHZ4HQC5YJ6.jpg
+  - bracelet\YZ69VS64BK99.jpg
+  - bracelet\Z1WGR7EXQXRN.jpg
+  - bracelet\ZACIDUCDSFIC.jpg
+  - bracelet\ZCM4741RH5J4.jpg
+  - bracelet\ZDVIDR8Y224Y.jpg
+  - bracelet\ZGSJU5GWNYEH.jpg
+  - bracelet\ZQJCP2PPBZ1R.jpg
+  - bracelet\ZQPFCVGPUV6T.jpg
+  - bracelet\ZS0SYA6JGTSW.jpg
+  - bracelet\ZSFJDUCYHBN7.jpg
+  - bracelet\ZSMKA187T91S.jpg
+  - bracelet\ZU54433USVKI.jpg
+  - bracelet\ZUDRRQ2ABI4B.jpg
+  - bracelet\ZV1T249AJWB1.jpg
+  - bracelet\bm5_ssc.jpg
+  - bracelet\bracelet-socotra.jpg
+  - bracelet\bracelet_001.jpg
+  - bracelet\bracelet_002.jpg
+  - bracelet\bracelet_003.jpg
+  - bracelet\bracelet_004.jpg
+  - bracelet\bracelet_006.jpg
+  - bracelet\bracelet_007.jpg
+  - bracelet\bracelet_008.jpg
+  - bracelet\bracelet_009.jpg
+  - bracelet\bracelet_010.jpg
+  - bracelet\bracelet_011.jpg
+  - bracelet\bracelet_012.jpg
+  - bracelet\bracelet_013.jpg
+  - bracelet\bracelet_014.jpg
+  - bracelet\bracelet_015.jpg
+  - bracelet\bracelet_016.jpg
+  - bracelet\bracelet_017.jpg
+  - bracelet\bracelet_018.jpg
+  - bracelet\bracelet_019.jpg
+  - bracelet\bracelet_020.jpg
+  - bracelet\bracelet_021.jpg
+  - bracelet\bracelet_022.jpg
+  - bracelet\bracelet_023.jpg
+  - bracelet\bracelet_024.jpg
+  - bracelet\bracelet_025.jpg
+  - bracelet\bracelet_026.jpg
+  - bracelet\bracelet_027.jpg
+  - bracelet\bracelet_028.jpg
+  - bracelet\bracelet_029.jpg
+  - bracelet\bracelet_030.jpg
+  - bracelet\bracelet_031.jpg
+  - bracelet\bracelet_032.jpg
+  - bracelet\bracelet_034.jpg
+  - bracelet\bracelet_036.jpg
+  - bracelet\bracelet_037.jpg
+  - bracelet\bracelet_039.jpg
+  - bracelet\bracelet_040.jpg
+  - bracelet\bracelet_041.jpg
+  - bracelet\bracelet_042.jpg
+  - bracelet\bracelet_043.jpg
+  - bracelet\bracelet_045.jpg
+  - bracelet\bracelet_046.jpg
+  - bracelet\bracelet_047.jpg
+  - bracelet\bracelet_048.jpg
+  - bracelet\bracelet_049.jpg
+  - bracelet\bracelet_051.jpg
+  - bracelet\bracelet_052.jpg
+  - bracelet\bracelet_053.jpg
+  - bracelet\bracelet_054.jpg
+  - bracelet\bracelet_056.jpg
+  - bracelet\bracelet_057.jpg
+  - bracelet\bracelet_058.jpg
+  - bracelet\bracelet_059.jpg
+  - bracelet\bracelet_060.jpg
+  - bracelet\bracelet_062.jpg
+  - bracelet\bracelet_063.jpg
+  - bracelet\bracelet_064.jpg
+  - bracelet\bracelet_065.jpg
+  - bracelet\bracelet_066.jpg
+  - bracelet\bracelet_067.jpg
+  - bracelet\bracelet_068.jpg
+  - bracelet\bracelet_069.jpg
+  - bracelet\bracelet_071.jpg
+  - bracelet\bracelet_072.jpg
+  - bracelet\bracelet_073.jpg
+  - bracelet\bracelet_074.jpg
+  - bracelet\bracelet_075.jpg
+  - bracelet\bracelet_076.jpg
+  - bracelet\bracelet_077.jpg
+  - bracelet\bracelet_078.jpg
+  - bracelet\bracelet_079.jpg
+  - bracelet\bracelet_080.jpg
+  - bracelet\bracelet_081.jpg
+  - bracelet\bracelet_082.jpg
+  - bracelet\bracelet_083.jpg
+  - bracelet\bracelet_084.jpg
+  - bracelet\bracelet_085.jpg
+  - bracelet\bracelet_087.jpg
+  - bracelet\bracelet_088.jpg
+  - bracelet\bracelet_089.jpg
+  - bracelet\bracelet_090.jpg
+  - bracelet\bracelet_091.jpg
+  - bracelet\bracelet_093.jpg
+  - bracelet\bracelet_095.jpg
+  - bracelet\bracelet_096.jpg
+  - bracelet\bracelet_097.jpg
+  - bracelet\bracelet_098.jpg
+  - bracelet\bracelet_099.jpg
+  - bracelet\bracelet_100.jpg
+  - bracelet\bracelet_101.jpg
+  - bracelet\bracelet_102.jpg
+  - bracelet\bracelet_103.jpg
+  - bracelet\bracelet_104.jpg
+  - bracelet\bracelet_105.jpg
+  - bracelet\bracelet_106.jpg
+  - bracelet\bracelet_107.jpg
+  - bracelet\bracelet_108.jpg
+  - bracelet\bracelet_109.jpg
+  - bracelet\bracelet_110.jpg
+  - bracelet\bracelet_111.jpg
+  - bracelet\bracelet_112.jpg
+  - bracelet\bracelet_113.jpg
+  - bracelet\bracelet_114.jpg
+  - bracelet\bracelet_115.jpg
+  - bracelet\bracelet_116.jpg
+  - bracelet\bracelet_117.jpg
+  - bracelet\bracelet_118.jpg
+  - bracelet\bracelet_119.jpg
+  - bracelet\bracelet_120.jpg
+  - bracelet\bracelet_121.jpg
+  - bracelet\bracelet_123.jpg
+  - bracelet\bracelet_124.jpg
+  - bracelet\bracelet_125.jpg
+  - bracelet\bracelet_126.jpg
+  - bracelet\bracelet_127.jpg
+  - bracelet\bracelet_128.jpg
+  - bracelet\bracelet_129.jpg
+  - bracelet\bracelet_130.jpg
+  - bracelet\bracelet_131.jpg
+  - bracelet\bracelet_133.jpg
+  - bracelet\bracelet_134.jpg
+  - bracelet\bracelet_136.jpg
+  - bracelet\bracelet_137.jpg
+  - bracelet\bracelet_138.jpg
+  - bracelet\bracelet_139.jpg
+  - bracelet\bracelet_140.jpg
+  - bracelet\bracelet_141.jpg
+  - bracelet\bracelet_142.jpg
+  - bracelet\bracelet_143.jpg
+  - bracelet\bracelet_144.jpg
+  - bracelet\bracelet_145.jpg
+  - bracelet\bracelet_146.jpg
+  - bracelet\bracelet_147.jpg
+  - bracelet\bracelet_148.jpg
+  - bracelet\bracelet_149.jpg
+  - bracelet\bracelet_150.jpg
+  - bracelet\bracelet_151.jpg
+  - bracelet\bracelet_152.jpg
+  - bracelet\bracelet_153.jpg
+  - bracelet\bracelet_154.jpg
+  - bracelet\bracelet_155.jpg
+  - bracelet\bracelet_156.jpg
+  - bracelet\bracelet_157.jpg
+  - bracelet\bracelet_158.jpg
+  - bracelet\bracelet_159.jpg
+  - bracelet\bracelet_160.jpg
+  - bracelet\bracelet_162.jpg
+  - bracelet\bracelet_163.jpg
+  - bracelet\bracelet_164.jpg
+  - bracelet\bracelet_165.jpg
+  - bracelet\bracelet_166.jpg
+  - bracelet\bracelet_167.jpg
+  - bracelet\bracelet_168.jpg
+  - bracelet\bracelet_170.jpg
+  - bracelet\bracelet_171.jpg
+  - bracelet\bracelet_173.jpg
+  - bracelet\bracelet_174.jpg
+  - bracelet\bracelet_175.jpg
+  - bracelet\bracelet_176.jpg
+  - bracelet\bracelet_177.jpg
+  - bracelet\bracelet_178.jpg
+  - bracelet\bracelet_179.jpg
+  - bracelet\bracelet_180.jpg
+  - bracelet\bracelet_181.jpg
+  - bracelet\bracelet_182.jpg
+  - bracelet\bracelet_183.jpg
+  - bracelet\bracelet_184.jpg
+  - bracelet\bracelet_185.jpg
+  - bracelet\bracelet_186.jpg
+  - bracelet\bracelet_187.jpg
+  - bracelet\bracelet_188.jpg
+  - bracelet\bracelet_189.jpg
+  - bracelet\bracelet_190.jpg
+  - bracelet\bracelet_191.jpg
+  - bracelet\bracelet_192.jpg
+  - bracelet\bracelet_193.jpg
+  - bracelet\bracelet_194.jpg
+  - bracelet\bracelet_195.jpg
+  - bracelet\bracelet_196.jpg
+  - bracelet\bracelet_198.jpg
+  - bracelet\bracelet_199.jpg
+  - bracelet\bracelet_200.jpg
+  - bracelet\bracelet_201.jpg
+  - bracelet\bracelet_202.jpg
+  - bracelet\bracelet_203.jpg
+  - bracelet\bracelet_204.jpg
+  - bracelet\bracelet_205.jpg
+  - bracelet\bracelet_206.jpg
+  - bracelet\bracelet_207.jpg
+  - bracelet\bracelet_208.jpg
+  - bracelet\bracelet_210.jpg
+  - bracelet\bracelet_211.jpg
+  - bracelet\bracelet_213.jpg
+  - bracelet\bracelet_214.jpg
+  - bracelet\bracelet_215.jpg
+  - bracelet\bracelet_216.jpg
+  - bracelet\bracelet_217.jpg
+  - bracelet\bracelet_218.jpg
+  - bracelet\bracelet_219.jpg
+  - bracelet\bracelet_220.jpg
+  - bracelet\bracelet_221.jpg
+  - bracelet\bracelet_222.jpg
+  - bracelet\bracelet_224.jpg
+  - bracelet\bracelet_225.jpg
+  - bracelet\bracelet_226.jpg
+  - bracelet\bracelet_227.jpg
+  - bracelet\bracelet_228.jpg
+  - bracelet\bracelet_229.jpg
+  - bracelet\bracelet_230.jpg
+  - bracelet\bracelet_231.jpg
+  - bracelet\bracelet_232.jpg
+  - bracelet\bracelet_233.jpg
+  - bracelet\bracelet_234.jpg
+  - bracelet\bracelet_235.jpg
+  - bracelet\bracelet_236.jpg
+  - bracelet\bracelet_239.jpg
+  - bracelet\bracelet_240.jpg
+  - bracelet\bracelet_241.jpg
+  - bracelet\bracelet_242.jpg
+  - bracelet\bracelet_243.jpg
+  - bracelet\bracelet_244.jpg
+  - bracelet\bracelet_245.jpg
+  - bracelet\bracelet_246.jpg
+  - bracelet\bracelet_248.jpg
+  - bracelet\bracelet_249.jpg
+  - bracelet\bracelet_252.jpg
+  - bracelet\bracelet_253.jpg
+  - bracelet\bracelet_254.jpg
+  - bracelet\bracelet_255.jpg
+  - bracelet\bracelet_256.jpg
+  - bracelet\bracelet_257.jpg
+  - bracelet\bracelet_258.jpg
+  - bracelet\bracelet_259.jpg
+  - bracelet\bracelet_260.jpg
+  - bracelet\bracelet_261.jpg
+  - bracelet\bracelet_262.jpg
+  - bracelet\bracelet_263.jpg
+  - bracelet\bracelet_264.jpg
+  - bracelet\bracelet_265.jpg
+  - bracelet\bracelet_267.jpg
+  - bracelet\bracelet_268.jpg
+  - bracelet\bracelet_270.jpg
+  - bracelet\bracelet_271.jpg
+  - bracelet\bracelet_272.jpg
+  - bracelet\bracelet_273.jpg
+  - bracelet\bracelet_274.jpg
+  - bracelet\bracelet_276.jpg
+  - bracelet\bracelet_277.jpg
+  - bracelet\bracelet_279.jpg
+  - bracelet\bracelet_280.jpg
+  - bracelet\bracelet_281.jpg
+  - bracelet\bracelet_282.jpg
+  - bracelet\bracelet_283.jpg
+  - bracelet\bracelet_284.jpg
+  - bracelet\bracelet_285.jpg
+  - bracelet\bracelet_286.jpg
+  - bracelet\bracelet_287.jpg
+  - bracelet\bracelet_288.jpg
+  - bracelet\bracelet_290.jpg
+  - bracelet\bracelet_291.jpg
+  - bracelet\bracelet_292.jpg
+  - bracelet\bracelet_293.jpg
+  - bracelet\bracelet_294.jpg
+  - bracelet\bracelet_295.jpg
+  - bracelet\bracelet_297.jpg
+  - bracelet\bracelet_298.jpg
+  - bracelet\bracelet_299.jpg
+  - bracelet\bracelet_300.jpg
+  - bracelet\bracelet_301.jpg
+  - bracelet\bracelet_302.jpg
+  - bracelet\bracelet_303.jpg
+  - bracelet\bracelet_304.jpg
+  - bracelet\bracelet_305.jpg
+  - bracelet\bracelet_306.jpg
+  - bracelet\bracelet_307.jpg
+  - bracelet\bracelet_308.jpg
+  - bracelet\bracelet_309.jpg
+  - bracelet\d3d801008a90f354231c3f57544c9328b26269f8.jpg
+  - bracelet\images (13).jpeg
+  - bracelet\wood-and-silver-bracelet.jpg
+  - bracelet\zver-001-KNOTS-WAXED-CORD-LAVA-BEADS-925-SILVER-120-euro.jpg
+  - earring_best\001_001.png
+  - earring_best\001_002.png
+  - earring_best\001_003.png
+  - earring_best\001_004.png
+  - earring_best\001_005.png
+  - earring_best\001_006.png
+  - earring_best\001_007.png
+  - earring_best\001_008.png
+  - earring_best\001_009.png
+  - earring_best\001_010.png
+  - earring_best\001_011.png
+  - earring_best\001_012.png
+  - earring_best\001_013.png
+  - earring_best\001_014.png
+  - earring_best\001_015.png
+  - earring_best\001_016.png
+  - earring_best\001_017.png
+  - earring_best\001_018.png
+  - earring_best\001_019.png
+  - earring_best\001_020.png
+  - earring_best\001_021.png
+  - earring_best\001_022.png
+  - earring_best\002_001.png
+  - earring_best\002_004.png
+  - earring_best\002_005.png
+  - earring_best\002_006.png
+  - earring_best\002_007.png
+  - earring_best\002_008.png
+  - earring_best\002_009.png
+  - earring_best\002_010.png
+  - earring_best\002_011.png
+  - earring_best\002_012.png
+  - earring_best\002_013.png
+  - earring_best\002_014.png
+  - earring_best\002_015.png
+  - earring_best\002_016.png
+  - earring_best\002_017.png
+  - earring_best\002_018.png
+  - earring_best\002_019.png
+  - earring_best\002_020.png
+  - earring_best\002_022.png
+  - earring_best\002_025.png
+  - earring_best\002_027.png
+  - earring_best\002_028.png
+  - earring_best\002_029.png
+  - earring_best\002_030.png
+  - earring_best\002_031.png
+  - earring_best\002_032.png
+  - earring_best\002_033.png
+  - earring_best\002_034.png
+  - earring_best\002_035.png
+  - earring_best\002_036.png
+  - earring_best\002_037.png
+  - earring_best\002_038.png
+  - earring_best\002_039.png
+  - earring_best\002_040.png
+  - earring_best\002_041.png
+  - earring_best\002_042.png
+  - earring_best\002_043.png
+  - earring_best\003_001.png
+  - earring_best\003_002.png
+  - earring_best\003_003.png
+  - earring_best\003_004.png
+  - earring_best\003_005.png
+  - earring_best\003_007.png
+  - earring_best\003_008.png
+  - earring_best\003_009.png
+  - earring_best\003_010.png
+  - earring_best\003_011.png
+  - earring_best\003_012.png
+  - earring_best\003_013.png
+  - earring_best\003_014.png
+  - earring_best\003_015.png
+  - earring_best\003_017.png
+  - earring_best\003_018.png
+  - earring_best\003_021.png
+  - earring_best\003_022.png
+  - earring_best\003_023.png
+  - earring_best\003_024.png
+  - earring_best\003_025.png
+  - earring_best\003_026.png
+  - earring_best\003_027.png
+  - earring_best\003_028.png
+  - earring_best\003_029.png
+  - earring_best\003_031.png
+  - earring_best\003_032.png
+  - earring_best\003_033.png
+  - earring_best\003_034.png
+  - earring_best\003_035.png
+  - earring_best\003_036.png
+  - earring_best\003_037.png
+  - earring_best\003_038.png
+  - earring_best\003_039.png
+  - earring_best\003_040.png
+  - earring_best\003_041.png
+  - earring_best\003_042.png
+  - earring_best\003_043.png
+  - earring_best\003_044.png
+  - earring_best\003_045.png
+  - earring_best\003_047.png
+  - earring_best\003_048.png
+  - earring_best\003_049.png
+  - earring_best\003_050.png
+  - earring_best\003_051.png
+  - earring_best\003_052.png
+  - earring_best\003_054.png
+  - earring_best\003_055.png
+  - earring_best\003_056.png
+  - earring_best\003_057.png
+  - earring_best\003_058.png
+  - earring_best\004_001.png
+  - earring_best\004_002.png
+  - earring_best\004_003.png
+  - earring_best\004_004.png
+  - earring_best\004_005.png
+  - earring_best\004_006.png
+  - earring_best\004_007.png
+  - earring_best\004_008.png
+  - earring_best\004_009.png
+  - earring_best\004_010.png
+  - earring_best\004_011.png
+  - earring_best\004_012.png
+  - earring_best\004_013.png
+  - earring_best\004_014.png
+  - earring_best\004_016.png
+  - earring_best\004_017.png
+  - earring_best\004_018.png
+  - earring_best\004_019.png
+  - earring_best\004_020.png
+  - earring_best\004_021.png
+  - earring_best\004_022.png
+  - earring_best\004_023.png
+  - earring_best\004_024.png
+  - earring_best\004_025.png
+  - earring_best\004_026.png
+  - earring_best\004_027.png
+  - earring_best\004_028.png
+  - earring_best\004_030.png
+  - earring_best\004_031.png
+  - earring_best\004_032.png
+  - earring_best\004_033.png
+  - earring_best\004_034.png
+  - earring_best\004_035.png
+  - earring_best\004_036.png
+  - earring_best\004_037.png
+  - earring_best\004_038.png
+  - earring_best\004_039.png
+  - earring_best\004_040.png
+  - earring_best\004_041.png
+  - earring_best\004_042.png
+  - earring_best\004_043.png
+  - earring_best\005_003.png
+  - earring_best\005_004.png
+  - earring_best\005_005.png
+  - earring_best\005_007.png
+  - earring_best\005_009.png
+  - earring_best\005_010.png
+  - earring_best\005_013.png
+  - earring_best\005_014.png
+  - earring_best\005_017.png
+  - earring_best\005_020.png
+  - earring_best\005_023.png
+  - earring_best\005_024.png
+  - earring_best\006_001.png
+  - earring_best\006_002.png
+  - earring_best\006_003.png
+  - earring_best\006_004.png
+  - earring_best\006_005.png
+  - earring_best\006_006.png
+  - earring_best\006_007.png
+  - earring_best\006_008.png
+  - earring_best\006_009.png
+  - earring_best\006_010.png
+  - earring_best\006_011.png
+  - earring_best\006_012.png
+  - earring_best\006_013.png
+  - earring_best\006_014.png
+  - earring_best\006_015.png
+  - earring_best\007_003.png
+  - earring_best\007_005.png
+  - earring_best\007_010.png
+  - earring_best\007_016.png
+  - earring_best\007_018.png
+  - earring_best\007_021.png
+  - earring_best\007_022.png
+  - earring_best\007_023.png
+  - earring_best\007_024.png
+  - earring_best\007_025.png
+  - earring_best\007_026.png
+  - earring_best\007_027.png
+  - earring_best\007_028.png
+  - earring_best\007_029.png
+  - earring_best\007_030.png
+  - earring_best\007_031.png
+  - earring_best\007_032.png
+  - earring_best\007_033.png
+  - earring_best\007_034.png
+  - earring_best\007_035.png
+  - earring_best\007_036.png
+  - earring_best\007_037.png
+  - earring_best\007_038.png
+  - earring_best\007_040.png
+  - earring_best\007_041.png
+  - earring_best\007_042.png
+  - earring_best\007_043.png
+  - earring_best\007_044.png
+  - earring_best\007_045.png
+  - earring_best\007_046.png
+  - earring_best\007_047.png
+  - earring_best\007_048.png
+  - earring_best\007_049.png
+  - earring_best\008_001.png
+  - earring_best\008_002.png
+  - earring_best\008_003.png
+  - earring_best\008_004.png
+  - earring_best\008_005.png
+  - earring_best\008_007.png
+  - earring_best\008_015.png
+  - earring_best\008_016.png
+  - earring_best\008_018.png
+  - earring_best\008_019.png
+  - earring_best\008_024.png
+  - earring_best\008_027.png
+  - earring_best\008_029.png
+  - earring_best\008_033.png
+  - earring_best\008_034.png
+  - earring_best\008_035.png
+  - earring_best\008_036.png
+  - earring_best\008_037.png
+  - earring_best\008_038.png
+  - earring_best\008_039.png
+  - earring_best\008_040.png
+  - earring_best\008_041.png
+  - earring_best\008_042.png
+  - earring_best\008_043.png
+  - earring_best\008_044.png
+  - earring_best\008_045.png
+  - earring_best\008_046.png
+  - earring_best\008_047.png
+  - earring_best\008_048.png
+  - earring_best\008_049.png
+  - earring_best\008_050.png
+  - earring_best\008_051.png
+  - earring_best\008_052.png
+  - earring_best\008_053.png
+  - earring_best\009_010.png
+  - earring_best\009_012.png
+  - earring_best\009_014.png
+  - earring_best\009_015.png
+  - earring_best\009_016.png
+  - earring_best\009_017.png
+  - earring_best\009_018.png
+  - earring_best\009_019.png
+  - earring_best\009_020.png
+  - earring_best\009_021.png
+  - earring_best\009_022.png
+  - earring_best\009_023.png
+  - earring_best\009_024.png
+  - earring_best\009_025.png
+  - earring_best\009_026.png
+  - earring_best\009_027.png
+  - earring_best\009_028.png
+  - earring_best\009_029.png
+  - earring_best\009_030.png
+  - earring_best\009_031.png
+  - earring_best\009_032.png
+  - earring_best\009_033.png
+  - earring_best\009_034.png
+  - earring_best\009_035.png
+  - earring_best\009_036.png
+  - earring_best\010_001.png
+  - earring_best\010_002.png
+  - earring_best\010_007.png
+  - earring_best\010_008.png
+  - earring_best\010_010.png
+  - earring_best\010_011.png
+  - earring_best\010_012.png
+  - earring_best\010_013.png
+  - earring_best\010_015.png
+  - earring_best\010_016.png
+  - earring_best\010_017.png
+  - earring_best\010_018.png
+  - earring_best\010_019.png
+  - earring_best\010_020.png
+  - earring_best\010_021.png
+  - earring_best\010_022.png
+  - earring_best\010_023.png
+  - earring_best\010_025.png
+  - earring_best\010_026.png
+  - earring_best\010_028.png
+  - earring_best\010_029.png
+  - earring_best\010_030.png
+  - earring_best\010_031.png
+  - earring_best\010_032.png
+  - earring_best\010_033.png
+  - earring_best\010_034.png
+  - earring_best\010_035.png
+  - earring_best\010_036.png
+  - earring_best\011_002.png
+  - earring_best\011_004.png
+  - earring_best\011_006.png
+  - earring_best\011_007.png
+  - earring_best\011_008.png
+  - earring_best\011_009.png
+  - earring_best\011_010.png
+  - earring_best\011_011.png
+  - earring_best\011_012.png
+  - earring_best\011_013.png
+  - earring_best\011_014.png
+  - earring_best\011_015.png
+  - earring_best\011_016.png
+  - earring_best\011_017.png
+  - earring_best\011_018.png
+  - earring_best\011_020.png
+  - earring_best\011_021.png
+  - earring_best\011_022.png
+  - earring_best\011_023.png
+  - earring_best\011_024.png
+  - earring_best\011_025.png
+  - earring_best\011_026.png
+  - earring_best\011_027.png
+  - earring_best\011_028.png
+  - earring_best\011_029.png
+  - earring_best\011_030.png
+  - earring_best\011_031.png
+  - earring_best\011_032.png
+  - earring_best\011_033.png
+  - earring_best\011_034.png
+  - earring_best\011_035.png
+  - earring_best\011_036.png
+  - earring_best\011_037.png
+  - earring_best\011_038.png
+  - earring_best\011_039.png
+  - earring_best\011_040.png
+  - earring_best\011_041.png
+  - earring_best\011_042.png
+  - earring_best\011_043.png
+  - earring_best\011_044.png
+  - earring_best\011_045.png
+  - earring_best\011_046.png
+  - earring_best\011_047.png
+  - earring_best\011_048.png
+  - earring_best\011_049.png
+  - earring_best\011_050.png
+  - earring_best\011_051.png
+  - earring_best\011_052.png
+  - earring_best\011_053.png
+  - earring_best\011_054.png
+  - earring_best\011_055.png
+  - earring_best\012_001.png
+  - earring_best\012_002.png
+  - earring_best\012_003.png
+  - earring_best\012_004.png
+  - earring_best\012_005.png
+  - earring_best\012_006.png
+  - earring_best\012_007.png
+  - earring_best\012_009.png
+  - earring_best\012_010.png
+  - earring_best\012_011.png
+  - earring_best\012_012.png
+  - earring_best\012_013.png
+  - earring_best\012_014.png
+  - earring_best\012_015.png
+  - earring_best\012_016.png
+  - earring_best\012_017.png
+  - earring_best\012_018.png
+  - earring_best\012_019.png
+  - earring_best\012_020.png
+  - earring_best\012_021.png
+  - earring_best\012_022.png
+  - earring_best\012_023.png
+  - earring_best\012_024.png
+  - earring_best\012_025.png
+  - earring_best\013_001.png
+  - earring_best\013_002.png
+  - earring_best\013_003.png
+  - earring_best\013_004.png
+  - earring_best\013_005.png
+  - earring_best\013_006.png
+  - earring_best\013_007.png
+  - earring_best\013_008.png
+  - earring_best\013_009.png
+  - earring_best\013_010.png
+  - earring_best\013_011.png
+  - earring_best\013_012.png
+  - earring_best\013_013.png
+  - earring_best\013_014.png
+  - earring_best\013_015.png
+  - earring_best\013_016.png
+  - earring_best\013_017.png
+  - earring_best\013_018.png
+  - earring_best\013_019.png
+  - earring_best\013_020.png
+  - earring_best\013_021.png
+  - earring_best\013_022.png
+  - earring_best\013_023.png
+  - earring_best\013_024.png
+  - earring_best\013_025.png
+  - earring_best\013_026.png
+  - earring_best\013_027.png
+  - earring_best\013_028.png
+  - earring_best\013_029.png
+  - earring_best\013_030.png
+  - earring_best\014_001.png
+  - earring_best\014_002.png
+  - earring_best\014_003.png
+  - earring_best\014_004.png
+  - earring_best\014_005.png
+  - earring_best\014_006.png
+  - earring_best\014_007.png
+  - earring_best\014_008.png
+  - earring_best\014_009.png
+  - earring_best\014_010.png
+  - earring_best\014_011.png
+  - earring_best\014_012.png
+  - earring_best\014_013.png
+  - earring_best\014_014.png
+  - earring_best\014_015.png
+  - earring_best\014_016.png
+  - earring_best\014_017.png
+  - earring_best\014_018.png
+  - earring_best\014_019.png
+  - earring_best\014_020.png
+  - earring_best\014_021.png
+  - earring_best\014_022.png
+  - earring_best\014_023.png
+  - earring_best\014_024.png
+  - earring_best\014_025.png
+  - earring_best\014_026.png
+  - earring_best\014_027.png
+  - earring_best\014_031.png
+  - earring_best\014_032.png
+  - earring_best\015_002.png
+  - earring_best\015_003.png
+  - earring_best\015_004.png
+  - earring_best\015_005.png
+  - earring_best\015_006.png
+  - earring_best\015_012.png
+  - earring_best\015_014.png
+  - earring_best\015_015.png
+  - earring_best\015_016.png
+  - earring_best\015_017.png
+  - earring_best\016_001.png
+  - earring_best\016_002.png
+  - earring_best\016_004.png
+  - earring_best\016_005.png
+  - earring_best\016_006.png
+  - earring_best\016_007.png
+  - earring_best\016_008.png
+  - earring_best\016_009.png
+  - earring_best\016_010.png
+  - earring_best\016_011.png
+  - earring_best\016_012.png
+  - earring_best\016_014.png
+  - earring_best\016_015.png
+  - earring_best\016_016.png
+  - earring_best\016_017.png
+  - earring_best\016_018.png
+  - earring_best\016_019.png
+  - earring_best\016_020.png
+  - earring_best\016_021.png
+  - earring_best\016_022.png
+  - earring_best\016_023.png
+  - earring_best\016_025.png
+  - earring_best\016_026.png
+  - earring_best\016_027.png
+  - earring_best\016_028.png
+  - earring_best\016_029.png
+  - earring_best\016_030.png
+  - earring_best\016_031.png
+  - earring_best\016_032.png
+  - earring_best\016_034.png
+  - earring_best\017_007.png
+  - earring_best\017_008.png
+  - earring_best\017_009.png
+  - earring_best\017_010.png
+  - earring_best\017_011.png
+  - earring_best\017_012.png
+  - earring_best\017_013.png
+  - earring_best\017_014.png
+  - earring_best\017_016.png
+  - earring_best\017_018.png
+  - earring_best\017_020.png
+  - earring_best\017_021.png
+  - earring_best\017_022.png
+  - earring_best\017_023.png
+  - earring_best\017_024.png
+  - earring_best\017_025.png
+  - earring_best\017_026.png
+  - earring_best\017_027.png
+  - earring_best\017_028.png
+  - earring_best\017_029.png
+  - earring_best\017_030.png
+  - earring_best\017_031.png
+  - earring_best\017_032.png
+  - earring_best\017_033.png
+  - earring_best\017_034.png
+  - earring_best\017_035.png
+  - earring_best\017_036.png
+  - earring_best\017_038.png
+  - earring_best\017_039.png
+  - earring_best\017_040.png
+  - earring_best\017_041.png
+  - earring_best\017_042.png
+  - earring_best\017_043.png
+  - earring_best\017_044.png
+  - earring_best\017_045.png
+  - earring_best\017_046.png
+  - earring_best\017_047.png
+  - earring_best\017_048.png
+  - earring_best\017_049.png
+  - earring_best\017_050.png
+  - earring_best\017_051.png
+  - earring_best\017_052.png
+  - earring_best\017_053.png
+  - earring_best\017_054.png
+  - earring_best\017_055.png
+  - earring_best\017_056.png
+  - earring_best\017_057.png
+  - earring_best\017_060.png
+  - earring_best\017_061.png
+  - earring_best\017_062.png
+  - earring_best\017_063.png
+  - earring_best\017_064.png
+  - earring_best\017_065.png
+  - earring_best\017_066.png
+  - earring_best\017_067.png
+  - earring_best\017_068.png
+  - earring_best\017_069.png
+  - earring_best\017_070.png
+  - earring_best\017_071.png
+  - earring_best\017_072.png
+  - earring_best\017_073.png
+  - earring_best\017_074.png
+  - earring_best\017_075.png
+  - earring_best\017_077.png
+  - earring_best\017_078.png
+  - earring_best\017_079.png
+  - earring_best\017_080.png
+  - earring_best\017_081.png
+  - earring_best\017_082.png
+  - earring_best\017_083.png
+  - earring_best\017_085.png
+  - earring_best\017_086.png
+  - earring_best\017_087.png
+  - earring_best\017_088.png
+  - earring_best\017_089.png
+  - earring_best\017_090.png
+  - earring_best\017_091.png
+  - earring_best\017_092.png
+  - earring_best\017_093.png
+  - earring_best\017_094.png
+  - earring_best\017_095.png
+  - earring_best\017_096.png
+  - earring_best\017_097.png
+  - earring_best\017_098.png
+  - earring_best\017_099.png
+  - earring_best\017_100.png
+  - earring_best\017_101.png
+  - earring_best\017_102.png
+  - earring_best\017_103.png
+  - earring_best\017_104.png
+  - earring_best\017_105.png
+  - earring_best\017_107.png
+  - earring_best\017_108.png
+  - earring_best\017_109.png
+  - earring_best\017_59.png
+  - earring_best\018_006.png
+  - earring_best\018_007.png
+  - earring_best\018_019.png
+  - earring_best\018_020.png
+  - earring_best\018_024.png
+  - earring_best\018_025.png
+  - earring_best\018_026.png
+  - earring_best\018_027.png
+  - earring_best\018_028.png
+  - earring_best\018_029.png
+  - earring_best\018_030.png
+  - earring_best\018_032.png
+  - earring_best\018_033.png
+  - earring_best\018_034.png
+  - earring_best\018_035.png
+  - earring_best\018_036.png
+  - earring_best\018_037.png
+  - earring_best\018_038.png
+  - earring_best\018_039.png
+  - earring_best\018_040.png
+  - earring_best\018_041.png
+  - earring_best\018_042.png
+  - earring_best\018_043.png
+  - earring_best\018_044.png
+  - earring_best\018_045.png
+  - earring_best\018_046.png
+  - earring_best\018_047.png
+  - earring_best\018_049.png
+  - earring_best\018_050.png
+  - earring_best\018_051.png
+  - earring_best\018_052.png
+  - earring_best\018_053.png
+  - earring_best\018_054.png
+  - earring_best\018_055.png
+  - earring_best\018_056.png
+  - earring_best\018_057.png
+  - earring_best\018_058.png
+  - earring_best\018_059.png
+  - earring_best\018_060.png
+  - earring_best\018_062.png
+  - earring_best\018_063.png
+  - earring_best\018_064.png
+  - earring_best\018_065.png
+  - earring_best\018_066.png
+  - earring_best\018_067.png
+  - earring_best\018_068.png
+  - earring_best\018_069.png
+  - earring_best\018_070.png
+  - earring_best\018_071.png
+  - earring_best\018_073.png
+  - earring_best\018_074.png
+  - earring_best\018_075.png
+  - earring_best\018_076.png
+  - earring_best\018_077.png
+  - earring_best\018_078.png
+  - earring_best\018_079.png
+  - earring_best\018_080.png
+  - earring_best\018_081.png
+  - earring_best\018_083.png
+  - earring_best\018_084.png
+  - earring_best\018_085.png
+  - earring_best\018_086.png
+  - earring_best\018_087.png
+  - earring_best\018_31.png
+  - earring_best\019_001.png
+  - earring_best\019_002.png
+  - earring_best\019_005.png
+  - earring_best\019_006.png
+  - earring_best\019_010.png
+  - earring_best\019_011.png
+  - earring_best\019_015.png
+  - earring_best\019_017.png
+  - earring_best\019_018.png
+  - earring_best\019_019.png
+  - earring_best\019_020.png
+  - earring_best\019_022.png
+  - earring_best\019_023.png
+  - earring_best\019_024.png
+  - earring_best\019_025.png
+  - earring_best\019_026.png
+  - earring_best\019_027.png
+  - earring_best\019_028.png
+  - earring_best\019_029.png
+  - earring_best\019_030.png
+  - earring_best\019_031.png
+  - earring_best\019_032.png
+  - earring_best\019_033.png
+  - earring_best\019_034.png
+  - earring_best\019_035.png
+  - earring_best\019_037.png
+  - earring_best\019_038.png
+  - earring_best\019_039.png
+  - earring_best\019_040.png
+  - earring_best\019_041.png
+  - earring_best\019_042.png
+  - earring_best\019_043.png
+  - earring_best\019_044.png
+  - earring_best\019_045.png
+  - earring_best\019_046.png
+  - earring_best\019_047.png
+  - earring_best\019_048.png
+  - earring_best\019_049.png
+  - earring_best\019_050.png
+  - earring_best\019_051.png
+  - earring_best\019_052.png
+  - earring_best\019_053.png
+  - earring_best\019_054.png
+  - earring_best\019_056.png
+  - earring_best\019_057.png
+  - earring_best\019_059.png
+  - earring_best\020_001.png
+  - earring_best\020_003.png
+  - earring_best\020_004.png
+  - earring_best\020_005.png
+  - earring_best\020_006.png
+  - earring_best\020_007.png
+  - earring_best\020_008.png
+  - earring_best\020_009.png
+  - earring_best\020_010.png
+  - earring_best\020_011.png
+  - earring_best\020_012.png
+  - earring_best\020_013.png
+  - earring_best\020_014.png
+  - earring_best\020_015.png
+  - earring_best\020_016.png
+  - earring_best\020_017.png
+  - earring_best\020_018.png
+  - earring_best\020_019.png
+  - earring_best\020_021.png
+  - earring_best\020_022.png
+  - earring_best\020_023.png
+  - earring_best\020_024.png
+  - earring_best\020_029.png
+  - earring_best\020_030.png
+  - earring_best\020_031.png
+  - earring_best\020_033.png
+  - earring_best\020_035.png
+  - earring_best\020_037.png
+  - earring_best\020_038.png
+  - earring_best\021_001.png
+  - earring_best\021_002.png
+  - earring_best\021_003.png
+  - earring_best\021_005.png
+  - earring_best\021_006.png
+  - earring_best\021_007.png
+  - earring_best\021_008.png
+  - earring_best\021_010.png
+  - earring_best\021_011.png
+  - earring_best\021_012.png
+  - earring_best\021_013.png
+  - earring_best\021_014.png
+  - earring_best\021_015.png
+  - earring_best\021_017.png
+  - earring_best\021_020.png
+  - earring_best\021_025.png
+  - earring_best\021_026.png
+  - earring_best\021_027.png
+  - earring_best\021_028.png
+  - earring_best\021_029.png
+  - earring_best\021_030.png
+  - earring_best\021_031.png
+  - earring_best\021_032.png
+  - earring_best\021_033.png
+  - earring_best\021_034.png
+  - earring_best\021_035.png
+  - earring_best\021_036.png
+  - earring_best\021_037.png
+  - earring_best\021_038.png
+  - earring_best\021_039.png
+  - earring_best\021_040.png
+  - earring_best\021_041.png
+  - earring_best\021_042.png
+  - earring_best\021_043.png
+  - earring_best\021_044.png
+  - earring_best\021_045.png
+  - earring_best\021_046.png
+  - earring_best\021_047.png
+  - earring_best\021_048.png
+  - earring_best\021_049.png
+  - earring_best\021_050.png
+  - earring_best\021_051.png
+  - earring_best\021_052.png
+  - earring_best\021_053.png
+  - earring_best\021_054.png
+  - earring_best\021_055.png
+  - earring_best\021_056.png
+  - earring_best\021_057.png
+  - earring_best\021_058.png
+  - earring_best\021_059.png
+  - earring_best\021_060.png
+  - earring_best\021_061.png
+  - earring_best\021_062.png
+  - earring_best\021_063.png
+  - earring_best\021_064.png
+  - earring_best\021_065.png
+  - earring_best\021_066.png
+  - earring_best\021_067.png
+  - earring_best\021_068.png
+  - earring_best\021_069.png
+  - earring_best\021_070.png
+  - earring_best\021_071.png
+  - earring_best\021_072.png
+  - earring_best\021_073.png
+  - earring_best\021_074.png
+  - earring_best\021_075.png
+  - earring_best\021_076.png
+  - earring_best\021_077.png
+  - earring_best\021_078.png
+  - earring_best\021_079.png
+  - earring_best\021_080.png
+  - earring_best\022_002.png
+  - earring_best\022_003.png
+  - earring_best\022_004.png
+  - earring_best\022_005.png
+  - earring_best\022_006.png
+  - earring_best\022_008.png
+  - earring_best\022_011.png
+  - earring_best\022_012.png
+  - earring_best\022_013.png
+  - earring_best\022_014.png
+  - earring_best\022_015.png
+  - earring_best\022_016.png
+  - earring_best\022_017.png
+  - earring_best\022_018.png
+  - earring_best\022_019.png
+  - earring_best\022_020.png
+  - earring_best\022_021.png
+  - earring_best\022_022.png
+  - earring_best\022_023.png
+  - earring_best\022_024.png
+  - earring_best\022_025.png
+  - earring_best\022_026.png
+  - earring_best\022_027.png
+  - earring_best\022_028.png
+  - earring_best\022_029.png
+  - earring_best\022_030.png
+  - earring_best\022_031.png
+  - earring_best\022_032.png
+  - earring_best\022_033.png
+  - earring_best\022_034.png
+  - earring_best\022_036.png
+  - earring_best\022_037.png
+  - earring_best\022_038.png
+  - earring_best\022_039.png
+  - earring_best\022_040.png
+  - earring_best\022_041.png
+  - earring_best\022_042.png
+  - earring_best\022_044.png
+  - earring_best\022_045.png
+  - earring_best\022_046.png
+  - earring_best\022_047.png
+  - earring_best\022_048.png
+  - earring_best\022_049.png
+  - earring_best\022_050.png
+  - earring_best\022_051.png
+  - earring_best\022_052.png
+  - earring_best\022_053.png
+  - earring_best\022_054.png
+  - earring_best\022_055.png
+  - earring_best\022_056.png
+  - earring_best\022_057.png
+  - earring_best\022_058.png
+  - earring_best\022_059.png
+  - earring_best\022_060.png
+  - earring_best\022_061.png
+  - earring_best\022_062.png
+  - earring_best\022_063.png
+  - earring_best\023_001.png
+  - earring_best\023_003.png
+  - earring_best\023_006.png
+  - earring_best\023_007.png
+  - earring_best\023_009.png
+  - earring_best\023_010.png
+  - earring_best\023_012.png
+  - earring_best\023_013.png
+  - earring_best\023_014.png
+  - earring_best\023_015.png
+  - earring_best\023_016.png
+  - earring_best\023_017.png
+  - earring_best\023_018.png
+  - earring_best\023_019.png
+  - earring_best\023_020.png
+  - earring_best\023_021.png
+  - earring_best\023_022.png
+  - earring_best\023_023.png
+  - earring_best\023_024.png
+  - earring_best\023_025.png
+  - earring_best\023_026.png
+  - earring_best\023_027.png
+  - earring_best\023_028.png
+  - earring_best\023_029.png
+  - earring_best\023_030.png
+  - earring_best\023_031.png
+  - earring_best\023_032.png
+  - earring_best\023_033.png
+  - earring_best\023_034.png
+  - earring_best\023_035.png
+  - earring_best\023_036.png
+  - earring_best\023_037.png
+  - earring_best\023_038.png
+  - earring_best\023_040.png
+  - earring_best\023_041.png
+  - earring_best\023_043.png
+  - earring_best\024_001.png
+  - earring_best\024_002.png
+  - earring_best\024_003.png
+  - earring_best\024_004.png
+  - earring_best\024_005.png
+  - earring_best\024_007.png
+  - earring_best\024_009.png
+  - earring_best\024_010.png
+  - earring_best\024_011.png
+  - earring_best\024_013.png
+  - earring_best\024_014.png
+  - earring_best\024_017.png
+  - earring_best\024_018.png
+  - earring_best\024_019.png
+  - earring_best\024_020.png
+  - earring_best\024_021.png
+  - earring_best\024_022.png
+  - earring_best\024_024.png
+  - earring_best\024_025.png
+  - earring_best\024_026.png
+  - earring_best\024_027.png
+  - earring_best\024_028.png
+  - earring_best\024_029.png
+  - earring_best\024_030.png
+  - earring_best\024_031.png
+  - earring_best\024_032.png
+  - earring_best\024_033.png
+  - earring_best\024_034.png
+  - earring_best\024_035.png
+  - earring_best\024_036.png
+  - earring_best\024_037.png
+  - earring_best\024_038.png
+  - earring_best\024_039.png
+  - earring_best\024_040.png
+  - earring_best\024_041.png
+  - earring_best\024_042.png
+  - earring_best\024_043.png
+  - earring_best\024_044.png
+  - earring_best\024_045.png
+  - earring_best\024_046.png
+  - earring_best\024_047.png
+  - earring_best\024_048.png
+  - earring_best\024_049.png
+  - earring_best\024_050.png
+  - earring_best\024_051.png
+  - earring_best\024_052.png
+  - earring_best\024_053.png
+  - earring_best\024_054.png
+  - earring_best\024_055.png
+  - earring_best\024_056.png
+  - earring_best\024_057.png
+  - earring_best\024_058.png
+  - earring_best\024_059.png
+  - earring_best\024_060.png
+  - earring_best\024_061.png
+  - earring_best\024_062.png
+  - earring_best\024_063.png
+  - earring_best\024_064.png
+  - earring_best\024_065.png
+  - earring_best\024_066.png
+  - earring_best\024_070.png
+  - earring_best\024_071.png
+  - earring_best\024_072.png
+  - earring_best\024_073.png
+  - earring_best\024_074.png
+  - earring_best\024_075.png
+  - earring_best\024_076.png
+  - earring_best\024_077.png
+  - earring_best\024_078.png
+  - earring_best\024_079.png
+  - earring_best\024_080.png
+  - earring_best\024_081.png
+  - earring_best\024_082.png
+  - earring_best\024_083.png
+  - earring_best\024_084.png
+  - earring_best\024_086.png
+  - earring_best\024_089.png
+  - earring_best\024_090.png
+  - earring_best\024_091.png
+  - earring_best\024_092.png
+  - earring_best\024_093.png
+  - earring_best\024_094.png
+  - earring_best\024_095.png
+  - earring_best\024_096.png
+  - earring_best\024_097.png
+  - earring_best\024_098.png
+  - earring_best\024_099.png
+  - earring_best\024_100.png
+  - earring_best\024_101.png
+  - earring_best\024_102.png
+  - earring_best\024_103.png
+  - earring_best\024_104.png
+  - earring_best\024_105.png
+  - earring_best\024_106.png
+  - earring_best\024_107.png
+  - earring_best\024_108.png
+  - earring_best\024_109.png
+  - earring_best\024_110.png
+  - earring_best\024_111.png
+  - earring_best\024_112.png
+  - earring_best\024_113.png
+  - earring_best\024_114.png
+  - earring_best\024_115.png
+  - earring_best\024_116.png
+  - earring_best\024_117.png
+  - earring_best\024_118.png
+  - earring_best\024_119.png
+  - earring_best\024_120.png
+  - earring_best\024_121.png
+  - earring_best\024_122.png
+  - earring_best\024_123.png
+  - earring_best\024_124.png
+  - earring_best\025_003.png
+  - earring_best\025_004.png
+  - earring_best\025_005.png
+  - earring_best\025_018.png
+  - earring_best\025_027.png
+  - earring_best\025_029.png
+  - earring_best\025_030.png
+  - earring_best\025_031.png
+  - earring_best\025_032.png
+  - earring_best\025_033.png
+  - earring_best\025_034.png
+  - earring_best\025_035.png
+  - earring_best\025_036.png
+  - earring_best\025_037.png
+  - earring_best\025_038.png
+  - earring_best\025_039.png
+  - earring_best\025_040.png
+  - earring_best\025_041.png
+  - earring_best\025_042.png
+  - earring_best\025_043.png
+  - earring_best\025_044.png
+  - earring_best\025_045.png
+  - earring_best\025_046.png
+  - earring_best\025_047.png
+  - earring_best\025_048.png
+  - earring_best\025_049.png
+  - earring_best\025_050.png
+  - earring_best\025_051.png
+  - earring_best\025_052.png
+  - earring_best\025_053.png
+  - earring_best\025_054.png
+  - earring_best\025_055.png
+  - earring_best\025_056.png
+  - earring_best\025_057.png
+  - earring_best\025_058.png
+  - earring_best\025_059.png
+  - earring_best\025_061.png
+  - earring_best\025_062.png
+  - earring_best\025_063.png
+  - earring_best\025_064.png
+  - earring_best\025_065.png
+  - earring_best\025_066.png
+  - earring_best\025_067.png
+  - earring_best\025_068.png
+  - earring_best\025_070.png
+  - earring_best\025_072.png
+  - earring_best\025_073.png
+  - earring_best\025_075.png
+  - earring_best\025_076.png
+  - earring_best\025_077.png
+  - earring_best\026_001.png
+  - earring_best\026_002.png
+  - earring_best\026_004.png
+  - earring_best\026_005.png
+  - earring_best\026_006.png
+  - earring_best\026_007.png
+  - earring_best\026_008.png
+  - earring_best\026_009.png
+  - earring_best\026_010.png
+  - earring_best\026_011.png
+  - earring_best\026_012.png
+  - earring_best\026_013.png
+  - earring_best\026_016.png
+  - earring_best\026_017.png
+  - earring_best\026_018.png
+  - earring_best\026_021.png
+  - earring_best\026_022.png
+  - earring_best\026_023.png
+  - earring_best\026_024.png
+  - earring_best\026_028.png
+  - earring_best\026_030.png
+  - earring_best\026_035.png
+  - earring_best\026_036.png
+  - earring_best\026_037.png
+  - earring_best\026_038.png
+  - earring_best\026_039.png
+  - earring_best\026_040.png
+  - earring_best\026_041.png
+  - earring_best\026_042.png
+  - earring_best\026_043.png
+  - earring_best\026_044.png
+  - earring_best\026_045.png
+  - earring_best\026_046.png
+  - earring_best\026_048.png
+  - earring_best\026_049.png
+  - earring_best\026_050.png
+  - earring_best\026_051.png
+  - earring_best\026_052.png
+  - earring_best\026_053.png
+  - earring_best\026_054.png
+  - earring_best\026_055.png
+  - earring_best\026_056.png
+  - earring_best\026_057.png
+  - earring_best\026_058.png
+  - earring_best\026_059.png
+  - earring_best\026_060.png
+  - earring_best\026_061.png
+  - earring_best\026_062.png
+  - earring_best\026_063.png
+  - earring_best\026_064.png
+  - earring_best\026_065.png
+  - earring_best\026_066.png
+  - earring_best\026_067.png
+  - earring_best\026_068.png
+  - earring_best\026_069.png
+  - earring_best\026_070.png
+  - earring_best\026_071.png
+  - earring_best\026_072.png
+  - earring_best\026_073.png
+  - earring_best\026_074.png
+  - earring_best\026_075.png
+  - earring_best\026_076.png
+  - earring_best\026_077.png
+  - earring_best\026_078.png
+  - earring_best\026_079.png
+  - earring_best\026_080.png
+  - earring_best\026_081.png
+  - earring_best\026_082.png
+  - earring_best\026_083.png
+  - earring_best\026_084.png
+  - earring_best\026_086.png
+  - earring_best\026_087.png
+  - earring_best\026_088.png
+  - earring_best\026_090.png
+  - earring_best\026_091.png
+  - earring_best\026_092.png
+  - earring_best\026_093.png
+  - earring_best\026_095.png
+  - earring_best\026_096.png
+  - earring_best\026_097.png
+  - earring_best\026_098.png
+  - earring_best\026_099.png
+  - earring_best\026_100.png
+  - earring_best\027_001.png
+  - earring_best\027_002.png
+  - earring_best\027_004.png
+  - earring_best\027_007.png
+  - earring_best\027_008.png
+  - earring_best\027_009.png
+  - earring_best\027_010.png
+  - earring_best\027_011.png
+  - earring_best\027_012.png
+  - earring_best\027_013.png
+  - earring_best\027_014.png
+  - earring_best\027_015.png
+  - earring_best\027_016.png
+  - earring_best\027_017.png
+  - earring_best\027_018.png
+  - earring_best\027_019.png
+  - earring_best\027_020.png
+  - earring_best\027_021.png
+  - earring_best\027_022.png
+  - earring_best\027_023.png
+  - earring_best\027_024.png
+  - earring_best\027_025.png
+  - earring_best\027_026.png
+  - earring_best\027_027.png
+  - earring_best\027_028.png
+  - earring_best\027_029.png
+  - earring_best\027_030.png
+  - earring_best\027_031.png
+  - earring_best\027_032.png
+  - earring_best\027_033.png
+  - earring_best\027_034.png
+  - earring_best\027_035.png
+  - earring_best\027_036.png
+  - earring_best\027_037.png
+  - earring_best\027_038.png
+  - earring_best\027_039.png
+  - earring_best\027_040.png
+  - earring_best\027_041.png
+  - earring_best\027_042.png
+  - earring_best\027_043.png
+  - earring_best\027_044.png
+  - earring_best\027_045.png
+  - earring_best\027_046.png
+  - earring_best\027_047.png
+  - earring_best\027_048.png
+  - earring_best\027_049.png
+  - earring_best\027_050.png
+  - earring_best\027_051.png
+  - earring_best\027_052.png
+  - earring_best\027_053.png
+  - earring_best\027_054.png
+  - earring_best\027_055.png
+  - earring_best\027_056.png
+  - earring_best\027_057.png
+  - earring_best\027_058.png
+  - earring_best\027_059.png
+  - earring_best\027_060.png
+  - earring_best\027_061.png
+  - earring_best\027_062.png
+  - earring_best\027_063.png
+  - earring_best\027_064.png
+  - earring_best\027_065.png
+  - earring_best\027_066.png
+  - earring_best\027_067.png
+  - earring_best\027_068.png
+  - earring_best\027_069.png
+  - earring_best\027_070.png
+  - earring_best\027_071.png
+  - earring_best\027_072.png
+  - earring_best\027_073.png
+  - earring_best\027_074.png
+  - earring_best\027_075.png
+  - earring_best\027_076.png
+  - earring_best\027_077.png
+  - earring_best\027_078.png
+  - earring_best\027_079.png
+  - earring_best\027_080.png
+  - earring_best\027_081.png
+  - earring_best\027_082.png
+  - earring_best\027_083.png
+  - earring_best\027_084.png
+  - earring_best\027_085.png
+  - earring_best\027_086.png
+  - earring_best\027_087.png
+  - earring_best\027_088.png
+  - earring_best\027_089.png
+  - earring_best\027_090.png
+  - earring_best\027_091.png
+  - earring_best\027_092.png
+  - earring_best\027_093.png
+  - earring_best\027_094.png
+  - earring_best\027_095.png
+  - earring_best\027_096.png
+  - earring_best\027_099.png
+  - earring_best\027_100.png
+  - earring_best\027_101.png
+  - earring_best\027_102.png
+  - earring_best\027_103.png
+  - earring_best\027_104.png
+  - earring_best\027_105.png
+  - earring_best\027_106.png
+  - earring_best\027_107.png
+  - earring_best\027_108.png
+  - earring_best\027_109.png
+  - earring_best\027_110.png
+  - earring_best\027_111.png
+  - earring_best\027_112.png
+  - earring_best\027_113.png
+  - earring_best\027_114.png
+  - earring_best\027_115.png
+  - earring_best\028_003.png
+  - earring_best\028_004.png
+  - earring_best\028_006.png
+  - earring_best\028_013.png
+  - earring_best\028_014.png
+  - earring_best\028_018.png
+  - earring_best\028_019.png
+  - earring_best\028_020.png
+  - earring_best\028_021.png
+  - earring_best\028_022.png
+  - earring_best\028_023.png
+  - earring_best\028_024.png
+  - earring_best\028_025.png
+  - earring_best\028_026.png
+  - earring_best\028_027.png
+  - earring_best\028_028.png
+  - earring_best\028_029.png
+  - earring_best\028_030.png
+  - earring_best\028_031.png
+  - earring_best\028_032.png
+  - earring_best\028_033.png
+  - earring_best\028_034.png
+  - earring_best\028_035.png
+  - earring_best\028_036.png
+  - earring_best\028_037.png
+  - earring_best\028_038.png
+  - earring_best\028_039.png
+  - earring_best\028_040.png
+  - earring_best\028_041.png
+  - earring_best\028_042.png
+  - earring_best\028_043.png
+  - earring_best\028_044.png
+  - earring_best\028_045.png
+  - earring_best\028_046.png
+  - earring_best\028_047.png
+  - earring_best\028_048.png
+  - earring_best\028_049.png
+  - earring_best\028_052.png
+  - earring_best\028_053.png
+  - earring_best\028_054.png
+  - earring_best\028_055.png
+  - earring_best\028_056.png
+  - earring_best\028_057.png
+  - earring_best\029_001.png
+  - earring_best\029_002.png
+  - earring_best\029_003.png
+  - earring_best\029_004.png
+  - earring_best\029_007.png
+  - earring_best\029_008.png
+  - earring_best\029_011.png
+  - earring_best\029_012.png
+  - earring_best\029_013.png
+  - earring_best\029_014.png
+  - earring_best\029_015.png
+  - earring_best\029_016.png
+  - earring_best\029_017.png
+  - earring_best\029_019.png
+  - earring_best\029_020.png
+  - earring_best\029_021.png
+  - earring_best\029_022.png
+  - earring_best\029_023.png
+  - earring_best\029_024.png
+  - earring_best\029_025.png
+  - earring_best\029_026.png
+  - earring_best\029_027.png
+  - earring_best\029_028.png
+  - earring_best\029_029.png
+  - earring_best\029_030.png
+  - earring_best\029_031.png
+  - earring_best\029_032.png
+  - earring_best\029_033.png
+  - earring_best\029_034.png
+  - earring_best\029_035.png
+  - earring_best\029_036.png
+  - earring_best\029_037.png
+  - earring_best\029_038.png
+  - earring_best\029_039.png
+  - earring_best\029_040.png
+  - earring_best\029_041.png
+  - earring_best\029_042.png
+  - earring_best\029_043.png
+  - earring_best\029_044.png
+  - earring_best\029_045.png
+  - earring_best\029_046.png
+  - earring_best\029_047.png
+  - earring_best\029_048.png
+  - earring_best\029_049.png
+  - earring_best\029_050.png
+  - earring_best\029_051.png
+  - earring_best\029_052.png
+  - earring_best\029_053.png
+  - earring_best\029_054.png
+  - earring_best\029_055.png
+  - earring_best\029_057.png
+  - earring_best\029_058.png
+  - earring_best\029_059.png
+  - earring_best\029_060.png
+  - earring_best\029_061.png
+  - earring_best\029_062.png
+  - earring_best\029_063.png
+  - earring_best\029_064.png
+  - earring_best\029_065.png
+  - earring_best\029_066.png
+  - earring_best\029_067.png
+  - earring_best\029_068.png
+  - earring_best\029_069.png
+  - earring_best\029_070.png
+  - earring_best\029_071.png
+  - earring_best\029_072.png
+  - earring_best\029_073.png
+  - earring_best\029_074.png
+  - earring_best\029_076.png
+  - earring_best\029_077.png
+  - earring_best\029_078.png
+  - earring_best\029_079.png
+  - earring_best\029_080.png
+  - earring_best\030_001.png
+  - earring_best\030_002.png
+  - earring_best\030_003.png
+  - earring_best\030_004.png
+  - earring_best\030_005.png
+  - earring_best\030_006.png
+  - earring_best\030_007.png
+  - earring_best\030_008.png
+  - earring_best\030_009.png
+  - earring_best\030_010.png
+  - earring_best\030_011.png
+  - earring_best\030_012.png
+  - earring_best\030_013.png
+  - earring_best\030_014.png
+  - earring_best\030_015.png
+  - earring_best\030_016.png
+  - earring_best\030_017.png
+  - earring_best\030_018.png
+  - earring_best\030_019.png
+  - earring_best\030_020.png
+  - earring_best\030_021.png
+  - earring_best\030_022.png
+  - earring_best\030_023.png
+  - earring_best\030_024.png
+  - earring_best\030_025.png
+  - earring_best\030_026.png
+  - earring_best\030_027.png
+  - earring_best\030_028.png
+  - earring_best\030_029.png
+  - earring_best\030_030.png
+  - earring_best\030_031.png
+  - earring_best\030_032.png
+  - earring_best\030_033.png
+  - earring_best\030_034.png
+  - earring_best\030_035.png
+  - earring_best\030_036.png
+  - earring_best\030_037.png
+  - earring_best\030_039.png
+  - earring_best\030_040.png
+  - earring_best\030_041.png
+  - earring_best\030_042.png
+  - earring_best\030_043.png
+  - earring_best\030_044.png
+  - earring_best\030_045.png
+  - earring_best\030_046.png
+  - earring_best\030_047.png
+  - earring_best\030_048.png
+  - earring_best\030_049.png
+  - earring_best\030_050.png
+  - earring_best\030_051.png
+  - earring_best\030_052.png
+  - earring_best\030_053.png
+  - earring_best\030_054.png
+  - earring_best\030_055.png
+  - earring_best\030_056.png
+  - earring_best\030_057.png
+  - earring_best\030_058.png
+  - earring_best\030_059.png
+  - earring_best\030_060.png
+  - earring_best\030_061.png
+  - earring_best\030_062.png
+  - earring_best\030_063.png
+  - earring_best\030_064.png
+  - earring_best\030_065.png
+  - earring_best\030_066.png
+  - earring_best\030_067.png
+  - earring_best\030_068.png
+  - earring_best\030_069.png
+  - earring_best\030_070.png
+  - earring_best\030_071.png
+  - earring_best\030_072.png
+  - earring_best\030_073.png
+  - earring_best\030_074.png
+  - earring_best\030_075.png
+  - earring_best\030_076.png
+  - earring_best\030_077.png
+  - earring_best\030_078.png
+  - earring_best\030_079.png
+  - earring_best\030_080.png
+  - earring_best\030_081.png
+  - earring_best\030_082.png
+  - earring_best\030_083.png
+  - earring_best\030_084.png
+  - earring_best\030_085.png
+  - earring_best\030_086.png
+  - earring_best\030_087.png
+  - earring_best\030_089.png
+  - earring_best\030_090.png
+  - earring_best\030_091.png
+  - earring_best\030_092.png
+  - earring_best\030_093.png
+  - earring_best\030_094.png
+  - earring_best\030_095.png
+  - earring_best\030_096.png
+  - earring_best\030_098.png
+  - earring_best\030_099.png
+  - earring_best\030_100.png
+  - earring_best\030_101.png
+  - earring_best\030_102.png
+  - earring_best\030_103.png
+  - earring_best\031_001.png
+  - earring_best\031_002.png
+  - earring_best\031_003.png
+  - earring_best\031_005.png
+  - earring_best\031_006.png
+  - earring_best\031_007.png
+  - earring_best\031_008.png
+  - earring_best\031_009.png
+  - earring_best\031_010.png
+  - earring_best\031_011.png
+  - earring_best\031_012.png
+  - earring_best\031_013.png
+  - earring_best\031_014.png
+  - earring_best\031_015.png
+  - earring_best\031_016.png
+  - earring_best\031_017.png
+  - earring_best\031_018.png
+  - earring_best\031_020.png
+  - earring_best\031_021.png
+  - earring_best\031_022.png
+  - earring_best\031_023.png
+  - earring_best\031_024.png
+  - earring_best\031_025.png
+  - earring_best\031_026.png
+  - earring_best\031_027.png
+  - earring_best\031_028.png
+  - earring_best\031_029.png
+  - earring_best\031_030.png
+  - earring_best\031_031.png
+  - earring_best\031_032.png
+  - earring_best\031_033.png
+  - earring_best\031_034.png
+  - earring_best\031_036.png
+  - earring_best\031_037.png
+  - earring_best\031_038.png
+  - earring_best\031_040.png
+  - earring_best\031_041.png
+  - earring_best\032_008.png
+  - earring_best\032_010.png
+  - earring_best\032_017.png
+  - earring_best\032_018.png
+  - earring_best\032_019.png
+  - earring_best\032_020.png
+  - earring_best\032_021.png
+  - earring_best\032_022.png
+  - earring_best\032_023.png
+  - earring_best\032_024.png
+  - earring_best\032_025.png
+  - earring_best\032_026.png
+  - earring_best\032_027.png
+  - earring_best\032_028.png
+  - earring_best\032_029.png
+  - earring_best\032_030.png
+  - earring_best\032_031.png
+  - earring_best\032_032.png
+  - earring_best\032_033.png
+  - earring_best\032_034.png
+  - earring_best\032_035.png
+  - earring_best\032_036.png
+  - earring_best\032_037.png
+  - earring_best\032_038.png
+  - earring_best\032_039.png
+  - earring_best\032_040.png
+  - earring_best\032_041.png
+  - earring_best\032_042.png
+  - earring_best\032_043.png
+  - earring_best\032_044.png
+  - earring_best\032_045.png
+  - earring_best\032_046.png
+  - earring_best\032_047.png
+  - earring_best\032_048.png
+  - earring_best\032_049.png
+  - earring_best\032_050.png
+  - earring_best\032_051.png
+  - earring_best\032_052.png
+  - earring_best\032_053.png
+  - earring_best\032_054.png
+  - earring_best\032_055.png
+  - earring_best\032_056.png
+  - earring_best\032_057.png
+  - earring_best\032_058.png
+  - earring_best\032_059.png
+  - earring_best\032_060.png
+  - earring_best\032_061.png
+  - earring_best\032_062.png
+  - earring_best\032_063.png
+  - earring_best\032_064.png
+  - earring_best\032_065.png
+  - earring_best\032_066.png
+  - earring_best\032_068.png
+  - earring_best\032_069.png
+  - earring_best\033_001.png
+  - earring_best\033_002.png
+  - earring_best\033_003.png
+  - earring_best\033_004.png
+  - earring_best\033_005.png
+  - earring_best\033_006.png
+  - earring_best\033_007.png
+  - earring_best\033_008.png
+  - earring_best\033_009.png
+  - earring_best\033_010.png
+  - earring_best\033_011.png
+  - earring_best\033_012.png
+  - earring_best\033_013.png
+  - earring_best\033_014.png
+  - earring_best\033_015.png
+  - earring_best\033_016.png
+  - earring_best\033_017.png
+  - earring_best\033_018.png
+  - earring_best\033_019.png
+  - earring_best\033_020.png
+  - earring_best\033_021.png
+  - earring_best\033_022.png
+  - earring_best\033_023.png
+  - earring_best\033_024.png
+  - earring_best\033_026.png
+  - earring_best\033_029.png
+  - earring_best\033_030.png
+  - earring_best\033_031.png
+  - earring_best\033_032.png
+  - earring_best\033_033.png
+  - earring_best\033_034.png
+  - earring_best\033_035.png
+  - earring_best\033_036.png
+  - earring_best\033_037.png
+  - earring_best\033_038.png
+  - earring_best\034_001.png
+  - earring_best\034_002.png
+  - earring_best\034_003.png
+  - earring_best\034_004.png
+  - earring_best\034_005.png
+  - earring_best\034_006.png
+  - earring_best\034_007.png
+  - earring_best\034_008.png
+  - earring_best\034_009.png
+  - earring_best\034_010.png
+  - earring_best\034_011.png
+  - earring_best\034_012.png
+  - earring_best\034_014.png
+  - earring_best\034_016.png
+  - earring_best\034_017.png
+  - earring_best\034_018.png
+  - earring_best\034_019.png
+  - earring_best\034_020.png
+  - earring_best\034_021.png
+  - earring_best\034_022.png
+  - earring_best\034_023.png
+  - earring_best\034_024.png
+  - earring_best\034_025.png
+  - earring_best\034_026.png
+  - earring_best\034_027.png
+  - earring_best\034_029.png
+  - earring_best\034_030.png
+  - earring_best\034_031.png
+  - earring_best\035_001.png
+  - earring_best\035_003.png
+  - earring_best\035_004.png
+  - earring_best\035_005.png
+  - earring_best\035_006.png
+  - earring_best\035_007.png
+  - earring_best\035_008.png
+  - earring_best\035_009.png
+  - earring_best\035_010.png
+  - earring_best\035_011.png
+  - earring_best\035_012.png
+  - earring_best\035_013.png
+  - earring_best\035_014.png
+  - earring_best\035_015.png
+  - earring_best\035_016.png
+  - earring_best\035_017.png
+  - earring_best\035_018.png
+  - earring_best\035_019.png
+  - earring_best\035_020.png
+  - earring_best\035_021.png
+  - earring_best\036_001.png
+  - earring_best\036_002.png
+  - earring_best\036_004.png
+  - earring_best\036_005.png
+  - earring_best\036_006.png
+  - earring_best\036_007.png
+  - earring_best\036_008.png
+  - earring_best\036_009.png
+  - earring_best\036_010.png
+  - earring_best\036_011.png
+  - earring_best\036_012.png
+  - earring_best\036_013.png
+  - earring_best\036_014.png
+  - earring_best\036_015.png
+  - earring_best\036_016.png
+  - earring_best\036_017.png
+  - earring_best\036_018.png
+  - earring_best\036_019.png
+  - earring_best\036_020.png
+  - earring_best\036_021.png
+  - earring_best\036_022.png
+  - earring_best\036_023.png
+  - earring_best\036_024.png
+  - earring_best\036_025.png
+  - earring_best\036_026.png
+  - earring_best\036_027.png
+  - earring_best\036_028.png
+  - earring_best\036_031.png
+  - earring_best\036_032.png
+  - earring_best\036_033.png
+  - earring_best\036_034.png
+  - earring_best\036_035.png
+  - earring_best\037_001.png
+  - earring_best\037_002.png
+  - earring_best\037_003.png
+  - earring_best\037_004.png
+  - earring_best\037_005.png
+  - earring_best\037_006.png
+  - earring_best\037_007.png
+  - earring_best\037_008.png
+  - earring_best\037_009.png
+  - earring_best\037_010.png
+  - earring_best\037_011.png
+  - earring_best\037_012.png
+  - earring_best\037_013.png
+  - earring_best\037_014.png
+  - earring_best\037_015.png
+  - earring_best\037_016.png
+  - earring_best\037_017.png
+  - earring_best\037_018.png
+  - earring_best\037_019.png
+  - earring_best\037_020.png
+  - earring_best\037_021.png
+  - earring_best\037_022.png
+  - earring_best\038_001.png
+  - earring_best\038_002.png
+  - earring_best\038_005.png
+  - earring_best\038_006.png
+  - earring_best\038_008.png
+  - earring_best\038_009.png
+  - earring_best\038_010.png
+  - earring_best\038_011.png
+  - earring_best\038_012.png
+  - earring_best\038_013.png
+  - earring_best\038_014.png
+  - earring_best\038_015.png
+  - earring_best\038_016.png
+  - earring_best\038_017.png
+  - earring_best\038_018.png
+  - earring_best\038_019.png
+  - earring_best\038_020.png
+  - earring_best\038_021.png
+  - earring_best\038_022.png
+  - earring_best\038_023.png
+  - earring_best\038_024.png
+  - earring_best\038_025.png
+  - earring_best\038_026.png
+  - earring_best\038_027.png
+  - earring_best\038_028.png
+  - earring_best\038_029.png
+  - earring_best\038_030.png
+  - earring_best\038_031.png
+  - earring_best\038_032.png
+  - earring_best\038_033.png
+  - earring_best\038_034.png
+  - earring_best\038_035.png
+  - earring_best\038_036.png
+  - earring_best\038_037.png
+  - earring_best\038_038.png
+  - earring_best\038_039.png
+  - earring_best\038_040.png
+  - earring_best\038_041.png
+  - earring_best\038_042.png
+  - earring_best\038_043.png
+  - earring_best\038_044.png
+  - earring_best\038_045.png
+  - earring_best\038_046.png
+  - earring_best\038_047.png
+  - earring_best\038_048.png
+  - earring_best\038_049.png
+  - earring_best\038_050.png
+  - earring_best\038_051.png
+  - earring_best\038_052.png
+  - earring_best\038_056.png
+  - earring_best\038_057.png
+  - earring_best\038_058.png
+  - earring_best\038_059.png
+  - earring_best\038_060.png
+  - earring_best\038_061.png
+  - earring_best\038_062.png
+  - earring_best\038_063.png
+  - earring_best\038_064.png
+  - earring_best\038_065.png
+  - earring_best\038_066.png
+  - earring_best\038_067.png
+  - earring_best\038_068.png
+  - earring_best\038_069.png
+  - earring_best\038_071.png
+  - earring_best\038_072.png
+  - earring_best\038_073.png
+  - earring_best\038_074.png
+  - earring_best\038_075.png
+  - earring_best\038_077.png
+  - earring_best\038_078.png
+  - earring_best\038_079.png
+  - earring_best\039_004.png
+  - earring_best\039_014.png
+  - earring_best\039_015.png
+  - earring_best\039_016.png
+  - earring_best\039_017.png
+  - earring_best\039_018.png
+  - earring_best\039_019.png
+  - earring_best\039_020.png
+  - earring_best\039_021.png
+  - earring_best\039_022.png
+  - earring_best\039_023.png
+  - earring_best\039_024.png
+  - earring_best\039_025.png
+  - earring_best\039_026.png
+  - earring_best\039_027.png
+  - earring_best\039_028.png
+  - earring_best\039_029.png
+  - earring_best\039_030.png
+  - earring_best\039_031.png
+  - earring_best\039_032.png
+  - earring_best\039_033.png
+  - earring_best\039_034.png
+  - earring_best\039_035.png
+  - earring_best\039_036.png
+  - earring_best\039_037.png
+  - earring_best\039_038.png
+  - earring_best\039_039.png
+  - earring_best\039_040.png
+  - earring_best\039_041.png
+  - earring_best\039_042.png
+  - earring_best\039_043.png
+  - earring_best\039_045.png
+  - earring_best\039_046.png
+  - earring_best\039_047.png
+  - earring_best\039_048.png
+  - earring_best\039_049.png
+  - earring_best\039_050.png
+  - earring_best\039_051.png
+  - earring_best\039_052.png
+  - earring_best\039_053.png
+  - earring_best\039_055.png
+  - earring_best\039_056.png
+  - earring_best\039_057.png
+  - earring_best\039_058.png
+  - earring_best\039_060.png
+  - earring_best\039_061.png
+  - earring_best\039_062.png
+  - earring_best\039_063.png
+  - earring_best\039_064.png
+  - earring_best\039_065.png
+  - earring_best\039_066.png
+  - earring_best\040_002.png
+  - earring_best\040_003.png
+  - earring_best\040_004.png
+  - earring_best\040_005.png
+  - earring_best\040_006.png
+  - earring_best\040_007.png
+  - earring_best\040_008.png
+  - earring_best\040_009.png
+  - earring_best\040_010.png
+  - earring_best\040_011.png
+  - earring_best\040_012.png
+  - earring_best\040_013.png
+  - earring_best\040_014.png
+  - earring_best\040_015.png
+  - earring_best\040_016.png
+  - earring_best\040_017.png
+  - earring_best\040_018.png
+  - earring_best\040_019.png
+  - earring_best\040_020.png
+  - earring_best\040_022.png
+  - earring_best\040_023.png
+  - earring_best\040_024.png
+  - earring_best\040_025.png
+  - earring_best\040_027.png
+  - earring_best\040_028.png
+  - earring_best\040_029.png
+  - earring_best\040_031.png
+  - earring_best\040_033.png
+  - earring_best\040_035.png
+  - earring_best\040_036.png
+  - earring_best\040_037.png
+  - earring_best\040_038.png
+  - earring_best\040_039.png
+  - earring_best\040_040.png
+  - earring_best\040_041.png
+  - earring_best\040_042.png
+  - earring_best\040_043.png
+  - earring_best\040_045.png
+  - earring_best\040_046.png
+  - earring_best\040_047.png
+  - earring_best\040_048.png
+  - earring_best\040_049.png
+  - earring_best\040_050.png
+  - earring_best\040_051.png
+  - earring_best\040_052.png
+  - earring_best\040_053.png
+  - earring_best\040_054.png
+  - earring_best\040_055.png
+  - earring_best\040_056.png
+  - earring_best\040_057.png
+  - earring_best\040_058.png
+  - earring_best\040_059.png
+  - earring_best\040_060.png
+  - earring_best\040_061.png
+  - earring_best\040_062.png
+  - earring_best\040_063.png
+  - earring_best\040_064.png
+  - earring_best\040_065.png
+  - earring_best\040_066.png
+  - earring_best\040_067.png
+  - earring_best\040_068.png
+  - earring_best\040_069.png
+  - earring_best\040_070.png
+  - earring_best\040_071.png
+  - earring_best\040_072.png
+  - earring_best\040_073.png
+  - earring_best\040_074.png
+  - earring_best\040_075.png
+  - earring_best\040_076.png
+  - earring_best\040_077.png
+  - earring_best\040_078.png
+  - earring_best\040_079.png
+  - earring_best\040_080.png
+  - earring_best\040_081.png
+  - earring_best\040_082.png
+  - earring_best\040_083.png
+  - earring_best\040_084.png
+  - earring_best\040_086.png
+  - earring_best\040_087.png
+  - earring_best\040_088.png
+  - earring_best\040_089.png
+  - earring_best\040_090.png
+  - earring_best\040_091.png
+  - earring_best\040_092.png
+  - earring_best\040_093.png
+  - earring_best\040_094.png
+  - earring_best\040_095.png
+  - earring_best\040_096.png
+  - earring_best\040_097.png
+  - earring_best\040_098.png
+  - earring_best\040_099.png
+  - earring_best\040_100.png
+  - earring_best\040_101.png
+  - earring_best\040_102.png
+  - earring_best\040_103.png
+  - earring_best\040_104.png
+  - earring_best\040_105.png
+  - earring_best\040_106.png
+  - earring_best\041_001.png
+  - earring_best\041_002.png
+  - earring_best\041_003.png
+  - earring_best\041_004.png
+  - earring_best\041_005.png
+  - earring_best\041_006.png
+  - earring_best\041_010.png
+  - earring_best\041_011.png
+  - earring_best\041_013.png
+  - earring_best\041_014.png
+  - earring_best\041_016.png
+  - earring_best\041_017.png
+  - earring_best\041_018.png
+  - earring_best\041_019.png
+  - earring_best\041_020.png
+  - earring_best\041_021.png
+  - earring_best\041_022.png
+  - earring_best\041_023.png
+  - earring_best\041_024.png
+  - earring_best\041_025.png
+  - earring_best\041_026.png
+  - earring_best\041_027.png
+  - earring_best\041_028.png
+  - earring_best\041_030.png
+  - earring_best\041_031.png
+  - earring_best\041_032.png
+  - earring_best\041_033.png
+  - earring_best\041_035.png
+  - earring_best\041_036.png
+  - earring_best\041_037.png
+  - earring_best\041_038.png
+  - earring_best\041_039.png
+  - earring_best\041_040.png
+  - earring_best\042_001.png
+  - earring_best\042_002.png
+  - earring_best\042_003.png
+  - earring_best\042_004.png
+  - earring_best\042_005.png
+  - earring_best\042_006.png
+  - earring_best\042_007.png
+  - earring_best\042_008.png
+  - earring_best\042_009.png
+  - earring_best\042_010.png
+  - earring_best\042_011.png
+  - earring_best\042_012.png
+  - earring_best\042_013.png
+  - earring_best\042_014.png
+  - earring_best\042_015.png
+  - earring_best\042_017.png
+  - earring_best\042_019.png
+  - earring_best\042_020.png
+  - earring_best\042_021.png
+  - earring_best\042_022.png
+  - earring_best\042_023.png
+  - earring_best\042_024.png
+  - earring_best\042_025.png
+  - earring_best\042_026.png
+  - earring_best\042_027.png
+  - earring_best\042_029.png
+  - earring_best\042_030.png
+  - earring_best\042_031.png
+  - earring_best\042_032.png
+  - earring_best\042_033.png
+  - earring_best\042_034.png
+  - earring_best\042_035.png
+  - earring_best\042_036.png
+  - earring_best\042_037.png
+  - earring_best\042_038.png
+  - earring_best\042_039.png
+  - earring_best\042_040.png
+  - earring_best\042_041.png
+  - earring_best\042_042.png
+  - earring_best\042_043.png
+  - earring_best\042_044.png
+  - earring_best\042_046.png
+  - earring_best\042_047.png
+  - earring_best\042_048.png
+  - earring_best\042_049.png
+  - earring_best\042_050.png
+  - earring_best\042_051.png
+  - earring_best\042_052.png
+  - earring_best\042_053.png
+  - earring_best\042_054.png
+  - earring_best\042_055.png
+  - earring_best\042_056.png
+  - earring_best\042_057.png
+  - earring_best\042_058.png
+  - earring_best\043_001.png
+  - earring_best\043_002.png
+  - earring_best\043_005.png
+  - earring_best\043_006.png
+  - earring_best\043_009.png
+  - earring_best\043_010.png
+  - earring_best\043_011.png
+  - earring_best\043_012.png
+  - earring_best\043_013.png
+  - earring_best\043_014.png
+  - earring_best\043_015.png
+  - earring_best\043_016.png
+  - earring_best\043_018.png
+  - earring_best\043_019.png
+  - earring_best\043_020.png
+  - earring_best\043_021.png
+  - earring_best\043_022.png
+  - earring_best\043_024.png
+  - earring_best\043_025.png
+  - earring_best\043_028.png
+  - earring_best\043_030.png
+  - earring_best\043_031.png
+  - earring_best\043_032.png
+  - earring_best\043_033.png
+  - earring_best\043_034.png
+  - earring_best\043_035.png
+  - earring_best\043_036.png
+  - earring_best\043_038.png
+  - earring_best\044_001.png
+  - earring_best\044_003.png
+  - earring_best\044_004.png
+  - earring_best\044_005.png
+  - earring_best\044_006.png
+  - earring_best\044_007.png
+  - earring_best\044_008.png
+  - earring_best\044_009.png
+  - earring_best\044_010.png
+  - earring_best\044_011.png
+  - earring_best\044_012.png
+  - earring_best\044_013.png
+  - earring_best\044_014.png
+  - earring_best\044_015.png
+  - earring_best\044_016.png
+  - earring_best\044_017.png
+  - earring_best\044_018.png
+  - earring_best\044_019.png
+  - earring_best\044_020.png
+  - earring_best\044_021.png
+  - earring_best\044_022.png
+  - earring_best\044_023.png
+  - earring_best\044_024.png
+  - earring_best\044_025.png
+  - earring_best\044_026.png
+  - earring_best\044_027.png
+  - earring_best\044_028.png
+  - earring_best\044_029.png
+  - earring_best\044_030.png
+  - earring_best\044_031.png
+  - earring_best\044_032.png
+  - earring_best\044_033.png
+  - earring_best\044_034.png
+  - earring_best\044_035.png
+  - earring_best\044_036.png
+  - earring_best\044_038.png
+  - earring_best\044_039.png
+  - earring_best\044_040.png
+  - earring_best\044_041.png
+  - earring_best\044_042.png
+  - earring_best\044_043.png
+  - earring_best\044_044.png
+  - earring_best\044_045.png
+  - earring_best\044_046.png
+  - earring_best\044_047.png
+  - earring_best\044_048.png
+  - earring_best\044_049.png
+  - earring_best\044_050.png
+  - earring_best\044_051.png
+  - earring_best\044_052.png
+  - earring_best\044_053.png
+  - earring_best\044_054.png
+  - earring_best\044_055.png
+  - earring_best\044_056.png
+  - earring_best\044_057.png
+  - earring_best\044_058.png
+  - earring_best\044_059.png
+  - earring_best\044_060.png
+  - earring_best\044_062.png
+  - earring_best\044_063.png
+  - earring_best\044_064.png
+  - earring_best\044_065.png
+  - earring_best\044_066.png
+  - earring_best\044_067.png
+  - earring_best\044_068.png
+  - earring_best\044_069.png
+  - earring_best\044_070.png
+  - earring_best\045_001.png
+  - earring_best\045_002.png
+  - earring_best\045_004.png
+  - earring_best\045_005.png
+  - earring_best\045_006.png
+  - earring_best\045_007.png
+  - earring_best\045_008.png
+  - earring_best\045_009.png
+  - earring_best\045_010.png
+  - earring_best\045_011.png
+  - earring_best\045_012.png
+  - earring_best\045_013.png
+  - earring_best\045_014.png
+  - earring_best\045_015.png
+  - earring_best\045_016.png
+  - earring_best\045_017.png
+  - earring_best\045_018.png
+  - earring_best\045_019.png
+  - earring_best\045_020.png
+  - earring_best\045_021.png
+  - earring_best\045_022.png
+  - earring_best\045_023.png
+  - earring_best\045_024.png
+  - earring_best\045_025.png
+  - earring_best\045_026.png
+  - earring_best\045_027.png
+  - earring_best\045_028.png
+  - earring_best\045_029.png
+  - earring_best\045_030.png
+  - earring_best\045_031.png
+  - earring_best\045_032.png
+  - earring_best\045_033.png
+  - earring_best\045_034.png
+  - earring_best\045_035.png
+  - earring_best\045_036.png
+  - earring_best\045_037.png
+  - earring_best\045_038.png
+  - earring_best\045_039.png
+  - earring_best\045_040.png
+  - earring_best\045_041.png
+  - earring_best\045_042.png
+  - earring_best\045_044.png
+  - earring_best\045_045.png
+  - earring_best\045_046.png
+  - earring_best\045_047.png
+  - earring_best\045_049.png
+  - earring_best\045_050.png
+  - earring_best\045_051.png
+  - earring_best\045_052.png
+  - earring_best\045_053.png
+  - earring_best\045_054.png
+  - earring_best\045_055.png
+  - earring_best\045_056.png
+  - earring_best\045_057.png
+  - earring_best\045_059.png
+  - earring_best\045_060.png
+  - earring_best\045_062.png
+  - earring_best\045_063.png
+  - earring_best\045_064.png
+  - earring_best\045_065.png
+  - earring_best\045_066.png
+  - earring_best\045_068.png
+  - earring_best\045_069.png
+  - earring_best\045_071.png
+  - earring_best\045_072.png
+  - earring_best\045_073.png
+  - earring_best\046_003.png
+  - earring_best\046_005.png
+  - earring_best\046_006.png
+  - earring_best\046_007.png
+  - earring_best\046_008.png
+  - earring_best\046_009.png
+  - earring_best\046_010.png
+  - earring_best\046_011.png
+  - earring_best\046_012.png
+  - earring_best\046_013.png
+  - earring_best\046_014.png
+  - earring_best\046_015.png
+  - earring_best\046_016.png
+  - earring_best\046_017.png
+  - earring_best\046_018.png
+  - earring_best\046_019.png
+  - earring_best\046_020.png
+  - earring_best\046_021.png
+  - earring_best\046_022.png
+  - earring_best\046_023.png
+  - earring_best\046_024.png
+  - earring_best\046_025.png
+  - earring_best\046_026.png
+  - earring_best\046_027.png
+  - earring_best\046_028.png
+  - earring_best\046_029.png
+  - earring_best\046_030.png
+  - earring_best\046_031.png
+  - earring_best\046_032.png
+  - earring_best\046_033.png
+  - earring_best\046_034.png
+  - earring_best\046_035.png
+  - earring_best\046_036.png
+  - earring_best\046_037.png
+  - earring_best\046_038.png
+  - earring_best\046_039.png
+  - earring_best\046_040.png
+  - earring_best\046_041.png
+  - earring_best\046_042.png
+  - earring_best\046_043.png
+  - earring_best\046_044.png
+  - earring_best\046_045.png
+  - earring_best\046_046.png
+  - earring_best\046_047.png
+  - earring_best\046_048.png
+  - earring_best\046_049.png
+  - earring_best\046_050.png
+  - earring_best\046_051.png
+  - earring_best\046_052.png
+  - earring_best\046_053.png
+  - earring_best\046_054.png
+  - earring_best\046_055.png
+  - earring_best\046_056.png
+  - earring_best\046_057.png
+  - earring_best\046_058.png
+  - earring_best\046_059.png
+  - earring_best\046_060.png
+  - earring_best\046_061.png
+  - earring_best\046_062.png
+  - earring_best\046_063.png
+  - earring_best\046_064.png
+  - earring_best\046_065.png
+  - earring_best\046_066.png
+  - earring_best\046_067.png
+  - earring_best\046_068.png
+  - earring_best\046_069.png
+  - earring_best\046_070.png
+  - earring_best\046_071.png
+  - earring_best\046_072.png
+  - earring_best\046_073.png
+  - earring_best\046_074.png
+  - earring_best\046_075.png
+  - earring_best\046_076.png
+  - earring_best\046_077.png
+  - earring_best\046_078.png
+  - earring_best\046_079.png
+  - earring_best\046_080.png
+  - earring_best\046_081.png
+  - earring_best\046_082.png
+  - earring_best\046_083.png
+  - earring_best\046_084.png
+  - earring_best\046_086.png
+  - earring_best\046_087.png
+  - earring_best\046_088.png
+  - earring_best\046_089.png
+  - earring_best\046_090.png
+  - earring_best\046_091.png
+  - earring_best\046_092.png
+  - earring_best\046_093.png
+  - earring_best\046_094.png
+  - earring_best\046_095.png
+  - earring_best\046_096.png
+  - earring_best\046_097.png
+  - earring_best\1 (1).jpg
+  - earring_best\1.jpg
+  - earring_best\11495432936270-Zaveri-Pearls-Women-Earrings-2751495432936199-1.jpg
+  - earring_best\11512189537872-Zaveri-Pearls-Gold-Toned-Chandbalis-6931512189537849-1.jpg
+  - earring_best\135931433_14271959703_large.jpg
+  - earring_best\1398.Jpg
+  - earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring (1).jpg
+  - earring_best\152301390262299242-metallic-gold-chain-black-tassel-earring.jpg
+  - earring_best\153372934957324276-youbella-goldplated-moti-fancy-partywear-jhumka.jpg
+  - earring_best\1544544349-57571700.jpg
+  - earring_best\2631_6192tr_front_300x.jpg
+  - earring_best\31JLx-Ugs-L._UY395_.jpg
+  - earring_best\3DIEW0102A_1000x1000_540x540.jpg
+  - earring_best\3dropearring_grande.jpg
+  - earring_best\41OBUc2qfRL._UY395_.jpg
+  - earring_best\41PN+bmyslL._UY395_.jpg
+  - earring_best\41rFH0x18bL._SY300_QL70_.jpg
+  - earring_best\41vkv3vYSkL.jpg
+  - earring_best\513FXlFj-AL._SY395._SX._UX._SY._UY_.jpg
+  - earring_best\51woC60wBgL.jpg
+  - earring_best\57597_main.jpeg
+  - earring_best\59387_main.jpeg
+  - earring_best\61Pz+NSSatL._UY395_.jpg
+  - earring_best\61TqDlj3i6L._UY395_.jpg
+  - earring_best\61YsSHH+fpL._UY500_.jpg
+  - earring_best\61pAcjkFtoL._UY500_ (1).jpg
+  - earring_best\61pAcjkFtoL._UY500_.jpg
+  - earring_best\6b0bc98097235140497bb8cbee3956dd.jpg
+  - earring_best\812IYTBbB1L._UY395_.jpg
+  - earring_best\81LTWvgCIEL._UL1500_.jpg
+  - earring_best\8798247_fpx.jpeg
+  - earring_best\9556046_fpx.jpeg
+  - earring_best\CFE0686_D.jpg
+  - earring_best\Chandelier_Diamond_Wedding_Earrings_JLE35-750x500.jpg
+  - earring_best\Cheerful-Diamond-Drop-Earrings-1.jpg
+  - earring_best\DE06400200_hero.jpeg
+  - earring_best\DIDE0015_1Y.jpg
+  - earring_best\Diamond-Earrings-SMT337_GF-600x600.jpg
+  - earring_best\Diamond-Earrings-T7743_GF-600x600.jpg
+  - earring_best\Dubai-payal-gold-plated-design-jewelries-set.jpg_350x350.jpg
+  - earring_best\E747-yellow-gold-18k-heart-shape-two-heart-cute-earring-the-lastest-designs-hotsale-cute-earrings.jpg
+  - earring_best\EADPRPDRL4C_352777_white_1n_mobile.png
+  - earring_best\EADRRDLGHWL-455599-trans-3h.png
+  - earring_best\ER1069-Mizana-Jewelry.jpg
+  - earring_best\Earrings_PDRSVE016_01-600x600.jpg
+  - earring_best\GGSDCiJvMV_20180411121700.jpg
+  - earring_best\Graff-Classic-Butterfly-Diamond-Chandelier-Earrings_RGE393.png
+  - earring_best\Handluv-Gold-American-Diamond-Earrings-SDL352813271-1-944d6.jpg
+  - earring_best\JE03505-YGP900_1_lar.jpg
+  - earring_best\JE03525-YGP900_1_lar.jpg
+  - earring_best\JE03706-YGP900_1_lar.jpg
+  - earring_best\JE04410-YGP9OS_1_lar.jpg
+  - earring_best\Joyas-Stylish-American-Diamond-Jhumka-SDL573009592-1-51439.jpg
+  - earring_best\MP000000002953346_437Wx649H_20180408091948.jpeg
+  - earring_best\MP000000002964268_437Wx649H_20180411025830.jpeg
+  - earring_best\New-arrival-Latest-Styles-Flowers-Earrings-Colorful-Summer-gold-earring-tops-designs-for-girls.jpg
+  - earring_best\Resin-Rhinestone-Butterfly-Stud-Earrings__30519_zoom.jpg
+  - earring_best\Roberto-Coin-Black-Jade-18K-Rose-Gold-Earrings-with-Mother-of-Pearl-and-Diamonds-8881985AXERJ.png
+  - earring_best\Screenshot_20181117-123100_1542547254874.png
+  - earring_best\Sublime-Gold-Drop-Earrings-2.jpg
+  - earring_best\Sukkhi-Chandbali-Gold-Plated-Australian-SDL706265832-1-c4680.jpg
+  - earring_best\The20Strawberry20Gold20Stud20For20Baby20Girl.jpg
+  - earring_best\UE00012-YG0000_1_lar.jpg
+  - earring_best\UE00018-YG0000_1_lar.jpg
+  - earring_best\UE00495-YG0000_1_lar.jpg
+  - earring_best\UE00497-YG0000_1_lar.jpg
+  - earring_best\UE00503-YG0000_1_lar.jpg
+  - earring_best\UE00694-2Y0000_1_lar.jpg
+  - earring_best\UE04341-YG00P0_1_lar.jpg
+  - earring_best\Winsome-Diamond-Drop-Earrings-1.jpg
+  - earring_best\ariel-elegant-diamond-earrings-jle139 (1)-750x500.jpg
+  - earring_best\beautiful-fancy-peacock-earring-with-hanging-drops-11-250x250.jpg
+  - earring_best\bohemian-thread-dangle-earrings-soriee-drop.jpg
+  - earring_best\buti-earring-250x250.jpg
+  - earring_best\earring_1.jpg
+  - earring_best\earring_10.jpg
+  - earring_best\earring_100.jpg
+  - earring_best\earring_102.jpg
+  - earring_best\earring_103.jpg
+  - earring_best\earring_104.jpg
+  - earring_best\earring_105.jpg
+  - earring_best\earring_106.jpg
+  - earring_best\earring_108.jpg
+  - earring_best\earring_109.jpg
+  - earring_best\earring_11.jpg
+  - earring_best\earring_110.jpg
+  - earring_best\earring_111.jpg
+  - earring_best\earring_113.jpg
+  - earring_best\earring_114.jpg
+  - earring_best\earring_115.jpg
+  - earring_best\earring_116.jpg
+  - earring_best\earring_117.jpg
+  - earring_best\earring_118.jpg
+  - earring_best\earring_119.jpg
+  - earring_best\earring_120.jpg
+  - earring_best\earring_121.jpg
+  - earring_best\earring_122.jpg
+  - earring_best\earring_123.jpg
+  - earring_best\earring_124.jpg
+  - earring_best\earring_125.jpg
+  - earring_best\earring_126.jpg
+  - earring_best\earring_127.jpg
+  - earring_best\earring_128.jpg
+  - earring_best\earring_13.jpg
+  - earring_best\earring_130.jpg
+  - earring_best\earring_131.jpg
+  - earring_best\earring_132.jpg
+  - earring_best\earring_133.jpg
+  - earring_best\earring_134.jpg
+  - earring_best\earring_135.jpg
+  - earring_best\earring_136.jpg
+  - earring_best\earring_137.jpg
+  - earring_best\earring_138.jpg
+  - earring_best\earring_139.jpg
+  - earring_best\earring_14.jpg
+  - earring_best\earring_140.jpg
+  - earring_best\earring_141.jpg
+  - earring_best\earring_142.jpg
+  - earring_best\earring_144.jpg
+  - earring_best\earring_145.jpg
+  - earring_best\earring_146.jpg
+  - earring_best\earring_147.jpg
+  - earring_best\earring_149.jpg
+  - earring_best\earring_15.jpg
+  - earring_best\earring_150.jpg
+  - earring_best\earring_151.jpg
+  - earring_best\earring_152.jpg
+  - earring_best\earring_153.jpg
+  - earring_best\earring_154.jpg
+  - earring_best\earring_155.jpg
+  - earring_best\earring_156.jpg
+  - earring_best\earring_157.jpg
+  - earring_best\earring_159.jpg
+  - earring_best\earring_16.jpg
+  - earring_best\earring_160.jpg
+  - earring_best\earring_161.jpg
+  - earring_best\earring_162.jpg
+  - earring_best\earring_163.jpg
+  - earring_best\earring_165.jpg
+  - earring_best\earring_166.jpg
+  - earring_best\earring_167.jpg
+  - earring_best\earring_168.jpg
+  - earring_best\earring_169.jpg
+  - earring_best\earring_17.jpg
+  - earring_best\earring_170.jpg
+  - earring_best\earring_171.jpg
+  - earring_best\earring_172.jpg
+  - earring_best\earring_173.jpg
+  - earring_best\earring_174.jpg
+  - earring_best\earring_175.jpg
+  - earring_best\earring_176.jpg
+  - earring_best\earring_177.jpg
+  - earring_best\earring_178.jpg
+  - earring_best\earring_179.jpg
+  - earring_best\earring_18.jpg
+  - earring_best\earring_180.jpg
+  - earring_best\earring_181.jpg
+  - earring_best\earring_182.jpg
+  - earring_best\earring_183.jpg
+  - earring_best\earring_184.jpg
+  - earring_best\earring_185.jpg
+  - earring_best\earring_186.jpg
+  - earring_best\earring_188.jpg
+  - earring_best\earring_189.jpg
+  - earring_best\earring_19.jpg
+  - earring_best\earring_191.jpg
+  - earring_best\earring_192.jpg
+  - earring_best\earring_193.jpg
+  - earring_best\earring_194.jpg
+  - earring_best\earring_195.jpg
+  - earring_best\earring_196.jpg
+  - earring_best\earring_197.jpg
+  - earring_best\earring_198.jpg
+  - earring_best\earring_199.jpg
+  - earring_best\earring_2.jpg
+  - earring_best\earring_20.jpg
+  - earring_best\earring_200.jpg
+  - earring_best\earring_201.jpg
+  - earring_best\earring_202.jpg
+  - earring_best\earring_203.jpg
+  - earring_best\earring_205.jpg
+  - earring_best\earring_206.jpg
+  - earring_best\earring_207.jpg
+  - earring_best\earring_208.jpg
+  - earring_best\earring_209.jpg
+  - earring_best\earring_21.jpg
+  - earring_best\earring_210.jpg
+  - earring_best\earring_211.jpg
+  - earring_best\earring_212.jpg
+  - earring_best\earring_213.jpg
+  - earring_best\earring_214.jpg
+  - earring_best\earring_215.jpg
+  - earring_best\earring_216.jpg
+  - earring_best\earring_217.jpg
+  - earring_best\earring_218.jpg
+  - earring_best\earring_219.jpg
+  - earring_best\earring_22.jpg
+  - earring_best\earring_220.jpg
+  - earring_best\earring_221.jpg
+  - earring_best\earring_223.jpg
+  - earring_best\earring_224.jpg
+  - earring_best\earring_225.jpg
+  - earring_best\earring_227.jpg
+  - earring_best\earring_228.jpg
+  - earring_best\earring_229.jpg
+  - earring_best\earring_230.jpg
+  - earring_best\earring_231.jpg
+  - earring_best\earring_232.jpg
+  - earring_best\earring_233.jpg
+  - earring_best\earring_234.jpg
+  - earring_best\earring_235.jpg
+  - earring_best\earring_236.jpg
+  - earring_best\earring_237.jpg
+  - earring_best\earring_238.jpg
+  - earring_best\earring_239.jpg
+  - earring_best\earring_24.jpg
+  - earring_best\earring_240.jpg
+  - earring_best\earring_241.jpg
+  - earring_best\earring_243.jpg
+  - earring_best\earring_244.jpg
+  - earring_best\earring_246.jpg
+  - earring_best\earring_247.jpg
+  - earring_best\earring_248.jpg
+  - earring_best\earring_249.jpg
+  - earring_best\earring_25.jpg
+  - earring_best\earring_250.jpg
+  - earring_best\earring_251.jpg
+  - earring_best\earring_252.jpg
+  - earring_best\earring_255.jpg
+  - earring_best\earring_256.jpg
+  - earring_best\earring_257.jpg
+  - earring_best\earring_258.jpg
+  - earring_best\earring_259.jpg
+  - earring_best\earring_261.jpg
+  - earring_best\earring_262.jpg
+  - earring_best\earring_263.jpg
+  - earring_best\earring_264.jpg
+  - earring_best\earring_265.jpg
+  - earring_best\earring_267.jpg
+  - earring_best\earring_268.jpg
+  - earring_best\earring_269.jpg
+  - earring_best\earring_27.jpg
+  - earring_best\earring_270.jpg
+  - earring_best\earring_271.jpg
+  - earring_best\earring_272.jpg
+  - earring_best\earring_273.jpg
+  - earring_best\earring_274.jpg
+  - earring_best\earring_275.jpg
+  - earring_best\earring_276.jpg
+  - earring_best\earring_277.jpg
+  - earring_best\earring_278.jpg
+  - earring_best\earring_279.jpg
+  - earring_best\earring_28.jpg
+  - earring_best\earring_280.jpg
+  - earring_best\earring_281.jpg
+  - earring_best\earring_282.jpg
+  - earring_best\earring_283.jpg
+  - earring_best\earring_284.jpg
+  - earring_best\earring_285.jpg
+  - earring_best\earring_286.jpg
+  - earring_best\earring_287.jpg
+  - earring_best\earring_288.jpg
+  - earring_best\earring_289.jpg
+  - earring_best\earring_290.jpg
+  - earring_best\earring_291.jpg
+  - earring_best\earring_292.jpg
+  - earring_best\earring_293.jpg
+  - earring_best\earring_294.jpg
+  - earring_best\earring_295.jpg
+  - earring_best\earring_296.jpg
+  - earring_best\earring_297.jpg
+  - earring_best\earring_298.jpg
+  - earring_best\earring_299.jpg
+  - earring_best\earring_3.jpg
+  - earring_best\earring_30.jpg
+  - earring_best\earring_300.jpg
+  - earring_best\earring_301.jpg
+  - earring_best\earring_302.jpg
+  - earring_best\earring_303.jpg
+  - earring_best\earring_305.jpg
+  - earring_best\earring_306.jpg
+  - earring_best\earring_307.jpg
+  - earring_best\earring_308.jpg
+  - earring_best\earring_309.jpg
+  - earring_best\earring_31.jpg
+  - earring_best\earring_310.jpg
+  - earring_best\earring_311.jpg
+  - earring_best\earring_312.jpg
+  - earring_best\earring_313.jpg
+  - earring_best\earring_314.jpg
+  - earring_best\earring_316.jpg
+  - earring_best\earring_317.jpg
+  - earring_best\earring_318.jpg
+  - earring_best\earring_319.jpg
+  - earring_best\earring_32.jpg
+  - earring_best\earring_320.jpg
+  - earring_best\earring_321.jpg
+  - earring_best\earring_322.jpg
+  - earring_best\earring_323.jpg
+  - earring_best\earring_324.jpg
+  - earring_best\earring_325.jpg
+  - earring_best\earring_326.jpg
+  - earring_best\earring_327.jpg
+  - earring_best\earring_328.jpg
+  - earring_best\earring_33.jpg
+  - earring_best\earring_330.jpg
+  - earring_best\earring_331.jpg
+  - earring_best\earring_332.jpg
+  - earring_best\earring_333.jpg
+  - earring_best\earring_334.jpg
+  - earring_best\earring_335.jpg
+  - earring_best\earring_336.jpg
+  - earring_best\earring_337.jpg
+  - earring_best\earring_339.jpg
+  - earring_best\earring_34.jpg
+  - earring_best\earring_340.jpg
+  - earring_best\earring_341.jpg
+  - earring_best\earring_342.jpg
+  - earring_best\earring_343.jpg
+  - earring_best\earring_344.jpg
+  - earring_best\earring_345.jpg
+  - earring_best\earring_346.jpg
+  - earring_best\earring_348.jpg
+  - earring_best\earring_349.jpg
+  - earring_best\earring_35.jpg
+  - earring_best\earring_350.jpg
+  - earring_best\earring_351.jpg
+  - earring_best\earring_353.jpg
+  - earring_best\earring_354.jpg
+  - earring_best\earring_355.jpg
+  - earring_best\earring_356.jpg
+  - earring_best\earring_357.jpg
+  - earring_best\earring_358.jpg
+  - earring_best\earring_359.jpg
+  - earring_best\earring_36.jpg
+  - earring_best\earring_360.jpg
+  - earring_best\earring_361.jpg
+  - earring_best\earring_362.jpg
+  - earring_best\earring_363.jpg
+  - earring_best\earring_365.jpg
+  - earring_best\earring_366.jpg
+  - earring_best\earring_367.jpg
+  - earring_best\earring_368.jpg
+  - earring_best\earring_369.jpg
+  - earring_best\earring_37.jpg
+  - earring_best\earring_371.jpg
+  - earring_best\earring_372.jpg
+  - earring_best\earring_373.jpg
+  - earring_best\earring_374.jpg
+  - earring_best\earring_375.jpg
+  - earring_best\earring_377.jpg
+  - earring_best\earring_378.jpg
+  - earring_best\earring_379.jpg
+  - earring_best\earring_380.jpg
+  - earring_best\earring_381.jpg
+  - earring_best\earring_382.jpg
+  - earring_best\earring_383.jpg
+  - earring_best\earring_384.jpg
+  - earring_best\earring_387.jpg
+  - earring_best\earring_388.jpg
+  - earring_best\earring_389.jpg
+  - earring_best\earring_39.jpg
+  - earring_best\earring_390.jpg
+  - earring_best\earring_391.jpg
+  - earring_best\earring_392.jpg
+  - earring_best\earring_393.jpg
+  - earring_best\earring_394.jpg
+  - earring_best\earring_395.jpg
+  - earring_best\earring_396.jpg
+  - earring_best\earring_397.jpg
+  - earring_best\earring_398.jpg
+  - earring_best\earring_399.jpg
+  - earring_best\earring_4.jpg
+  - earring_best\earring_40.jpg
+  - earring_best\earring_401.jpg
+  - earring_best\earring_402.jpg
+  - earring_best\earring_403.jpg
+  - earring_best\earring_404.jpg
+  - earring_best\earring_405.jpg
+  - earring_best\earring_406.jpg
+  - earring_best\earring_407.jpg
+  - earring_best\earring_408.jpg
+  - earring_best\earring_41.jpg
+  - earring_best\earring_410.jpg
+  - earring_best\earring_411.jpg
+  - earring_best\earring_412.jpg
+  - earring_best\earring_413.jpg
+  - earring_best\earring_414.jpg
+  - earring_best\earring_415.jpg
+  - earring_best\earring_416.jpg
+  - earring_best\earring_417.jpg
+  - earring_best\earring_418.jpg
+  - earring_best\earring_419.jpg
+  - earring_best\earring_42.jpg
+  - earring_best\earring_420.jpg
+  - earring_best\earring_421.jpg
+  - earring_best\earring_422.jpg
+  - earring_best\earring_423.jpg
+  - earring_best\earring_424.jpg
+  - earring_best\earring_425.jpg
+  - earring_best\earring_426.jpg
+  - earring_best\earring_427.jpg
+  - earring_best\earring_428.jpg
+  - earring_best\earring_429.jpg
+  - earring_best\earring_43.jpg
+  - earring_best\earring_430.jpg
+  - earring_best\earring_431.jpg
+  - earring_best\earring_432.jpg
+  - earring_best\earring_433.jpg
+  - earring_best\earring_434.jpg
+  - earring_best\earring_435.jpg
+  - earring_best\earring_437.jpg
+  - earring_best\earring_438.jpg
+  - earring_best\earring_44.jpg
+  - earring_best\earring_440.jpg
+  - earring_best\earring_441.jpg
+  - earring_best\earring_442.jpg
+  - earring_best\earring_443.jpg
+  - earring_best\earring_444.jpg
+  - earring_best\earring_445.jpg
+  - earring_best\earring_446.jpg
+  - earring_best\earring_45.jpg
+  - earring_best\earring_450.jpg
+  - earring_best\earring_454.jpg
+  - earring_best\earring_455.jpg
+  - earring_best\earring_456.jpg
+  - earring_best\earring_457.jpg
+  - earring_best\earring_458.jpg
+  - earring_best\earring_459.jpg
+  - earring_best\earring_46.jpg
+  - earring_best\earring_460.jpg
+  - earring_best\earring_461.jpg
+  - earring_best\earring_462.jpg
+  - earring_best\earring_463.jpg
+  - earring_best\earring_464.jpg
+  - earring_best\earring_465.jpg
+  - earring_best\earring_466.jpg
+  - earring_best\earring_467.jpg
+  - earring_best\earring_469.jpg
+  - earring_best\earring_47.jpg
+  - earring_best\earring_470.jpg
+  - earring_best\earring_472.jpg
+  - earring_best\earring_473.jpg
+  - earring_best\earring_474.jpg
+  - earring_best\earring_475.jpg
+  - earring_best\earring_48.jpg
+  - earring_best\earring_49.jpg
+  - earring_best\earring_50.jpg
+  - earring_best\earring_51.jpg
+  - earring_best\earring_52.jpg
+  - earring_best\earring_53.jpg
+  - earring_best\earring_54.jpg
+  - earring_best\earring_55.jpg
+  - earring_best\earring_56.jpg
+  - earring_best\earring_57.jpg
+  - earring_best\earring_59.jpg
+  - earring_best\earring_6.jpg
+  - earring_best\earring_61.jpg
+  - earring_best\earring_62.jpg
+  - earring_best\earring_63.jpg
+  - earring_best\earring_65.jpg
+  - earring_best\earring_66.jpg
+  - earring_best\earring_68.jpg
+  - earring_best\earring_69.jpg
+  - earring_best\earring_7.jpg
+  - earring_best\earring_70.jpg
+  - earring_best\earring_71.jpg
+  - earring_best\earring_72.jpg
+  - earring_best\earring_74.jpg
+  - earring_best\earring_75.jpg
+  - earring_best\earring_76.jpg
+  - earring_best\earring_77.jpg
+  - earring_best\earring_78.jpg
+  - earring_best\earring_79.jpg
+  - earring_best\earring_8.jpg
+  - earring_best\earring_80.jpg
+  - earring_best\earring_81.jpg
+  - earring_best\earring_84.jpg
+  - earring_best\earring_85.jpg
+  - earring_best\earring_86.jpg
+  - earring_best\earring_87.jpg
+  - earring_best\earring_9.jpg
+  - earring_best\earring_90.jpg
+  - earring_best\earring_91.jpg
+  - earring_best\earring_92.jpg
+  - earring_best\earring_93.jpg
+  - earring_best\earring_94.jpg
+  - earring_best\earring_95.jpg
+  - earring_best\earring_96.jpg
+  - earring_best\earring_97.jpg
+  - earring_best\earring_98.jpg
+  - earring_best\earring_99.jpg
+  - earring_best\free-shipping-girls-crystal-drop-earrings-white-gold-plated-dangle-earrings.jpg
+  - earring_best\ier82.20170628130105.jpg
+  - earring_best\il_570xN.1508471387_j6bv_large.jpg
+  - earring_best\images (1).jpeg
+  - earring_best\images (16).jpeg
+  - earring_best\images (17).jpeg
+  - earring_best\images (2).jpeg
+  - earring_best\images (21).jpeg
+  - earring_best\images (22).jpeg
+  - earring_best\images (23).jpeg
+  - earring_best\images (25).jpeg
+  - earring_best\images (26).jpeg
+  - earring_best\images (28).jpeg
+  - earring_best\images (3).jpeg
+  - earring_best\images (30).jpeg
+  - earring_best\images (31).jpeg
+  - earring_best\images (32).jpeg
+  - earring_best\images (33).jpeg
+  - earring_best\images (34).jpeg
+  - earring_best\images (37).jpeg
+  - earring_best\images (38).jpeg
+  - earring_best\images (39).jpeg
+  - earring_best\images (4).jpeg
+  - earring_best\images (40).jpeg
+  - earring_best\images (41).jpeg
+  - earring_best\images (42).jpeg
+  - earring_best\images (43).jpeg
+  - earring_best\images (45).jpeg
+  - earring_best\images (46).jpeg
+  - earring_best\images (48).jpeg
+  - earring_best\images (50).jpeg
+  - earring_best\images (61).jpeg
+  - earring_best\images (62).jpeg
+  - earring_best\images (64).jpeg
+  - earring_best\images (65).jpeg
+  - earring_best\images (66).jpeg
+  - earring_best\images (67).jpeg
+  - earring_best\images (68).jpeg
+  - earring_best\images (69).jpeg
+  - earring_best\images (70).jpeg
+  - earring_best\images (71).jpeg
+  - earring_best\images (72).jpeg
+  - earring_best\images (74).jpeg
+  - earring_best\images (78).jpeg
+  - earring_best\images (79).jpeg
+  - earring_best\images (8).jpeg
+  - earring_best\images (80).jpeg
+  - earring_best\images (81).jpeg
+  - earring_best\images (82).jpeg
+  - earring_best\images (83).jpeg
+  - earring_best\images (85).jpeg
+  - earring_best\images (86).jpeg
+  - earring_best\images (87).jpeg
+  - earring_best\images (88).jpeg
+  - earring_best\images (90).jpeg
+  - earring_best\images (91).jpeg
+  - earring_best\images (92).jpeg
+  - earring_best\images (93).jpeg
+  - earring_best\images (97).jpeg
+  - earring_best\images (98).jpeg
+  - earring_best\images (99).jpeg
+  - earring_best\images_ER617018_view1_big_peacock-feather-diamond-earrings-1452069541-r-w.jpg
+  - earring_best\invisible-set-round-diamond-stud-earring-in-18K-rose-gold-FDEAR8388-NL-RG.jpg
+  - earring_best\k_1_4_1.jpeg
+  - earring_best\ladies-fancy-earring-500x500.jpg
+  - earring_best\maira-series-american-diamond-earrings.jpg
+  - earring_best\marshall_pierce_company_chicago_fine_jewelry_pearl_and_diamond_bracelet_256-10305.jpg
+  - earring_best\princess-cut-halo-diamond-earring-with-ruby-in-14K-yellow-gold-FDOEAR40538GRUDR-NL-YG.jpg
+  - earring_best\product-hugerect-449558-169254-1423069448-3db6c3d4b4887a223a91e64c58b6d3e5.jpg
+  - earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e (1).jpg
+  - earring_best\product-hugerect-449571-169254-1423071030-3f92cfbdab3d38d2b7dae9dae4999a6e.jpg
+  - earring_best\ramleela-earrings-black.jpg
+  - earring_best\stylish-earrings-by-kaara-san203-large_7e79aaf7b7df7c443e89db3c1b96bac1.jpg
+  - necklace\05MD7PLPEVBL.jpg
+  - necklace\07MQQDPM75GI.jpg
+  - necklace\0IWH80RS6UHO.jpg
+  - necklace\0JXM8676YVTV.jpg
+  - necklace\0K8JV16HVYTY.jpg
+  - necklace\0LGMOYWP1LAA.jpg
+  - necklace\0NM11EUC0DXD.jpg
+  - necklace\1330DV7U37AY.jpg
+  - necklace\17KK4HJ01C03.jpg
+  - necklace\19SHZA98FE3M.jpg
+  - necklace\1BP62KNLR856.jpg
+  - necklace\1C8DL7QIKKZZ.jpg
+  - necklace\1EKQ3MU7KYUE.jpg
+  - necklace\1HZHHVP58I6Y.jpg
+  - necklace\1R2UTBB4F5PK.jpg
+  - necklace\1SFM9OPQWFU6.jpg
+  - necklace\26PKTGF6H8QK.jpg
+  - necklace\2IPXEHA3MTHY.jpg
+  - necklace\2KCB0164E0WZ.jpg
+  - necklace\2NXSPEDKO62B.jpg
+  - necklace\2QCO7R5GIQC4.jpg
+  - necklace\31PZN04QOIRT.jpg
+  - necklace\37GD1F0PUHFZ.jpg
+  - necklace\38M736KC7Y0J.jpg
+  - necklace\3CB0HRSQXSZR.jpg
+  - necklace\3DRGEIUA5QPC.jpg
+  - necklace\3ERBEGLV7EFO.jpg
+  - necklace\3GCDVBLT5ZFO.jpg
+  - necklace\3JJFXBP6BIEC.jpg
+  - necklace\3JXLA2XNQTXT.jpg
+  - necklace\3NSTN5KXJ3NT.jpg
+  - necklace\3P85KEPGZK93.jpg
+  - necklace\3WOH2U0IS716.jpg
+  - necklace\3X42YAK093FU.jpg
+  - necklace\43WY648HEQOM.jpg
+  - necklace\47NAHE95E9RR.jpg
+  - necklace\48WHHDAZ7RPY.jpg
+  - necklace\4LT08FYIHOWW.jpg
+  - necklace\4RCQB25SPSI0.jpg
+  - necklace\4VLLON5GA1NU.jpg
+  - necklace\4Y6ZD9C8S0GD.jpg
+  - necklace\52Y2T01AO871.jpg
+  - necklace\5CRH4BJ1QG1E.jpg
+  - necklace\5JG7493NX0YB.jpg
+  - necklace\5NFSMTJK5YAK.jpg
+  - necklace\5SPIPWEY7ST7.jpg
+  - necklace\5TLD8YRN91QT.jpg
+  - necklace\617CIVUG5Y7T.jpg
+  - necklace\65QSUARHA96A.jpg
+  - necklace\6JIU2A15NF0Q.jpg
+  - necklace\6OTJE9T65BNP.jpg
+  - necklace\6SE79YMZ1L10.jpg
+  - necklace\6UNYEKLR4UGC.jpg
+  - necklace\72EWSM49RHF1.jpg
+  - necklace\74O9NUZ871QO.jpg
+  - necklace\7AC9QR452H62.jpg
+  - necklace\7HBMNVY6QTHN.jpg
+  - necklace\7Q1BTBELXLE2.jpg
+  - necklace\7SN97B35M0WE.jpg
+  - necklace\7SO8EEU6FTEZ.jpg
+  - necklace\836N1R31QNJR.jpg
+  - necklace\89Y074NW4CX1.jpg
+  - necklace\8AZCYXTMFVZC.jpg
+  - necklace\8E23JHTFVKKU.jpg
+  - necklace\8E3859N20EBY.jpg
+  - necklace\8ERW1F73EFV5.jpg
+  - necklace\8FJ4JYQGA4KA.jpg
+  - necklace\8IACKSIP2ZQ7.jpg
+  - necklace\8JJF4TRYGZHH.jpg
+  - necklace\8OAN6DV8OQCM.jpg
+  - necklace\8PA2PYGZUIQ7.jpg
+  - necklace\8PUEYS1Z543V.jpg
+  - necklace\8YA06KEVCUOB.jpg
+  - necklace\907J22O5ZMV8.jpg
+  - necklace\9437QP6RBGEP.jpg
+  - necklace\95M86MAKHLTN.jpg
+  - necklace\96R1VNCGFJX7.jpg
+  - necklace\9F0Y1XGW84G4.jpg
+  - necklace\9F2ZKUOG6BCA.jpg
+  - necklace\9OQ1W7N6N673.jpg
+  - necklace\9R0X8L91YOQ9.jpg
+  - necklace\A9MSN0598UA0.jpg
+  - necklace\A9UP6DGCZ2D3.jpg
+  - necklace\ADSS5Z40CWLX.jpg
+  - necklace\AHCSZ03LGE1E.jpg
+  - necklace\AL1SUZF38BOA.jpg
+  - necklace\AL615FBDKDGJ.jpg
+  - necklace\ARUR3T9KJ1SK.jpg
+  - necklace\AV6XH95CUSM9.jpg
+  - necklace\AW6FAM2DSALW.jpg
+  - necklace\AXH5UHWSFS9C.jpg
+  - necklace\AXUC5EM9GPLC.jpg
+  - necklace\AZ0ZDMURLKNG.jpg
+  - necklace\AZKH9HO1G920.jpg
+  - necklace\AZNSA0BJJT6F.jpg
+  - necklace\B5ZWSDA1QEIT.jpg
+  - necklace\BGHZRXUR7I0Y.jpg
+  - necklace\BIRNMHHB9ZME.jpg
+  - necklace\BMVNHPAR3149.jpg
+  - necklace\BQN5C9F05LDD.jpg
+  - necklace\BUFUVET2NH5Z.jpg
+  - necklace\BVFKRSER2VAA.jpg
+  - necklace\BVZ4WR9YLOQG.jpg
+  - necklace\BW8Q7QW5DDQL.jpg
+  - necklace\BX20Q6KFWDIS.jpg
+  - necklace\C5N0T9I6NITA.jpg
+  - necklace\CBVYWU7YHJNZ.jpg
+  - necklace\CE425DDVUDL2.jpg
+  - necklace\CH01IVURU3DA.jpg
+  - necklace\CJIKJOWVRF9C.jpg
+  - necklace\CKDM3D1592G6.jpg
+  - necklace\CRKMYDSH5DW2.jpg
+  - necklace\CRKXFC9ZIY0A.jpg
+  - necklace\CRTCZKBMCI7O.jpg
+  - necklace\CX1F6HKMXKEG.jpg
+  - necklace\CX3QY1TA87CX.jpg
+  - necklace\CXTODL1TOFZC.jpg
+  - necklace\D5HHT3NS109E.jpg
+  - necklace\DA0MGVUB0YDL.jpg
+  - necklace\DBY9HOGIY1CO.jpg
+  - necklace\DPIYJYHLITA4.jpg
+  - necklace\DQ0SKAJRPQES.jpg
+  - necklace\DRB65CCNAYW1.jpg
+  - necklace\E26A99UKITGB.jpg
+  - necklace\E5D7L83ET6ZT.jpg
+  - necklace\E8EO76I2MNZZ.jpg
+  - necklace\EHI5USWKURSO.jpg
+  - necklace\EJ4JHYN2FKR0.jpg
+  - necklace\EOHORSKJV95P.jpg
+  - necklace\EVD85R06KNH3.jpg
+  - necklace\F4NQTFUYD5Z0.jpg
+  - necklace\F77MYU2DVTRQ.jpg
+  - necklace\F7RET5AIN7CD.jpg
+  - necklace\FAIEPEPPFIRY.jpg
+  - necklace\FAYJHCPIK0LJ.jpg
+  - necklace\FGQKW2SE7UDH.jpg
+  - necklace\FLD16WTPQ3XO.jpg
+  - necklace\FO3PW2MH5FBX.jpg
+  - necklace\FOBAR62CMJQQ.jpg
+  - necklace\FR91BQB4Y8UI.jpg
+  - necklace\FWVEYQL9NH93.jpg
+  - necklace\FXD6FJ75K5P2.jpg
+  - necklace\G0FMIV1Z279P.jpg
+  - necklace\G4RO0MUBR7X6.jpg
+  - necklace\GDNL6JO3R7K8.jpg
+  - necklace\GE0X3YHCY4H5.jpg
+  - necklace\GI93X1XFXU5Y.jpg
+  - necklace\GQ4T48K26JJV.jpg
+  - necklace\GSODSTYHMD1P.jpg
+  - necklace\GVV75ZZ1DKSA.jpg
+  - necklace\H1J41MULTOO1.jpg
+  - necklace\HDC351EIKY6P.jpg
+  - necklace\HEDQUMY3SX2A.jpg
+  - necklace\HMTR0QW1DF44.jpg
+  - necklace\HVL9L4SJTOC1.jpg
+  - necklace\HZUVI3NCLZMV.jpg
+  - necklace\I0A0CW5LB72W.jpg
+  - necklace\I9FZK5OSA5ND.jpg
+  - necklace\IF4HH0F5THJ6.jpg
+  - necklace\IK10JUYTIF5M.jpg
+  - necklace\IO3105TSVTDK.jpg
+  - necklace\IQ0YMOMC5C0Z.jpg
+  - necklace\IQQOJCWWOSHN.jpg
+  - necklace\ISWADOMFDOUD.jpg
+  - necklace\IVUQJZU2AUDE.jpg
+  - necklace\IWRYJ79YYEUH.jpg
+  - necklace\IXFY7N2DIYHP.jpg
+  - necklace\J2J2BLMUOC6V.jpg
+  - necklace\J4PQC3WA3R5W.jpg
+  - necklace\JA479G46R5PB.jpg
+  - necklace\JA7J7A85A0UV.jpg
+  - necklace\JAUTP5JDN0WY.jpg
+  - necklace\JCMI925WD0Z9.jpg
+  - necklace\JIJ61UCY6EZG.jpg
+  - necklace\JVPBG6HPJV8Y.jpg
+  - necklace\JWJBOXTDCQU2.jpg
+  - necklace\K0OWO5HYKZHA.jpg
+  - necklace\K8P4JOPQSXGU.jpg
+  - necklace\KBJZSSCOEZEY.jpg
+  - necklace\KGIA7QADG5RI.jpg
+  - necklace\KKIKDPJMS9GK.jpg
+  - necklace\KKSSO1HJDHVZ.jpg
+  - necklace\KPGETF9YBAF2.jpg
+  - necklace\KQY586IRO0OK.jpg
+  - necklace\KT98NIMGDCYC.jpg
+  - necklace\KTO3ES4M9O86.jpg
+  - necklace\KW8W0C0GG405.jpg
+  - necklace\KY1V3ODQ4HOR.jpg
+  - necklace\KYJBN5L9S3GR.jpg
+  - necklace\KYMOVJB3VZAM.jpg
+  - necklace\KZUJLZ4N9XUW.jpg
+  - necklace\L2OL0L0ILCM4.jpg
+  - necklace\L7QNYUL3Q9MS.jpg
+  - necklace\LC6KQBP597II.jpg
+  - necklace\LE9X7NMDTA4L.jpg
+  - necklace\LKS7B6E1W2AE.jpg
+  - necklace\LL6VZ4QIIVGF.jpg
+  - necklace\LQTXI11R923Z.jpg
+  - necklace\LRQ3NXSKVUSL.jpg
+  - necklace\LU1G3VJWC6Q8.jpg
+  - necklace\LU2FO1HB5X75.jpg
+  - necklace\LUUL6HXC64KD.jpg
+  - necklace\LZTFB5F7THBK.jpg
+  - necklace\M0VQ0PH33XPY.jpg
+  - necklace\M6BSNGAV31Z8.jpg
+  - necklace\MJ2SVLOFGEPF.jpg
+  - necklace\MJGOX3ZYP9XE.jpg
+  - necklace\MKC67M50OHMD.jpg
+  - necklace\MKXRARJK4MGV.jpg
+  - necklace\MM2I47DEXGLX.jpg
+  - necklace\MMB8NOHFDX6S.jpg
+  - necklace\MNY275L0NTKC.jpg
+  - necklace\MOKTGL7R5MXB.jpg
+  - necklace\MR06HMY05J4O.jpg
+  - necklace\MUOYEUIMFDB4.jpg
+  - necklace\MXXBFEW9OH78.jpg
+  - necklace\MYEBPOLV1DGQ.jpg
+  - necklace\N4XHJFZH1XAG.jpg
+  - necklace\N4Z4BA3DJ7ZB.jpg
+  - necklace\NBOHXF0075WB.jpg
+  - necklace\ND9BSRJZ1G49.jpg
+  - necklace\NE9P5JAEYZEF.jpg
+  - necklace\NEITTOSLE2WD.jpg
+  - necklace\NJRV9UC1PSZ4.jpg
+  - necklace\NLFC8BC3RLCN.jpg
+  - necklace\NS1NO6GQMC4D.jpg
+  - necklace\NXVLEJHJTHL7.jpg
+  - necklace\O3J8XBTA103Z.jpg
+  - necklace\O57CR40SZWOK.jpg
+  - necklace\O5HR048P25Y9.jpg
+  - necklace\O5TUG2IPZGR9.jpg
+  - necklace\O6EQDXIDSLCE.jpg
+  - necklace\O8K8COGC9SJU.jpg
+  - necklace\O9MMXONRGQLQ.jpg
+  - necklace\OGHQ2SWTSORV.jpg
+  - necklace\OGRQWDXHYO69.jpg
+  - necklace\OLSP73XANWEO.jpg
+  - necklace\OLWX9O2X6R1R.jpg
+  - necklace\OMSZI1IEY4Z6.jpg
+  - necklace\ORUP2RKJJASX.jpg
+  - necklace\OZ9N1MQROWQ7.jpg
+  - necklace\P30NW3CWVI3C.jpg
+  - necklace\P5QKNSHOOULI.jpg
+  - necklace\P7ICO16B3BWI.jpg
+  - necklace\P8SK5IXVVDI2.jpg
+  - necklace\P8Y5N4GSQE6K.jpg
+  - necklace\P9FJTOV9AK42.jpg
+  - necklace\PDOKVKB2KM6F.jpg
+  - necklace\PFCAOQEOYB3C.jpg
+  - necklace\PFSPT94W47NI.jpg
+  - necklace\PHGU07UM1P5A.jpg
+  - necklace\PLXCQ8E0LII2.jpg
+  - necklace\PO310D7UGJGZ.jpg
+  - necklace\PPQ5I9VK0U9D.jpg
+  - necklace\PUMJQ4WLYO88.jpg
+  - necklace\Q26H2FUCW66V.jpg
+  - necklace\Q5IKDAR0BUID.jpg
+  - necklace\QBN3RCDOG4IG.jpg
+  - necklace\QCELPE82D03B.jpg
+  - necklace\QCG5WKCCSGNU.jpg
+  - necklace\QDH1BR3KMH7L.jpg
+  - necklace\QF0L4B6KK3B1.jpg
+  - necklace\QFWYBA9I5GMR.jpg
+  - necklace\QIHJQLTM80RH.jpg
+  - necklace\QRBTY1BB7CX9.jpg
+  - necklace\QSDJVH8CT0FG.jpg
+  - necklace\QTX5H4385B66.jpg
+  - necklace\QV48NB3121YH.jpg
+  - necklace\QVDFZT49SWET.jpg
+  - necklace\QVZLZUN1ES1Q.jpg
+  - necklace\R13O5HME2DJE.jpg
+  - necklace\R5W7BOZU6HTG.jpg
+  - necklace\RB2QX5KO1LB9.jpg
+  - necklace\RIV49BBQLB6S.jpg
+  - necklace\RPY1OTTYS2C4.jpg
+  - necklace\RVH0IW1D2YFN.jpg
+  - necklace\RW2IIRUF9509.jpg
+  - necklace\RXALK577J7GI.jpg
+  - necklace\RYIRPDF50MDA.jpg
+  - necklace\S3QHBK1ZI0GV.jpg
+  - necklace\S7OAV82KKNRS.jpg
+  - necklace\SCLOGMX7C472.jpg
+  - necklace\SEW2IWG0APPV.jpg
+  - necklace\SP428Q03QEEJ.jpg
+  - necklace\SPXT5PV6EWY0.jpg
+  - necklace\SQOM0RXLJWDK.jpg
+  - necklace\SXGL70XZVNRW.jpg
+  - necklace\SZR8HYM6SWU3.jpg
+  - necklace\T2YFM7GKAJC4.jpg
+  - necklace\T30S1F6R52LO.jpg
+  - necklace\T3P1HFG2E6QD.jpg
+  - necklace\T4GBMV83GS5Q.jpg
+  - necklace\T8Q5A1JSV7Z9.jpg
+  - necklace\TAUVMRCC665Y.jpg
+  - necklace\TECP1EZUZ7CB.jpg
+  - necklace\TQ2TBEQAJTC9.jpg
+  - necklace\TT7TRUEO0786.jpg
+  - necklace\TZ7BA21JWCJC.jpg
+  - necklace\U2939YLWKDUT.jpg
+  - necklace\U6MCEB7VSKHD.jpg
+  - necklace\U8ZYRG4UXJ3Y.jpg
+  - necklace\UCILX9WOTA3I.jpg
+  - necklace\UK4BLN61QNTI.jpg
+  - necklace\ULW8274OR4WX.jpg
+  - necklace\UMULEZZ4EWTS.jpg
+  - necklace\UOLVOKCL2QEY.jpg
+  - necklace\UQLIU658Z1KF.jpg
+  - necklace\UTB3XBRB5S86.jpg
+  - necklace\V6E4US4ZN7XV.jpg
+  - necklace\VC41N7D3STNJ.jpg
+  - necklace\VD0VBMVKAZQE.jpg
+  - necklace\VF7VDY1LZA38.jpg
+  - necklace\VKE72851P4K1.jpg
+  - necklace\VNC52R9H84YR.jpg
+  - necklace\VPUJPA2LK1YM.jpg
+  - necklace\VYEMEBQ1KHGK.jpg
+  - necklace\W09VOYD074BA.jpg
+  - necklace\WCJZ72MIGBRC.jpg
+  - necklace\WQHY95AZQWBY.jpg
+  - necklace\WQQEVYGWYBM3.jpg
+  - necklace\WQXGJYRIT1P7.jpg
+  - necklace\X0VV6NOA4D3Q.jpg
+  - necklace\X41QS437PVQO.jpg
+  - necklace\X4RYNC0CX87R.jpg
+  - necklace\X6C9Y9W1H78N.jpg
+  - necklace\X7F3JLVFWNIV.jpg
+  - necklace\X8BPM954AKD8.jpg
+  - necklace\XIZ7D9O6MPCP.jpg
+  - necklace\XY7899W6XHQ9.jpg
+  - necklace\Y36OTY0PBHHN.jpg
+  - necklace\Y36UCJNDYHG5.jpg
+  - necklace\Y5CSO4G4TXEZ.jpg
+  - necklace\Y5WWTNCY6NA4.jpg
+  - necklace\YBIZ51S7IFRJ.jpg
+  - necklace\YHEV5MZR80V4.jpg
+  - necklace\YISHVTEXJ9VJ.jpg
+  - necklace\YPAVK8L1KVCL.jpg
+  - necklace\YRJKFOY9A783.jpg
+  - necklace\YTS994SK6L5Y.jpg
+  - necklace\YXI0ZR58CO64.jpg
+  - necklace\Z1G9X9V9SJ7A.jpg
+  - necklace\Z2CDKE7UUX3C.jpg
+  - necklace\Z47RGC9KUJF1.jpg
+  - necklace\Z4VV8P04Y6RK.jpg
+  - necklace\ZHTXJO5Q3USO.jpg
+  - necklace\ZOCJKF5K2F0U.jpg
+  - necklace\ZTERS81NKS82.jpg
+  - necklace\ZX8VA6U905XU.jpg
+  - necklace\ZZZNRRZT71O6.jpg
+  - necklace\necklace_10.jpg
+  - necklace\necklace_101.jpg
+  - necklace\necklace_102.jpg
+  - necklace\necklace_104.jpg
+  - necklace\necklace_105.jpg
+  - necklace\necklace_107.jpg
+  - necklace\necklace_108.jpg
+  - necklace\necklace_109.jpg
+  - necklace\necklace_110.jpg
+  - necklace\necklace_114.jpg
+  - necklace\necklace_115.jpg
+  - necklace\necklace_116.jpg
+  - necklace\necklace_117.jpg
+  - necklace\necklace_118.jpg
+  - necklace\necklace_121.jpg
+  - necklace\necklace_122.jpg
+  - necklace\necklace_123.jpg
+  - necklace\necklace_125.jpg
+  - necklace\necklace_126.jpg
+  - necklace\necklace_128.jpg
+  - necklace\necklace_130.jpg
+  - necklace\necklace_131.jpg
+  - necklace\necklace_133.jpg
+  - necklace\necklace_134.jpg
+  - necklace\necklace_135.jpg
+  - necklace\necklace_136.jpg
+  - necklace\necklace_137.jpg
+  - necklace\necklace_139.jpg
+  - necklace\necklace_14.jpg
+  - necklace\necklace_141.jpg
+  - necklace\necklace_144.jpg
+  - necklace\necklace_145.jpg
+  - necklace\necklace_146.jpg
+  - necklace\necklace_147.jpg
+  - necklace\necklace_15.jpg
+  - necklace\necklace_153.jpg
+  - necklace\necklace_155.jpg
+  - necklace\necklace_156.jpg
+  - necklace\necklace_158.jpg
+  - necklace\necklace_16.jpg
+  - necklace\necklace_160.jpg
+  - necklace\necklace_161.jpg
+  - necklace\necklace_164.jpg
+  - necklace\necklace_170.jpg
+  - necklace\necklace_171.jpg
+  - necklace\necklace_172.jpg
+  - necklace\necklace_176.jpg
+  - necklace\necklace_177.jpg
+  - necklace\necklace_178.jpg
+  - necklace\necklace_179.jpg
+  - necklace\necklace_18.jpg
+  - necklace\necklace_181.jpg
+  - necklace\necklace_183.jpg
+  - necklace\necklace_184.jpg
+  - necklace\necklace_185.jpg
+  - necklace\necklace_186.jpg
+  - necklace\necklace_187.jpg
+  - necklace\necklace_188.jpg
+  - necklace\necklace_189.jpg
+  - necklace\necklace_19.jpg
+  - necklace\necklace_190.jpg
+  - necklace\necklace_192.jpg
+  - necklace\necklace_193.jpg
+  - necklace\necklace_194.jpg
+  - necklace\necklace_195.jpg
+  - necklace\necklace_196.jpg
+  - necklace\necklace_197.jpg
+  - necklace\necklace_199.jpg
+  - necklace\necklace_20.jpg
+  - necklace\necklace_200.jpg
+  - necklace\necklace_202.jpg
+  - necklace\necklace_203.jpg
+  - necklace\necklace_204.jpg
+  - necklace\necklace_205.jpg
+  - necklace\necklace_206.jpg
+  - necklace\necklace_207.jpg
+  - necklace\necklace_21.jpg
+  - necklace\necklace_210.jpg
+  - necklace\necklace_212.jpg
+  - necklace\necklace_213.jpg
+  - necklace\necklace_214.jpg
+  - necklace\necklace_215.jpg
+  - necklace\necklace_216.jpg
+  - necklace\necklace_217.jpg
+  - necklace\necklace_218.jpg
+  - necklace\necklace_219.jpg
+  - necklace\necklace_22.jpg
+  - necklace\necklace_223.jpg
+  - necklace\necklace_224.jpg
+  - necklace\necklace_225.jpg
+  - necklace\necklace_226.jpg
+  - necklace\necklace_227.jpg
+  - necklace\necklace_228.jpg
+  - necklace\necklace_229.jpg
+  - necklace\necklace_23.jpg
+  - necklace\necklace_230.jpg
+  - necklace\necklace_235.jpg
+  - necklace\necklace_236.jpg
+  - necklace\necklace_237.jpg
+  - necklace\necklace_238.jpg
+  - necklace\necklace_239.jpg
+  - necklace\necklace_24.jpg
+  - necklace\necklace_241.jpg
+  - necklace\necklace_242.jpg
+  - necklace\necklace_244.jpg
+  - necklace\necklace_245.jpg
+  - necklace\necklace_246.jpg
+  - necklace\necklace_247.jpg
+  - necklace\necklace_25.jpg
+  - necklace\necklace_250.jpg
+  - necklace\necklace_254.jpg
+  - necklace\necklace_26.jpg
+  - necklace\necklace_271.jpg
+  - necklace\necklace_272.jpg
+  - necklace\necklace_273.jpg
+  - necklace\necklace_274.jpg
+  - necklace\necklace_275.jpg
+  - necklace\necklace_276.jpg
+  - necklace\necklace_277.jpg
+  - necklace\necklace_278.jpg
+  - necklace\necklace_279.jpg
+  - necklace\necklace_280.jpg
+  - necklace\necklace_281.jpg
+  - necklace\necklace_282.jpg
+  - necklace\necklace_283.jpg
+  - necklace\necklace_284.jpg
+  - necklace\necklace_285.jpg
+  - necklace\necklace_286.jpg
+  - necklace\necklace_288.jpg
+  - necklace\necklace_291.jpg
+  - necklace\necklace_292.jpg
+  - necklace\necklace_293.jpg
+  - necklace\necklace_294.jpg
+  - necklace\necklace_296.jpg
+  - necklace\necklace_297.jpg
+  - necklace\necklace_298.jpg
+  - necklace\necklace_299.jpg
+  - necklace\necklace_3.jpg
+  - necklace\necklace_302.jpg
+  - necklace\necklace_303.jpg
+  - necklace\necklace_304.jpg
+  - necklace\necklace_305.jpg
+  - necklace\necklace_306.jpg
+  - necklace\necklace_307.jpg
+  - necklace\necklace_308.jpg
+  - necklace\necklace_310.jpg
+  - necklace\necklace_311.jpg
+  - necklace\necklace_312.jpg
+  - necklace\necklace_313.jpg
+  - necklace\necklace_314.jpg
+  - necklace\necklace_315.jpg
+  - necklace\necklace_316.jpg
+  - necklace\necklace_317.jpg
+  - necklace\necklace_318.jpg
+  - necklace\necklace_319.jpg
+  - necklace\necklace_320.jpg
+  - necklace\necklace_33.jpg
+  - necklace\necklace_34.jpg
+  - necklace\necklace_36.jpg
+  - necklace\necklace_37.jpg
+  - necklace\necklace_38.jpg
+  - necklace\necklace_39.jpg
+  - necklace\necklace_4.jpg
+  - necklace\necklace_40.jpg
+  - necklace\necklace_41.jpg
+  - necklace\necklace_42.jpg
+  - necklace\necklace_43.jpg
+  - necklace\necklace_44.jpg
+  - necklace\necklace_45.jpg
+  - necklace\necklace_46.jpg
+  - necklace\necklace_47.jpg
+  - necklace\necklace_48.jpg
+  - necklace\necklace_53.jpg
+  - necklace\necklace_55.jpg
+  - necklace\necklace_56.jpg
+  - necklace\necklace_57.jpg
+  - necklace\necklace_58.jpg
+  - necklace\necklace_59.jpg
+  - necklace\necklace_6.jpg
+  - necklace\necklace_60.jpg
+  - necklace\necklace_61.jpg
+  - necklace\necklace_62.jpg
+  - necklace\necklace_63.jpg
+  - necklace\necklace_64.jpg
+  - necklace\necklace_65.jpg
+  - necklace\necklace_66.jpg
+  - necklace\necklace_67.jpg
+  - necklace\necklace_68.jpg
+  - necklace\necklace_7.jpg
+  - necklace\necklace_71.jpg
+  - necklace\necklace_72.jpg
+  - necklace\necklace_73.jpg
+  - necklace\necklace_75.jpg
+  - necklace\necklace_76.jpg
+  - necklace\necklace_77.jpg
+  - necklace\necklace_82.jpg
+  - necklace\necklace_83.jpg
+  - necklace\necklace_84.jpg
+  - necklace\necklace_87.jpg
+  - necklace\necklace_88.jpg
+  - necklace\necklace_89.jpg
+  - necklace\necklace_9.jpg
+  - necklace\necklace_91.jpg
+  - necklace\necklace_93.jpg
+  - necklace\necklace_95.jpg
+  - necklace\necklace_96.jpg
+  - necklace\necklace_97.jpg
+  - necklace\necklace_98.jpg
+  - necklace\necklace_99.jpg
+  - ring_best\IMG_6004.JPG
+  - ring_best\IMG_6007.JPG
+  - ring_best\IMG_6008.JPG
+  - ring_best\IMG_6012.JPG
+  - ring_best\IMG_6013.JPG
+  - ring_best\IMG_6014.JPG
+  - ring_best\IMG_6015.JPG
+  - ring_best\Screenshot_20181116-203329_1542449759369.png
+  - ring_best\Screenshot_20181116-203906_1542449654649.png
+  - ring_best\Screenshot_20181116-204038_1542449567926.png
+  - ring_best\Screenshot_20181116-204201_1542449544117.png
+  - ring_best\Screenshot_20181116-204220_1542449522544.png
+  - ring_best\Screenshot_20181116-204258_1542449483238.png
+  - ring_best\Screenshot_20181116-205200_1542447247163.png
+  - ring_best\ring_001.jpg
+  - ring_best\ring_002.jpg
+  - ring_best\ring_004.jpg
+  - ring_best\ring_005.jpg
+  - ring_best\ring_008.jpg
+  - ring_best\ring_013.jpg
+  - ring_best\ring_014.jpg
+  - ring_best\ring_015.jpg
+  - ring_best\ring_018.jpg
+  - ring_best\ring_023.jpg
+  - ring_best\ring_024.jpg
+  - ring_best\ring_030.jpg
+  - ring_best\ring_031.jpg
+  - ring_best\ring_036.jpg
+  - ring_best\ring_044.jpg
+  - ring_best\ring_046.jpg
+  - ring_best\ring_050.jpg
+  - ring_best\ring_051.jpg
+  - ring_best\ring_052.jpg
+  - ring_best\ring_053.jpg
+  - ring_best\ring_057.jpg
+  - ring_best\ring_058.jpg
+  - ring_best\ring_059.jpg
+  - ring_best\ring_060.jpg
+  - ring_best\ring_061.jpg
+  - ring_best\ring_063.jpg
+  - ring_best\ring_064.png
+  - ring_best\ring_065.jpg
+  - ring_best\ring_066.jpg
+  - ring_best\ring_067.jpg
+  - ring_best\ring_068.jpg
+  - ring_best\ring_069.jpg
+  - ring_best\ring_070.jpg
+  - ring_best\ring_071.jpg
+  - ring_best\ring_072.jpg
+  - ring_best\ring_073.jpg
+  - ring_best\ring_074.jpg
+  - ring_best\ring_075.jpg
+  - ring_best\ring_076.jpg
+  - ring_best\ring_078.jpg
+  - ring_best\ring_079.jpg
+  - ring_best\ring_080.jpg
+  - ring_best\ring_081.jpg
+  - ring_best\ring_082.jpg
+  - ring_best\ring_083.jpg
+  - ring_best\ring_084.jpg
+  - ring_best\ring_085.jpg
+  - ring_best\ring_086.jpg
+  - ring_best\ring_087.jpg
+  - ring_best\ring_088.jpg
+  - ring_best\ring_089.jpg
+  - ring_best\ring_090.jpg
+  - ring_best\ring_091.jpg
+  - ring_best\ring_092.jpg
+  - ring_best\ring_093.jpg
+  - ring_best\ring_094.jpg
+  - ring_best\ring_096.jpg
+  - ring_best\ring_097.jpg
+  - ring_best\ring_098.jpg
+  - ring_best\ring_099.jpg
+  - ring_best\ring_100.jpg
+  - ring_best\ring_101.jpg
+  - ring_best\ring_102.jpg
+  - ring_best\ring_103.jpg
+  - ring_best\ring_104.jpg
+  - ring_best\ring_105.jpg
+  - ring_best\ring_106.jpg
+  - ring_best\ring_107.jpg
+  - ring_best\ring_108.jpg
+  - ring_best\ring_109.jpg
+  - ring_best\ring_110.jpg
+  - ring_best\ring_111.jpg
+  - ring_best\ring_112.jpg
+  - ring_best\ring_113.jpg
+  - ring_best\ring_114.jpg
+  - ring_best\ring_115.jpg
+  - ring_best\ring_116.jpg
+  - ring_best\ring_117.jpg
+  - ring_best\ring_118.jpg
+  - ring_best\ring_119.jpg
+  - ring_best\ring_120.jpg
+  - ring_best\ring_121.jpg
+  - ring_best\ring_122.jpg
+  - ring_best\ring_123.jpg
+  - ring_best\ring_125.jpg
+  - ring_best\ring_126.jpg
+  - ring_best\ring_128.jpg
+  - ring_best\ring_129.jpg
+  - ring_best\ring_130.jpg
+  - ring_best\ring_131.jpg
+  - ring_best\ring_132.jpg
+  - ring_best\ring_133.jpg
+  - ring_best\ring_134.jpg
+  - ring_best\ring_135.jpg
+  - ring_best\ring_136.jpg
+  - ring_best\ring_137.jpg
+  - ring_best\ring_138.jpg
+  - ring_best\ring_139.jpg
+  - ring_best\ring_140.jpg
+  - ring_best\ring_141.jpg
+  - ring_best\ring_142.jpg
+  - ring_best\ring_143.jpg
+  - ring_best\ring_144.jpg
+  - ring_best\ring_145.jpg
+  - ring_best\ring_146.jpg
+  - ring_best\ring_147.jpg
+  - ring_best\ring_148.jpg
+  - ring_best\ring_149.jpg
+  - ring_best\ring_150.jpg
+  - ring_best\ring_151.jpg
+  - ring_best\ring_152.jpg
+  - ring_best\ring_153.jpg
+  - ring_best\ring_154.jpg
+  - ring_best\ring_155.jpg
+  - ring_best\ring_156.jpg
+  - ring_best\ring_157.jpg
+  - ring_best\ring_158.jpg
+  - ring_best\ring_159.jpg
+  - ring_best\ring_160.jpg
+  - ring_best\ring_161.jpg
+  - ring_best\ring_162.jpg
+  - ring_best\ring_163.jpg
+  - ring_best\ring_164.jpg
+  - ring_best\ring_165.jpg
+  - ring_best\ring_166.jpg
+  - ring_best\ring_167.jpg
+  - ring_best\ring_168.jpg
+  - ring_best\ring_169.jpg
+  - ring_best\ring_170.jpg
+  - ring_best\ring_171.jpg
+  - ring_best\ring_172.jpg
+  - ring_best\ring_173.jpg
+  - ring_best\ring_174.jpg
+  - ring_best\ring_176.jpg
+  - ring_best\ring_177.jpg
+  - ring_best\ring_178.jpg
+  - ring_best\ring_179.jpg
+  - ring_best\ring_180.jpg
+  - ring_best\ring_181.jpg
+  - ring_best\ring_182.jpg
+  - ring_best\ring_183.jpg
+  - ring_best\ring_184.jpg
+  - ring_best\ring_185.jpg
+  - ring_best\ring_187.jpg
+  - ring_best\ring_188.jpg
+  - ring_best\ring_189.jpg
+  - ring_best\ring_191.jpg
+  - ring_best\ring_192.jpg
+- Group 2: 31 files; classes=earring_best, necklace; cross_class=True; distance=0–12
+  - earring_best\005_022.png
+  - earring_best\017_005.png
+  - earring_best\017_006.png
+  - earring_best\018_001.png
+  - earring_best\018_008.png
+  - earring_best\018_010.png
+  - earring_best\018_011.png
+  - earring_best\018_013.png
+  - earring_best\018_016.png
+  - earring_best\018_017.png
+  - earring_best\018_018.png
+  - earring_best\018_022.png
+  - earring_best\019_008.png
+  - earring_best\021_016.png
+  - earring_best\021_022.png
+  - earring_best\021_023.png
+  - earring_best\021_024.png
+  - earring_best\024_008.png
+  - earring_best\024_015.png
+  - earring_best\024_016.png
+  - earring_best\025_007.png
+  - earring_best\025_008.png
+  - earring_best\025_009.png
+  - earring_best\025_014.png
+  - earring_best\025_015.png
+  - earring_best\025_021.png
+  - earring_best\025_028.png
+  - earring_best\028_017.png
+  - earring_best\039_003.png
+  - earring_best\Graff-White-Diamond-High-Jewellery-29_77ct-baguette_cut_double_loop_earrings-GE26997.png
+  - necklace\8EE52G0HH5PA.jpg
+- Group 3: 10 files; classes=earring_best; cross_class=False; distance=10–12
+  - earring_best\005_002.png
+  - earring_best\005_006.png
+  - earring_best\005_018.png
+  - earring_best\007_002.png
+  - earring_best\007_006.png
+  - earring_best\008_009.png
+  - earring_best\008_028.png
+  - earring_best\008_030.png
+  - earring_best\009_002.png
+  - earring_best\026_014.png
+- Group 4: 10 files; classes=earring_best, necklace; cross_class=True; distance=8–12
+  - earring_best\007_004.png
+  - earring_best\007_012.png
+  - earring_best\008_008.png
+  - earring_best\008_022.png
+  - earring_best\009_001.png
+  - earring_best\009_003.png
+  - earring_best\019_016.png
+  - earring_best\026_027.png
+  - necklace\JA4Z0HUGPV0H.jpg
+  - necklace\U1XFYCVH6QA6.jpg
+- Group 5: 9 files; classes=necklace; cross_class=False; distance=2–12
+  - necklace\necklace_209.jpg
+  - necklace\necklace_221.jpg
+  - necklace\necklace_231.jpg
+  - necklace\necklace_232.jpg
+  - necklace\necklace_240.jpg
+  - necklace\necklace_243.jpg
+  - necklace\necklace_249.jpg
+  - necklace\necklace_252.jpg
+  - necklace\necklace_253.jpg
+- Group 6: 8 files; classes=necklace; cross_class=False; distance=6–12
+  - necklace\necklace_256.jpg
+  - necklace\necklace_257.jpg
+  - necklace\necklace_258.jpg
+  - necklace\necklace_259.jpg
+  - necklace\necklace_260.jpg
+  - necklace\necklace_261.jpg
+  - necklace\necklace_262.jpg
+  - necklace\necklace_263.jpg
+- Group 7: 7 files; classes=earring_best; cross_class=False; distance=10–12
+  - earring_best\007_008.png
+  - earring_best\008_031.png
+  - earring_best\009_007.png
+  - earring_best\009_009.png
+  - earring_best\010_004.png
+  - earring_best\022_009.png
+  - earring_best\027_003.png
+- Group 8: 6 files; classes=necklace; cross_class=False; distance=4–12
+  - necklace\7720LK0CISQK.jpg
+  - necklace\C3VHRHU6N0VQ.jpg
+  - necklace\L1O528YKKU1W.jpg
+  - necklace\necklace_30.jpg
+  - necklace\necklace_31.jpg
+  - necklace\necklace_50.jpg
+- Group 9: 5 files; classes=bracelet, earring_best, necklace; cross_class=True; distance=8–12
+  - bracelet\077K4K2JBEWE.jpg
+  - earring_best\007_017.png
+  - earring_best\010_006.png
+  - earring_best\023_011.png
+  - necklace\WDX0J7NU1N5E.jpg
+- Group 10: 5 files; classes=earring_best; cross_class=False; distance=10–12
+  - earring_best\008_006.png
+  - earring_best\020_020.png
+  - earring_best\020_032.png
+  - earring_best\020_036.png
+  - earring_best\028_001.png
+- Group 11: 5 files; classes=necklace; cross_class=False; distance=8–12
+  - necklace\63YMX5IZGI8Y.jpg
+  - necklace\7J37UE2RM37Z.jpg
+  - necklace\LSGWSBK34FJU.jpg
+  - necklace\O8ME77B6V52B.jpg
+  - necklace\VTPWOACDT8CU.jpg
+- Group 12: 4 files; classes=bracelet, earring_best; cross_class=True; distance=10–12
+  - bracelet\R6RVUU8DOD54.jpg
+  - bracelet\bracelet_092.jpg
+  - bracelet\bracelet_094.jpg
+  - earring_best\031_035.png
+- Group 13: 4 files; classes=earring_best, necklace; cross_class=True; distance=12–12
+  - earring_best\002_044.png
+  - earring_best\015_009.png
+  - earring_best\earring_5.jpg
+  - necklace\PNOS2KYJTOAX.jpg
+- Group 14: 4 files; classes=earring_best; cross_class=False; distance=10–12
+  - earring_best\009_005.png
+  - earring_best\026_025.png
+  - earring_best\028_011.png
+  - earring_best\032_001.png
+- Group 15: 4 files; classes=earring_best; cross_class=False; distance=8–12
+  - earring_best\017_002.png
+  - earring_best\017_003.png
+  - earring_best\017_004.png
+  - earring_best\018_002.png
+- Group 16: 4 files; classes=necklace; cross_class=False; distance=6–12
+  - necklace\necklace_264.jpg
+  - necklace\necklace_266.jpg
+  - necklace\necklace_267.jpg
+  - necklace\necklace_268.jpg
+- Group 17: 4 files; classes=ring_best; cross_class=False; distance=6–12
+  - ring_best\Screenshot_20181116-204341_1542449441847.png
+  - ring_best\ring_040.jpg
+  - ring_best\ring_041.jpg
+  - ring_best\ring_042.jpg
+- Group 18: 3 files; classes=bracelet; cross_class=False; distance=2–12
+  - bracelet\1CIZFWA6KG94.jpg
+  - bracelet\HFC8YYV9CRHF.jpg
+  - bracelet\YIJX2H4AE3YL.jpg
+- Group 19: 3 files; classes=bracelet, necklace; cross_class=True; distance=12–12
+  - bracelet\1RLNDZXWU9XM.jpg
+  - necklace\ENZ0YSXY3Y17.jpg
+  - necklace\WZY98XJF65UB.jpg
+- Group 20: 3 files; classes=bracelet; cross_class=False; distance=8–10
+  - bracelet\1SY23F78RJG6.jpg
+  - bracelet\8AC6BF27UBH2.jpg
+  - bracelet\RWZEEZS3K2T6.jpg
+- Group 21: 3 files; classes=bracelet, necklace; cross_class=True; distance=12–12
+  - bracelet\4L8DX4XXGQDC.jpg
+  - necklace\necklace_112.jpg
+  - necklace\necklace_113.jpg
+- Group 22: 3 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\4LC5MYV180U7.jpg
+  - bracelet\UXPNB44QWCLS.jpg
+  - bracelet\bracelet_275.jpg
+- Group 23: 3 files; classes=bracelet, earring_best, ring_best; cross_class=True; distance=12–12
+  - bracelet\6784F220AE5V.jpg
+  - earring_best\020_025.png
+  - ring_best\Screenshot_20181116-203347_1542449724585.png
+- Group 24: 3 files; classes=bracelet, ring_best; cross_class=True; distance=12–12
+  - bracelet\6HKBF8SW8E9C.jpg
+  - bracelet\Functional_Cooper-240x300.jpg
+  - ring_best\Screenshot_20181116-204417_1542449390654.png
+- Group 25: 3 files; classes=bracelet; cross_class=False; distance=10–12
+  - bracelet\AJAVA6GTR0JB.jpg
+  - bracelet\H6D6CMVEEZPD.jpg
+  - bracelet\H7I8N2HC6P90.jpg
+- Group 26: 3 files; classes=bracelet; cross_class=False; distance=8–12
+  - bracelet\B84SJS8CCKKQ.jpg
+  - bracelet\bracelet_238.jpg
+  - bracelet\bracelet_247.jpg
+- Group 27: 3 files; classes=bracelet, necklace; cross_class=True; distance=12–12
+  - bracelet\ND55SBY3A99L.jpg
+  - necklace\necklace_100.jpg
+  - necklace\necklace_309.jpg
+- Group 28: 3 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\005_019.png
+  - earring_best\007_014.png
+  - earring_best\045_003.png
+- Group 29: 3 files; classes=earring_best; cross_class=False; distance=8–12
+  - earring_best\008_013.png
+  - earring_best\028_008.png
+  - earring_best\032_002.png
+- Group 30: 3 files; classes=earring_best; cross_class=False; distance=8–12
+  - earring_best\018_009.png
+  - earring_best\020_002.png
+  - earring_best\043_003.png
+- Group 31: 3 files; classes=earring_best; cross_class=False; distance=6–12
+  - earring_best\019_060.png
+  - earring_best\020_034.png
+  - earring_best\031_039.png
+- Group 32: 3 files; classes=earring_best, necklace; cross_class=True; distance=10–12
+  - earring_best\025_019.png
+  - necklace\H4FNIREPMHJU.jpg
+  - necklace\necklace_162.jpg
+- Group 33: 3 files; classes=earring_best; cross_class=False; distance=0–10
+  - earring_best\025_020.png
+  - earring_best\039_006.png
+  - earring_best\039_007.png
+- Group 34: 3 files; classes=necklace; cross_class=False; distance=8–12
+  - necklace\0Y5F95H1UFPE.jpg
+  - necklace\7L86P2I3XEUA.jpg
+  - necklace\M02PFQ3907WM.jpg
+- Group 35: 3 files; classes=necklace; cross_class=False; distance=12–12
+  - necklace\598K8L5AS5XD.jpg
+  - necklace\75QEO84LZGPR.jpg
+  - necklace\necklace_151.jpg
+- Group 36: 3 files; classes=necklace; cross_class=False; distance=12–12
+  - necklace\8U3PKB4N2C9R.jpg
+  - necklace\FCS4X9FTVSRL.jpg
+  - necklace\necklace_182.jpg
+- Group 37: 3 files; classes=necklace; cross_class=False; distance=0–2
+  - necklace\NM6BBE8CX8YE.jpg
+  - necklace\TCQAEJWM3IE9.jpg
+  - necklace\XC80ICY9WJ8Q.jpg
+- Group 38: 3 files; classes=necklace; cross_class=False; distance=10–12
+  - necklace\SP8RTJ2SZWTM.jpg
+  - necklace\necklace_129.jpg
+  - necklace\necklace_149.jpg
+- Group 39: 3 files; classes=necklace; cross_class=False; distance=8–12
+  - necklace\necklace_287.jpg
+  - necklace\necklace_289.jpg
+  - necklace\necklace_301.jpg
+- Group 40: 2 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\$_3.jpeg
+  - bracelet\2YCJBDMHEP98.jpg
+- Group 41: 2 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\0JOVO66NH8NZ.jpg
+  - bracelet\V6XFMH88YVR0.jpg
+- Group 42: 2 files; classes=bracelet; cross_class=False; distance=8–8
+  - bracelet\1M7ISACWQ2FJ.jpg
+  - bracelet\FXJDYDVLWM87.jpg
+- Group 43: 2 files; classes=bracelet, necklace; cross_class=True; distance=12–12
+  - bracelet\1TNK1GV62F5L.jpg
+  - necklace\necklace_1.jpg
+- Group 44: 2 files; classes=bracelet, ring_best; cross_class=True; distance=12–12
+  - bracelet\365-00492_1400x.jpg
+  - ring_best\IMG_6005.JPG
+- Group 45: 2 files; classes=bracelet, necklace; cross_class=True; distance=12–12
+  - bracelet\7VNOSDVNM41U.jpg
+  - necklace\Q4WOIYK4E7OE.jpg
+- Group 46: 2 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\DYCMNMOH4VKI.jpg
+  - bracelet\LOH0055U5PPV.jpg
+- Group 47: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\IB5F0X3NDTKR.jpg
+  - bracelet\wedding-anniversary-gifts-payal-design-with-price.jpg
+- Group 48: 2 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\IGSYHOFFTJ2T.jpg
+  - bracelet\OMU70CUVX6CL.jpg
+- Group 49: 2 files; classes=bracelet, earring_best; cross_class=True; distance=12–12
+  - bracelet\IMG_5987.JPG
+  - earring_best\007_039.png
+- Group 50: 2 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\JD1CFX507BU9.jpg
+  - bracelet\XNYIGZDLLY1Q.jpg
+- Group 51: 2 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\JDLZFBSM3LSK.jpg
+  - bracelet\X812TW542T0S.jpg
+- Group 52: 2 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\K3LWWQ2KJVBU.jpg
+  - bracelet\N7DYLMEECKQI.jpg
+- Group 53: 2 files; classes=bracelet, necklace; cross_class=True; distance=12–12
+  - bracelet\LKGDXURQ6FAG.jpg
+  - necklace\OEWNHHHAEB29.jpg
+- Group 54: 2 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\MXUQOTS80A33.jpg
+  - bracelet\Y1EBV84IT4SA.jpg
+- Group 55: 2 files; classes=bracelet, earring_best; cross_class=True; distance=12–12
+  - bracelet\ORG89_1283265841_1_l.jpeg
+  - earring_best\026_003.png
+- Group 56: 2 files; classes=bracelet, earring_best; cross_class=True; distance=10–10
+  - bracelet\SL28DZBTM38B.jpg
+  - earring_best\034_015.png
+- Group 57: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\SYT1KV59VV21.jpg
+  - bracelet\T1D1E7B72PMW.jpg
+- Group 58: 2 files; classes=bracelet; cross_class=False; distance=10–10
+  - bracelet\Screenshot_20181117-123917_1542547218003.png
+  - bracelet\bracelet_296.jpg
+- Group 59: 2 files; classes=bracelet, earring_best; cross_class=True; distance=12–12
+  - bracelet\Screenshot_20181117-124004_1542547190452.png
+  - earring_best\026_089.png
+- Group 60: 2 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\Screenshot_20181121-044952_1544080641057.png
+  - bracelet\Screenshot_20181121-045019_1544080621020.png
+- Group 61: 2 files; classes=bracelet; cross_class=False; distance=12–12
+  - bracelet\TP998EOK6S09.jpg
+  - bracelet\bracelet_289.jpg
+- Group 62: 2 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\002_002.png
+  - earring_best\025_017.png
+- Group 63: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\007_007.png
+  - earring_best\046_001.png
+- Group 64: 2 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\007_020.png
+  - earring_best\images (29).jpeg
+- Group 65: 2 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\008_021.png
+  - earring_best\019_009.png
+- Group 66: 2 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\009_006.png
+  - earring_best\029_009.png
+- Group 67: 2 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\009_011.png
+  - earring_best\032_015.png
+- Group 68: 2 files; classes=earring_best; cross_class=False; distance=6–6
+  - earring_best\014_028.png
+  - earring_best\014_029.png
+- Group 69: 2 files; classes=earring_best, necklace; cross_class=True; distance=12–12
+  - earring_best\017_106.png
+  - necklace\VQWKSAN6IXRD.jpg
+- Group 70: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\023_005.png
+  - earring_best\041_008.png
+- Group 71: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_010.png
+  - earring_best\025_011.png
+- Group 72: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\025_012.png
+  - earring_best\025_013.png
+- Group 73: 2 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\025_022.png
+  - earring_best\025_023.png
+- Group 74: 2 files; classes=earring_best, necklace; cross_class=True; distance=6–6
+  - earring_best\025_069.png
+  - necklace\2L56SAL3QEZQ.jpg
+- Group 75: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\026_015.png
+  - earring_best\028_009.png
+- Group 76: 2 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\026_026.png
+  - earring_best\027_006.png
+- Group 77: 2 files; classes=earring_best, necklace; cross_class=True; distance=12–12
+  - earring_best\026_085.png
+  - necklace\OJIESD540NL7.jpg
+- Group 78: 2 files; classes=earring_best; cross_class=False; distance=10–10
+  - earring_best\027_005.png
+  - earring_best\pirouette_by_harry_winston_earrings__diamond__EADPRFPRSPIR_trans-1h.png
+- Group 79: 2 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\038_004.png
+  - earring_best\038_053.png
+- Group 80: 2 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\038_054.png
+  - earring_best\044_061.png
+- Group 81: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_002.png
+  - earring_best\041_012.png
+- Group 82: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_008.png
+  - earring_best\039_009.png
+- Group 83: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_010.png
+  - earring_best\039_011.png
+- Group 84: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\039_012.png
+  - earring_best\039_013.png
+- Group 85: 2 files; classes=earring_best, ring_best; cross_class=True; distance=10–10
+  - earring_best\043_007.png
+  - ring_best\Screenshot_20181116-203358_1542449694567.png
+- Group 86: 2 files; classes=earring_best; cross_class=False; distance=0–0
+  - earring_best\NMPALMX_mz.jpg
+  - earring_best\images (49).jpeg
+- Group 87: 2 files; classes=earring_best, necklace; cross_class=True; distance=12–12
+  - earring_best\Screenshot_20181121-045031.png
+  - necklace\H1WWVCY7P1OA.jpg
+- Group 88: 2 files; classes=earring_best; cross_class=False; distance=8–8
+  - earring_best\earring_29.jpg
+  - earring_best\earring_89.jpg
+- Group 89: 2 files; classes=earring_best; cross_class=False; distance=12–12
+  - earring_best\earring_452.jpg
+  - earring_best\earring_453.jpg
+- Group 90: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\2CUNGGQ7HELG.jpg
+  - necklace\P5XYFN465RKC.jpg
+- Group 91: 2 files; classes=necklace; cross_class=False; distance=12–12
+  - necklace\63YYZD7MKL8J.jpg
+  - necklace\OFAYJZSZDBO1.jpg
+- Group 92: 2 files; classes=necklace; cross_class=False; distance=12–12
+  - necklace\7PN03G4JV9EE.jpg
+  - necklace\OYNC4NWWDG4L.jpg
+- Group 93: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\8BDAS0ZPMTWX.jpg
+  - necklace\necklace_191.jpg
+- Group 94: 2 files; classes=necklace; cross_class=False; distance=12–12
+  - necklace\8I1836HXS0LZ.jpg
+  - necklace\QN51J5OVVBQU.jpg
+- Group 95: 2 files; classes=necklace; cross_class=False; distance=12–12
+  - necklace\9IKF6X1KY3YF.jpg
+  - necklace\ORZ2JUE3JANF.jpg
+- Group 96: 2 files; classes=necklace; cross_class=False; distance=2–2
+  - necklace\A86B0SBIPBET.jpg
+  - necklace\LXE9TVUVMDYI.jpg
+- Group 97: 2 files; classes=necklace; cross_class=False; distance=12–12
+  - necklace\BN3AGR2HWZYU.jpg
+  - necklace\LO5KL5JWJWM3.jpg
+- Group 98: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\DDJKTEIDCVVA.jpg
+  - necklace\DGT8FRCHX2ZG.jpg
+- Group 99: 2 files; classes=necklace; cross_class=False; distance=4–4
+  - necklace\EPL0QTEDN8UZ.jpg
+  - necklace\necklace_138.jpg
+- Group 100: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\IJIYFKBUG5J9.jpg
+  - necklace\necklace_74.jpg
+- Group 101: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\K19ZR1CZDOHA.jpg
+  - necklace\NMI2EBQ8PJ9P.jpg
+- Group 102: 2 files; classes=necklace, ring_best; cross_class=True; distance=10–10
+  - necklace\LZWLY26Y1DVX.jpg
+  - ring_best\ring_077.jpg
+- Group 103: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\N3ACFOQFIK38.jpg
+  - necklace\Y8SPAP0ZMEFW.jpg
+- Group 104: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\NH9ER44NQLVW.jpg
+  - necklace\WYM5FUSDUM2P.jpg
+- Group 105: 2 files; classes=necklace; cross_class=False; distance=12–12
+  - necklace\NLXJQ6UR9ME6.jpg
+  - necklace\UTME1KU3MJWE.jpg
+- Group 106: 2 files; classes=necklace; cross_class=False; distance=10–10
+  - necklace\necklace_106.jpg
+  - necklace\necklace_169.jpg
+- Group 107: 2 files; classes=necklace; cross_class=False; distance=0–0
+  - necklace\necklace_233.jpg
+  - necklace\necklace_234.jpg
+- Group 108: 2 files; classes=necklace; cross_class=False; distance=6–6
+  - necklace\necklace_27.jpg
+  - necklace\necklace_28.jpg
+- Group 109: 2 files; classes=necklace; cross_class=False; distance=8–8
+  - necklace\necklace_52.jpg
+  - necklace\necklace_54.jpg
+- Group 110: 2 files; classes=necklace; cross_class=False; distance=12–12
+  - necklace\necklace_80.jpg
+  - necklace\necklace_81.jpg
+- Group 111: 2 files; classes=ring_best; cross_class=False; distance=12–12
+  - ring_best\IMG_6006.JPG
+  - ring_best\Screenshot_20181116-204603_1542447556990.png
+- Group 112: 2 files; classes=ring_best; cross_class=False; distance=12–12
+  - ring_best\Screenshot_20181116-202725_1542453224588.png
+  - ring_best\Screenshot_20181116-202936_1542450027786.png
+- Group 113: 2 files; classes=ring_best; cross_class=False; distance=12–12
+  - ring_best\Screenshot_20181116-203021_1542449934494.png
+  - ring_best\Screenshot_20181116-203109_1542449890237.png
+- Group 114: 2 files; classes=ring_best; cross_class=False; distance=6–6
+  - ring_best\ring_124.jpg
+  - ring_best\ring_193.jpg
+
+## Scope Boundary
+- Read-only analysis.
+- No image deletion, renaming, moving, or rewriting.
+- No final train/validation/test split.
+- No final perceptual threshold selection.
+- No model training.
