@@ -1,7 +1,12 @@
 # Temp Model dataset configuration
 # S0.1: Dataset Acquisition
+#
+# The project uses the existing local dataset copy. The absolute local path is
+# intentionally kept here for the current machine and must not be committed
+# into shared project configuration.
 
 dataset:
   id: sidd707/jewelry-design-dataset
-  source: huggingface
+  source: local
+  local_input_dir: "E:/Privat File/Projects/Zargar Interview/dataset/jewelry-design-dataset"
   raw_output_dir: data/raw/jewelry-design-dataset
