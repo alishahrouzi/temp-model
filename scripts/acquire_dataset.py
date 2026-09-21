@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import json
 from datetime import datetime, timezone
 from pathlib import Path, PureWindowsPath
@@ -18,17 +19,14 @@ from datasets import Dataset, DatasetDict, load_dataset
 
 DEFAULT_DATASET_ID = "sidd707/jewelry-design-dataset"
 DEFAULT_OUTPUT_DIR = Path("data/raw/jewelry-design-dataset")
+CSV_ENCODINGS = ("utf-8-sig", "cp1252", "latin-1")
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Acquire the Temp Model dataset from Hugging Face or a local copy."
     )
-    parser.add_argument(
-        "--source",
-        choices=("huggingface", "local"),
-        default="local",
-    )
+    parser.add_argument("--source", choices=("huggingface", "local"), default="local")
     parser.add_argument("--dataset-id", default=DEFAULT_DATASET_ID)
     parser.add_argument(
         "--input-dir",
@@ -85,15 +83,31 @@ def _resolve_local_dataset_root(input_dir: Path) -> Path:
     )
 
 
+def _read_labels_csv(labels_path: Path) -> tuple[list[dict[str, str]], str]:
+    """Read the dataset CSV using common encodings without altering the source file."""
+    raw = labels_path.read_bytes()
+
+    for encoding in CSV_ENCODINGS:
+        try:
+            text = raw.decode(encoding)
+            rows = list(csv.DictReader(io.StringIO(text)))
+            return rows, encoding
+        except UnicodeDecodeError:
+            continue
+
+    raise RuntimeError(
+        f"Could not decode labels file with supported encodings "
+        f"{CSV_ENCODINGS}: {labels_path}"
+    )
+
+
 def _local_metadata(
     dataset_id: str,
     input_dir: Path,
     dataset_root: Path,
 ) -> dict[str, Any]:
     labels_path = dataset_root / "dataset_labels.csv"
-
-    with labels_path.open("r", encoding="utf-8-sig", newline="") as handle:
-        rows = list(csv.DictReader(handle))
+    rows, csv_encoding = _read_labels_csv(labels_path)
 
     if not rows:
         raise RuntimeError(f"No data rows found in labels file: {labels_path}")
@@ -126,6 +140,7 @@ def _local_metadata(
         "source_location": str(input_dir.resolve()),
         "dataset_root": str(dataset_root.resolve()),
         "labels_file": "dataset_labels.csv",
+        "labels_encoding": csv_encoding,
         "labels_record_count": len(rows),
         "class_directories": class_directories,
         "resolvable_image_paths": len(rows) - len(missing_paths),
@@ -143,7 +158,9 @@ def acquire_from_local(
     metadata = _local_metadata(dataset_id, input_dir, dataset_root)
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    metadata["metadata_location"] = str((output_dir / "acquisition_metadata.json").resolve())
+    metadata["metadata_location"] = str(
+        (output_dir / "acquisition_metadata.json").resolve()
+    )
     return metadata
 
 
@@ -200,6 +217,7 @@ def main() -> None:
     print(f"  - Metadata: {metadata_path}")
 
     if metadata["source"] == "local":
+        print(f"  - CSV encoding: {metadata['labels_encoding']}")
         print(f"  - CSV records: {metadata['labels_record_count']}")
         print(
             "  - Resolvable image paths: "
