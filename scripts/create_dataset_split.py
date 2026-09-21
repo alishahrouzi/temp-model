@@ -74,7 +74,7 @@ def read_labels_csv(path: Path) -> tuple[dict[str, dict[str, str]], str]:
     raw = path.read_bytes()
     for encoding in CSV_ENCODINGS:
         try:
-            rows = list(csv.DictReader(io.StringIO(raw.decode(encoding)))
+            rows = list(csv.DictReader(io.StringIO(raw.decode(encoding))))
             if not rows:
                 raise RuntimeError("dataset_labels.csv contains no records.")
             required = {"image_path", "description"}
