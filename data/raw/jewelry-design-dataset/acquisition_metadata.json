@@ -1,0 +1,37 @@
+{
+  "dataset_id": "sidd707/jewelry-design-dataset",
+  "source": "local",
+  "acquired_at_utc": "2026-09-21T08:34:24.144482+00:00",
+  "source_location": "E:\\Privat File\\Projects\\Zargar Interview\\dataset\\jewelry-design-dataset",
+  "dataset_root": "E:\\Privat File\\Projects\\Zargar Interview\\dataset\\jewelry-design-dataset\\dataset",
+  "labels_file": "dataset_labels.csv",
+  "labels_encoding": "cp1252",
+  "labels_record_count": 6156,
+  "class_directories": [
+    "bracelet",
+    "earring_best",
+    "necklace",
+    "ring_best"
+  ],
+  "resolvable_image_paths": 6140,
+  "missing_image_path_count": 16,
+  "missing_image_paths": [
+    "bracelet\\bracelet_070.jpg",
+    "bracelet\\HBKHVAN63VC3.jpg",
+    "bracelet\\IMG_5965.JPG",
+    "bracelet\\sd_hol17_b429g_philippa_hero.jpg",
+    "bracelet\\XZSRV88R1MQB.jpg",
+    "bracelet\\Y56G64Y1JP7V.jpg",
+    "earring_best\\010_024.png",
+    "earring_best\\016_003.png",
+    "earring_best\\017_015.png",
+    "earring_best\\017_037.png",
+    "earring_best\\018_012.png",
+    "earring_best\\018_014.png",
+    "earring_best\\019_036.png",
+    "earring_best\\021_019.png",
+    "earring_best\\031_004.png",
+    "earring_best\\040_001.png"
+  ],
+  "metadata_location": "E:\\Privat File\\Projects\\Zargar Interview\\temp model\\code\\data\\raw\\jewelry-design-dataset\\acquisition_metadata.json"
+}
