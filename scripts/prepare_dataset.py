@@ -9,12 +9,18 @@ from __future__ import annotations
 
 import argparse
 import csv
+import sys
 import json
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path, PureWindowsPath
 
 from PIL import Image, UnidentifiedImageError
+
+# Allow direct execution from the repository root without requiring package installation.
+SRC_ROOT = Path(__file__).resolve().parents[1] / "src"
+if str(SRC_ROOT) not in sys.path:
+    sys.path.insert(0, str(SRC_ROOT))
 
 from temp_model.dataset import DEFAULT_IMAGE_SIZE, JewelrySplitDataset
 
