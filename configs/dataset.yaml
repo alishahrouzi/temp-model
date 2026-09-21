@@ -1,0 +1,7 @@
+# Temp Model dataset configuration
+# S0.1: Dataset Acquisition
+
+dataset:
+  id: sidd707/jewelry-design-dataset
+  source: huggingface
+  raw_output_dir: data/raw/jewelry-design-dataset
