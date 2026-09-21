@@ -1,0 +1,70 @@
+{
+  "created_at_utc": "2026-09-21T10:33:13.049168+00:00",
+  "dataset_root": "E:\\Privat File\\Projects\\Zargar Interview\\dataset\\jewelry-design-dataset\\dataset",
+  "split_directory": "results\\dataset-split",
+  "preprocessing": {
+    "image_size": 224,
+    "color_mode": "RGB",
+    "tensor_range": "[0, 1]",
+    "augmentation": false,
+    "normalization": null
+  },
+  "splits": {
+    "train": {
+      "manifest": "train.csv",
+      "image_count": 4913,
+      "class_distribution": {
+        "bracelet": 706,
+        "earring_best": 2630,
+        "necklace": 1390,
+        "ring_best": 187
+      },
+      "missing_images": [],
+      "unreadable_images": [],
+      "duplicate_manifest_paths": 0
+    },
+    "validation": {
+      "manifest": "validation.csv",
+      "image_count": 614,
+      "class_distribution": {
+        "bracelet": 88,
+        "earring_best": 329,
+        "necklace": 174,
+        "ring_best": 23
+      },
+      "missing_images": [],
+      "unreadable_images": [],
+      "duplicate_manifest_paths": 0
+    },
+    "test": {
+      "manifest": "test.csv",
+      "image_count": 614,
+      "class_distribution": {
+        "bracelet": 88,
+        "earring_best": 329,
+        "necklace": 174,
+        "ring_best": 23
+      },
+      "missing_images": [],
+      "unreadable_images": [],
+      "duplicate_manifest_paths": 0
+    }
+  },
+  "sample_validation": {
+    "sample_image_path": "bracelet\\2XJ1BV7UBEN6.jpg",
+    "tensor_shape": [
+      3,
+      224,
+      224
+    ],
+    "tensor_dtype": "torch.float32",
+    "tensor_min": 0.07058823853731155,
+    "tensor_max": 1.0,
+    "class": "bracelet"
+  },
+  "validation": {
+    "all_split_images_resolve": true,
+    "all_split_images_readable": true,
+    "all_manifest_paths_unique_within_split": true
+  }
+}
