@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import json
 import random
 from collections import Counter, defaultdict
@@ -73,7 +74,7 @@ def read_labels_csv(path: Path) -> tuple[dict[str, dict[str, str]], str]:
     raw = path.read_bytes()
     for encoding in CSV_ENCODINGS:
         try:
-            rows = list(csv.DictReader(raw.decode(encoding).splitlines()))
+            rows = list(csv.DictReader(io.StringIO(raw.decode(encoding)))
             if not rows:
                 raise RuntimeError("dataset_labels.csv contains no records.")
             required = {"image_path", "description"}
