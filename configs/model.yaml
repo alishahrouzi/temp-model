@@ -1,0 +1,77 @@
+# S1.1 — Custom CNN architecture specification
+# Architecture decisions only. Training hyperparameters belong to Sprint 2.
+
+model:
+  name: temp_model_cnn
+  type: custom_cnn
+  input:
+    channels: 3
+    image_size: 224
+
+  feature_extractor:
+    blocks:
+      - name: block1
+        in_channels: 3
+        out_channels: 32
+        kernel_size: 3
+        stride: 1
+        padding: 1
+        normalization: batchnorm2d
+        activation: relu
+        pooling: maxpool2d
+        pool_kernel_size: 2
+
+      - name: block2
+        in_channels: 32
+        out_channels: 64
+        kernel_size: 3
+        stride: 1
+        padding: 1
+        normalization: batchnorm2d
+        activation: relu
+        pooling: maxpool2d
+        pool_kernel_size: 2
+
+      - name: block3
+        in_channels: 64
+        out_channels: 128
+        kernel_size: 3
+        stride: 1
+        padding: 1
+        normalization: batchnorm2d
+        activation: relu
+        pooling: maxpool2d
+        pool_kernel_size: 2
+
+      - name: block4
+        in_channels: 128
+        out_channels: 256
+        kernel_size: 3
+        stride: 1
+        padding: 1
+        normalization: batchnorm2d
+        activation: relu
+        pooling: maxpool2d
+        pool_kernel_size: 2
+
+    global_pooling: adaptive_avg_pool2d_1x1
+
+  embedding:
+    input_dim: 256
+    output_dim: 128
+    activation: relu
+    l2_normalize_for_retrieval: true
+
+  classifier:
+    input_dim: 128
+    num_classes: 4
+    classes:
+      - bracelet
+      - earring_best
+      - necklace
+      - ring_best
+
+  training_input_policy:
+    source_range: "[0,1]"
+    pretrained_normalization: false
+    augmentation: deferred_to_sprint_2
