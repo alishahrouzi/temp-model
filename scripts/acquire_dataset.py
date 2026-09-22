@@ -1,210 +1,52 @@
-"""Acquire the Temp Model dataset from Hugging Face or an existing local copy.
+"""Download and persist the configured Hugging Face dataset.
 
-S0.1 handles dataset acquisition and basic source registration only.
-Dataset QA, duplicate analysis, splitting, and preprocessing belong to
-subsequent Sprint 0 tasks.
+This task intentionally handles acquisition only. Dataset QA, duplicate analysis,
+splitting, and preprocessing belong to later Sprint 0 tasks.
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
-import io
 import json
 from datetime import datetime, timezone
-from pathlib import Path, PureWindowsPath
-from typing import Any
+from pathlib import Path
 
-from datasets import Dataset, DatasetDict, load_dataset
+from datasets import DatasetDict, load_dataset
 
 DEFAULT_DATASET_ID = "sidd707/jewelry-design-dataset"
 DEFAULT_OUTPUT_DIR = Path("data/raw/jewelry-design-dataset")
-CSV_ENCODINGS = ("utf-8-sig", "cp1252", "latin-1")
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Acquire the Temp Model dataset from Hugging Face or a local copy."
+        description="Download the Temp Model dataset from Hugging Face."
     )
-    parser.add_argument("--source", choices=("huggingface", "local"), default="local")
     parser.add_argument("--dataset-id", default=DEFAULT_DATASET_ID)
-    parser.add_argument(
-        "--input-dir",
-        type=Path,
-        default=None,
-        help=(
-            "Existing local dataset directory. It may be either the dataset "
-            "repository root or the nested directory containing class folders "
-            "and dataset_labels.csv. Required when --source local."
-        ),
-    )
-    parser.add_argument(
-        "--output-dir",
-        type=Path,
-        default=DEFAULT_OUTPUT_DIR,
-        help=(
-            "Destination for Hugging Face acquisition and acquisition metadata. "
-            "Local mode does not copy raw images."
-        ),
-    )
+    parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     return parser.parse_args()
 
 
-def _split_sizes(dataset: DatasetDict | Dataset) -> dict[str, int]:
-    if isinstance(dataset, DatasetDict):
-        return {name: len(split_data) for name, split_data in dataset.items()}
-    return {"default": len(dataset)}
-
-
-def _normalise_relative_path(value: str) -> Path:
-    """Convert Windows-style CSV paths to a platform-independent relative path."""
-    parts = PureWindowsPath(value).parts
-    return Path(*parts)
-
-
-def _resolve_local_dataset_root(input_dir: Path) -> Path:
-    """Resolve either the repository root or the actual dataset directory."""
-    if not input_dir.exists():
-        raise FileNotFoundError(f"Local dataset path does not exist: {input_dir}")
-    if not input_dir.is_dir():
-        raise NotADirectoryError(f"Local dataset path is not a directory: {input_dir}")
-
-    if (input_dir / "dataset_labels.csv").is_file():
-        return input_dir
-
-    nested_dataset = input_dir / "dataset"
-    if (nested_dataset / "dataset_labels.csv").is_file():
-        return nested_dataset
-
-    raise RuntimeError(
-        "The local dataset structure is not recognized. Expected either "
-        "<input>/dataset_labels.csv with class directories, or "
-        "<input>/dataset/dataset_labels.csv with class directories."
-    )
-
-
-def _read_labels_csv(labels_path: Path) -> tuple[list[dict[str, str]], str]:
-    """Read the dataset CSV using common encodings without altering the source file."""
-    raw = labels_path.read_bytes()
-
-    for encoding in CSV_ENCODINGS:
-        try:
-            text = raw.decode(encoding)
-            rows = list(csv.DictReader(io.StringIO(text)))
-            return rows, encoding
-        except UnicodeDecodeError:
-            continue
-
-    raise RuntimeError(
-        f"Could not decode labels file with supported encodings "
-        f"{CSV_ENCODINGS}: {labels_path}"
-    )
-
-
-def _local_metadata(
-    dataset_id: str,
-    input_dir: Path,
-    dataset_root: Path,
-) -> dict[str, Any]:
-    labels_path = dataset_root / "dataset_labels.csv"
-    rows, csv_encoding = _read_labels_csv(labels_path)
-
-    if not rows:
-        raise RuntimeError(f"No data rows found in labels file: {labels_path}")
-
-    fieldnames = set(rows[0].keys())
-    required_fields = {"image_path", "description"}
-    missing_fields = required_fields - fieldnames
-    if missing_fields:
-        raise RuntimeError(
-            f"Labels file is missing required columns: {sorted(missing_fields)}"
-        )
-
-    missing_paths: list[str] = []
-    for row in rows:
-        relative_path = row["image_path"]
-        image_path = dataset_root.joinpath(_normalise_relative_path(relative_path))
-        if not image_path.is_file():
-            missing_paths.append(relative_path)
-
-    class_directories = sorted(
-        path.name
-        for path in dataset_root.iterdir()
-        if path.is_dir() and not path.name.startswith(".")
-    )
-
+def build_metadata(dataset_id: str, dataset: DatasetDict, output_dir: Path) -> dict:
     return {
         "dataset_id": dataset_id,
-        "source": "local",
-        "acquired_at_utc": datetime.now(timezone.utc).isoformat(),
-        "source_location": str(input_dir.resolve()),
-        "dataset_root": str(dataset_root.resolve()),
-        "labels_file": "dataset_labels.csv",
-        "labels_encoding": csv_encoding,
-        "labels_record_count": len(rows),
-        "class_directories": class_directories,
-        "resolvable_image_paths": len(rows) - len(missing_paths),
-        "missing_image_path_count": len(missing_paths),
-        "missing_image_paths": missing_paths,
-    }
-
-
-def acquire_from_local(
-    dataset_id: str,
-    input_dir: Path,
-    output_dir: Path,
-) -> dict[str, Any]:
-    dataset_root = _resolve_local_dataset_root(input_dir)
-    metadata = _local_metadata(dataset_id, input_dir, dataset_root)
-
-    output_dir.mkdir(parents=True, exist_ok=True)
-    metadata["metadata_location"] = str(
-        (output_dir / "acquisition_metadata.json").resolve()
-    )
-    return metadata
-
-
-def acquire_from_huggingface(
-    dataset_id: str,
-    output_dir: Path,
-) -> dict[str, Any]:
-    output_dir.mkdir(parents=True, exist_ok=True)
-    print(f"Loading dataset from Hugging Face: {dataset_id}")
-    dataset = load_dataset(dataset_id)
-    print(f"Persisting dataset to: {output_dir}")
-    dataset.save_to_disk(str(output_dir))
-
-    return {
-        "dataset_id": dataset_id,
-        "source": "huggingface",
-        "acquired_at_utc": datetime.now(timezone.utc).isoformat(),
-        "source_location": dataset_id,
-        "dataset_root": str(output_dir.resolve()),
-        "splits": _split_sizes(dataset),
-        "metadata_location": str(
-            (output_dir / "acquisition_metadata.json").resolve()
-        ),
+        "source": "Hugging Face Datasets",
+        "downloaded_at_utc": datetime.now(timezone.utc).isoformat(),
+        "output_dir": output_dir.as_posix(),
+        "splits": {name: len(split_data) for name, split_data in dataset.items()},
     }
 
 
 def main() -> None:
     args = parse_args()
+    args.output_dir.mkdir(parents=True, exist_ok=True)
 
-    if args.source == "local":
-        if args.input_dir is None:
-            raise SystemExit("--input-dir is required when --source local.")
+    print(f"Loading dataset: {args.dataset_id}")
+    dataset = load_dataset(args.dataset_id)
 
-        metadata = acquire_from_local(
-            dataset_id=args.dataset_id,
-            input_dir=args.input_dir,
-            output_dir=args.output_dir,
-        )
-    else:
-        metadata = acquire_from_huggingface(
-            dataset_id=args.dataset_id,
-            output_dir=args.output_dir,
-        )
+    print(f"Persisting dataset to: {args.output_dir}")
+    dataset.save_to_disk(str(args.output_dir))
 
+    metadata = build_metadata(args.dataset_id, dataset, args.output_dir)
     metadata_path = args.output_dir / "acquisition_metadata.json"
     metadata_path.write_text(
         json.dumps(metadata, indent=2, ensure_ascii=False),
@@ -212,28 +54,9 @@ def main() -> None:
     )
 
     print("Dataset acquisition completed.")
-    print(f"  - Source: {metadata['source']}")
-    print(f"  - Dataset: {metadata['dataset_id']}")
-    print(f"  - Metadata: {metadata_path}")
-
-    if metadata["source"] == "local":
-        print(f"  - CSV encoding: {metadata['labels_encoding']}")
-        print(f"  - CSV records: {metadata['labels_record_count']}")
-        print(
-            "  - Resolvable image paths: "
-            f"{metadata['resolvable_image_paths']}"
-        )
-        print(
-            "  - Missing image paths: "
-            f"{metadata['missing_image_path_count']}"
-        )
-        print(
-            "  - Raw images copied: no "
-            "(local mode registers the existing dataset in place)"
-        )
-    else:
-        for split_name, size in metadata["splits"].items():
-            print(f"  - {split_name}: {size} samples")
+    for split_name, split_dataset in dataset.items():
+        print(f"  - {split_name}: {len(split_dataset)} samples")
+    print(f"Metadata: {metadata_path}")
 
 
 if __name__ == "__main__":
