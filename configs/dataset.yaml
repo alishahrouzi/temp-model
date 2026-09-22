@@ -1,11 +1,7 @@
 # Temp Model dataset configuration
 # S0.1: Dataset Acquisition
-#
-# Local dataset paths are machine-specific and must be supplied at runtime.
-# Do not commit absolute local paths to the shared repository.
 
 dataset:
   id: sidd707/jewelry-design-dataset
-  source: local
-  local_input_dir: null
+  source: huggingface
   raw_output_dir: data/raw/jewelry-design-dataset
