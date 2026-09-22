@@ -24,11 +24,11 @@ ENV/
 Thumbs.db
 
 # Project data and generated artifacts
-# data/
+data/
 models/
 checkpoints/
 embeddings/
-# results/
+results/
 runs/
 logs/
 
