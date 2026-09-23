@@ -14,11 +14,11 @@ from torch import nn
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-SRC_ROOT = REPO_ROOT / "src"
+SRC_ROOT = REPO_ROOT 
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from temp_model.model import (  # noqa: E402
+from src.temp_model.model import (  # noqa: E402
     CLASS_NAMES,
     EMBEDDING_DIM,
     INPUT_CHANNELS,
