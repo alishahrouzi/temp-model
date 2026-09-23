@@ -49,7 +49,7 @@ The dataset contains four jewelry categories:
 - necklace
 - ring_best
 
-The original dataset provides a `train` split. Train/validation/test subsets for this project will be created during Sprint 0 while preserving class distribution as much as practical.
+The original dataset provides a `train` split. Train/validation/test subsets for this project are created during Sprint 0 while preserving class distribution as much as practical and preventing duplicate-group leakage.
 
 ## High-Level Pipeline
 
@@ -63,7 +63,7 @@ Preprocessing
 Custom Lightweight CNN
     |
     v
-Feature Vector
+128-d Normalized Embedding
     |
     v
 Similarity Calculation
@@ -77,9 +77,36 @@ Top-K Similar Images + Similarity Scores
 
 ## Project Status
 
-Current phase: **Repository Setup**
+Current phase: **Sprint 1 complete**
 
-Next phase: **Sprint 0 — Dataset Validation**
+Completed:
+
+- Sprint 0 — Dataset Validation & Preparation
+- S1.1 — Custom CNN Model Design
+- S1.2 — Custom CNN Implementation
+- S1.3 — Classification Head
+- S1.4 — Forward Pass Test
+- S1.5 — Model Documentation
+
+Next phase: **Sprint 2 — Model Training**
+
+## Model Summary
+
+The current custom CNN has:
+
+- four convolutional blocks;
+- channel progression `3 → 32 → 64 → 128 → 256`;
+- adaptive global average pooling;
+- 128-dimensional normalized retrieval embedding;
+- separate four-class linear classification head;
+- exactly **422,788 trainable parameters**;
+- no pretrained backbone.
+
+The retrieval interface is `CustomCNN.encode()`.
+
+Detailed model documentation:
+
+`docs/sprint-1-s1.5-model-documentation.md`
 
 ## Development Principles
 
