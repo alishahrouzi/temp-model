@@ -1,4 +1,4 @@
-"""Dataset loading and deterministic preprocessing for Temp Model S0.5."""
+"""Dataset loading and preprocessing for Temp Model training and evaluation."""
 
 from __future__ import annotations
 
@@ -16,20 +16,14 @@ DEFAULT_IMAGE_SIZE = 224
 
 
 class JewelrySplitDataset(Dataset[dict[str, Any]]):
-    """Load one S0.4 split manifest with deterministic image preprocessing.
-
-    The dataset keeps the source images untouched. Each item is loaded from its
-    original path, converted to RGB, resized to a fixed square, and converted
-    to a float tensor in [0, 1]. No augmentation or learned/pretrained
-    normalization is applied in S0.5; those choices belong to later model
-    development and training work.
-    """
+    """Load one split manifest and apply the supplied image transform."""
 
     def __init__(
         self,
         manifest_path: str | Path,
         dataset_root: str | Path,
         image_size: int = DEFAULT_IMAGE_SIZE,
+        transform: transforms.Compose | None = None,
     ) -> None:
         self.manifest_path = Path(manifest_path)
         self.dataset_root = Path(dataset_root)
@@ -37,7 +31,7 @@ class JewelrySplitDataset(Dataset[dict[str, Any]]):
             raise ValueError("image_size must be a positive integer")
 
         self.records = self._read_manifest()
-        self.transform = build_preprocessing_transform(image_size)
+        self.transform = transform or build_preprocessing_transform(image_size)
 
     def _read_manifest(self) -> list[dict[str, str]]:
         if not self.manifest_path.is_file():
@@ -47,9 +41,7 @@ class JewelrySplitDataset(Dataset[dict[str, Any]]):
             reader = csv.DictReader(handle)
             required = {"image_path", "class", "description"}
             if not required.issubset(reader.fieldnames or set()):
-                raise ValueError(
-                    f"Manifest must contain columns: {sorted(required)}"
-                )
+                raise ValueError(f"Manifest must contain columns: {sorted(required)}")
             records = list(reader)
 
         if not records:
@@ -80,12 +72,45 @@ class JewelrySplitDataset(Dataset[dict[str, Any]]):
 
 
 def build_preprocessing_transform(image_size: int = DEFAULT_IMAGE_SIZE):
-    """Return the S0.5 deterministic preprocessing transform."""
+    """Return deterministic validation/test preprocessing."""
     if image_size <= 0:
         raise ValueError("image_size must be a positive integer")
     return transforms.Compose(
         [
             transforms.Resize((image_size, image_size), antialias=True),
+            transforms.ToTensor(),
+        ]
+    )
+
+
+def build_training_transform(
+    image_size: int = DEFAULT_IMAGE_SIZE,
+    horizontal_flip_probability: float = 0.5,
+    rotation_degrees: float = 10.0,
+    brightness: float = 0.15,
+    contrast: float = 0.15,
+    saturation: float = 0.10,
+    hue: float = 0.02,
+):
+    """Return the mild training-only augmentation policy from S2.1."""
+    if image_size <= 0:
+        raise ValueError("image_size must be a positive integer")
+    if not 0.0 <= horizontal_flip_probability <= 1.0:
+        raise ValueError("horizontal_flip_probability must be in [0, 1]")
+    if rotation_degrees < 0:
+        raise ValueError("rotation_degrees must be non-negative")
+
+    return transforms.Compose(
+        [
+            transforms.Resize((image_size, image_size), antialias=True),
+            transforms.RandomHorizontalFlip(p=horizontal_flip_probability),
+            transforms.RandomRotation(degrees=rotation_degrees),
+            transforms.ColorJitter(
+                brightness=brightness,
+                contrast=contrast,
+                saturation=saturation,
+                hue=hue,
+            ),
             transforms.ToTensor(),
         ]
     )
