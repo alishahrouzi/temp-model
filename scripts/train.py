@@ -1,7 +1,7 @@
 """Train and validate the Temp Model custom CNN.
 
-S2.2 implements only the training loop. Checkpoint creation and selection
-belong to S2.3/S2.6 and are intentionally not performed here.
+S2.3 adds controlled checkpoint creation after each completed epoch.
+Best-checkpoint selection remains a later S2.6 responsibility.
 """
 
 from __future__ import annotations
