@@ -1,7 +1,7 @@
 """Train and validate the Temp Model custom CNN.
 
-S2.2 implements only the training loop. Checkpoint creation and selection
-belong to S2.3/S2.6 and are intentionally not performed here.
+S2.3 adds controlled checkpoint creation after each completed epoch.
+Best-checkpoint selection remains a later S2.6 responsibility.
 """
 
 from __future__ import annotations
@@ -102,6 +102,34 @@ def class_weights(config: dict[str, Any], device: torch.device) -> torch.Tensor 
     return torch.tensor(weights, dtype=torch.float32, device=device)
 
 
+def save_checkpoint(
+    path: Path,
+    model: CustomCNN,
+    optimizer: torch.optim.Optimizer,
+    scheduler: ReduceLROnPlateau,
+    epoch: int,
+    metrics: dict[str, float | int],
+    config: dict[str, Any],
+) -> None:
+    checkpoint = {
+        "checkpoint_version": 1,
+        "epoch": epoch,
+        "model_state_dict": model.state_dict(),
+        "optimizer_state_dict": optimizer.state_dict(),
+        "scheduler_state_dict": scheduler.state_dict(),
+        "metrics": metrics,
+        "config": config,
+        "random_state": random.getstate(),
+        "numpy_random_state": np.random.get_state(),
+        "torch_random_state": torch.get_rng_state(),
+        "cuda_random_state": (
+            torch.cuda.get_rng_state_all() if torch.cuda.is_available() else None
+        ),
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    torch.save(checkpoint, path)
+
+
 def run_epoch(
     model: CustomCNN,
     loader: DataLoader,
@@ -173,6 +201,12 @@ def main() -> None:
         "--history-output",
         type=Path,
         default=REPO_ROOT / "results" / "training" / "training_history.json",
+    )
+    parser.add_argument(
+        "--checkpoint-dir",
+        type=Path,
+        default=REPO_ROOT / "checkpoints" / "s2.3",
+        help="Directory for epoch and latest training checkpoints.",
     )
     args = parser.parse_args()
 
@@ -259,6 +293,26 @@ def main() -> None:
             "learning_rate": learning_rate,
         }
         history.append(row)
+
+        save_checkpoint(
+            args.checkpoint_dir / f"epoch_{epoch:03d}.pt",
+            model,
+            optimizer,
+            scheduler,
+            epoch,
+            row,
+            config,
+        )
+        save_checkpoint(
+            args.checkpoint_dir / "last.pt",
+            model,
+            optimizer,
+            scheduler,
+            epoch,
+            row,
+            config,
+        )
+
         print(
             f"Epoch {epoch:02d}/{epochs:02d} | "
             f"train_loss={train_loss:.4f} | train_acc={train_accuracy:.4f} | "
@@ -279,7 +333,8 @@ def main() -> None:
         json.dump(payload, handle, indent=2)
 
     print(f"Training history written to: {args.history_output}")
-    print("S2.2 training loop completed. No checkpoint was created or selected.")
+    print(f"Checkpoints written to: {args.checkpoint_dir}")
+    print("S2.3 checkpointing completed. No best checkpoint was selected.")
 
 
 if __name__ == "__main__":
