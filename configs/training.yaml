@@ -1,0 +1,77 @@
+# S2.1 — Model training configuration
+# Training policy only. Training execution belongs to S2.2.
+# Checkpoint creation/selection belongs to S2.3/S2.6.
+
+training:
+  seed: 42
+  deterministic: true
+
+  device:
+    strategy: auto
+    preferred: cuda
+    fallback: cpu
+
+  dataloader:
+    batch_size: 32
+    num_workers: 2
+    pin_memory: true
+    drop_last: false
+    persistent_workers: false
+
+  epochs: 30
+
+  loss:
+    name: cross_entropy
+    label_smoothing: 0.0
+    class_weighting:
+      enabled: true
+      strategy: sqrt_inverse_frequency
+      normalization: mean_one
+      source_split: train
+      classes:
+        bracelet: 0.958352
+        earring_best: 0.496534
+        necklace: 0.682999
+        ring_best: 1.862115
+
+  optimizer:
+    name: adamw
+    learning_rate: 0.001
+    weight_decay: 0.0001
+    betas: [0.9, 0.999]
+    eps: 0.00000001
+
+  scheduler:
+    name: reduce_lr_on_plateau
+    monitor: validation_loss
+    mode: min
+    factor: 0.5
+    patience: 3
+    threshold: 0.0001
+    min_lr: 0.000001
+
+  gradient:
+    max_norm: 1.0
+
+  augmentation:
+    enabled: true
+    policy: mild
+    horizontal_flip_probability: 0.5
+    rotation_degrees: 10
+    color_jitter:
+      brightness: 0.15
+      contrast: 0.15
+      saturation: 0.10
+      hue: 0.02
+
+  input:
+    image_size: 224
+    channels: 3
+    value_range: "[0,1]"
+    pretrained_normalization: false
+
+  monitoring:
+    train_loss: true
+    validation_loss: true
+    validation_accuracy: true
+    learning_rate: true

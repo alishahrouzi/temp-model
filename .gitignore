@@ -28,7 +28,7 @@ data/
 models/
 checkpoints/
 embeddings/
-results/
+# results/
 runs/
 logs/
 

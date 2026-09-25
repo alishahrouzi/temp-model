@@ -1,0 +1,22 @@
+{
+  "epochs_completed": 30,
+  "device": "cpu",
+  "train_samples": 4913,
+  "validation_samples": 614,
+  "best_validation_loss": {
+    "epoch": 27,
+    "value": 0.5356912397406388
+  },
+  "best_validation_accuracy": {
+    "epoch": 27,
+    "value": 0.8452768729641694
+  },
+  "final_epoch": {
+    "epoch": 30,
+    "train_loss": 0.27316122931107323,
+    "train_accuracy": 0.9348666802361083,
+    "validation_loss": 0.7164992728916753,
+    "validation_accuracy": 0.7882736156351792,
+    "learning_rate": 6.25e-05
+  }
+}

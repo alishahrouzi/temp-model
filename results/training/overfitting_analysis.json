@@ -1,0 +1,49 @@
+{
+  "epochs_analyzed": 30,
+  "data_scope": {
+    "train_samples": 4913,
+    "validation_samples": 614,
+    "test_split_used": false
+  },
+  "observed_validation_peaks": {
+    "minimum_validation_loss": {
+      "epoch": 27,
+      "value": 0.5356912397406388
+    },
+    "maximum_validation_accuracy": {
+      "epoch": 27,
+      "value": 0.8452768729641694
+    }
+  },
+  "final_epoch": {
+    "epoch": 30,
+    "train_loss": 0.27316122931107323,
+    "validation_loss": 0.7164992728916753,
+    "train_accuracy": 0.9348666802361083,
+    "validation_accuracy": 0.7882736156351792,
+    "learning_rate": 6.25e-05
+  },
+  "generalization_gap_at_final_epoch": {
+    "accuracy": 0.14659306460092913,
+    "loss": 0.443338043580602
+  },
+  "post_observed_validation_peak": {
+    "reference_epoch": 27,
+    "epochs_after_reference": 3,
+    "validation_loss_increase": 0.18080803315103644,
+    "validation_accuracy_drop": 0.05700325732899025,
+    "train_loss_change": -0.00268261662064323,
+    "train_accuracy_change": 0.00020354162426217126
+  },
+  "signals": {
+    "train_loss_continues_down_after_reference": true,
+    "train_accuracy_continues_up_after_reference": true,
+    "validation_loss_worsens_after_reference": true,
+    "validation_accuracy_worsens_after_reference": true,
+    "late_overfitting_signal": true
+  },
+  "interpretation": {
+    "status": "late_generalization_degradation_observed",
+    "note": "The training history shows a late divergence pattern after the observed validation peak: training metrics continue improving while validation metrics deteriorate. Earlier validation metrics are also highly variable, so this result is evidence of late generalization degradation rather than proof that all validation fluctuations are caused by overfitting."
+  }
+}
