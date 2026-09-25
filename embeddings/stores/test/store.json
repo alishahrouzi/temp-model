@@ -1,0 +1,12 @@
+{
+  "storage_version": 1,
+  "split": "test",
+  "sample_count": 614,
+  "embedding_dimension": 128,
+  "dtype": "float32",
+  "normalized": true,
+  "checkpoint_epoch": 27,
+  "embedding_file": "embeddings.npy",
+  "metadata_file": "metadata.json",
+  "row_alignment": "metadata_records[i] corresponds to embeddings[i]"
+}
