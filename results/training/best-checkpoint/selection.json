@@ -1,0 +1,24 @@
+{
+  "selection_version": 1,
+  "criterion": {
+    "primary": "minimum_validation_loss",
+    "secondary": "maximum_validation_accuracy",
+    "tie_breaker": "earliest_epoch"
+  },
+  "selected_epoch": 27,
+  "source_checkpoint": "E:\\Privat File\\Projects\\Zargar Interview\\temp model\\code\\checkpoints\\s2.3\\epoch_027.pt",
+  "selected_checkpoint": "E:\\Privat File\\Projects\\Zargar Interview\\temp model\\code\\results\\training\\best-checkpoint\\best.pt",
+  "metrics": {
+    "epoch": 27,
+    "train_loss": 0.27584384593171646,
+    "train_accuracy": 0.9346631386118461,
+    "validation_loss": 0.5356912397406388,
+    "validation_accuracy": 0.8452768729641694,
+    "learning_rate": 6.25e-05
+  },
+  "data_scope": {
+    "train_samples": 4913,
+    "validation_samples": 614,
+    "test_split_used": false
+  }
+}
