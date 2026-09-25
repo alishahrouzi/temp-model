@@ -90,7 +90,7 @@ def main() -> None:
     print(f"  Samples: {len(dataset)}")
     print(f"  Embedding shape: {embeddings.shape}")
     print(f"  Embedding dimension: {EMBEDDING_DIM}")
-    print(f"  Checkpoint epoch: {checkpoint.get("epoch")}")
+    print(f"  Checkpoint epoch: {checkpoint.get('epoch')}")
     print(f"  Device: {device}")
     print(f"  Output: {embedding_path}")
 
