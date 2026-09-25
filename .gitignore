@@ -27,7 +27,7 @@ Thumbs.db
 data/
 models/
 checkpoints/
-embeddings/
+# embeddings/
 # results/
 runs/
 logs/
@@ -37,6 +37,7 @@ logs/
 *.pth
 *.ckpt
 *.onnx
+*.npy
 
 # Temporary files
 *.tmp

@@ -1,0 +1,3084 @@
+{
+  "generation_version": 1,
+  "split": "test",
+  "sample_count": 614,
+  "embedding_dimension": 128,
+  "dtype": "float32",
+  "device": "cpu",
+  "checkpoint": "E:\\Privat File\\Projects\\Zargar Interview\\temp model\\code\\results\\training\\best-checkpoint\\best.pt",
+  "checkpoint_epoch": 27,
+  "normalized": true,
+  "manifest": "E:\\Privat File\\Projects\\Zargar Interview\\temp model\\code\\results\\dataset-split\\test.csv",
+  "metadata_records": [
+    {
+      "image_path": "bracelet\\$_3.jpeg",
+      "class": "bracelet",
+      "description": "A bronze bracelet featuring a golden sphere between two stylized wings."
+    },
+    {
+      "image_path": "bracelet\\00G0FPIT4D9J.jpg",
+      "class": "bracelet",
+      "description": "A stack of eight bracelets in varying shades of blue and silver, featuring beads, stones, and metallic elements."
+    },
+    {
+      "image_path": "bracelet\\01D7PTXV8C7F.jpg",
+      "class": "bracelet",
+      "description": "A pair of matte black metal cuff bracelets, one engraved with \"MG,\" shown open and closed."
+    },
+    {
+      "image_path": "bracelet\\02G14031IMEF.jpg",
+      "class": "bracelet",
+      "description": "A gold-toned bangle bracelet encrusted with small, amber-colored crystals, featuring small clear crystal accents at each end."
+    },
+    {
+      "image_path": "bracelet\\031Q9F07X716.jpg",
+      "class": "bracelet",
+      "description": "A gold bracelet with a lion's head centerpiece and intricate detailing on a textured gold background."
+    },
+    {
+      "image_path": "bracelet\\03WI4QOA9EUK.jpg",
+      "class": "bracelet",
+      "description": "A silver Pandora bracelet with a row of small, light-yellow cubic zirconia stones and a sliding clasp."
+    },
+    {
+      "image_path": "bracelet\\077K4K2JBEWE.jpg",
+      "class": "bracelet",
+      "description": "A rose gold bracelet adorned with clear crystal marquise-shaped stones arranged in a floral pattern."
+    },
+    {
+      "image_path": "bracelet\\09T1R2G1IRZ0.jpg",
+      "class": "bracelet",
+      "description": "A gold sparkly double wrap bracelet with small gold end caps."
+    },
+    {
+      "image_path": "bracelet\\0DGXDB6HD6LX.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold chain bracelet featuring a textured square charm and a rectangular rose quartz gemstone."
+    },
+    {
+      "image_path": "bracelet\\0FB6U4NLW1KR.jpg",
+      "class": "bracelet",
+      "description": "A delicate silver bracelet with small diamonds and a central circular diamond bezel setting."
+    },
+    {
+      "image_path": "bracelet\\0J4OHJWD35A8.jpg",
+      "class": "bracelet",
+      "description": "A delicate silver bracelet with a filigree design featuring repeating butterfly motifs, adorned with small, sparkling diamonds."
+    },
+    {
+      "image_path": "bracelet\\0JOVO66NH8NZ.jpg",
+      "class": "bracelet",
+      "description": "A bronze cuff bracelet engraved with \"I LOVE YOU\"."
+    },
+    {
+      "image_path": "bracelet\\0LMDJG11WE0S.jpg",
+      "class": "bracelet",
+      "description": "Close-up of a black, studded elastic bracelet."
+    },
+    {
+      "image_path": "bracelet\\0TW1LGMLRAWX.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold necklace featuring a cluster of irregularly shaped, off-white gemstones."
+    },
+    {
+      "image_path": "bracelet\\0UFSYZ217O51.jpg",
+      "class": "bracelet",
+      "description": "A rose gold bracelet with a white ceramic and rose gold central element on a textured chain."
+    },
+    {
+      "image_path": "bracelet\\0X8F0EH1FXYE.jpg",
+      "class": "bracelet",
+      "description": "A silver Alex and Ani Hogwarts house charm bangle bracelet."
+    },
+    {
+      "image_path": "bracelet\\10047527649310.jpg",
+      "class": "bracelet",
+      "description": "Gold beaded bracelet with two large golden pearls and diamond accents."
+    },
+    {
+      "image_path": "bracelet\\100UP9VF7WMN.jpg",
+      "class": "bracelet",
+      "description": "A sterling silver Tiffany & Co. heart tag bracelet on a white background."
+    },
+    {
+      "image_path": "bracelet\\10530C32BLTK.jpg",
+      "class": "bracelet",
+      "description": "A delicate rose gold intertwined hearts charm bracelet on a dark brown cord."
+    },
+    {
+      "image_path": "bracelet\\17SPDO6HO14K.jpg",
+      "class": "bracelet",
+      "description": "Three delicate gold, rose gold, and silver bar bracelets with engraved personalized messages lie intertwined on a white background."
+    },
+    {
+      "image_path": "bracelet\\18ct-white-gold-2-row-akoya-pearl-0-92ct-diamond-bracelet-p875-4916_image.jpg",
+      "class": "bracelet",
+      "description": "A double-strand pearl bracelet with a diamond clasp."
+    },
+    {
+      "image_path": "bracelet\\1CIZFWA6KG94.jpg",
+      "class": "bracelet",
+      "description": "A gold bracelet with intricately carved, leaf-shaped beads linked by delicate chains."
+    },
+    {
+      "image_path": "bracelet\\1DFX4SUBN7IJ.jpg",
+      "class": "bracelet",
+      "description": "A gold bracelet with a personalized nameplate reading \"Emily\" and a beaded clasp."
+    },
+    {
+      "image_path": "bracelet\\1EJ4YT88W2FA.jpg",
+      "class": "bracelet",
+      "description": "A close-up shot of a silver twisted rope bracelet with a small ball clasp."
+    },
+    {
+      "image_path": "bracelet\\1IFBWI02T4UC.jpg",
+      "class": "bracelet",
+      "description": "A delicate rose gold adjustable bracelet adorned with a cluster of clear, marquise-shaped cubic zirconia stones."
+    },
+    {
+      "image_path": "bracelet\\1KN3NNCZUKM9.jpg",
+      "class": "bracelet",
+      "description": "A black cord bracelet with a silver diamond-shaped charm featuring the initials \"HMP\" and \"V\" in a minimalist design."
+    },
+    {
+      "image_path": "bracelet\\1M7ISACWQ2FJ.jpg",
+      "class": "bracelet",
+      "description": "A rose gold Cartier Juste un Clou bracelet paved with diamonds."
+    },
+    {
+      "image_path": "bracelet\\1NLZL9TQ1RBN.jpg",
+      "class": "bracelet",
+      "description": "A wide, silver cuff bracelet with a gold border, featuring a repeating geometric floral cutout pattern."
+    },
+    {
+      "image_path": "bracelet\\1PC34DAV4UVT.jpg",
+      "class": "bracelet",
+      "description": "A gold bracelet with three charms, including one with small diamonds, on a snake chain."
+    },
+    {
+      "image_path": "bracelet\\1R2J7ROMA59G.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold chain bracelet adorned with a cluster of irregularly shaped white pearls."
+    },
+    {
+      "image_path": "bracelet\\1RLNDZXWU9XM.jpg",
+      "class": "bracelet",
+      "description": "A sterling silver curb chain bracelet with a double heart toggle clasp."
+    },
+    {
+      "image_path": "bracelet\\1SY23F78RJG6.jpg",
+      "class": "bracelet",
+      "description": "A gold bracelet with channel-set diamonds in a geometric pattern."
+    },
+    {
+      "image_path": "bracelet\\1TNK1GV62F5L.jpg",
+      "class": "bracelet",
+      "description": "A silver Pandora bracelet with a clasp showing the Pandora logo."
+    },
+    {
+      "image_path": "bracelet\\1U7C9X4MCZSN.jpg",
+      "class": "bracelet",
+      "description": "A silver bracelet crafted from a repurposed spoon, adorned with floral details and a central silver bead."
+    },
+    {
+      "image_path": "bracelet\\20WQIS8HSYW8.jpg",
+      "class": "bracelet",
+      "description": "A close-up shot of a men's layered bracelet featuring black leather, metal studs, and black and silver beads on a white background."
+    },
+    {
+      "image_path": "bracelet\\21IWBZI4BZEC.jpg",
+      "class": "bracelet",
+      "description": "A close-up shot of a multi-layered beige and silver bracelet adorned with rhinestones and a feather charm."
+    },
+    {
+      "image_path": "bracelet\\22O1ZFD6TSKL.jpg",
+      "class": "bracelet",
+      "description": "A dazzling tennis bracelet featuring a continuous row of brilliant-cut diamonds set in a gleaming white metal."
+    },
+    {
+      "image_path": "bracelet\\2DDDCOBDYJV4.jpg",
+      "class": "bracelet",
+      "description": "A stunning tennis bracelet featuring a row of brilliant-cut diamonds set in a white gold or platinum setting."
+    },
+    {
+      "image_path": "bracelet\\2DMYQ69DDX5B.jpg",
+      "class": "bracelet",
+      "description": "A triple-strand pearl bracelet with a diamond clasp."
+    },
+    {
+      "image_path": "bracelet\\2DP6FEGXVJ1Q.jpg",
+      "class": "bracelet",
+      "description": "Three-strand bracelet with sunstone, moonstone, and milky quartz oval beads, silver clasp and charm."
+    },
+    {
+      "image_path": "bracelet\\2JHIRBNXUYR7.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold chain bracelet featuring a teal oval gemstone and a small cutout charm."
+    },
+    {
+      "image_path": "bracelet\\2ULFR5D7UYLB.jpg",
+      "class": "bracelet",
+      "description": "A silver curb chain bracelet with a blank rectangular tag flanked by cherubic angel figures."
+    },
+    {
+      "image_path": "bracelet\\2WGZHVH8O1V3.jpg",
+      "class": "bracelet",
+      "description": "A close-up shot of a teal and green Pura Vida bracelet with a beige cord and silver charm."
+    },
+    {
+      "image_path": "bracelet\\43DOTJXD75JE.jpg",
+      "class": "bracelet",
+      "description": "A rose gold and silver Pandora bracelet with a pave heart charm."
+    },
+    {
+      "image_path": "bracelet\\7B1IKBKRKSL7.jpg",
+      "class": "bracelet",
+      "description": "A gold Pandora Moments snake chain bracelet on a white background."
+    },
+    {
+      "image_path": "bracelet\\98O5L98RN2KN.jpg",
+      "class": "bracelet",
+      "description": "A delicate rose gold bracelet with three small, pave diamond accents."
+    },
+    {
+      "image_path": "bracelet\\AAQSFJZOELZ8.jpg",
+      "class": "bracelet",
+      "description": "A gold bangle bracelet with a coral-colored lotus charm and two small gold charms."
+    },
+    {
+      "image_path": "bracelet\\bracelet-socotra.jpg",
+      "class": "bracelet",
+      "description": "A close-up shot of a multi-layered beaded bracelet with a large turquoise centerpiece on a white background."
+    },
+    {
+      "image_path": "bracelet\\bracelet_001.jpg",
+      "class": "bracelet",
+      "description": "A gold bracelet featuring a heart-shaped pendant with half ruby and half diamond."
+    },
+    {
+      "image_path": "bracelet\\bracelet_018.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet featuring a diamond-centered, floral filigree charm."
+    },
+    {
+      "image_path": "bracelet\\bracelet_023.jpg",
+      "class": "bracelet",
+      "description": "A black cord bracelet featuring a small gold elephant charm with an evil eye and flower detail."
+    },
+    {
+      "image_path": "bracelet\\bracelet_028.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet featuring a single pearl and a geometric, gold charm."
+    },
+    {
+      "image_path": "bracelet\\bracelet_045.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet featuring a four-petal flower design with pave diamonds in the center, on a delicate chain."
+    },
+    {
+      "image_path": "bracelet\\bracelet_048.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet featuring a blue evil eye charm encircled by diamonds."
+    },
+    {
+      "image_path": "bracelet\\bracelet_063.jpg",
+      "class": "bracelet",
+      "description": "A stylish black cord bracelet featuring a gold flower-shaped pendant with a blue evil eye and small diamonds."
+    },
+    {
+      "image_path": "bracelet\\bracelet_068.jpg",
+      "class": "bracelet",
+      "description": "A black cord bracelet featuring a gold evil eye pendant with blue and white enamel and diamond accents."
+    },
+    {
+      "image_path": "bracelet\\bracelet_073.jpg",
+      "class": "bracelet",
+      "description": "A black cord bracelet featuring a gold and diamond-encrusted evil eye charm."
+    },
+    {
+      "image_path": "bracelet\\bracelet_074.jpg",
+      "class": "bracelet",
+      "description": "A black cord bracelet with a gold evil eye charm set with diamonds."
+    },
+    {
+      "image_path": "bracelet\\bracelet_093.jpg",
+      "class": "bracelet",
+      "description": "A delicate rose gold and white gold bracelet featuring a rose-shaped pendant with a single diamond at its center."
+    },
+    {
+      "image_path": "bracelet\\bracelet_130.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet with filigree detailing and small diamonds, set against a plain white background."
+    },
+    {
+      "image_path": "bracelet\\bracelet_133.jpg",
+      "class": "bracelet",
+      "description": "A delicate black beaded gold bracelet with a small diamond flower charm."
+    },
+    {
+      "image_path": "bracelet\\bracelet_136.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet featuring a pearl and diamond bow charm."
+    },
+    {
+      "image_path": "bracelet\\bracelet_138.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold and black beaded bracelet with a small, ornate, diamond-like centerpiece."
+    },
+    {
+      "image_path": "bracelet\\bracelet_141.jpg",
+      "class": "bracelet",
+      "description": "A black beaded gold bracelet with a small diamond cluster pendant."
+    },
+    {
+      "image_path": "bracelet\\bracelet_142.jpg",
+      "class": "bracelet",
+      "description": "A black beaded gold anklet with a small, ornate diamond pendant."
+    },
+    {
+      "image_path": "bracelet\\bracelet_144.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet with black beads and a small circular gold charm featuring tiny diamonds."
+    },
+    {
+      "image_path": "bracelet\\bracelet_147.jpg",
+      "class": "bracelet",
+      "description": "A black beaded anklet with a small gold and diamond pendant."
+    },
+    {
+      "image_path": "bracelet\\bracelet_150.jpg",
+      "class": "bracelet",
+      "description": "A delicate black and gold bracelet with a small, sparkling diamond charm."
+    },
+    {
+      "image_path": "bracelet\\bracelet_166.jpg",
+      "class": "bracelet",
+      "description": "A black beaded gold anklet with a small diamond-like charm."
+    },
+    {
+      "image_path": "bracelet\\bracelet_173.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet with an ornate filigree charm and small pearl accents."
+    },
+    {
+      "image_path": "bracelet\\bracelet_180.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet with a small, ornate, pearl-centered charm on a delicate chain."
+    },
+    {
+      "image_path": "bracelet\\bracelet_194.jpg",
+      "class": "bracelet",
+      "description": "A gold bracelet featuring a peacock feather design with colorful enamel and clear gemstones."
+    },
+    {
+      "image_path": "bracelet\\bracelet_195.jpg",
+      "class": "bracelet",
+      "description": "A gold chain bracelet with a pendant spelling \"I love U\" featuring a small red gemstone heart."
+    },
+    {
+      "image_path": "bracelet\\bracelet_196.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold butterfly charm bracelet adorned with small pearls."
+    },
+    {
+      "image_path": "bracelet\\bracelet_211.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet featuring a floral design of interconnected hearts with pave diamonds."
+    },
+    {
+      "image_path": "bracelet\\bracelet_213.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet with a diamond-encrusted leaf-shaped pendant."
+    },
+    {
+      "image_path": "bracelet\\bracelet_218.jpg",
+      "class": "bracelet",
+      "description": "A black cord bracelet featuring a gold-rimmed evil eye charm with a blue iris and white diamond accents."
+    },
+    {
+      "image_path": "bracelet\\bracelet_222.jpg",
+      "class": "bracelet",
+      "description": "A dazzling tennis bracelet featuring a row of brilliant, round-cut diamonds set in a gleaming white metal."
+    },
+    {
+      "image_path": "bracelet\\bracelet_231.jpg",
+      "class": "bracelet",
+      "description": "A dazzling tennis bracelet featuring a row of brilliant round-cut diamonds set in a gleaming white metal."
+    },
+    {
+      "image_path": "bracelet\\bracelet_264.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet featuring a central evil eye charm surrounded by baguette-cut diamonds, set on a thin chain."
+    },
+    {
+      "image_path": "bracelet\\E1UNL404V9EJ.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet featuring a blue and green enamel butterfly with diamond accents and a single pearl charm."
+    },
+    {
+      "image_path": "bracelet\\EUETWO4ZFI1P.jpg",
+      "class": "bracelet",
+      "description": "Rose gold bangle bracelet with an evil eye charm."
+    },
+    {
+      "image_path": "bracelet\\HFC8YYV9CRHF.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet with teardrop-shaped links and small diamonds."
+    },
+    {
+      "image_path": "bracelet\\IMG_5993.JPG",
+      "class": "bracelet",
+      "description": "A gold cuff bracelet adorned with two large pearls and pave diamonds."
+    },
+    {
+      "image_path": "bracelet\\QJJSQ47YGDJ2.jpg",
+      "class": "bracelet",
+      "description": "A delicate silver bracelet with three pave-set charms on a chain."
+    },
+    {
+      "image_path": "bracelet\\YIJX2H4AE3YL.jpg",
+      "class": "bracelet",
+      "description": "A delicate gold bracelet with interconnected, swirling heart-shaped links and textured end caps."
+    },
+    {
+      "image_path": "bracelet\\Z1WGR7EXQXRN.jpg",
+      "class": "bracelet",
+      "description": "A silver Pandora Moments snake chain bracelet with a heart-shaped charm."
+    },
+    {
+      "image_path": "bracelet\\ZSMKA187T91S.jpg",
+      "class": "bracelet",
+      "description": "A rose gold heart charm on a silver Pandora snake chain bracelet."
+    },
+    {
+      "image_path": "earring_best\\006_007.png",
+      "class": "earring_best",
+      "description": "A pair of gold diamond earrings with a v-shaped design."
+    },
+    {
+      "image_path": "earring_best\\007_030.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold earrings with diamond accents, shaped like stylized teardrops."
+    },
+    {
+      "image_path": "earring_best\\010_002.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with pink and white gemstone accents in a teardrop design."
+    },
+    {
+      "image_path": "earring_best\\010_012.png",
+      "class": "earring_best",
+      "description": "Pair of gold diamond earrings with a square and teardrop design."
+    },
+    {
+      "image_path": "earring_best\\010_017.png",
+      "class": "earring_best",
+      "description": "Pair of gold and silver earrings with red enamel detailing, featuring an infinity-like design and floral accents."
+    },
+    {
+      "image_path": "earring_best\\010_018.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold star-shaped earrings with dangling pearls."
+    },
+    {
+      "image_path": "earring_best\\010_021.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with pearl drops, featuring paisley-shaped designs and white gemstone accents."
+    },
+    {
+      "image_path": "earring_best\\010_025.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with white stones and pearls, featuring a floral design and a central ruby."
+    },
+    {
+      "image_path": "earring_best\\014_008.png",
+      "class": "earring_best",
+      "description": "A pair of gold hoop earrings with textured detailing and small decorative elements."
+    },
+    {
+      "image_path": "earring_best\\014_010.png",
+      "class": "earring_best",
+      "description": "Close-up of a pair of gold hoop earrings with textured detailing and small decorative beads."
+    },
+    {
+      "image_path": "earring_best\\014_013.png",
+      "class": "earring_best",
+      "description": "Pair of gold hoop earrings with colorful enamel bead accents."
+    },
+    {
+      "image_path": "earring_best\\014_014.png",
+      "class": "earring_best",
+      "description": "Pair of gold hoop earrings with textured hoops and three small textured gold beads."
+    },
+    {
+      "image_path": "earring_best\\014_015.png",
+      "class": "earring_best",
+      "description": "Pair of gold hoop earrings with three textured gold beads."
+    },
+    {
+      "image_path": "earring_best\\014_016.png",
+      "class": "earring_best",
+      "description": "Pair of gold hoop earrings with small, colorful enamel beads."
+    },
+    {
+      "image_path": "earring_best\\017_014.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with circular tops and triangular jhumkas."
+    },
+    {
+      "image_path": "earring_best\\017_023.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold jhumka earrings with square tops and intricate detailing."
+    },
+    {
+      "image_path": "earring_best\\017_027.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with intricate leaf and bead detailing, isolated on a white background."
+    },
+    {
+      "image_path": "earring_best\\017_028.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with intricate filigree work and dangling balls, set against a white background."
+    },
+    {
+      "image_path": "earring_best\\017_031.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with floral detailing and dangling beads, isolated on a white background."
+    },
+    {
+      "image_path": "earring_best\\017_032.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings against a white background."
+    },
+    {
+      "image_path": "earring_best\\017_033.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with a floral design and textured, bell-shaped drops."
+    },
+    {
+      "image_path": "earring_best\\017_034.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with intricate filigree work and dangling spherical beads, isolated on a white background."
+    },
+    {
+      "image_path": "earring_best\\017_036.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with floral tops and dangling bells, isolated on a white background."
+    },
+    {
+      "image_path": "earring_best\\017_039.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold jhumka earrings with intricate detailing and dangling elements."
+    },
+    {
+      "image_path": "earring_best\\017_041.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold jhumka earrings with paisley-shaped tops and bell-shaped bottoms, detailed with intricate carvings and hanging embellishments."
+    },
+    {
+      "image_path": "earring_best\\017_044.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with intricate detailing and dangling beads, isolated on a white background."
+    },
+    {
+      "image_path": "earring_best\\017_049.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with floral designs and beaded detailing, set against a white background."
+    },
+    {
+      "image_path": "earring_best\\017_053.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of ornate gold earrings with intricate filigree work and jhumka-style bells."
+    },
+    {
+      "image_path": "earring_best\\017_060.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold jhumka earrings with floral tops and jhumka bells."
+    },
+    {
+      "image_path": "earring_best\\017_066.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold jhumka earrings with intricate detailing and leaf-shaped accents."
+    },
+    {
+      "image_path": "earring_best\\017_067.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold jhumka earrings with teardrop-shaped tops and dangling spherical accents."
+    },
+    {
+      "image_path": "earring_best\\017_070.png",
+      "class": "earring_best",
+      "description": "A pair of ornate, gold jhumka earrings with intricate detailing."
+    },
+    {
+      "image_path": "earring_best\\017_078.png",
+      "class": "earring_best",
+      "description": "A pair of ornate, gold jhumka earrings with intricate floral and bell-shaped designs."
+    },
+    {
+      "image_path": "earring_best\\017_094.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with intricate detailing."
+    },
+    {
+      "image_path": "earring_best\\017_098.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with floral detailing, hanging from small ball-shaped tops."
+    },
+    {
+      "image_path": "earring_best\\018_006.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular tops and dangling, beaded accents."
+    },
+    {
+      "image_path": "earring_best\\018_019.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with heart-shaped tops and dangling bells."
+    },
+    {
+      "image_path": "earring_best\\018_020.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with round tops and dangling tassels, isolated on white."
+    },
+    {
+      "image_path": "earring_best\\018_024.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with intricate geometric designs and dangling tassels, set against a white background."
+    },
+    {
+      "image_path": "earring_best\\018_026.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with textured heart-shaped pendants and delicate chains."
+    },
+    {
+      "image_path": "earring_best\\018_027.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with leaf-shaped tops, conical bells, and heart-shaped charms hanging from delicate chains."
+    },
+    {
+      "image_path": "earring_best\\018_029.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with textured rectangular tops and dangling jhumka-style accents."
+    },
+    {
+      "image_path": "earring_best\\018_030.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with intricate detailing and a bell-shaped bottom."
+    },
+    {
+      "image_path": "earring_best\\018_032.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with jhumka-style drops, featuring intricate floral and beaded detailing."
+    },
+    {
+      "image_path": "earring_best\\018_033.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with textured oval tops and dangling jhumka-style tassels."
+    },
+    {
+      "image_path": "earring_best\\018_035.png",
+      "class": "earring_best",
+      "description": "A pair of gold jhumka earrings with a beaded design and a bell-shaped bottom."
+    },
+    {
+      "image_path": "earring_best\\018_040.png",
+      "class": "earring_best",
+      "description": "A pair of intricately designed gold earrings with jhumka-style detailing."
+    },
+    {
+      "image_path": "earring_best\\018_045.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold jhumka earrings with intricate detailing and dangling elements."
+    },
+    {
+      "image_path": "earring_best\\018_051.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with intricate detailing and a dangling design, set against a white background."
+    },
+    {
+      "image_path": "earring_best\\018_055.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with intricate detailing and dangling spherical accents."
+    },
+    {
+      "image_path": "earring_best\\018_069.png",
+      "class": "earring_best",
+      "description": "A pair of ornate, gold, tiered jhumka earrings with intricate floral detailing at the top."
+    },
+    {
+      "image_path": "earring_best\\018_074.png",
+      "class": "earring_best",
+      "description": "A pair of ornate, tiered gold earrings with textured surfaces."
+    },
+    {
+      "image_path": "earring_best\\018_075.png",
+      "class": "earring_best",
+      "description": "Pair of three-tiered gold jhumka earrings with floral tops."
+    },
+    {
+      "image_path": "earring_best\\018_081.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold jhumka earrings with three tiered bells and intricate detailing."
+    },
+    {
+      "image_path": "earring_best\\018_083.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with three tiers of bells and paisley-shaped tops, adorned with green and red gemstones."
+    },
+    {
+      "image_path": "earring_best\\019_017.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with leaf-shaped detail and dangling chains."
+    },
+    {
+      "image_path": "earring_best\\019_025.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with textured cylindrical tops and dangling chains ending in heart-shaped charms."
+    },
+    {
+      "image_path": "earring_best\\019_026.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with teardrop-shaped tops and dangling chains."
+    },
+    {
+      "image_path": "earring_best\\019_028.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with textured rectangular tops and dangling spherical clusters."
+    },
+    {
+      "image_path": "earring_best\\019_029.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with a crown-like top and a tassel fringe."
+    },
+    {
+      "image_path": "earring_best\\019_030.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with floral designs and dangling chains, isolated on a white background."
+    },
+    {
+      "image_path": "earring_best\\019_033.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with floral detailing and teardrop-shaped tops."
+    },
+    {
+      "image_path": "earring_best\\019_035.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with floral designs and dangling beads."
+    },
+    {
+      "image_path": "earring_best\\019_037.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with dangling chains and decorative embellishments."
+    },
+    {
+      "image_path": "earring_best\\019_043.png",
+      "class": "earring_best",
+      "description": "A pair of gold leaf-shaped earrings with dangling chains and small gold balls."
+    },
+    {
+      "image_path": "earring_best\\019_044.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold star-shaped earrings with dangling chains and small balls."
+    },
+    {
+      "image_path": "earring_best\\020_010.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with an intricate, interwoven knot design."
+    },
+    {
+      "image_path": "earring_best\\020_012.png",
+      "class": "earring_best",
+      "description": "A pair of gold leaf-shaped dangling earrings."
+    },
+    {
+      "image_path": "earring_best\\020_015.png",
+      "class": "earring_best",
+      "description": "A pair of gold leaf-shaped dangling earrings with small beads."
+    },
+    {
+      "image_path": "earring_best\\020_018.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with green enamel detailing, featuring floral and leaf motifs, dangling from a delicate chain."
+    },
+    {
+      "image_path": "earring_best\\021_002.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold heart-shaped earrings with intricate detailing."
+    },
+    {
+      "image_path": "earring_best\\021_028.png",
+      "class": "earring_best",
+      "description": "A pair of intricately designed, gold earrings with teardrop accents."
+    },
+    {
+      "image_path": "earring_best\\021_043.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular and leaf-shaped details, hanging from a delicate chain."
+    },
+    {
+      "image_path": "earring_best\\021_046.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with teardrop-shaped central elements and dangling accents."
+    },
+    {
+      "image_path": "earring_best\\021_048.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular and teardrop accents, dangling from delicate chains."
+    },
+    {
+      "image_path": "earring_best\\021_055.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with crescent moon and fringe detailing."
+    },
+    {
+      "image_path": "earring_best\\021_063.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with intricate detailing and a dangling design, set against a white background."
+    },
+    {
+      "image_path": "earring_best\\021_078.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with intricate detailing and a triangular pendant design."
+    },
+    {
+      "image_path": "earring_best\\021_079.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with intricate detailing and a heart-shaped central design."
+    },
+    {
+      "image_path": "earring_best\\022_018.png",
+      "class": "earring_best",
+      "description": "A pair of intricately designed, gold earrings with multiple crescent-shaped layers and dangling elements."
+    },
+    {
+      "image_path": "earring_best\\022_025.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular, filigree-detailed pendants and dangling chains."
+    },
+    {
+      "image_path": "earring_best\\022_027.png",
+      "class": "earring_best",
+      "description": "A pair of ornate, gold earrings with intricate detailing and dangling accents, set against a white background."
+    },
+    {
+      "image_path": "earring_best\\022_031.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular filigree designs and floral accents."
+    },
+    {
+      "image_path": "earring_best\\022_055.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with circular filigree designs and dangling chains."
+    },
+    {
+      "image_path": "earring_best\\023_006.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a floral design and dangling spherical accents."
+    },
+    {
+      "image_path": "earring_best\\023_007.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a floral design and a dangling ball."
+    },
+    {
+      "image_path": "earring_best\\023_015.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with teardrop accents, featuring intricate filigree work."
+    },
+    {
+      "image_path": "earring_best\\023_017.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with floral detailing and round drop accents."
+    },
+    {
+      "image_path": "earring_best\\023_018.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold earrings with a diamond-shaped cluster of small balls and a dangling sphere."
+    },
+    {
+      "image_path": "earring_best\\023_021.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with heart-shaped detailing and dangling spherical accents."
+    },
+    {
+      "image_path": "earring_best\\023_023.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with rectangular tops composed of small golden beads and bell-shaped drops."
+    },
+    {
+      "image_path": "earring_best\\023_024.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with textured cylindrical tops and decorative teardrop pendants."
+    },
+    {
+      "image_path": "earring_best\\023_025.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with intricate floral and beaded designs, hanging from circular frames."
+    },
+    {
+      "image_path": "earring_best\\023_026.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with a floral design and jhumka-style drops."
+    },
+    {
+      "image_path": "earring_best\\023_027.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with paisley and floral motifs, featuring textured surfaces and dangling spherical accents."
+    },
+    {
+      "image_path": "earring_best\\023_029.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with teardrop pendants and intricate floral detailing."
+    },
+    {
+      "image_path": "earring_best\\023_032.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular tops and dangling flower-shaped accents."
+    },
+    {
+      "image_path": "earring_best\\023_033.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with round tops and dangling teardrop accents."
+    },
+    {
+      "image_path": "earring_best\\023_037.png",
+      "class": "earring_best",
+      "description": "Pair of gold star-shaped dangle earrings with teardrop accents."
+    },
+    {
+      "image_path": "earring_best\\024_002.png",
+      "class": "earring_best",
+      "description": "A pair of gold drop earrings with heart-shaped tops and floral accents."
+    },
+    {
+      "image_path": "earring_best\\024_004.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings featuring peacock motifs and dangling chains with small balls."
+    },
+    {
+      "image_path": "earring_best\\024_010.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with round tops and dangling spherical charms."
+    },
+    {
+      "image_path": "earring_best\\024_031.png",
+      "class": "earring_best",
+      "description": "A pair of gold butterfly earrings with dangling chains and small gold balls."
+    },
+    {
+      "image_path": "earring_best\\024_034.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of ornate gold earrings with flower-shaped tops and dangling elements against a white background."
+    },
+    {
+      "image_path": "earring_best\\024_043.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with intricate filigree detailing and dangling chains."
+    },
+    {
+      "image_path": "earring_best\\024_044.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with circular tops, bell-shaped pendants, and delicate chains."
+    },
+    {
+      "image_path": "earring_best\\024_048.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with intricate diamond-shaped designs and dangling chains."
+    },
+    {
+      "image_path": "earring_best\\024_070.png",
+      "class": "earring_best",
+      "description": "A pair of gold bird earrings with enamel detailing and dangling chains."
+    },
+    {
+      "image_path": "earring_best\\024_112.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with dangling teardrop and heart-shaped charms."
+    },
+    {
+      "image_path": "earring_best\\024_115.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with dangling elements."
+    },
+    {
+      "image_path": "earring_best\\024_117.png",
+      "class": "earring_best",
+      "description": "A pair of long, gold earrings with intricate, leaf-shaped designs and dangling tassels."
+    },
+    {
+      "image_path": "earring_best\\024_119.png",
+      "class": "earring_best",
+      "description": "A pair of gold hoop earrings with textured detailing and small dangling tassels."
+    },
+    {
+      "image_path": "earring_best\\024_122.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with a bell-shaped top and dangling figure charms."
+    },
+    {
+      "image_path": "earring_best\\025_008.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with ornate floral and figure detailing hanging from a hook."
+    },
+    {
+      "image_path": "earring_best\\025_009.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with floral and bird motifs hanging from thin chains."
+    },
+    {
+      "image_path": "earring_best\\025_010.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a floral design and a triangular pendant."
+    },
+    {
+      "image_path": "earring_best\\025_011.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings, each featuring a floral element above a triangular pendant with intricate filigree detailing."
+    },
+    {
+      "image_path": "earring_best\\025_012.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold drop earrings with floral and scroll detailing."
+    },
+    {
+      "image_path": "earring_best\\025_013.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with floral and scroll details hanging against a black background."
+    },
+    {
+      "image_path": "earring_best\\025_014.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with circular tops and three dangling leaf-shaped accents."
+    },
+    {
+      "image_path": "earring_best\\025_015.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold drop earrings with textured circular tops and three leaf-shaped pendants."
+    },
+    {
+      "image_path": "earring_best\\025_039.png",
+      "class": "earring_best",
+      "description": "Pair of gold leaf-shaped earrings with cutout detailing."
+    },
+    {
+      "image_path": "earring_best\\025_040.png",
+      "class": "earring_best",
+      "description": "Pair of gold leaf-shaped earrings with cutout detailing."
+    },
+    {
+      "image_path": "earring_best\\025_042.png",
+      "class": "earring_best",
+      "description": "A pair of gold leaf-shaped earrings on a white background."
+    },
+    {
+      "image_path": "earring_best\\025_043.png",
+      "class": "earring_best",
+      "description": "A pair of gold leaf-shaped earrings with textured stems."
+    },
+    {
+      "image_path": "earring_best\\026_004.png",
+      "class": "earring_best",
+      "description": "Two gold heart-shaped earrings on a white background."
+    },
+    {
+      "image_path": "earring_best\\026_008.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with leaf-shaped design and enamel flower accents."
+    },
+    {
+      "image_path": "earring_best\\026_009.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with red gemstone accents, intricately designed with leaf-like patterns and filigree details."
+    },
+    {
+      "image_path": "earring_best\\026_048.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold teardrop earrings with intricate cutout floral designs."
+    },
+    {
+      "image_path": "earring_best\\026_050.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a teardrop shape and intricate cutout design."
+    },
+    {
+      "image_path": "earring_best\\026_052.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold leaf-shaped earrings with intricate detailing against a white background."
+    },
+    {
+      "image_path": "earring_best\\026_063.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with leaf-shaped filigree and textured detailing, photographed against a white background."
+    },
+    {
+      "image_path": "earring_best\\026_064.png",
+      "class": "earring_best",
+      "description": "Pair of teardrop-shaped gold earrings with a subtle leaf-like design."
+    },
+    {
+      "image_path": "earring_best\\027_001.png",
+      "class": "earring_best",
+      "description": "A pair of ornate, gold, floral stud earrings on a white background."
+    },
+    {
+      "image_path": "earring_best\\027_004.png",
+      "class": "earring_best",
+      "description": "Pair of gold circular earrings with concentric grooves."
+    },
+    {
+      "image_path": "earring_best\\027_007.png",
+      "class": "earring_best",
+      "description": "A pair of round, gold earrings with concentric circular patterns."
+    },
+    {
+      "image_path": "earring_best\\027_013.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with interwoven circular designs and a central bead."
+    },
+    {
+      "image_path": "earring_best\\027_021.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold earrings with a central pearl, featuring a concentric circular design."
+    },
+    {
+      "image_path": "earring_best\\027_022.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings featuring a circular floral design."
+    },
+    {
+      "image_path": "earring_best\\027_023.png",
+      "class": "earring_best",
+      "description": "A pair of ornate, gold, circular earrings with a textured, floral design."
+    },
+    {
+      "image_path": "earring_best\\027_024.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a swirling, textured square design in the center."
+    },
+    {
+      "image_path": "earring_best\\027_025.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular, beaded designs."
+    },
+    {
+      "image_path": "earring_best\\027_026.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular floral designs."
+    },
+    {
+      "image_path": "earring_best\\027_030.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular, mandala-like designs."
+    },
+    {
+      "image_path": "earring_best\\027_031.png",
+      "class": "earring_best",
+      "description": "Pair of ornate, round gold earrings with intricate floral designs."
+    },
+    {
+      "image_path": "earring_best\\027_034.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular, mandala-like designs."
+    },
+    {
+      "image_path": "earring_best\\027_035.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with intricate circular filigree designs."
+    },
+    {
+      "image_path": "earring_best\\027_037.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular, mandala-like designs."
+    },
+    {
+      "image_path": "earring_best\\027_042.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with octagonal flower design."
+    },
+    {
+      "image_path": "earring_best\\027_043.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular floral designs."
+    },
+    {
+      "image_path": "earring_best\\027_049.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings, round with intricate floral designs."
+    },
+    {
+      "image_path": "earring_best\\027_051.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with circular, ornate, sunflower-like design."
+    },
+    {
+      "image_path": "earring_best\\027_053.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a circular, swirling, textured design featuring small beads and a central floral motif."
+    },
+    {
+      "image_path": "earring_best\\027_057.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings, each featuring a circular, filigree design resembling a stylized flower."
+    },
+    {
+      "image_path": "earring_best\\027_058.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular, filigree design."
+    },
+    {
+      "image_path": "earring_best\\027_059.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold knot-design stud earrings on a white background."
+    },
+    {
+      "image_path": "earring_best\\027_061.png",
+      "class": "earring_best",
+      "description": "Pair of gold circular earrings with a sunburst/shell design cutout."
+    },
+    {
+      "image_path": "earring_best\\027_064.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold stud earrings with a textured, floral design."
+    },
+    {
+      "image_path": "earring_best\\027_067.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with a swirling, textured floral design."
+    },
+    {
+      "image_path": "earring_best\\027_068.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with intricate floral and leaf designs."
+    },
+    {
+      "image_path": "earring_best\\027_069.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with intricate floral designs."
+    },
+    {
+      "image_path": "earring_best\\027_102.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with circular floral designs."
+    },
+    {
+      "image_path": "earring_best\\027_104.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold earrings with a floral design, featuring white stones and dark green accents."
+    },
+    {
+      "image_path": "earring_best\\027_115.png",
+      "class": "earring_best",
+      "description": "A pair of gold stud earrings with a floral design, detailed close-up studio shot on a white background."
+    },
+    {
+      "image_path": "earring_best\\028_018.png",
+      "class": "earring_best",
+      "description": "A pair of gold heart-shaped stud earrings with a textured, swirled design."
+    },
+    {
+      "image_path": "earring_best\\028_031.png",
+      "class": "earring_best",
+      "description": "A pair of intricately designed gold earrings with filigree teardrop tops and double oval drops."
+    },
+    {
+      "image_path": "earring_best\\028_036.png",
+      "class": "earring_best",
+      "description": "A pair of gold knot-shaped stud earrings on a white background."
+    },
+    {
+      "image_path": "earring_best\\028_056.png",
+      "class": "earring_best",
+      "description": "Pair of gold leaf-shaped dangling earrings with small beads."
+    },
+    {
+      "image_path": "earring_best\\029_001.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold flower-shaped stud earrings."
+    },
+    {
+      "image_path": "earring_best\\029_004.png",
+      "class": "earring_best",
+      "description": "A pair of gold flower-shaped stud earrings on a white background."
+    },
+    {
+      "image_path": "earring_best\\029_014.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with a clover-like design, intricately detailed and set against a white background."
+    },
+    {
+      "image_path": "earring_best\\029_017.png",
+      "class": "earring_best",
+      "description": "Pair of gold flower-shaped stud earrings."
+    },
+    {
+      "image_path": "earring_best\\029_019.png",
+      "class": "earring_best",
+      "description": "Pair of gold starburst earrings on white background."
+    },
+    {
+      "image_path": "earring_best\\029_028.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold floral earrings with textured detailing."
+    },
+    {
+      "image_path": "earring_best\\029_034.png",
+      "class": "earring_best",
+      "description": "A pair of gold stud earrings with a geometric, star-like design featuring a textured square in the center."
+    },
+    {
+      "image_path": "earring_best\\029_037.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings featuring a starburst design with a central flower motif."
+    },
+    {
+      "image_path": "earring_best\\029_041.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a geometric, quatrefoil design."
+    },
+    {
+      "image_path": "earring_best\\029_042.png",
+      "class": "earring_best",
+      "description": "Pair of gold star-shaped earrings on a white background."
+    },
+    {
+      "image_path": "earring_best\\029_043.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold stud earrings with a sunflower-like design."
+    },
+    {
+      "image_path": "earring_best\\029_044.png",
+      "class": "earring_best",
+      "description": "Pair of gold flower-shaped stud earrings with textured centers."
+    },
+    {
+      "image_path": "earring_best\\029_047.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with a tri-petal flower design, featuring a contrasting metallic inlay."
+    },
+    {
+      "image_path": "earring_best\\029_048.png",
+      "class": "earring_best",
+      "description": "Pair of gold flower-shaped stud earrings."
+    },
+    {
+      "image_path": "earring_best\\029_049.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold flower-shaped stud earrings."
+    },
+    {
+      "image_path": "earring_best\\029_054.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold flower-shaped stud earrings."
+    },
+    {
+      "image_path": "earring_best\\029_076.png",
+      "class": "earring_best",
+      "description": "Pair of gold flower stud earrings with a light beige center."
+    },
+    {
+      "image_path": "earring_best\\029_079.png",
+      "class": "earring_best",
+      "description": "A pair of gold flower-shaped earrings with textured petals and a central gemstone."
+    },
+    {
+      "image_path": "earring_best\\030_001.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with intricate floral designs and textured spherical accents."
+    },
+    {
+      "image_path": "earring_best\\030_004.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with intricate floral designs and dangling spherical accents."
+    },
+    {
+      "image_path": "earring_best\\030_005.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with intricate detailing, featuring a circular top and a diamond-shaped pendant ending in a bell-shaped drop."
+    },
+    {
+      "image_path": "earring_best\\030_006.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with intricate detailing and a tassel design, photographed against a white background."
+    },
+    {
+      "image_path": "earring_best\\030_011.png",
+      "class": "earring_best",
+      "description": "A pair of gold teardrop earrings with textured, layered detailing."
+    },
+    {
+      "image_path": "earring_best\\030_015.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with an intricate, swirling, floral design."
+    },
+    {
+      "image_path": "earring_best\\030_022.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings, each featuring a circular top and a diamond-shaped pendant with intricate filigree work."
+    },
+    {
+      "image_path": "earring_best\\030_024.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with leaf and heart design."
+    },
+    {
+      "image_path": "earring_best\\030_025.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with leaf and heart motifs."
+    },
+    {
+      "image_path": "earring_best\\030_026.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with square and heart-shaped pendants, intricately detailed."
+    },
+    {
+      "image_path": "earring_best\\030_027.png",
+      "class": "earring_best",
+      "description": "A pair of ornate, gold, diamond-shaped earrings with intricate detailing."
+    },
+    {
+      "image_path": "earring_best\\030_028.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with floral and geometric motifs, set against a white background."
+    },
+    {
+      "image_path": "earring_best\\030_029.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold teardrop earrings with intricate detailing against a white background."
+    },
+    {
+      "image_path": "earring_best\\030_032.png",
+      "class": "earring_best",
+      "description": "A pair of ornate, gold, filigree earrings with teardrop-shaped pendants."
+    },
+    {
+      "image_path": "earring_best\\030_034.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold teardrop earrings with filigree detailing."
+    },
+    {
+      "image_path": "earring_best\\030_035.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with three diamond-shaped filigree pendants hanging from delicate loops."
+    },
+    {
+      "image_path": "earring_best\\030_040.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with leaf and floral filigree designs."
+    },
+    {
+      "image_path": "earring_best\\030_041.png",
+      "class": "earring_best",
+      "description": "Pair of gold leaf-shaped dangle earrings on white background."
+    },
+    {
+      "image_path": "earring_best\\030_043.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with filigree detailing, teardrop-shaped pendants, and circular tops."
+    },
+    {
+      "image_path": "earring_best\\030_053.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with teardrop-shaped filigree designs and leaf-shaped accents."
+    },
+    {
+      "image_path": "earring_best\\030_055.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with leaf-shaped tops and cascading teardrop-shaped pendants."
+    },
+    {
+      "image_path": "earring_best\\030_060.png",
+      "class": "earring_best",
+      "description": "A pair of intricately designed, teardrop-shaped gold earrings with filigree detailing."
+    },
+    {
+      "image_path": "earring_best\\030_065.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with circular, sunburst-like designs and filigree teardrop accents."
+    },
+    {
+      "image_path": "earring_best\\030_080.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with leaf-shaped, filigree designs."
+    },
+    {
+      "image_path": "earring_best\\030_092.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold earrings with an intricate, geometric diamond design and floral accents."
+    },
+    {
+      "image_path": "earring_best\\030_094.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with geometric diamond-shaped cutouts."
+    },
+    {
+      "image_path": "earring_best\\031_001.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with round and cylindrical embellishments hanging from a beaded chain."
+    },
+    {
+      "image_path": "earring_best\\031_002.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with a textured, beaded design and dangling spherical accents."
+    },
+    {
+      "image_path": "earring_best\\031_011.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with dangling leaf-shaped pendants."
+    },
+    {
+      "image_path": "earring_best\\031_017.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with floral and bird motifs, hanging teardrop accents, and delicate chain detailing."
+    },
+    {
+      "image_path": "earring_best\\031_036.png",
+      "class": "earring_best",
+      "description": "Pair of gold filigree earrings featuring a small flower at the top and a larger, circular flower at the bottom."
+    },
+    {
+      "image_path": "earring_best\\032_022.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold earrings with a unique abstract design, featuring smooth, teardrop-shaped elements."
+    },
+    {
+      "image_path": "earring_best\\032_024.png",
+      "class": "earring_best",
+      "description": "Pair of gold teardrop earrings with cutout detail."
+    },
+    {
+      "image_path": "earring_best\\032_026.png",
+      "class": "earring_best",
+      "description": "A pair of gold star-shaped earrings with a crescent moon design."
+    },
+    {
+      "image_path": "earring_best\\032_031.png",
+      "class": "earring_best",
+      "description": "Pair of gold flower-shaped stud earrings with a small pearl center."
+    },
+    {
+      "image_path": "earring_best\\032_037.png",
+      "class": "earring_best",
+      "description": "A pair of gold leaf-shaped earrings."
+    },
+    {
+      "image_path": "earring_best\\032_038.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a ribbed, fan-shaped design and a diamond-shaped top."
+    },
+    {
+      "image_path": "earring_best\\032_039.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings, featuring a paisley-inspired design with detailed floral motifs, are shown against a white background."
+    },
+    {
+      "image_path": "earring_best\\032_069.png",
+      "class": "earring_best",
+      "description": "A pair of gold triangular stud earrings, each featuring a small floral design in the center."
+    },
+    {
+      "image_path": "earring_best\\033_001.png",
+      "class": "earring_best",
+      "description": "Pair of gold rectangular earrings composed of small golden beads."
+    },
+    {
+      "image_path": "earring_best\\033_004.png",
+      "class": "earring_best",
+      "description": "A pair of intricately designed gold earrings with a central circular motif and beaded borders, set against a white background."
+    },
+    {
+      "image_path": "earring_best\\033_019.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold earrings with intricate, textured, leaf-like designs."
+    },
+    {
+      "image_path": "earring_best\\033_024.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a textured, beaded design in a half-hoop shape."
+    },
+    {
+      "image_path": "earring_best\\035_007.png",
+      "class": "earring_best",
+      "description": "A pair of gold diamond-shaped earrings adorned with multicolored gemstones and pearls."
+    },
+    {
+      "image_path": "earring_best\\035_015.png",
+      "class": "earring_best",
+      "description": "Pair of gold whale stud earrings with black eyes."
+    },
+    {
+      "image_path": "earring_best\\036_008.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with red gemstone centers, isolated on white."
+    },
+    {
+      "image_path": "earring_best\\036_010.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with dark red and blue enamel detailing, set against a white background."
+    },
+    {
+      "image_path": "earring_best\\036_012.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with red gemstone accents."
+    },
+    {
+      "image_path": "earring_best\\036_013.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with white stones, arranged in a floral pattern."
+    },
+    {
+      "image_path": "earring_best\\036_014.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with red gemstone centers, featuring a floral, paisley design."
+    },
+    {
+      "image_path": "earring_best\\036_018.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of ornate gold earrings with red gemstone centers, arranged against a white background."
+    },
+    {
+      "image_path": "earring_best\\036_020.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with multicolored enamel detailing in a circular, ornate design."
+    },
+    {
+      "image_path": "earring_best\\037_003.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with red garnet center stones set in floral filigree."
+    },
+    {
+      "image_path": "earring_best\\037_008.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold earrings featuring oval-shaped garnet gemstones in ornate settings."
+    },
+    {
+      "image_path": "earring_best\\038_005.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with purple and green gemstones."
+    },
+    {
+      "image_path": "earring_best\\038_011.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with floral designs, pink and green gemstones."
+    },
+    {
+      "image_path": "earring_best\\038_014.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with flower-shaped tops and teardrop-shaped green and red gemstones."
+    },
+    {
+      "image_path": "earring_best\\038_017.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold earrings with floral and paisley designs, featuring green and white gemstones."
+    },
+    {
+      "image_path": "earring_best\\038_021.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with red and green gemstone accents, styled as flower and teardrop shapes."
+    },
+    {
+      "image_path": "earring_best\\038_024.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with red and green gemstone accents."
+    },
+    {
+      "image_path": "earring_best\\038_032.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with pink and green gemstones, featuring floral and teardrop designs."
+    },
+    {
+      "image_path": "earring_best\\038_038.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with red and clear gemstones."
+    },
+    {
+      "image_path": "earring_best\\038_062.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings featuring peacock motifs and pink gemstones."
+    },
+    {
+      "image_path": "earring_best\\039_002.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with maroon enamel detailing and gold tassels."
+    },
+    {
+      "image_path": "earring_best\\039_006.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with square geometric designs and dangling pearls."
+    },
+    {
+      "image_path": "earring_best\\039_007.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with square geometric designs and dangling pearls."
+    },
+    {
+      "image_path": "earring_best\\039_008.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with three teardrop-shaped accents."
+    },
+    {
+      "image_path": "earring_best\\039_009.png",
+      "class": "earring_best",
+      "description": "Pair of gold dangle earrings with three teardrop-shaped accents."
+    },
+    {
+      "image_path": "earring_best\\039_010.png",
+      "class": "earring_best",
+      "description": "A pair of gold drop earrings with a circular design and a small flower accent."
+    },
+    {
+      "image_path": "earring_best\\039_011.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a circular design and a small flower pendant."
+    },
+    {
+      "image_path": "earring_best\\039_025.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with textured ball tops and faceted cylindrical drops hanging from delicate chains."
+    },
+    {
+      "image_path": "earring_best\\039_026.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with floral and teardrop designs, featuring red gemstone accents."
+    },
+    {
+      "image_path": "earring_best\\039_030.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with three tiered jhumkas adorned with colorful enamel detailing."
+    },
+    {
+      "image_path": "earring_best\\039_031.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with red and green gemstone accents, hanging from bell-shaped filigree pendants and ending in small gold balls."
+    },
+    {
+      "image_path": "earring_best\\040_003.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with pink gemstone accents and pearl drops."
+    },
+    {
+      "image_path": "earring_best\\040_009.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with pink and green gemstones, detailed jhumka design."
+    },
+    {
+      "image_path": "earring_best\\040_012.png",
+      "class": "earring_best",
+      "description": "A pair of antique gold jhumka earrings with red and white gemstones."
+    },
+    {
+      "image_path": "earring_best\\040_014.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold jhumka earrings with red and white gemstone accents."
+    },
+    {
+      "image_path": "earring_best\\040_015.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold jhumka earrings with red and white stones."
+    },
+    {
+      "image_path": "earring_best\\040_019.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with red and green gemstones."
+    },
+    {
+      "image_path": "earring_best\\040_023.png",
+      "class": "earring_best",
+      "description": "A pair of gold jhumka earrings with pink and green gemstones and pearl accents."
+    },
+    {
+      "image_path": "earring_best\\040_035.png",
+      "class": "earring_best",
+      "description": "A pair of gold jhumka earrings adorned with white and pink gemstones."
+    },
+    {
+      "image_path": "earring_best\\040_070.png",
+      "class": "earring_best",
+      "description": "A pair of antique gold earrings with red and green stones, detailed ornate design."
+    },
+    {
+      "image_path": "earring_best\\040_078.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with red and clear gemstones."
+    },
+    {
+      "image_path": "earring_best\\040_094.png",
+      "class": "earring_best",
+      "description": "Pair of gold peacock jhumka earrings with intricate detailing and a small red gemstone accent."
+    },
+    {
+      "image_path": "earring_best\\040_099.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold jhumka earrings with red gemstone accents."
+    },
+    {
+      "image_path": "earring_best\\041_012.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with maroon enamel detailing and gold tassels."
+    },
+    {
+      "image_path": "earring_best\\041_016.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with red and green enamel detailing and gold tassels."
+    },
+    {
+      "image_path": "earring_best\\041_017.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings featuring pink ruby flowers and leaves."
+    },
+    {
+      "image_path": "earring_best\\042_022.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with red, green, and yellow gemstones."
+    },
+    {
+      "image_path": "earring_best\\043_001.png",
+      "class": "earring_best",
+      "description": "Elegant gold earrings with dangling pearls and swirling designs."
+    },
+    {
+      "image_path": "earring_best\\044_004.png",
+      "class": "earring_best",
+      "description": "A pair of gold paisley-shaped earrings adorned with ruby stones and dangling pearls."
+    },
+    {
+      "image_path": "earring_best\\044_007.png",
+      "class": "earring_best",
+      "description": "Close-up of a pair of gold paisley-shaped earrings adorned with green emeralds."
+    },
+    {
+      "image_path": "earring_best\\044_009.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with teardrop-shaped green gemstones and leaf-shaped accents."
+    },
+    {
+      "image_path": "earring_best\\044_010.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings adorned with pink gemstones arranged in a floral pattern."
+    },
+    {
+      "image_path": "earring_best\\044_015.png",
+      "class": "earring_best",
+      "description": "Pair of gold paisley earrings adorned with ruby stones and dangling pearls."
+    },
+    {
+      "image_path": "earring_best\\044_016.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings adorned with numerous bright pink rubies, arranged in a floral pattern with a dangling teardrop-shaped ruby."
+    },
+    {
+      "image_path": "earring_best\\044_017.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with ruby flower-shaped clusters and teardrop pendants."
+    },
+    {
+      "image_path": "earring_best\\044_018.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings adorned with ruby flowers and teardrop accents."
+    },
+    {
+      "image_path": "earring_best\\044_019.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings adorned with pink rubies, featuring a cluster design and teardrop accents."
+    },
+    {
+      "image_path": "earring_best\\044_026.png",
+      "class": "earring_best",
+      "description": "Pair of ornate gold earrings with colorful enamel detailing and dangling beads."
+    },
+    {
+      "image_path": "earring_best\\044_027.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with ruby and emerald flower accents and Lakshmi coin pendants."
+    },
+    {
+      "image_path": "earring_best\\044_034.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings adorned with rubies and emeralds."
+    },
+    {
+      "image_path": "earring_best\\044_056.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with red, green, and white gemstones, featuring a flower design at the top and a teardrop shape at the bottom."
+    },
+    {
+      "image_path": "earring_best\\044_065.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings adorned with pink and white gemstones, featuring a teardrop design and intricate detailing."
+    },
+    {
+      "image_path": "earring_best\\045_001.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with red and green gemstone accents, featuring circular tops and dangling triangular elements."
+    },
+    {
+      "image_path": "earring_best\\045_002.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings adorned with numerous vibrant pink rubies, arranged in a clustered, dangling design."
+    },
+    {
+      "image_path": "earring_best\\045_009.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold and silver earrings with layered circular designs."
+    },
+    {
+      "image_path": "earring_best\\045_012.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings featuring red and green gemstones, pearls, and intricate detailing."
+    },
+    {
+      "image_path": "earring_best\\045_016.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings, each featuring a pink ruby, a green emerald, and a circular arrangement of smaller diamonds."
+    },
+    {
+      "image_path": "earring_best\\045_019.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with teardrop-shaped settings, adorned with white and colored gemstones."
+    },
+    {
+      "image_path": "earring_best\\045_023.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings adorned with white and red gemstones, featuring intricate filigree work."
+    },
+    {
+      "image_path": "earring_best\\045_026.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings adorned with white and red gemstones, arranged in an intricate floral pattern."
+    },
+    {
+      "image_path": "earring_best\\045_027.png",
+      "class": "earring_best",
+      "description": "A pair of ornate gold earrings with teardrop-shaped pendants adorned with white stones and a central maroon gem."
+    },
+    {
+      "image_path": "earring_best\\045_038.png",
+      "class": "earring_best",
+      "description": "Pair of gold diamond-shaped earrings with intricate filigree work and enamel detailing."
+    },
+    {
+      "image_path": "earring_best\\046_007.png",
+      "class": "earring_best",
+      "description": "Pair of gold stud earrings with marquise-cut ruby gemstones arranged in a floral pattern."
+    },
+    {
+      "image_path": "earring_best\\046_008.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings shaped like vases with ruby flower accents."
+    },
+    {
+      "image_path": "earring_best\\046_009.png",
+      "class": "earring_best",
+      "description": "A pair of gold stud earrings with four pink gemstones set in a V-shaped design."
+    },
+    {
+      "image_path": "earring_best\\046_015.png",
+      "class": "earring_best",
+      "description": "Close-up shot of a pair of gold star-shaped earrings adorned with emerald gemstones."
+    },
+    {
+      "image_path": "earring_best\\046_021.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with ruby floral design."
+    },
+    {
+      "image_path": "earring_best\\046_025.png",
+      "class": "earring_best",
+      "description": "A pair of gold stud earrings, each featuring a cluster of bright pink gemstones arranged in a floral pattern."
+    },
+    {
+      "image_path": "earring_best\\046_028.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings shaped like pink ruby flowers."
+    },
+    {
+      "image_path": "earring_best\\046_030.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings featuring a floral design with dark blue sapphires."
+    },
+    {
+      "image_path": "earring_best\\046_031.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a central garnet surrounded by amethyst stones in a floral design."
+    },
+    {
+      "image_path": "earring_best\\046_033.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with pink gemstone flower accents, intertwined stems."
+    },
+    {
+      "image_path": "earring_best\\046_034.png",
+      "class": "earring_best",
+      "description": "Pair of gold flower-shaped earrings adorned with emerald gemstones."
+    },
+    {
+      "image_path": "earring_best\\046_042.png",
+      "class": "earring_best",
+      "description": "Pair of gold stud earrings with pink ruby floral design."
+    },
+    {
+      "image_path": "earring_best\\046_043.png",
+      "class": "earring_best",
+      "description": "A pair of gold stud earrings, each shaped like a flower with seven oval-shaped ruby gemstones."
+    },
+    {
+      "image_path": "earring_best\\046_045.png",
+      "class": "earring_best",
+      "description": "A pair of gold stud earrings adorned with emerald gemstones arranged in a floral pattern."
+    },
+    {
+      "image_path": "earring_best\\046_046.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings adorned with ruby and emerald gemstones, arranged in a floral pattern."
+    },
+    {
+      "image_path": "earring_best\\046_049.png",
+      "class": "earring_best",
+      "description": "A pair of gold flower-shaped earrings adorned with pink gemstones."
+    },
+    {
+      "image_path": "earring_best\\046_057.png",
+      "class": "earring_best",
+      "description": "Pair of gold earrings with pink and green gemstones, intricately designed in a circular teardrop shape."
+    },
+    {
+      "image_path": "earring_best\\046_060.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings, each featuring a central emerald teardrop surrounded by pink gemstones in a floral arrangement."
+    },
+    {
+      "image_path": "earring_best\\046_062.png",
+      "class": "earring_best",
+      "description": "Pair of ruby and gold flower-shaped stud earrings."
+    },
+    {
+      "image_path": "earring_best\\046_087.png",
+      "class": "earring_best",
+      "description": "Pair of gold flower-shaped earrings with pink gemstones."
+    },
+    {
+      "image_path": "earring_best\\046_095.png",
+      "class": "earring_best",
+      "description": "A pair of gold earrings shaped like triangles, adorned with small purple gemstones and textured gold leaves."
+    },
+    {
+      "image_path": "earring_best\\earring_308.jpg",
+      "class": "earring_best",
+      "description": "A pair of gold earrings featuring a smaller diamond heart dangling above a larger ruby heart."
+    },
+    {
+      "image_path": "earring_best\\earring_312.jpg",
+      "class": "earring_best",
+      "description": "A pair of elegant diamond drop earrings with halo settings, on a white background."
+    },
+    {
+      "image_path": "earring_best\\earring_322.jpg",
+      "class": "earring_best",
+      "description": "A pair of gold drop earrings with floral detailing and intricate cut-out designs."
+    },
+    {
+      "image_path": "earring_best\\earring_324.jpg",
+      "class": "earring_best",
+      "description": "A pair of gold filigree teardrop earrings with floral accents hanging from hooks."
+    },
+    {
+      "image_path": "earring_best\\earring_96.jpg",
+      "class": "earring_best",
+      "description": "A pair of gold flower-shaped earrings with dangling pearls and small diamonds in the center."
+    },
+    {
+      "image_path": "earring_best\\UE00012-YG0000_1_lar.jpg",
+      "class": "earring_best",
+      "description": "A pair of gold earrings with a floral design and intricate cut-out detailing in the shape of teardrops."
+    },
+    {
+      "image_path": "earring_best\\ybear-31772a-you-bella-original-imaez9n7sh8djtfc.jpeg",
+      "class": "earring_best",
+      "description": "A pair of silver oxidised earrings with intricate floral and crescent moon designs, adorned with beaded chains."
+    },
+    {
+      "image_path": "necklace\\009LF5LV4JOK.jpg",
+      "class": "necklace",
+      "description": "A long silver chain necklace with a circular pendant and two red gemstone beads."
+    },
+    {
+      "image_path": "necklace\\01HOXLHBJ10X.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with a crescent-shaped arrangement of dark blue gemstones and a dangling pendant."
+    },
+    {
+      "image_path": "necklace\\02CXSVCBZ2QF.jpg",
+      "class": "necklace",
+      "description": "A handmade necklace featuring three gray polymer clay flowers, two with pink and gray striped centers, and one with a cluster of small multicolored beads."
+    },
+    {
+      "image_path": "necklace\\037NLT0FF2EC.jpg",
+      "class": "necklace",
+      "description": "A colorful necklace made from linked circular pieces of repurposed magazine pages, displayed on a mannequin with a black ribbon."
+    },
+    {
+      "image_path": "necklace\\04VFYBPBZ6DV.jpg",
+      "class": "necklace",
+      "description": "A delicate silver necklace featuring asymmetrical baroque pearls and pink quartz drops."
+    },
+    {
+      "image_path": "necklace\\05MD7PLPEVBL.jpg",
+      "class": "necklace",
+      "description": "Two silver heart-shaped necklaces with engraved names and colorful gemstones, ideal for mothers or couples."
+    },
+    {
+      "image_path": "necklace\\06DMN63398UT.jpg",
+      "class": "necklace",
+      "description": "A crocheted necklace shaped like a wreath, adorned with multicolored flowers and leaves, rests on a stone surface."
+    },
+    {
+      "image_path": "necklace\\07MQQDPM75GI.jpg",
+      "class": "necklace",
+      "description": "A gold layered necklace with two large circular pendants and a small bead detail."
+    },
+    {
+      "image_path": "necklace\\084PID1BBL09.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of an elegant necklace featuring dark brown gemstone beads, intricate wirework accents, and a teardrop-shaped pendant, all against a stark white background."
+    },
+    {
+      "image_path": "necklace\\0AXOLUU7Z1B3.jpg",
+      "class": "necklace",
+      "description": "A long, layered necklace featuring pale teardrop-shaped stones, gold chains, and small coral-colored beads on a crimson background."
+    },
+    {
+      "image_path": "necklace\\0CUGRDKG881P.jpg",
+      "class": "necklace",
+      "description": "A long, layered necklace with a copper chain and turquoise and brown beads."
+    },
+    {
+      "image_path": "necklace\\0E3QG08A1AQD.jpg",
+      "class": "necklace",
+      "description": "Close-up of a steampunk-style necklace with brass gears, ornate filigree, and a dark red gemstone pendant on a red velvet background."
+    },
+    {
+      "image_path": "necklace\\0EQSFTVZPIJV.jpg",
+      "class": "necklace",
+      "description": "Elegant gold filigree necklace with light blue aquamarine gemstones and pearls."
+    },
+    {
+      "image_path": "necklace\\0EVG2TKKGJ4D.jpg",
+      "class": "necklace",
+      "description": "A delicate necklace featuring alternating purple and pink beads, culminating in a faceted rose quartz pendant."
+    },
+    {
+      "image_path": "necklace\\0FJN8YACEW8H.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a silver chain necklace featuring a polished, oval-shaped grey and white gemstone pendant resting on weathered grey wood."
+    },
+    {
+      "image_path": "necklace\\0FT374IW1Y62.jpg",
+      "class": "necklace",
+      "description": "Close-up of a dark green fabric pendant necklace with metallic accents and a ball chain."
+    },
+    {
+      "image_path": "necklace\\0FU2LSVWREZW.jpg",
+      "class": "necklace",
+      "description": "A silver necklace featuring two interlocking rings, one adorned with small stones and inscriptions, hanging from a delicate chain."
+    },
+    {
+      "image_path": "necklace\\0GT0TQBYJE1T.jpg",
+      "class": "necklace",
+      "description": "An elegant necklace featuring aquamarine and clear quartz gemstones on a silver wire setting, with a large quartz teardrop pendant."
+    },
+    {
+      "image_path": "necklace\\0IWH80RS6UHO.jpg",
+      "class": "necklace",
+      "description": "A gold Tiffany & Co. heart-shaped necklace with \"LOVE\" engraved on the pendant, featuring a delicate chain and a small padlock charm."
+    },
+    {
+      "image_path": "necklace\\0JXM8676YVTV.jpg",
+      "class": "necklace",
+      "description": "Elegant diamond necklace with a weeping willow leaf design, set against a plain grey background."
+    },
+    {
+      "image_path": "necklace\\0K8JV16HVYTY.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with a circular pendant featuring an evil eye design, small gemstones, and the inscription \"Lucky Talisman\"."
+    },
+    {
+      "image_path": "necklace\\0LGMOYWP1LAA.jpg",
+      "class": "necklace",
+      "description": "Elegant triple-strand pearl necklace with red beads and a central gemstone pendant."
+    },
+    {
+      "image_path": "necklace\\0MO1PKAYDVI0.jpg",
+      "class": "necklace",
+      "description": "Close-up of a pink glitter-filled heart-shaped glass pendant on a black and clear beaded necklace."
+    },
+    {
+      "image_path": "necklace\\0N7C347QCR2H.jpg",
+      "class": "necklace",
+      "description": "Close-up of an elegant necklace with a light amber crystal pendant and a chain of small, irregular, gold-toned beads."
+    },
+    {
+      "image_path": "necklace\\0NM11EUC0DXD.jpg",
+      "class": "necklace",
+      "description": "A delicate silver chain necklace featuring a large, iridescent purple teardrop crystal pendant, resting on antique-looking paper."
+    },
+    {
+      "image_path": "necklace\\0R4Q4HNRPK9C.jpg",
+      "class": "necklace",
+      "description": "A delicate silver necklace with small, vertically oriented, diamond-encrusted bars dangling from a thin chain."
+    },
+    {
+      "image_path": "necklace\\0TZ5N4O5VEHN.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with small, clear beads arranged in a flowing, vine-like pattern lies on a dark gray surface."
+    },
+    {
+      "image_path": "necklace\\0VBIH4H4UERP.jpg",
+      "class": "necklace",
+      "description": "A gold-toned necklace shaped like a magnolia branch with off-white flower blossoms and small crystal accents."
+    },
+    {
+      "image_path": "necklace\\0VNSIHEZ10LB.jpg",
+      "class": "necklace",
+      "description": "A beige crocheted cord necklace adorned with round, newspaper-print beads, gold leaf embellishments, and small red beads."
+    },
+    {
+      "image_path": "necklace\\0XZ2ZZMDDA8I.jpg",
+      "class": "necklace",
+      "description": "A silver oval pendant necklace with two concentric circles of diamonds."
+    },
+    {
+      "image_path": "necklace\\0Y5F95H1UFPE.jpg",
+      "class": "necklace",
+      "description": "A classic three-strand pearl necklace with a gold clasp, photographed on a white background."
+    },
+    {
+      "image_path": "necklace\\12CHS3FLKZAZ.jpg",
+      "class": "necklace",
+      "description": "A delicate necklace featuring swirled pink and grey polymer clay beads on a silver wire frame."
+    },
+    {
+      "image_path": "necklace\\12D9AIEI1CNE.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a handcrafted necklace featuring a double strand of faceted purple sapphires and irregular pyrite beads."
+    },
+    {
+      "image_path": "necklace\\12OXFW4M5XKL.jpg",
+      "class": "necklace",
+      "description": "Elegant tiger eye and garnet necklace with silver chain and beads."
+    },
+    {
+      "image_path": "necklace\\1330DV7U37AY.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a translucent, ornate necklace with a black and white paisley-like design on a light wooden surface."
+    },
+    {
+      "image_path": "necklace\\13C0AVRO1HR2.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a beige pearl necklace with ornate silver bead spacers on a mannequin."
+    },
+    {
+      "image_path": "necklace\\13MZ6F5PWKW2.jpg",
+      "class": "necklace",
+      "description": "Close-up of a unique fan-shaped pendant necklace with an abstract, marbled design in muted pinks, peaches, greens, and whites, set in black, on a black beaded cord."
+    },
+    {
+      "image_path": "necklace\\17KK4HJ01C03.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with red and green gemstone accents, featuring a central pendant and circular elements."
+    },
+    {
+      "image_path": "necklace\\197Y9CENMU2Q.jpg",
+      "class": "necklace",
+      "description": "Close-up of a crocheted necklace featuring vibrant, multicolored flowers and leaves on a dark background."
+    },
+    {
+      "image_path": "necklace\\19SHZA98FE3M.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with a teardrop-shaped iridescent crystal pendant."
+    },
+    {
+      "image_path": "necklace\\1ARB5RAIGH0V.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with a small, simple key pendant on a light gray background."
+    },
+    {
+      "image_path": "necklace\\1BEWTK2W1065.jpg",
+      "class": "necklace",
+      "description": "Three delicate bar necklaces with personalized inscriptions (\"Aurora\", \"in love\", \"will you marry me?\") in different metallic finishes."
+    },
+    {
+      "image_path": "necklace\\1BP62KNLR856.jpg",
+      "class": "necklace",
+      "description": "A handcrafted necklace and earrings set made from various earthy-toned buttons sewn onto brown cord."
+    },
+    {
+      "image_path": "necklace\\1C8DL7QIKKZZ.jpg",
+      "class": "necklace",
+      "description": "A rose gold necklace with a circular pendant featuring small diamonds and engraved text on a neutral background."
+    },
+    {
+      "image_path": "necklace\\1CADPJP88EDA.jpg",
+      "class": "necklace",
+      "description": "A handcrafted necklace featuring a miniature portrait of a woman in a dark dress, set within an ornate, dark brown frame, accented with red beads and metallic elements."
+    },
+    {
+      "image_path": "necklace\\1CJI0STOLCM0.jpg",
+      "class": "necklace",
+      "description": "Close-up of ornate bronze jewelry featuring turquoise and coral stones."
+    },
+    {
+      "image_path": "necklace\\1CR60SURGV8N.jpg",
+      "class": "necklace",
+      "description": "A stunning heart-shaped blue crystal pendant necklace with silver filigree and beaded chains rests on antique paper."
+    },
+    {
+      "image_path": "necklace\\1EKQ3MU7KYUE.jpg",
+      "class": "necklace",
+      "description": "A multi-strand necklace featuring various shades of green beads, black stones, silver accents, and a silver chain."
+    },
+    {
+      "image_path": "necklace\\1F5C3KMK2BGO.jpg",
+      "class": "necklace",
+      "description": "Close-up shot of a delicate silver chain necklace featuring two interconnected circles, one gold with textured wire, the other silver, resting on a textured off-white surface."
+    },
+    {
+      "image_path": "necklace\\1HZHHVP58I6Y.jpg",
+      "class": "necklace",
+      "description": "A silver necklace with a crescent-shaped pendant featuring etched floral designs and light blue gemstones."
+    },
+    {
+      "image_path": "necklace\\1M32VSQCT6R7.jpg",
+      "class": "necklace",
+      "description": "A close-up of a necklace with large, colorful, swirled beads against a rustic wooden background."
+    },
+    {
+      "image_path": "necklace\\1QDO31B1HV4O.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of an ornate gold necklace adorned with pink gemstones, white pearls, and intricate carvings of what appear to be birds or mythical creatures."
+    },
+    {
+      "image_path": "necklace\\1R2UTBB4F5PK.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of an antique-brass necklace adorned with dark red and maroon beads, ornate rectangular charms, and copper accents, set against a stark white background."
+    },
+    {
+      "image_path": "necklace\\1RBTCFC4UBM5.jpg",
+      "class": "necklace",
+      "description": "A gold chain necklace featuring eight oval-shaped tiger's eye gemstones, resting on a light brown wooden surface."
+    },
+    {
+      "image_path": "necklace\\1RZTFJW06AA9.jpg",
+      "class": "necklace",
+      "description": "A long necklace with red gemstone beads interspersed between silver chain links, lying on a textured surface."
+    },
+    {
+      "image_path": "necklace\\1SFM9OPQWFU6.jpg",
+      "class": "necklace",
+      "description": "A gold rose pendant necklace with delicate leaves on a thin chain."
+    },
+    {
+      "image_path": "necklace\\1SN9KY6LVN8E.jpg",
+      "class": "necklace",
+      "description": "A luxurious necklace featuring a large emerald-cut diamond pendant and a flowing design of emerald and diamond beads on a black background."
+    },
+    {
+      "image_path": "necklace\\1SQKQAXX4RE7.jpg",
+      "class": "necklace",
+      "description": "A statement necklace with dark blue oval stones, surrounded by bright pink and orange beaded fringe, on a bronze chain."
+    },
+    {
+      "image_path": "necklace\\1UW89MBLDF1S.jpg",
+      "class": "necklace",
+      "description": "A rose gold necklace with a malachite and diamond pendant on a white background."
+    },
+    {
+      "image_path": "necklace\\1WW234ULX6YA.jpg",
+      "class": "necklace",
+      "description": "A rose gold Cartier Love necklace with a circular pendant featuring visible screws on a delicate chain."
+    },
+    {
+      "image_path": "necklace\\1YN6P5F6K6O1.jpg",
+      "class": "necklace",
+      "description": "A vibrant turquoise and teal beaded necklace with a large flower pendant, displayed on a dark carved leaf-shaped stand."
+    },
+    {
+      "image_path": "necklace\\23AI90NE703W.jpg",
+      "class": "necklace",
+      "description": "A handcrafted necklace featuring black beads, a clear crystal, pearl accents, and a black silhouette of Bambi, displayed on a white surface."
+    },
+    {
+      "image_path": "necklace\\23IEOP8XCZQ3.jpg",
+      "class": "necklace",
+      "description": "A handmade Hello Kitty-themed necklace featuring crocheted butterflies, felt flowers, and colorful beads on a pink ribbon."
+    },
+    {
+      "image_path": "necklace\\23XDE6Y7HYWD.jpg",
+      "class": "necklace",
+      "description": "A rose gold infinity heart pendant necklace with small diamonds along the infinity symbol."
+    },
+    {
+      "image_path": "necklace\\24RNATJXBMHU.jpg",
+      "class": "necklace",
+      "description": "Close-up of a silver charm bracelet with pink Juicy Couture charms, including a heart, key, and shield."
+    },
+    {
+      "image_path": "necklace\\25V5214BEU3K.jpg",
+      "class": "necklace",
+      "description": "A multi-strand pearl necklace with a central antique silver clasp featuring a large pearl and two emeralds."
+    },
+    {
+      "image_path": "necklace\\26N1HGDC26VD.jpg",
+      "class": "necklace",
+      "description": "A dazzling silver necklace adorned with numerous clear, sparkling crystals, culminating in a large pear-shaped pendant."
+    },
+    {
+      "image_path": "necklace\\26PKTGF6H8QK.jpg",
+      "class": "necklace",
+      "description": "A silver necklace with a Mjolnir pendant featuring intricate Norse-style dragon and animal head details on a Byzantine chain."
+    },
+    {
+      "image_path": "necklace\\2AX1J6DPR4T2.jpg",
+      "class": "necklace",
+      "description": "A handcrafted necklace with a brown macrame cord, light beige and turquoise beads, and a wooden peace symbol pendant."
+    },
+    {
+      "image_path": "necklace\\2CUNGGQ7HELG.jpg",
+      "class": "necklace",
+      "description": "A silver statement necklace with turquoise cabochons, featuring a layered chain and a decorative pendant."
+    },
+    {
+      "image_path": "necklace\\2DDCFCU48VZL.jpg",
+      "class": "necklace",
+      "description": "A delicate gold beaded necklace and matching earrings, handcrafted by Grandma Marilyn, lie on a white fabric background."
+    },
+    {
+      "image_path": "necklace\\2G1L147JV0GV.jpg",
+      "class": "necklace",
+      "description": "A handcrafted statement necklace featuring vibrant red and green polymer clay oval pendants with floral designs, set against a patterned background."
+    },
+    {
+      "image_path": "necklace\\2GJ7F24YX72I.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a gold necklace with green and red gemstones, featuring intricate detailing and a central pendant."
+    },
+    {
+      "image_path": "necklace\\2GX8RYWVSHUY.jpg",
+      "class": "necklace",
+      "description": "A double-wrap bracelet featuring graduated shades of teal and lime green disc beads separated by silver spacers, fastened with a unique silver clasp."
+    },
+    {
+      "image_path": "necklace\\2IPXEHA3MTHY.jpg",
+      "class": "necklace",
+      "description": "A delicate necklace featuring numerous light teal, oblong gemstone beads arranged in a graduated, slightly curved row on a sheer light blue ribbon."
+    },
+    {
+      "image_path": "necklace\\2KCB0164E0WZ.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace featuring an infinity symbol intertwined with a heart, adorned with small diamonds."
+    },
+    {
+      "image_path": "necklace\\2L56SAL3QEZQ.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with a single, clear cubic zirconia pendant."
+    },
+    {
+      "image_path": "necklace\\2LOK4CXPBCJF.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of an ornate necklace featuring a white bird pendant, black lace detailing, red accents, and a dark teardrop gemstone."
+    },
+    {
+      "image_path": "necklace\\2NXSPEDKO62B.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a delicate necklace featuring a miniature pink cupcake charm on a silver chain with small, light pink and clear beads."
+    },
+    {
+      "image_path": "necklace\\2OAFZ8FMPTHA.jpg",
+      "class": "necklace",
+      "description": "A double-strand necklace featuring gray and black oval beads, possibly made of stone or resin, lies on a white surface."
+    },
+    {
+      "image_path": "necklace\\2QCO7R5GIQC4.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace featuring a minimalist rose pendant on a thin chain."
+    },
+    {
+      "image_path": "necklace\\2SNGG4O19YL5.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a gold necklace featuring a delicate chain and two intricately designed leaf pendants."
+    },
+    {
+      "image_path": "necklace\\2VIVEI4IN80H.jpg",
+      "class": "necklace",
+      "description": "An elegant necklace featuring black onyx beads, clusters of purple and gray gemstones, and intricate wirework detailing."
+    },
+    {
+      "image_path": "necklace\\2VTQ8XUP6M9A.jpg",
+      "class": "necklace",
+      "description": "A sterling silver necklace featuring a central dark green cabochon stone and three smaller matching stones dangling below, set against a wooden background."
+    },
+    {
+      "image_path": "necklace\\2XKO3IUPZQWY.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a layered necklace featuring light blue beads and silver chains, adorned with a leaf-shaped pendant."
+    },
+    {
+      "image_path": "necklace\\2Y7P5SMAYF2Y.jpg",
+      "class": "necklace",
+      "description": "A whimsical necklace featuring a Queen and King of Hearts playing cards nestled amongst red and blue flowers, crystals, and ornate bronze accents on a black beaded chain."
+    },
+    {
+      "image_path": "necklace\\31PZN04QOIRT.jpg",
+      "class": "necklace",
+      "description": "A stunning sapphire and gold necklace and earring set with teardrop and round crystals."
+    },
+    {
+      "image_path": "necklace\\32NNRTNLPST1.jpg",
+      "class": "necklace",
+      "description": "Close-up of a vintage blue and clear rhinestone necklace and earrings on a lace background."
+    },
+    {
+      "image_path": "necklace\\33K0A64XMLOE.jpg",
+      "class": "necklace",
+      "description": "A long, crocheted necklace with multiple small, circular motifs in a pale gold color, displayed on a mannequin."
+    },
+    {
+      "image_path": "necklace\\33RAXDZWW25V.jpg",
+      "class": "necklace",
+      "description": "A detailed close-up of a translucent pendant necklace featuring a stylized illustration of a squid, accented with pink and red beads."
+    },
+    {
+      "image_path": "necklace\\35E7IG25ZWD3.jpg",
+      "class": "necklace",
+      "description": "A handmade necklace featuring felt segments resembling stylized, pinkish-red and orange anatomical cross-sections, strung together on a dark background."
+    },
+    {
+      "image_path": "necklace\\6SE79YMZ1L10.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with a circular pendant featuring a raised capital \"R\"."
+    },
+    {
+      "image_path": "necklace\\8BDAS0ZPMTWX.jpg",
+      "class": "necklace",
+      "description": "Five gold necklaces with textured beads and small pendants layered together on a white background."
+    },
+    {
+      "image_path": "necklace\\8IACKSIP2ZQ7.jpg",
+      "class": "necklace",
+      "description": "A rose gold necklace with a clear cubic zirconia center stone surrounded by a halo of smaller stones, on a white background."
+    },
+    {
+      "image_path": "necklace\\A86B0SBIPBET.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with a small, dark-grey gemstone pendant on a beaded chain."
+    },
+    {
+      "image_path": "necklace\\AHCSZ03LGE1E.jpg",
+      "class": "necklace",
+      "description": "A delicate silver necklace featuring a XO charm encrusted with small diamonds on a thin chain."
+    },
+    {
+      "image_path": "necklace\\BVZ4WR9YLOQG.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with a green crystal palm tree pendant and small crystal accents along the chain."
+    },
+    {
+      "image_path": "necklace\\BW8Q7QW5DDQL.jpg",
+      "class": "necklace",
+      "description": "A delicate gold layered necklace featuring a green gemstone pendant and a minimalist crescent moon charm."
+    },
+    {
+      "image_path": "necklace\\CH01IVURU3DA.jpg",
+      "class": "necklace",
+      "description": "A delicate gold pendant necklace with a textured, shield-shaped charm featuring a small diamond, hanging from a dark grey chain on a white background."
+    },
+    {
+      "image_path": "necklace\\CRKMYDSH5DW2.jpg",
+      "class": "necklace",
+      "description": "A solitaire diamond pendant necklace on a delicate chain."
+    },
+    {
+      "image_path": "necklace\\DRB65CCNAYW1.jpg",
+      "class": "necklace",
+      "description": "A five-strand gold necklace with textured beads and triangular endpieces."
+    },
+    {
+      "image_path": "necklace\\EPL0QTEDN8UZ.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with a central flower pendant accented by pearls and small gold beads."
+    },
+    {
+      "image_path": "necklace\\GI93X1XFXU5Y.jpg",
+      "class": "necklace",
+      "description": "A gold oval pendant necklace with the letter R."
+    },
+    {
+      "image_path": "necklace\\KGIA7QADG5RI.jpg",
+      "class": "necklace",
+      "description": "A delicate gold chain necklace featuring a pale pink, rectangular gemstone pendant with gold accents."
+    },
+    {
+      "image_path": "necklace\\LXE9TVUVMDYI.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace featuring a small, bezel-set diamond pendant on a textured chain."
+    },
+    {
+      "image_path": "necklace\\LZTFB5F7THBK.jpg",
+      "class": "necklace",
+      "description": "A silver necklace with a black oval pendant featuring a detailed image of a full moon."
+    },
+    {
+      "image_path": "necklace\\MKC67M50OHMD.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with a padlock and key charm on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_102.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace featuring a diamond-encrusted infinity symbol and dangling diamond accents."
+    },
+    {
+      "image_path": "necklace\\necklace_107.jpg",
+      "class": "necklace",
+      "description": "A delicate silver infinity necklace with small diamonds adorning the symbol, on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_108.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace featuring an infinity symbol intertwined with a heart, adorned with small diamonds."
+    },
+    {
+      "image_path": "necklace\\necklace_137.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with a two-toned heart pendant featuring intricate filigree and a small butterfly charm."
+    },
+    {
+      "image_path": "necklace\\necklace_138.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with a floral pendant and pearl accents on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_145.jpg",
+      "class": "necklace",
+      "description": "A minimalist gold necklace with a textured, half-circle pendant on a delicate chain."
+    },
+    {
+      "image_path": "necklace\\necklace_147.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace featuring three interconnected, open square pendants on a thin chain."
+    },
+    {
+      "image_path": "necklace\\necklace_15.jpg",
+      "class": "necklace",
+      "description": "A long, delicate gold necklace with five emerald-cut gemstones arranged diagonally along its length."
+    },
+    {
+      "image_path": "necklace\\necklace_16.jpg",
+      "class": "necklace",
+      "description": "A long gold necklace with three delicate chains and five black square and gold round accents arranged in a staggered pattern."
+    },
+    {
+      "image_path": "necklace\\necklace_18.jpg",
+      "class": "necklace",
+      "description": "A delicate gold chain necklace adorned with several small, round gemstones of varying colors (yellow, white, and black)."
+    },
+    {
+      "image_path": "necklace\\necklace_191.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a layered gold necklace set with textured ball and flower-shaped pendants against a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_195.jpg",
+      "class": "necklace",
+      "description": "A five-strand gold necklace with small, textured beads and triangular endpieces."
+    },
+    {
+      "image_path": "necklace\\necklace_20.jpg",
+      "class": "necklace",
+      "description": "A long gold chain necklace adorned with oval-shaped gemstones in shades of green, yellow, and blue."
+    },
+    {
+      "image_path": "necklace\\necklace_207.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with a \"LOVE\" pendant featuring a small ruby heart."
+    },
+    {
+      "image_path": "necklace\\necklace_21.jpg",
+      "class": "necklace",
+      "description": "A long gold chain necklace adorned with alternating black and light purple oval gemstones."
+    },
+    {
+      "image_path": "necklace\\necklace_212.jpg",
+      "class": "necklace",
+      "description": "A delicate, silver-toned chain necklace with a small clasp lies on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_214.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a silver twisted chain necklace on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_215.jpg",
+      "class": "necklace",
+      "description": "A delicate silver paperclip chain necklace on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_216.jpg",
+      "class": "necklace",
+      "description": "A shiny silver ball chain necklace lies on a white background, curved to show both sides and clasp."
+    },
+    {
+      "image_path": "necklace\\necklace_217.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a silver box chain necklace on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_218.jpg",
+      "class": "necklace",
+      "description": "A two-toned gold and silver chain necklace with a slightly curved design lies on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_219.jpg",
+      "class": "necklace",
+      "description": "A delicate rose gold chain necklace with a lobster clasp, elegantly draped on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_22.jpg",
+      "class": "necklace",
+      "description": "A long gold chain necklace with alternating blue and white cabochon gemstones."
+    },
+    {
+      "image_path": "necklace\\necklace_223.jpg",
+      "class": "necklace",
+      "description": "A gleaming gold franco chain necklace lies gracefully on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_224.jpg",
+      "class": "necklace",
+      "description": "A shiny gold franco chain necklace lies on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_225.jpg",
+      "class": "necklace",
+      "description": "A gleaming gold franco chain necklace lies coiled on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_231.jpg",
+      "class": "necklace",
+      "description": "A gleaming gold herringbone chain necklace lies on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_232.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a gold chain with a textured, braided design, lying on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_233.jpg",
+      "class": "necklace",
+      "description": "A delicate gold and white gold double strand necklace with small beaded accents."
+    },
+    {
+      "image_path": "necklace\\necklace_234.jpg",
+      "class": "necklace",
+      "description": "A delicate double strand gold necklace with small, faceted beads, alternating yellow and white gold."
+    },
+    {
+      "image_path": "necklace\\necklace_271.jpg",
+      "class": "necklace",
+      "description": "Two gold box chains, one slightly longer than the other, lying parallel on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_273.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a gold chain with a textured surface, lying on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_275.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a gold chain with a textured surface and a lobster clasp on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_279.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a gold chain with a textured surface, lying on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_285.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a gold chain necklace laid flat on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_298.jpg",
+      "class": "necklace",
+      "description": "Close-up shot of two gold chains lying parallel, one slightly longer than the other, showcasing a textured flat design and a clasp."
+    },
+    {
+      "image_path": "necklace\\necklace_30.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace featuring a round amber pendant with intricate gold detailing."
+    },
+    {
+      "image_path": "necklace\\necklace_304.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a gold box chain necklace laid flat on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_305.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a gold chain necklace with a box clasp, laid flat on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_31.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace featuring a green cabochon gemstone pendant with a subtle floral design."
+    },
+    {
+      "image_path": "necklace\\necklace_314.jpg",
+      "class": "necklace",
+      "description": "Close-up shot of two gold box chains, one with a clasp, lying parallel against a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_319.jpg",
+      "class": "necklace",
+      "description": "Close-up shot of two gold chain necklaces laid flat against a white background, one slightly overlapping the other, showcasing their delicate design and clasp."
+    },
+    {
+      "image_path": "necklace\\necklace_320.jpg",
+      "class": "necklace",
+      "description": "A delicate gold chain necklace laid flat on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_38.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with swirling leaf-shaped pendants and small, sparkling gemstones."
+    },
+    {
+      "image_path": "necklace\\necklace_41.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with marquise-cut diamonds and a pear-shaped pendant, photographed on a white background."
+    },
+    {
+      "image_path": "necklace\\necklace_55.jpg",
+      "class": "necklace",
+      "description": "A delicate necklace featuring a rose gold butterfly charm and a pendant with white pearls and diamonds set in rose gold and white gold."
+    },
+    {
+      "image_path": "necklace\\necklace_56.jpg",
+      "class": "necklace",
+      "description": "A delicate rose gold and white gold necklace featuring a pink gemstone pendant shaped like a flower with diamond accents, and a small butterfly charm."
+    },
+    {
+      "image_path": "necklace\\necklace_58.jpg",
+      "class": "necklace",
+      "description": "A delicate rose gold and white gold necklace featuring a pearl and diamond infinity pendant with a small 'W' charm."
+    },
+    {
+      "image_path": "necklace\\necklace_59.jpg",
+      "class": "necklace",
+      "description": "A delicate rose gold and silver necklace featuring a pink gemstone flower pendant and a butterfly charm."
+    },
+    {
+      "image_path": "necklace\\necklace_60.jpg",
+      "class": "necklace",
+      "description": "A silver necklace with a black gemstone pendant featuring a stylized flower and infinity symbol, and a small \"M\" charm."
+    },
+    {
+      "image_path": "necklace\\necklace_61.jpg",
+      "class": "necklace",
+      "description": "A delicate silver necklace with a rose gold butterfly charm and a white stone flower pendant accented with diamonds."
+    },
+    {
+      "image_path": "necklace\\necklace_62.jpg",
+      "class": "necklace",
+      "description": "A delicate silver necklace with a pink gemstone rose pendant accented with diamonds and a small rose gold butterfly charm."
+    },
+    {
+      "image_path": "necklace\\necklace_64.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with a light green gemstone pendant encircled by diamonds, featuring a small gold \"W\" charm."
+    },
+    {
+      "image_path": "necklace\\necklace_68.jpg",
+      "class": "necklace",
+      "description": "A black onyx and diamond flower pendant necklace on a delicate silver chain."
+    },
+    {
+      "image_path": "necklace\\necklace_7.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace featuring a light blue heart-shaped gemstone pendant."
+    },
+    {
+      "image_path": "necklace\\necklace_98.jpg",
+      "class": "necklace",
+      "description": "A delicate gold necklace with dangling letter charms spelling \"LOVE\" and a small diamond heart charm in the center."
+    },
+    {
+      "image_path": "necklace\\NM6BBE8CX8YE.jpg",
+      "class": "necklace",
+      "description": "A delicate rose gold necklace with a single small diamond pendant on a black background."
+    },
+    {
+      "image_path": "necklace\\P8Y5N4GSQE6K.jpg",
+      "class": "necklace",
+      "description": "A stunning sapphire and diamond butterfly pendant necklace on a silver chain, isolated on a white background."
+    },
+    {
+      "image_path": "necklace\\P9FJTOV9AK42.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with a crown-topped heart-shaped diamond pendant surrounded by loose diamonds on a white background."
+    },
+    {
+      "image_path": "necklace\\PFCAOQEOYB3C.jpg",
+      "class": "necklace",
+      "description": "A delicate gold crescent moon necklace with two small diamonds adorning its points, hanging against a clean white background."
+    },
+    {
+      "image_path": "necklace\\PPQ5I9VK0U9D.jpg",
+      "class": "necklace",
+      "description": "A close-up shot of a silver necklace with a small, enamel watermelon slice pendant."
+    },
+    {
+      "image_path": "necklace\\QBN3RCDOG4IG.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with four circular pendants spelling \"LOVE,\" one pendant featuring a small diamond heart."
+    },
+    {
+      "image_path": "necklace\\TCQAEJWM3IE9.jpg",
+      "class": "necklace",
+      "description": "A delicate silver necklace with a small, solitaire diamond pendant on a black background."
+    },
+    {
+      "image_path": "necklace\\XC80ICY9WJ8Q.jpg",
+      "class": "necklace",
+      "description": "A delicate solitaire diamond pendant necklace on a thin chain against a black background."
+    },
+    {
+      "image_path": "necklace\\YHEV5MZR80V4.jpg",
+      "class": "necklace",
+      "description": "A long light pink beaded necklace with a small gold tassel pendant."
+    },
+    {
+      "image_path": "necklace\\YISHVTEXJ9VJ.jpg",
+      "class": "necklace",
+      "description": "A delicate silver lariat necklace featuring a pink triangular gemstone and a small gold bead."
+    },
+    {
+      "image_path": "necklace\\ZZ65VOM47QLP.jpg",
+      "class": "necklace",
+      "description": "A gold necklace with a large purple gemstone pendant."
+    },
+    {
+      "image_path": "ring_best\\ring_066.jpg",
+      "class": "ring_best",
+      "description": "A delicate yellow gold ring featuring a single, round-cut diamond set in a simple, elegant design."
+    },
+    {
+      "image_path": "ring_best\\ring_073.jpg",
+      "class": "ring_best",
+      "description": "A simple, thin gold wedding band with a smooth, rounded profile, reflecting light on a white background."
+    },
+    {
+      "image_path": "ring_best\\ring_078.jpg",
+      "class": "ring_best",
+      "description": "A simple gold wedding band with a textured, matte finish."
+    },
+    {
+      "image_path": "ring_best\\ring_079.jpg",
+      "class": "ring_best",
+      "description": "A close-up shot of a gold bangle with a hammered texture, set against a white background."
+    },
+    {
+      "image_path": "ring_best\\ring_087.jpg",
+      "class": "ring_best",
+      "description": "A gold ring featuring an emerald-cut green gemstone surrounded by a halo of small diamonds."
+    },
+    {
+      "image_path": "ring_best\\ring_096.jpg",
+      "class": "ring_best",
+      "description": "A gold ring with a square-shaped cluster of diamonds set within an intricate, filigree-style band."
+    },
+    {
+      "image_path": "ring_best\\ring_103.jpg",
+      "class": "ring_best",
+      "description": "A close-up shot of a gold infinity ring with small diamonds set along the intertwined bands."
+    },
+    {
+      "image_path": "ring_best\\ring_104.jpg",
+      "class": "ring_best",
+      "description": "A delicate gold ring with a small diamond set in a heart-shaped design."
+    },
+    {
+      "image_path": "ring_best\\ring_105.jpg",
+      "class": "ring_best",
+      "description": "A gold ring with a cluster of colorful gemstones, including ruby, sapphire, emerald, and others, set in a flower-like arrangement."
+    },
+    {
+      "image_path": "ring_best\\ring_106.jpg",
+      "class": "ring_best",
+      "description": "A close-up shot of a gold ring with a small, heart-shaped ruby."
+    },
+    {
+      "image_path": "ring_best\\ring_116.jpg",
+      "class": "ring_best",
+      "description": "A close-up shot of a delicate silver ring adorned with small, pear-shaped diamonds set in a leaf-like pattern."
+    },
+    {
+      "image_path": "ring_best\\ring_117.jpg",
+      "class": "ring_best",
+      "description": "A simple silver ring with three small diamonds set in a curved band."
+    },
+    {
+      "image_path": "ring_best\\ring_123.jpg",
+      "class": "ring_best",
+      "description": "A gold ring with a row of diamonds set in a cage-like design."
+    },
+    {
+      "image_path": "ring_best\\ring_129.jpg",
+      "class": "ring_best",
+      "description": "A close-up shot of a yellow gold infinity ring adorned with small, sparkling diamonds."
+    },
+    {
+      "image_path": "ring_best\\ring_132.jpg",
+      "class": "ring_best",
+      "description": "A simple gold band with seven small diamonds set in a channel setting."
+    },
+    {
+      "image_path": "ring_best\\ring_139.jpg",
+      "class": "ring_best",
+      "description": "A delicate gold ring with two small, diamond-encrusted butterfly motifs."
+    },
+    {
+      "image_path": "ring_best\\ring_146.jpg",
+      "class": "ring_best",
+      "description": "A close-up shot of a gold ring adorned with sparkling diamonds, featuring a unique, curved design."
+    },
+    {
+      "image_path": "ring_best\\ring_153.jpg",
+      "class": "ring_best",
+      "description": "A delicate gold ring adorned with a cluster of sparkling diamonds arranged in a floral pattern."
+    },
+    {
+      "image_path": "ring_best\\ring_154.jpg",
+      "class": "ring_best",
+      "description": "A gold ring adorned with a cluster of multicolored gemstones, including ruby, emerald, sapphire, and others, set in a swirling design."
+    },
+    {
+      "image_path": "ring_best\\ring_155.jpg",
+      "class": "ring_best",
+      "description": "A gold ring with a circular bezel set with small diamonds spelling the letter \"P\"."
+    },
+    {
+      "image_path": "ring_best\\ring_165.jpg",
+      "class": "ring_best",
+      "description": "A simple, elegant silver ring with a stylized leaf design."
+    },
+    {
+      "image_path": "ring_best\\ring_172.jpg",
+      "class": "ring_best",
+      "description": "A gold ring with a circular bezel featuring a diamond-encrusted letter A."
+    },
+    {
+      "image_path": "ring_best\\ring_187.jpg",
+      "class": "ring_best",
+      "description": "A simple platinum men's wedding band with two small diamonds set on the top."
+    }
+  ]
+}
