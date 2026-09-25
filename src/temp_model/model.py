@@ -80,7 +80,7 @@ class ClassificationHead(nn.Module):
 
 
 class CustomCNN(nn.Module):
-    """Compact custom CNN with a retrieval embedding and classifier."""
+    """Compact custom CNN with separate training and retrieval paths."""
 
     def __init__(
         self,
@@ -141,6 +141,10 @@ class CustomCNN(nn.Module):
         """Return an L2-normalized embedding for retrieval."""
         embedding = self.forward_features(x)
         return F.normalize(embedding, p=2, dim=1)
+
+    def forward_retrieval(self, x: Tensor) -> Tensor:
+        """Run the retrieval path without invoking the classification head."""
+        return self.encode(x)
 
     def classify(self, embedding: Tensor) -> Tensor:
         """Map a 128-d embedding to the four class logits."""
