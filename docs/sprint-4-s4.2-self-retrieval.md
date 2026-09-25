@@ -37,7 +37,23 @@ is the query itself. Exclusion is handled by S4.3.
 
 ## Runtime
 
-Default command:
+S4.2 requires a local persisted embedding store. Runtime artifacts are intentionally not tracked by Git.
+
+Before the first evaluation on a fresh clone or newly checked-out branch, prepare the store:
+
+    python scripts/prepare_retrieval_store.py --dataset-root "E:\\Privat File\\Projects\\Zargar Interview\\dataset\\jewelry-design-dataset"
+
+The preparation script reuses valid local S3.2/S3.3 artifacts and regenerates only missing runtime artifacts. It does not retrain the model.
+
+After preparation, run S4.2:
+
+    python scripts/self_retrieval.py
+
+A specific store row can be selected with:
+
+    python scripts/self_retrieval.py --query-index 10
+
+
 
 ```bash
 python scripts/self_retrieval.py
