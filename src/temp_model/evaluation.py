@@ -58,3 +58,57 @@ def evaluate_top1(store: EmbeddingStore) -> Top1Evaluation:
         incorrect_count=incorrect_count,
         accuracy=accuracy,
     )
+
+
+@dataclass(frozen=True)
+class Top5Evaluation:
+    """Aggregate Top-5 retrieval evaluation result."""
+
+    query_count: int
+    correct_count: int
+    incorrect_count: int
+    accuracy: float
+
+
+def evaluate_top5(store: EmbeddingStore) -> Top5Evaluation:
+    """Evaluate class-consistent Top-5 retrieval over every store query.
+
+    Each query uses its persisted embedding and excludes its own store row.
+    A query is counted as correct when at least one of the five highest-ranked
+    remaining candidates belongs to the same class as the query.
+    """
+    if not isinstance(store, EmbeddingStore):
+        raise TypeError("store must be an EmbeddingStore instance.")
+
+    if store.sample_count < 2:
+        raise ValueError("Top-5 evaluation requires at least two samples.")
+
+    correct_count = 0
+
+    for query_index, query_record in enumerate(store.metadata_records):
+        results = retrieve(
+            store.embeddings[query_index],
+            store,
+            exclude_index=query_index,
+        )
+
+        top5_results = results[:5]
+        if not top5_results:
+            raise AssertionError(
+                f"Query index {query_index} produced no candidates."
+            )
+
+        query_class = str(query_record["class"])
+        if any(result.class_name == query_class for result in top5_results):
+            correct_count += 1
+
+    query_count = store.sample_count
+    incorrect_count = query_count - correct_count
+    accuracy = correct_count / query_count
+
+    return Top5Evaluation(
+        query_count=query_count,
+        correct_count=correct_count,
+        incorrect_count=incorrect_count,
+        accuracy=accuracy,
+    )
