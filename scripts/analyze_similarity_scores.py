@@ -54,7 +54,7 @@ def main() -> None:
     print(f"  Top-5 mean: {result.top5_scores.mean:.6f}")
     print(f"  Top-10 mean: {result.top10_scores.mean:.6f}")
     print(f"  Top-1 same-class mean: {result.top1_same_class_scores.mean:.6f}")
-    if result.top1_different_class_scores.count:
+    if result.top1_different_class_scores is not None:
         print(
             "  Top-1 different-class mean: "
             f"{result.top1_different_class_scores.mean:.6f}"
