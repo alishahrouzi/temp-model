@@ -18,7 +18,10 @@ from src.temp_model.similarity_analysis import (
 )
 
 
-def unit_vector(index: int, dimension: int = 8) -> np.ndarray:
+EMBEDDING_DIMENSION = 128
+
+
+def unit_vector(index: int, dimension: int = EMBEDDING_DIMENSION) -> np.ndarray:
     vector = np.zeros(dimension, dtype=np.float32)
     vector[index] = 1.0
     return vector
