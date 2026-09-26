@@ -5,6 +5,12 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 import numpy as np
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from src.temp_model.embedding_store import EmbeddingStore
 from src.temp_model.retrieval import retrieve
