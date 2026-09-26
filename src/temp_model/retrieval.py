@@ -31,18 +31,36 @@ class RetrievalResult:
 def retrieve(
     query_embedding: np.ndarray,
     store: EmbeddingStore,
+    exclude_index: int | None = None,
 ) -> list[RetrievalResult]:
-    """Compare a query embedding against the store and rank all candidates.
+    """Compare a query embedding against the store and rank candidates.
 
-    The pipeline composes S3.4 cosine similarity and S3.5 ranking. It returns
-    every candidate in descending similarity order. Query exclusion and Top-K
-    selection are intentionally left to later Sprint 4 tasks.
+    When exclude_index is provided, that store row is removed before ranking
+    results. This supports excluded-query evaluation while preserving the
+    S4.1 retrieval behavior when no exclusion is requested.
     """
     if not isinstance(store, EmbeddingStore):
         raise TypeError("store must be an EmbeddingStore instance.")
 
+    if exclude_index is not None:
+        if not isinstance(exclude_index, (int, np.integer)):
+            raise TypeError("exclude_index must be an integer or None.")
+        if exclude_index < 0 or exclude_index >= store.sample_count:
+            raise ValueError(
+                f"exclude_index must be in [0, {store.sample_count - 1}], "
+                f"got {exclude_index}."
+            )
+
     scores = cosine_similarity(query_embedding, store.embeddings)
-    ranked_indices = rank_by_similarity(scores)
+
+    if exclude_index is not None:
+        candidate_mask = np.ones(store.sample_count, dtype=bool)
+        candidate_mask[exclude_index] = False
+        candidate_indices = np.flatnonzero(candidate_mask)
+        ranked_local_indices = rank_by_similarity(scores[candidate_indices])
+        ranked_indices = candidate_indices[ranked_local_indices]
+    else:
+        ranked_indices = rank_by_similarity(scores)
 
     results: list[RetrievalResult] = []
     for index in ranked_indices:
