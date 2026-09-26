@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from typing import Optional
+
 import numpy as np
 import sys
 from pathlib import Path
@@ -43,12 +45,12 @@ class SimilarityScoreAnalysis:
     top5_scores: ScoreSummary
     top10_scores: ScoreSummary
     top1_same_class_scores: ScoreSummary
-    top1_different_class_scores: ScoreSummary
+    top1_different_class_scores: Optional[ScoreSummary]
 
 
-def _summary(values: list[float]) -> ScoreSummary:
+def _summary(values: list[float]) -> Optional[ScoreSummary]:
     if not values:
-        raise ValueError("Cannot summarize an empty score collection.")
+        return None
     array = np.asarray(values, dtype=np.float64)
     if not np.all(np.isfinite(array)):
         raise ValueError("Similarity scores must be finite.")
