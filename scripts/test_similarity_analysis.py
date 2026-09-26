@@ -65,7 +65,7 @@ def main() -> None:
         raise AssertionError("Top-10 score count should use all available candidates.")
     if result.top1_same_class_scores.count != 4:
         raise AssertionError("All Top-1 matches should be same-class in this fixture.")
-    if result.top1_different_class_scores.count != 0:
+    if result.top1_different_class_scores is not None:
         raise AssertionError("Fixture should have no different-class Top-1 results.")
     if not math.isclose(result.all_scores.minimum, 0.0):
         raise AssertionError("Expected zero minimum cosine similarity.")
