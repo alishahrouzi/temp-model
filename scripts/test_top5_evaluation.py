@@ -50,9 +50,9 @@ def main() -> None:
 
     expected = Top5Evaluation(
         query_count=6,
-        correct_count=6,
-        incorrect_count=0,
-        accuracy=1.0,
+        correct_count=3,
+        incorrect_count=3,
+        accuracy=0.5,
     )
 
     if result != expected:
@@ -60,6 +60,12 @@ def main() -> None:
 
     if not 0.0 <= result.accuracy <= 1.0:
         raise AssertionError("Top-5 accuracy must be between 0 and 1.")
+
+    # With six samples and self-exclusion, exactly five candidates remain.
+    # The fixture intentionally has three singleton classes, so those three
+    # queries cannot have a same-class match.
+    if result.correct_count != 3:
+        raise AssertionError("Synthetic Top-5 class-match behavior is incorrect.")
 
     try:
         evaluate_top5(object())  # type: ignore[arg-type]
